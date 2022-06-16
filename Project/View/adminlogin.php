@@ -8,7 +8,7 @@
     <title>Admin Log in</title>
 </head>
 
-<body background="../image/admin_bg-img.jpeg">
+<body background="../image/bg_img_admin.png">
     <center>
         <h1>Welcome to XYZ Bank Limited.</h1>
         <p><strong>To do further work, please log in.</strong></p>
