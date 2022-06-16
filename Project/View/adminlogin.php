@@ -45,7 +45,7 @@
                     <tr>
                         <td>
                             <center>
-                                <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                                 <input type="submit" name="submit" value="Login">
                                 <input type="submit" name="registration" value="Registration">
                             </center>
