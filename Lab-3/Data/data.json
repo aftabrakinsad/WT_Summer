@@ -8,5 +8,15 @@
         "language": "java,php",
         "designation": "juniorprogrammer",
         "filepath": "..\/uploads\/aiub logo.png"
+    },
+    {
+        "firstname": "",
+        "lastname": "",
+        "age": "",
+        "pass": "",
+        "email": "",
+        "language": "",
+        "designation": null,
+        "filepath": ""
     }
 ]
