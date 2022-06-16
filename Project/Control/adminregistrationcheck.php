@@ -6,6 +6,8 @@ $unameErr = "";
 $emailErr = "";
 $nidErr = "";
 $phoneErr = "";
+$fileErr = "";
+$fromdata = "";
 $filepath = "";
 
 if(isset($_POST["submit"]))
@@ -15,7 +17,7 @@ if(isset($_POST["submit"]))
     $uname = $_POST["uname"];
     $email = $_POST["email"];
     $nid = $_POST["nid"];
-    $fname = $_POST["fname"];
+    $phone = $_POST["phone"];
 
     if(empty($fname))
     {
@@ -27,18 +29,102 @@ if(isset($_POST["submit"]))
     }
     else
     {
-        echo "Your First Name is". $fname;
+        echo "Your First Name is: ". $fname;
     }
     echo "<br>";
 
-    if (empty($lname)) {
-        $fnameErr = "Please Enter your First Name";
-    } else if (is_numeric($lname)) {
-        $fnameErr = "Name can't be numeric";
-    } else {
-        echo "Your First Name is" . $lname;
+    if (empty($lname))
+    {
+        $lnameErr = "Please Enter your Last Name";
+    }
+    else if (is_numeric($lname))
+    {
+        $lnameErr = "Name can't be numeric";
+    }
+    else
+    {
+        echo "Your Last Name is: " . $lname;
     }
     echo "<br>";
+
+    if (empty($uname))
+    {
+        $unameErr = "Please Enter your Username";
+    }
+    else if (is_numeric($uname))
+    {
+        $unameErr = "Name can't be numeric";
+    }
+    else
+    {
+        echo "Your Username is: " . $uname;
+    }
+    echo "<br>";
+
+    if(empty($nid))
+    {
+        $nidErr = "Please Enter your NID.";
+    }
+    else if (is_string($nid))
+    {
+        $nidErr = "NID must be an interger number"
+    }
+    elseif (is_float($nid))
+    {
+        $nidErr = "NID can't be fractional";
+    }
+    else
+    {
+        echo "NID: " . $nid;
+    }
+
+    if(empty($email))
+    {
+        $emailErr = "You must enter your email";
+    }
+    else if(!preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $email))
+    {
+        $emailErr = "Enter a valid email";
+    }
+    else
+    {
+        echo "Email: " . $email;
+    }
+    echo "<br>";
+
+    if(empty($phone))
+    {
+        $phoneErr = "Phone number is required";
+    }
+    else if(!preg_match("/^[0-9]{10}+$/", $phone))
+    {
+        $phoneErr = "Enter your valid phone number";
+    }
+    else
+    {
+        echo "Phone: " . $phone;
+    }
+
+    echo $_FILES["myfile"]["name"];
+    if(move_uploaded_file($_FILES["myfile"]["tmp_name"],"../Uploads/". $_FILES["myfile"]["name"]))
+    {
+        $filepath = "../Uploads/". $_FILES["myfile"]["name"];
+        $fileErr = "File Uploaded";
+    }
+    else
+    {
+        $fileErr = "Upload Error";
+        adminregistrationdata = array
+        (
+            'firstname' => $_POST["fname"],
+            'lastname' => $_POST["lname"],
+            'username' => $_POST["uname"],
+            'email' => $_POST["email"],
+            'nid' => $_POST["nid"],
+            'phine' => $_POST["phone"],
+            'filepath' => $filepath
+        );
+    }
 }
 
 ?>
