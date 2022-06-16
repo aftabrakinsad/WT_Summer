@@ -24,7 +24,7 @@
                             <label>
                                 <font color="darkblue">Username:</font>
                             </label>
-                            <input type="text" name="uname"> <br><br>
+                            <input type="text" name="username"> <br><br>
                         </td>
                     </tr>
 
@@ -33,7 +33,7 @@
                             <label>
                                 <font color="darkblue">Password :</font>
                             </label>
-                            <input type="password" name="pass"> <br><br>
+                            <input type="password" name="password"> <br><br>
                         </td>
                     </tr>
 
