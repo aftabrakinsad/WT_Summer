@@ -11,8 +11,8 @@
 <body bgcolor="#D1CECD">
     <center>
         <header>
-            <h1><font color="red">Welcome to City Bank Limited.</font></h1>
-            <p><strong><font color="red">To do further work, please log in.</font></strong></p>
+            <h1><font color="red">City Bank Limited.</font></h1>
+            <p><strong><font color="red">Login As An Admin</font></strong></p>
             <br><br><br><br><br><br><br><br><br><br><br><br>
         </header>
 
