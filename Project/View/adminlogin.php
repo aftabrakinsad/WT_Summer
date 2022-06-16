@@ -8,10 +8,10 @@
     <title>Admin Log in</title>
 </head>
 
-<body background="../image/bg_img_admin.png">
+<body background="../image/bg_admin.jpeg">
     <center>
-        <h1>Welcome to XYZ Bank Limited.</h1>
-        <p><strong>To do further work, please log in.</strong></p>
+        <h1><font color="white">Welcome to City Bank Limited.</font></h1>
+        <p><strong><font color="white">To do further work, please log in.</font></strong></p>
         <br><br><br><br><br><br><br><br>
 
         <form action="" method="POST" enctype="multipart/form-data">
