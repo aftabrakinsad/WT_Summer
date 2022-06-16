@@ -1,3 +1,9 @@
+<?php
+
+    include('../control/emplogin.php');
+
+?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,25 +13,31 @@
     <title>Employe Log in</title>
 </head>
 
-<body>
+    <body>
     <center>
-        <h1>Welcome to XYZ Bank Limited.</h1>
-        
-        <br><br>
+        <header>
+            <h1><font color="green">XYZ Bank Limited.</font></h1>
+            <p><strong><font color="green">Login As An Employe</font></strong></p>
+            <br><br><br><br>
+        </header>
 
         <form action="" method="POST" enctype="multipart/form-data">
             <center>
                 <table>
                     <tr>
                         <td>
-                            <label>Username: </label>
+                            <label>
+                                <font color="darkblue">Username:</font>
+                            </label>
                             <input type="text" name="username"> <br><br>
                         </td>
                     </tr>
 
                     <tr>
                         <td>
-                            <label>Password : </label>
+                            <label>
+                                <font color="darkblue">Password :</font>
+                            </label>
                             <input type="password" name="password"> <br><br>
                         </td>
                     </tr>
@@ -33,6 +45,7 @@
                     <tr>
                         <td>
                             <center>
+                                <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                                 <input type="submit" name="submit" value="Login">
                                 <input type="submit" name="registration" value="Registration">
                             </center>
@@ -44,4 +57,4 @@
     </center>
 </body>
 
-</html>
+</html
