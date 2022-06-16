@@ -1,3 +1,8 @@
+<?php
+
+    include('../Control/adminlogincheck.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 

@@ -19,11 +19,11 @@
 
         if(file_put_contents('../Data/adminlogindata.json', $admininfoencode))
         {
-            echo "ok";
+            echo "";
         }
         else
         {
-            echo "not ok";
+            echo "";
         }
     }
 
