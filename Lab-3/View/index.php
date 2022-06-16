@@ -61,7 +61,7 @@ include("../Control/process.php");
 <tr>
      <td>
       Please choose a file
-               
+
       <input type="file" name ="myfile"> <br>
       <?php echo $fileErr; ?>
      <br>

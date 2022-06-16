@@ -53,7 +53,7 @@
                         <td>
                             <center>
                                 <label>Email: &nbsp &nbsp &nbsp</label>
-                                <input type="email" placeholder="Enter your email"> <br><br>
+                                <input type="email" name="email" placeholder="Enter your email"> <br><br>
                             </center>
                         </td>
                     </tr>
@@ -79,6 +79,18 @@
                     <tr>
                         <td>
                             <center>
+                                Please upload your picture
+                                <input type="file" name="profilepic"><br>
+                                <?php echo $fileErr; ?>
+                                <br>
+                            </center>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <center>
+                                <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                                 <input type="submit" name="submit" value="Register">
                             </center>
                         </td>
