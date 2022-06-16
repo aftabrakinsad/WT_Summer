@@ -10,7 +10,7 @@
 
 <body>
     <center>
-        <h1>Welcome to XYZ Bank Limited.</h1>
+        <h1>Welcome to City Bank Limited.</h1>
         <p><strong>To do further work, please register.</strong></p>
         <br><br><br><br><br><br><br><br>
 
