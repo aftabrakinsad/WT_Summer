@@ -8,15 +8,13 @@
     <title>Admin Log in</title>
 </head>
 
-<body>
+<body bgcolor="#D1CECD">
     <center>
-        <h1>
-            <font color="red">Welcome to City Bank Limited.</font>
-        </h1>
-        <p><strong>
-                <font color="red">To do further work, please log in.</font>
-            </strong></p>
-        <br><br><br><br><br><br><br><br>
+        <header>
+            <h1><font color="red">Welcome to City Bank Limited.</font></h1>
+            <p><strong><font color="red">To do further work, please log in.</font></strong></p>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+        </header>
 
         <form action="" method="POST" enctype="multipart/form-data">
             <center>
