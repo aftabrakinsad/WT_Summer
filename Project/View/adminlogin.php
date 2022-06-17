@@ -1,6 +1,6 @@
 <?php
 
-    include('../Control/adminlogincheck.php');
+include('../Control/adminlogincheck.php');
 
 ?>
 <!DOCTYPE html>
@@ -16,20 +16,25 @@
 <body bgcolor="#D1CECD">
     <center>
         <header>
-            <h1><font color="red">City Bank Limited.</font></h1>
-            <p><strong><font color="red">Login As An Admin</font></strong></p>
+            <h1>
+                <font color="red">City Bank Limited.</font>
+            </h1>
+            <p><strong>
+                    <font color="red">Login As An Admin</font>
+                </strong></p>
             <br><br><br><br><br><br><br><br><br><br><br><br>
         </header>
 
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form action="" <?php echo $_SERVER['PHP_SELF'];?> method="POST" enctype="multipart/form-data">
+        <?php include '../Control/cookie.php';?>
             <center>
                 <table>
                     <tr>
                         <td>
                             <label>
                                 <font color="darkblue">Username:</font>
+                                <input type="text" id="uname" name="uname" value="<?php if(isset($_COOKIE['uname'])){echo $_COOKIE['uname'];} ?>"> <br><br>
                             </label>
-                            <input type="text" name="username"> <br><br>
                         </td>
                     </tr>
 
@@ -37,8 +42,17 @@
                         <td>
                             <label>
                                 <font color="darkblue">Password :</font>
+                                <input type="password" name="password" value="<?php if(isset($_COOKIE['password'])){echo $_COOKIE['password'];}?>"> <br><br>
                             </label>
-                            <input type="password" name="password"> <br><br>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="remember" id="remember">
+                            <label for="remember">
+                                <b>Remember Me</b>
+                            </label>
                         </td>
                     </tr>
 
