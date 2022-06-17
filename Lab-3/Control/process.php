@@ -176,14 +176,5 @@ if(file_put_contents("../Data/data.json",$jsondata))
 else
 echo 'No Data Saved';
 
-$data = file_get_contents("../Data/data.json");
-$mydata = json_decode($data);
-foreach($mydata as $myobject)
-    {
-    foreach($myobject as $key=>$value)
-    {
-        echo $key." => ".$value."<br>";
-    }
-    }
 }
 ?>

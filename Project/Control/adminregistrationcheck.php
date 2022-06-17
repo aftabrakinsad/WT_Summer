@@ -83,7 +83,7 @@ if(isset($_POST["submit"]))
     {
         $nidErr = "NID must be an interger number";
     }
-    elseif (is_float($nid))
+    else if (is_float($nid))
     {
         $nidErr = "NID can't be fractional";
     }
@@ -96,10 +96,6 @@ if(isset($_POST["submit"]))
     if(empty($phone))
     {
         $phoneErr = "Phone number is required";
-    }
-    else if(!preg_match("/^[0-9]{10}+$/", $phone))
-    {
-        $phoneErr = "Enter your valid phone number";
     }
     else
     {
@@ -136,11 +132,11 @@ if(isset($_POST["submit"]))
     $dataencode = json_encode($datadecode, JSON_PRETTY_PRINT);
     if (file_put_contents('../Data/adminregistrationdata.json', $dataencode))
     {
-        echo "Registration incomplete";
+        echo "Registration Done, click login button to Login";
     }
     else
     {
-        echo "Registration Done, click login button to Login";
+        echo "Registration incomplete";
     }
 
     /*$data = file_get_contents("../Data/adminregistrationdata.json");
