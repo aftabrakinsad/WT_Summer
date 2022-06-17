@@ -1,3 +1,9 @@
+<?php
+
+    include('../Control/adminregistrationcheck.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

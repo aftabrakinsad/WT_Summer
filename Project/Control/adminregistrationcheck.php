@@ -67,7 +67,7 @@ if(isset($_POST["submit"]))
     }
     else if (is_string($nid))
     {
-        $nidErr = "NID must be an interger number"
+        $nidErr = "NID must be an interger number";
     }
     elseif (is_float($nid))
     {
@@ -130,7 +130,7 @@ if(isset($_POST["submit"]))
         $datadecode[] = $existingadminregistrationdata;
 
         $dataencode = json_encode($datadecode, JSON_PRETTY_PRINT);
-        if(file_put_contents("../Data/adminregistrationdata.json"))
+        if(file_put_contents("../Data/adminregistrationdata.json", $dataencode))
         {
             echo "Registration Done, click login button to Login";
         }
@@ -139,7 +139,7 @@ if(isset($_POST["submit"]))
             echo "Registration incomplete";
         }
 
-        $admindata = file_get_contents("../Data/adminregistrationdata.json");
+        /*$admindata = file_get_contents("../Data/adminregistrationdata.json");
         $data = json_decode($admindata);
         foreach($data as $dataobject)
         {
@@ -147,7 +147,7 @@ if(isset($_POST["submit"]))
             {
                 echo $key. "=>" .$value. "<br>";
             }
-        }
+        }*/
     }
 }
 
