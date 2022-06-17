@@ -21,6 +21,17 @@ if(isset($_POST["submit"]))
 
     if($fname != "" && $lname != "" && $uname != "" && $email != "" && $nid != "" && $phone != "")
     {
+        echo $_FILES["myfile"]["name"];
+        if(move_uploaded_file($_FILES["myfile"]["tmp_name"],"../Uploads/". $_FILES["myfile"]["name"]))
+        {
+            $filepath = "../Uploads/". $_FILES["myfile"]["name"];
+            $fileErr = "File Uploaded";
+        }
+        else
+        {
+            $fileErr = "Upload Error";
+        }
+        echo "<br>";
         $existingadminregistrationdata = file_get_contents('../Data/adminregistrationdata.json');
         $datadecode = json_decode($existingadminregistrationdata, true);
         $adminregistrationdata = array
@@ -35,18 +46,18 @@ if(isset($_POST["submit"]))
         );
         $datadecode[] = $adminregistrationdata;
         $dataencode = json_encode($datadecode, JSON_PRETTY_PRINT);
-
         if (file_put_contents('../Data/adminregistrationdata.json', $dataencode))
         {
             echo "Registration complete";
-        } else
+        }
+        else
         {
             echo "Registration incomplete";
         }
     }
     else
     {
-        echo "Please Fill The form";
+        echo "Please Fill Out This Form";
     }
 
     /*if(empty($fname))
@@ -125,9 +136,34 @@ if(isset($_POST["submit"]))
     else
     {
         $fileErr = "Upload Error";
-    }*/
+    }
 
     //echo "<br>";
+    $existingadminregistrationdata = file_get_contents('../Data/adminregistrationdata.json');
+    $datadecode = json_decode($existingadminregistrationdata, true);
+
+    $adminregistrationdata = array
+    (
+        'firstName' => $fname,
+        'lastName' => $lname,
+        'username' => $uname,
+        'email' => $email,
+        'nid' => $nid,
+        'phone' => $phone,
+        'filepath' => $filepath
+    );
+
+    $datadecode[] = $adminregistrationdata;
+
+    $dataencode = json_encode($datadecode, JSON_PRETTY_PRINT);
+    if (file_put_contents('../Data/adminregistrationdata.json', $dataencode))
+    {
+        echo "";
+    }
+    else
+    {
+        echo "Registration incomplete";
+    }*/
 }
 
 ?>
