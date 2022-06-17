@@ -298,15 +298,5 @@ if(file_put_contents("../Data/empregistrationdata.json",$jsondata))
 else
 echo 'No Data Saved';
 
-$data = file_get_contents("../Data/empregistrationdata.json");
-$mydata = json_decode($data);
-foreach($mydata as $myobject)
-     {
-     foreach($myobject as $key=>$value)
-    {
-        echo $key." => ".$value."<br>";
-    }
-    }
-
   }
 ?>
