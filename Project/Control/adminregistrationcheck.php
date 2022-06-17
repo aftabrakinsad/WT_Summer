@@ -19,7 +19,37 @@ if(isset($_POST["submit"]))
     $nid = $_POST["nid"];
     $phone = $_POST["phone"];
 
-    if(empty($fname))
+    if($fname != "" && $lname != "" && $uname != "" && $email != "" && $nid != "" && $phone != "")
+    {
+        $existingadminregistrationdata = file_get_contents('../Data/adminregistrationdata.json');
+        $datadecode = json_decode($existingadminregistrationdata, true);
+        $adminregistrationdata = array
+        (
+            'firstName' => $fname,
+            'lastName' => $lname,
+            'username' => $uname,
+            'email' => $email,
+            'nid' => $nid,
+            'phone' => $phone,
+            'filepath' => $filepath
+        );
+        $datadecode[] = $adminregistrationdata;
+        $dataencode = json_encode($datadecode, JSON_PRETTY_PRINT);
+
+        if (file_put_contents('../Data/adminregistrationdata.json', $dataencode))
+        {
+            echo "Registration complete";
+        } else
+        {
+            echo "Registration incomplete";
+        }
+    }
+    else
+    {
+        echo "Please Fill The form";
+    }
+
+    /*if(empty($fname))
     {
         $fnameErr = "Please Enter your First Name";
     }
@@ -95,45 +125,9 @@ if(isset($_POST["submit"]))
     else
     {
         $fileErr = "Upload Error";
-    }
+    }*/
 
     //echo "<br>";
-    $existingadminregistrationdata = file_get_contents('../Data/adminregistrationdata.json');
-    $datadecode = json_decode($existingadminregistrationdata, true);
-
-    $adminregistrationdata = array
-    (
-        'firstName' => $fname,
-        'lastName' => $lname,
-        'username' => $uname,
-        'email' => $email,
-        'nid' => $nid,
-        'phone' => $phone,
-        'filepath' => $filepath
-    );
-
-    $datadecode[] = $adminregistrationdata;
-
-    $dataencode = json_encode($datadecode, JSON_PRETTY_PRINT);
-    if (file_put_contents('../Data/adminregistrationdata.json', $dataencode))
-    {
-        echo "";
-    }
-    else
-    {
-        echo "Registration incomplete";
-    }
-
-
-    /*$data = file_get_contents("../Data/adminregistrationdata.json");
-    $mydata = json_decode($data);
-    foreach ($mydata as $myobject)
-    {
-        foreach ($myobject as $key => $value)
-        {
-            echo $key . " => " . $value . "<br>";
-        }
-    }*/
 }
 
 ?>
