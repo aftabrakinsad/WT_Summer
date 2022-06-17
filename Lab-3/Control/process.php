@@ -7,7 +7,7 @@ $emailErr = "";
 $fileErr = "";
 $desigErr ="";
 $LanErr ="";
-$Designation="";
+$designation="";
 $Language="";
 $fromdata ="";
 $filepath ="";
@@ -25,11 +25,11 @@ if(isset($Language))
     $LanErr = 'You Havent Selected a checkbox';
 }
 else{$Language = $_POST["PreferredLanguage"] ;}
-if(isset($Designation))
+if(isset($designation))
 {
     $desigErr = 'You have not selected any Designation';
 }
-else{$Designation = $_POST["designation"];}
+else{$designation = $_POST["designation"];}
 
     if (empty($name))
     {
@@ -74,17 +74,17 @@ else{$Designation = $_POST["designation"];}
     echo '<br>';
    
     if (
-        isset($Designation) )
+        isset($designation) )
         {
-        if ("juniorprogrammer"==$Designation) {
+        if ("juniorprogrammer"== $designation) {
             $desigErr = 'You selected Junior Programmer ';
          
         }
-        if ($Designation=='seniorprogrammer') {
+        if ($designation=='seniorprogrammer') {
             $desigErr = 'You selected Senior Programmer';
          
         }
-        if ($Designation=='projectlead') {
+        if ($designation=='projectlead') {
             $desigErr ='You selected Project Lead';
          
         }
@@ -160,7 +160,7 @@ $formdata = array(
     'pass'=>$_POST["pass"],
     'email'=>$_POST["email"],
     'language'=>$Language,
-    'designation'=>$_POST["designation"],
+    'designation' => $designation,
     'filepath'=>$filepath
 );
 $existingdata = file_get_contents('../Data/data.json');
