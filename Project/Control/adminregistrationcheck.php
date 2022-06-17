@@ -23,10 +23,6 @@ if(isset($_POST["submit"]))
     {
         $fnameErr = "Please Enter your First Name";
     }
-    else if(is_numeric($fname))
-    {
-        $fnameErr = "Name can't be numeric";
-    }
     else
     {
         echo "";
@@ -36,10 +32,6 @@ if(isset($_POST["submit"]))
     if (empty($lname))
     {
         $lnameErr = "Please Enter your Last Name";
-    }
-    else if (is_numeric($lname))
-    {
-        $lnameErr = "Name can't be numeric";
     }
     else
     {
@@ -51,9 +43,9 @@ if(isset($_POST["submit"]))
     {
         $unameErr = "Please Enter your Username";
     }
-    else if (is_numeric($uname))
+    else if (strlen($uname) <=5)
     {
-        $unameErr = "Name can't be numeric";
+        $unameErr = "Username must be more then 5 characters";
     }
     else
     {
@@ -132,12 +124,13 @@ if(isset($_POST["submit"]))
     $dataencode = json_encode($datadecode, JSON_PRETTY_PRINT);
     if (file_put_contents('../Data/adminregistrationdata.json', $dataencode))
     {
-        echo "Registration Done, click login button to Login";
+        echo "";
     }
     else
     {
         echo "Registration incomplete";
     }
+
 
     /*$data = file_get_contents("../Data/adminregistrationdata.json");
     $mydata = json_decode($data);

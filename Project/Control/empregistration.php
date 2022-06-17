@@ -79,10 +79,6 @@ if (isset($_POST['submit']))
        {
         $LastNameErr = 'Please Enter Last Name';
         }
-        else if(is_numeric($LastName))
-       {
-        $LastNameErr ='Last Name can not be numeric';
-       }
 
        else if (!preg_match("/^[a-zA-Z-' ]*$/",$LastName)) 
            {

@@ -14,7 +14,7 @@ include("../control/empregistration.php");
 
 <body>
     <center>
-    <h1><font color="green">XYZ Bank Limited.</font></h1>
+    <h1><font color="green">City Bank Limited.</font></h1>
     
     <form action="" method="POST" enctype="multipart/form-data">
         
