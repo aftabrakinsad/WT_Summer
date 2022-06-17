@@ -30,7 +30,7 @@ include('../Control/adminregistrationcheck.php');
                                     <font>Firstname: </font>
                                 </label>
                                 <input type="text" name="fname" placeholder="Enter your firstname">
-                                    <?php echo $fnameErr ?>
+                                <?php echo $fnameErr; ?>
                                 <br><br>
                             </center>
                         </td>
@@ -52,7 +52,11 @@ include('../Control/adminregistrationcheck.php');
                             <center>
                                 <label>Username: </label>
                                 <input type="text" name="uname" placeholder="Enter your username">
-                                <?php echo $unameErr; ?>
+                                <span>
+                                    <font color="red">
+                                        <?php echo $unameErr; ?>
+                                    </font>
+                                </span>
                                 <br><br>
                             </center>
                         </td>
@@ -63,7 +67,7 @@ include('../Control/adminregistrationcheck.php');
                             <center>
                                 <label>Email: &nbsp &nbsp &nbsp</label>
                                 <input type="email" name="email" placeholder="Enter your email">
-                                <?php echo $emailErr; ?>
+                                <span><?php echo $emailErr; ?></span>
                                 <br><br>
                             </center>
                         </td>
