@@ -121,7 +121,7 @@ if(isset($_POST["submit"]))
             'username' => $_POST["uname"],
             'email' => $_POST["email"],
             'nid' => $_POST["nid"],
-            'phine' => $_POST["phone"],
+            'phone' => $_POST["phone"],
             'filepath' => $filepath
         );
 
