@@ -18,7 +18,7 @@ include('../Control/adminregistrationcheck.php');
     <center>
         <h1>Welcome to City Bank Limited.</h1>
         <p><strong>To do further work, please register.</strong></p>
-        <br><br><br><br><br><br><br><br>
+        <br><br>
 
         <form action="" method="POST" enctype="multipart/form-data">
             <center>
@@ -27,7 +27,7 @@ include('../Control/adminregistrationcheck.php');
                         <td>
                             <center>
                                 <label>
-                                    <font>Firstname: </font>
+                                    <font>Firstname: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</font>
                                 </label>
                                 <input type="text" name="fname" placeholder="Enter your firstname">
                                 <?php echo $fnameErr; ?>
@@ -39,7 +39,7 @@ include('../Control/adminregistrationcheck.php');
                     <tr>
                         <td>
                             <center>
-                                <label>Lastname: </label>
+                                <label>Lastname: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
                                 <input type="text" name="lname" placeholder="Enter your lastname">
                                 <?php echo $lnameErr; ?>
                                 <br><br>
@@ -50,8 +50,8 @@ include('../Control/adminregistrationcheck.php');
                     <tr>
                         <td>
                             <center>
-                                <label>Username: </label>
-                                <input type="text" name="uname" placeholder="Enter your username">
+                                <label>Username: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+                                <input type="text" name="uname" placeholder="Enter your username"><br>
                                 <span>
                                     <font color="red">
                                         <?php echo $unameErr; ?>
@@ -65,9 +65,13 @@ include('../Control/adminregistrationcheck.php');
                     <tr>
                         <td>
                             <center>
-                                <label>Email: &nbsp &nbsp &nbsp</label>
+                                <label>Email: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
                                 <input type="email" name="email" placeholder="Enter your email">
-                                <span><?php echo $emailErr; ?></span>
+                                <span>
+                                    <font color="red">
+                                        <?php echo $emailErr; ?>
+                                    </font>
+                                </span>
                                 <br><br>
                             </center>
                         </td>
@@ -76,9 +80,13 @@ include('../Control/adminregistrationcheck.php');
                     <tr>
                         <td>
                             <center>
-                                <label>NID: &nbsp; &nbsp; &nbsp; &nbsp;</label>
-                                <input type="text" name="nid" placeholder="Enter your valid nid">
-                                <?php echo $nidErr; ?>
+                                <label>NID: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+                                <input type="text" name="nid" placeholder="Enter your valid nid"> <br>
+                                <span>
+                                    <font color="red">
+                                        <?php echo $nidErr; ?>
+                                    </font>
+                                </span>
                                 <br><br>
                             </center>
                         </td>
@@ -87,7 +95,7 @@ include('../Control/adminregistrationcheck.php');
                     <tr>
                         <td>
                             <center>
-                                <label>Phone: &nbsp; &nbsp; &nbsp;</label>
+                                <label>Phone: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
                                 <input type="text" name="phone" placeholder="Enter your phone number">
                                 <?php echo $phoneErr; ?>
                                 <br><br>
@@ -98,7 +106,35 @@ include('../Control/adminregistrationcheck.php');
                     <tr>
                         <td>
                             <center>
-                                Please upload your picture
+                                <label>Password: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+                                <input type="password" name="password" placeholder="Enter your password"><br>
+                                <span>
+                                    <font color="red">
+                                        <?php echo $passwordErr; ?>
+                                    </font>
+                                </span>
+                                <br><br>
+                            </center>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <center>
+                                <label>Confirm Password: &nbsp;</label>
+                                <input type="password" name="cpassword" placeholder="Confirm Password"><br>
+                                <font color="red">
+                                    <?php echo $cpasswordErr; ?>
+                                </font>
+                                <br><br>
+                            </center>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <center>
+                                Please upload your picture &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <input type="file" name="myfile">
                                 <?php echo $fileErr; ?>
                                 <br><br>
@@ -109,7 +145,7 @@ include('../Control/adminregistrationcheck.php');
                     <tr>
                         <td>
                             <center>
-                                <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                                 <input type="submit" name="submit" value="Register">
                             </center>
                         </td>
