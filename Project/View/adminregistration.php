@@ -29,8 +29,9 @@ include('../Control/adminregistrationcheck.php');
                                 <label>
                                     <font>Firstname: </font>
                                 </label>
-                                <input type="text" name="fname" placeholder="Enter your firstname">
-                                <?php echo $fnameErr; ?>
+                                <input type="text" name="fname" placeholder="Enter your firstname"><?php if (isset($fnameErr)) { ?>
+                                    <p><?php echo $fnameErr ?></p>
+                                <?php } ?>
                                 <br><br>
                             </center>
                         </td>

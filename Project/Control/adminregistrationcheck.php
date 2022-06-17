@@ -71,14 +71,6 @@ if(isset($_POST["submit"]))
     {
         $nidErr = "Please Enter your NID";
     }
-    else if (is_string($nid))
-    {
-        $nidErr = "NID must be an interger number";
-    }
-    else if (is_float($nid))
-    {
-        $nidErr = "NID can't be fractional";
-    }
     else
     {
         echo "";
@@ -109,12 +101,18 @@ if(isset($_POST["submit"]))
 
     $adminregistrationdata = array
     (
-        'firstname' => $_POST["fname"],
+        /*'firstname' => $_POST["fname"],
         'lastname' => $_POST["lname"],
         'username' => $_POST["uname"],
         'email' => $_POST["email"],
         'nid' => $_POST["nid"],
-        'phone' => $_POST["phone"],
+        'phone' => $_POST["phone"],*/
+        'firstName' => $fname,
+        'lastName' => $lname,
+        'username' => $uname,
+        'email' => $email,
+        'nid' => $nid,
+        'phone' => $phone,
         'filepath' => $filepath
     );
     $existingadminregistrationdata = file_get_contents('../Data/adminregistrationdata.json');
