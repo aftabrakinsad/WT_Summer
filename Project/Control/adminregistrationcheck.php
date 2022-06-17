@@ -19,17 +19,17 @@ if(isset($_POST["submit"]))
     $nid = $_POST["nid"];
     $phone = $_POST["phone"];
 
-    if(strlen($uname) <= 5) 
+    if($uname != "" && strlen($uname) <= 5)
     {
-        $unameErr = "First Name must be more then 5 characters!";
+        $unameErr = "First name must be more then 5 characters!";
     }
-    elseif()
+    elseif ($email != "" && !preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $email))
     {
-
+        $emailErr = "Enter your valid email";
     }
     else
     {
-        if($fname != "" && $lname != "" && $uname != "" && $email != "" && $nid != "" &&   $phone != "")
+        if($fname != "" && $lname != "" && $nid != "" &&   $phone != "")
         {
             echo $_FILES["myfile"]["name"];
             if(move_uploaded_file($_FILES["myfile"]["tmp_name"],"../Uploads/". $_FILES  ["myfile"]["name"]))
@@ -42,7 +42,7 @@ if(isset($_POST["submit"]))
                 $fileErr = "Upload Error";
             }
             echo "<br>";
-            $existingadminregistrationdata = file_get_contents('../Data/    adminregistrationdata.json');
+            $existingadminregistrationdata = file_get_contents('../Data/adminregistrationdata.json');
             $datadecode = json_decode($existingadminregistrationdata, true);
             $adminregistrationdata = array
             (
