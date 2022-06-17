@@ -1,6 +1,6 @@
 <?php
 
-    include('../Control/adminregistrationcheck.php');
+include('../Control/adminregistrationcheck.php');
 
 ?>
 
@@ -30,6 +30,7 @@
                                     <font>Firstname: </font>
                                 </label>
                                 <input type="text" name="fname" placeholder="Enter your firstname">
+                                <?php echo $fnameErr; ?>
                                 <br><br>
                             </center>
                         </td>
@@ -40,6 +41,7 @@
                             <center>
                                 <label>Lastname: </label>
                                 <input type="text" name="lname" placeholder="Enter your lastname">
+                                <?php echo $lnameErr; ?>
                                 <br><br>
                             </center>
                         </td>
@@ -50,6 +52,7 @@
                             <center>
                                 <label>Username: </label>
                                 <input type="text" name="uname" placeholder="Enter your username">
+                                <?php echo $unameErr; ?>
                                 <br><br>
                             </center>
                         </td>
@@ -59,7 +62,9 @@
                         <td>
                             <center>
                                 <label>Email: &nbsp &nbsp &nbsp</label>
-                                <input type="email" name="email" placeholder="Enter your email"> <br><br>
+                                <input type="email" name="email" placeholder="Enter your email">
+                                <?php echo $emailErr; ?>
+                                <br><br>
                             </center>
                         </td>
                     </tr>
@@ -68,7 +73,9 @@
                         <td>
                             <center>
                                 <label>NID: &nbsp; &nbsp; &nbsp; &nbsp;</label>
-                                <input type="text" name="nid" placeholder="Enter your valid nid"> <br><br>
+                                <input type="text" name="nid" placeholder="Enter your valid nid">
+                                <?php echo $nidErr; ?>
+                                <br><br>
                             </center>
                         </td>
                     </tr>
@@ -77,7 +84,9 @@
                         <td>
                             <center>
                                 <label>Phone: &nbsp; &nbsp; &nbsp;</label>
-                                <input type="text" name="phone" placeholder="Enter your phone number"> <br><br>
+                                <input type="text" name="phone" placeholder="Enter your phone number">
+                                <?php echo $phoneErr; ?>
+                                <br><br>
                             </center>
                         </td>
                     </tr>

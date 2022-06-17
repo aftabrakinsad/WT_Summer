@@ -134,16 +134,16 @@ if(isset($_POST["submit"]))
     $datadecode[] = $adminregistrationdata;
 
     $dataencode = json_encode($datadecode, JSON_PRETTY_PRINT);
-    if (file_put_contents('../Data/adminregistrationdata.json', $dataencode))
+    if (empty(file_put_contents('../Data/adminregistrationdata.json', $dataencode)))
     {
         echo "<br>";
-        echo "Registration Done, click login button to Login";
-        echo "<br>";
+        echo "Registration incomplete";
     }
     else
     {
         echo "<br>";
-        echo "Registration incomplete";
+        echo "Registration Done, click login button to Login";
+        echo "<br>";
     }
 
     $data = file_get_contents("../Data/adminregistrationdata.json");
