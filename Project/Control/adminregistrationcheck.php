@@ -39,7 +39,7 @@ if(isset($_POST["submit"]))
             }
             else
             {
-                $fileErr = "Upload Error";
+                echo "";
             }
             echo "<br>";
             $existingadminregistrationdata = file_get_contents('../Data/adminregistrationdata.json');
