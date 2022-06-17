@@ -98,15 +98,11 @@ if(isset($_POST["submit"]))
     }
 
     //echo "<br>";
+    $existingadminregistrationdata = file_get_contents('../Data/adminregistrationdata.json');
+    $datadecode = json_decode($existingadminregistrationdata, true);
 
     $adminregistrationdata = array
     (
-        /*'firstname' => $_POST["fname"],
-        'lastname' => $_POST["lname"],
-        'username' => $_POST["uname"],
-        'email' => $_POST["email"],
-        'nid' => $_POST["nid"],
-        'phone' => $_POST["phone"],*/
         'firstName' => $fname,
         'lastName' => $lname,
         'username' => $uname,
@@ -115,8 +111,7 @@ if(isset($_POST["submit"]))
         'phone' => $phone,
         'filepath' => $filepath
     );
-    $existingadminregistrationdata = file_get_contents('../Data/adminregistrationdata.json');
-    $datadecode = json_decode($existingadminregistrationdata);
+
     $datadecode[] = $adminregistrationdata;
 
     $dataencode = json_encode($datadecode, JSON_PRETTY_PRINT);
