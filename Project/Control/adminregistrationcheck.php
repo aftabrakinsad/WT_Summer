@@ -105,10 +105,10 @@ if(isset($_POST["submit"]))
         echo "Phone: " . $phone;
     }
 
-    echo $_FILES["profilepic"]["name"];
-    if(move_uploaded_file($_FILES["profilepic"]["tmp_name"],"../Uploads/". $_FILES["profilepic"]["name"]))
+    echo $_FILES["myfile"]["name"];
+    if(move_uploaded_file($_FILES["myfile"]["tmp_name"],"../Uploads/". $_FILES["myfile"]["name"]))
     {
-        $filepath = "../Uploads/". $_FILES["profilepic"]["name"];
+        $filepath = "../Uploads/". $_FILES["myfile"]["name"];
         $fileErr = "File Uploaded";
     }
     else

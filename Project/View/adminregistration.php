@@ -86,7 +86,7 @@
                         <td>
                             <center>
                                 Please upload your picture
-                                <input type="file" name="profilepic"><br>
+                                <input type="file" name="myfile"><br>
                                 <?php echo $fileErr; ?>
                                 <br>
                             </center>
