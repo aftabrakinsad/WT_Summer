@@ -127,20 +127,28 @@ if(isset($_POST["submit"]))
         'phone' => $_POST["phone"],
         'filepath' => $filepath
     );
-    $existingadminregistrationdata = file_get_contents("../
-    Data/adminregistrationdata.json");
-
+    $existingadminregistrationdata = file_get_contents('../Data/adminregistrationdata.json');
     $datadecode = json_decode($existingadminregistrationdata);
     $datadecode[] = $adminregistrationdata;
+
     $dataencode = json_encode($datadecode, JSON_PRETTY_PRINT);
-    if (file_put_contents("../Data/adminregistrationdata.
-    json", $dataencode))
+    if (file_put_contents('../Data/adminregistrationdata.json', $dataencode))
     {
         echo "Registration Done, click login button to Login";
     }
     else
     {
         echo "Registration incomplete";
+    }
+
+    $data = file_get_contents("../Data/adminregistrationdata.json");
+    $mydata = json_decode($data);
+    foreach ($mydata as $myobject)
+    {
+        foreach ($myobject as $key => $value)
+        {
+            echo $key . " => " . $value . "<br>";
+        }
     }
 }
 
