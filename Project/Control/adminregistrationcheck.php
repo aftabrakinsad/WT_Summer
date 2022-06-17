@@ -125,7 +125,7 @@ if(isset($_POST["submit"]))
             'filepath' => $filepath
         );
 
-        $existingadminregistrationdata = file_get_contents('../Data/adminregistrationdata.json');
+        $existingadminregistrationdata = file_get_contents("../Data/adminregistrationdata.json");
         $datadecode = json_decode($existingadminregistrationdata);
         $datadecode[] = $existingadminregistrationdata;
 
