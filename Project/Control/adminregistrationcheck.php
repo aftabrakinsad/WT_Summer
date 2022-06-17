@@ -29,7 +29,7 @@ if(isset($_POST["submit"]))
     }
     else
     {
-        echo "Your First Name is: ". $fname;
+        echo "";
     }
     echo "<br>";
 
@@ -43,7 +43,7 @@ if(isset($_POST["submit"]))
     }
     else
     {
-        echo "Your Last Name is: " . $lname;
+        echo "";
     }
     echo "<br>";
 
@@ -57,7 +57,7 @@ if(isset($_POST["submit"]))
     }
     else
     {
-        echo "Your Username is: " . $uname;
+        echo "";
     }
     echo "<br>";
 
@@ -71,7 +71,7 @@ if(isset($_POST["submit"]))
     }
     else
     {
-        echo "Email: " . $email;
+        echo "";
     }
     echo "<br>";
 
@@ -89,7 +89,7 @@ if(isset($_POST["submit"]))
     }
     else
     {
-        echo "NID: " . $nid;
+        echo "";
     }
     echo "<br>";
 
@@ -103,7 +103,7 @@ if(isset($_POST["submit"]))
     }
     else
     {
-        echo "Phone: " . $phone;
+        echo "";
     }
 
     echo $_FILES["myfile"]["name"];
@@ -116,6 +116,8 @@ if(isset($_POST["submit"]))
     {
         $fileErr = "Upload Error";
     }
+
+    echo "<br>";
 
     $adminregistrationdata = array
     (
@@ -134,10 +136,13 @@ if(isset($_POST["submit"]))
     $dataencode = json_encode($datadecode, JSON_PRETTY_PRINT);
     if (file_put_contents('../Data/adminregistrationdata.json', $dataencode))
     {
+        echo "<br>";
         echo "Registration Done, click login button to Login";
+        echo "<br>";
     }
     else
     {
+        echo "<br>";
         echo "Registration incomplete";
     }
 
