@@ -138,16 +138,6 @@ if(isset($_POST["submit"]))
         {
             echo "Registration incomplete";
         }
-
-        /*$admindata = file_get_contents("../Data/adminregistrationdata.json");
-        $data = json_decode($admindata);
-        foreach($data as $dataobject)
-        {
-            foreach($dataobject as $key => $value)
-            {
-                echo $key. "=>" .$value. "<br>";
-            }
-        }*/
     }
 }
 
