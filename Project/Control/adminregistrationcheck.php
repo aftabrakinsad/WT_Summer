@@ -114,7 +114,7 @@ if(isset($_POST["submit"]))
     else
     {
         $fileErr = "Upload Error";
-        adminregistrationdata = array
+        $adminregistrationdata = array
         (
             'firstname' => $_POST["fname"],
             'lastname' => $_POST["lname"],
@@ -124,6 +124,30 @@ if(isset($_POST["submit"]))
             'phine' => $_POST["phone"],
             'filepath' => $filepath
         );
+
+        $existingadminregistrationdata = file_get_contents('../Data/adminregistrationdata.json');
+        $datadecode = json_decode($existingadminregistrationdata);
+        $datadecode[] = $existingadminregistrationdata;
+
+        $dataencode = json_encode($datadecode, JSON_PRETTY_PRINT);
+        if(file_put_contents("../Data/adminregistrationdata.json"))
+        {
+            echo "Registration Done, click login button to Login";
+        }
+        else
+        {
+            echo "Registration incomplete";
+        }
+
+        $admindata = file_get_contents("../Data/adminregistrationdata.json");
+        $data = json_decode($admindata);
+        foreach($data as $dataobject)
+        {
+            foreach($dataobject as $key => $value)
+            {
+                echo $key. "=>" .$value. "<br>";
+            }
+        }
     }
 }
 
