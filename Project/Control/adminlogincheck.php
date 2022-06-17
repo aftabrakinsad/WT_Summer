@@ -1,8 +1,11 @@
 <?php
 
+$unameErr = "";
+$passwordErr = "";
+
     if(isset($_POST['submit']))
     {
-        $username = $_POST['username'];
+        $uname = $_POST['uname'];
         $password = $_POST['password'];
 
         $admindata = file_get_contents('../Data/adminlogindata.json');
