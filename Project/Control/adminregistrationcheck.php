@@ -31,7 +31,7 @@ if(isset($_POST["submit"]))
     {
         echo "";
     }
-    echo "<br>";
+    //echo "<br>";
 
     if (empty($lname))
     {
@@ -45,7 +45,7 @@ if(isset($_POST["submit"]))
     {
         echo "";
     }
-    echo "<br>";
+    //echo "<br>";
 
     if (empty($uname))
     {
@@ -59,7 +59,7 @@ if(isset($_POST["submit"]))
     {
         echo "";
     }
-    echo "<br>";
+    //echo "<br>";
 
     if(empty($email))
     {
@@ -73,11 +73,11 @@ if(isset($_POST["submit"]))
     {
         echo "";
     }
-    echo "<br>";
+    //echo "<br>";
 
     if (empty($nid))
     {
-        $nidErr = "Please Enter your NID.";
+        $nidErr = "Please Enter your NID";
     }
     else if (is_string($nid))
     {
@@ -91,7 +91,7 @@ if(isset($_POST["submit"]))
     {
         echo "";
     }
-    echo "<br>";
+    //echo "<br>";
 
     if(empty($phone))
     {
@@ -117,7 +117,7 @@ if(isset($_POST["submit"]))
         $fileErr = "Upload Error";
     }
 
-    echo "<br>";
+    //echo "<br>";
 
     $adminregistrationdata = array
     (
@@ -134,19 +134,16 @@ if(isset($_POST["submit"]))
     $datadecode[] = $adminregistrationdata;
 
     $dataencode = json_encode($datadecode, JSON_PRETTY_PRINT);
-    if (empty(file_put_contents('../Data/adminregistrationdata.json', $dataencode)))
+    if (file_put_contents('../Data/adminregistrationdata.json', $dataencode))
     {
-        echo "<br>";
         echo "Registration incomplete";
     }
     else
     {
-        echo "<br>";
         echo "Registration Done, click login button to Login";
-        echo "<br>";
     }
 
-    $data = file_get_contents("../Data/adminregistrationdata.json");
+    /*$data = file_get_contents("../Data/adminregistrationdata.json");
     $mydata = json_decode($data);
     foreach ($mydata as $myobject)
     {
@@ -154,7 +151,7 @@ if(isset($_POST["submit"]))
         {
             echo $key . " => " . $value . "<br>";
         }
-    }
+    }*/
 }
 
 ?>

@@ -95,9 +95,9 @@ include('../Control/adminregistrationcheck.php');
                         <td>
                             <center>
                                 Please upload your picture
-                                <input type="file" name="myfile"><br>
+                                <input type="file" name="myfile">
                                 <?php echo $fileErr; ?>
-                                <br>
+                                <br><br>
                             </center>
                         </td>
                     </tr>
