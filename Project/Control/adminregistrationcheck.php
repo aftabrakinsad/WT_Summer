@@ -61,7 +61,21 @@ if(isset($_POST["submit"]))
     }
     echo "<br>";
 
-    if(empty($nid))
+    if(empty($email))
+    {
+        $emailErr = "You must enter your email";
+    }
+    else if(!preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $email))
+    {
+        $emailErr = "Enter a valid email";
+    }
+    else
+    {
+        echo "Email: " . $email;
+    }
+    echo "<br>";
+
+    if (empty($nid))
     {
         $nidErr = "Please Enter your NID.";
     }
@@ -76,19 +90,6 @@ if(isset($_POST["submit"]))
     else
     {
         echo "NID: " . $nid;
-    }
-
-    if(empty($email))
-    {
-        $emailErr = "You must enter your email";
-    }
-    else if(!preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $email))
-    {
-        $emailErr = "Enter a valid email";
-    }
-    else
-    {
-        echo "Email: " . $email;
     }
     echo "<br>";
 
@@ -114,30 +115,32 @@ if(isset($_POST["submit"]))
     else
     {
         $fileErr = "Upload Error";
-        $adminregistrationdata = array
-        (
-            'firstname' => $_POST["fname"],
-            'lastname' => $_POST["lname"],
-            'username' => $_POST["uname"],
-            'email' => $_POST["email"],
-            'nid' => $_POST["nid"],
-            'phone' => $_POST["phone"],
-            'filepath' => $filepath
-        );
+    }
 
-        $existingadminregistrationdata = file_get_contents("../Data/adminregistrationdata.json");
-        $datadecode = json_decode($existingadminregistrationdata);
-        $datadecode[] = $existingadminregistrationdata;
+    $adminregistrationdata = array
+    (
+        'firstname' => $_POST["fname"],
+        'lastname' => $_POST["lname"],
+        'username' => $_POST["uname"],
+        'email' => $_POST["email"],
+        'nid' => $_POST["nid"],
+        'phone' => $_POST["phone"],
+        'filepath' => $filepath
+    );
+    $existingadminregistrationdata = file_get_contents("../
+    Data/adminregistrationdata.json");
 
-        $dataencode = json_encode($datadecode, JSON_PRETTY_PRINT);
-        if(file_put_contents("../Data/adminregistrationdata.json", $dataencode))
-        {
-            echo "Registration Done, click login button to Login";
-        }
-        else
-        {
-            echo "Registration incomplete";
-        }
+    $datadecode = json_decode($existingadminregistrationdata);
+    $datadecode[] = $adminregistrationdata;
+    $dataencode = json_encode($datadecode, JSON_PRETTY_PRINT);
+    if (file_put_contents("../Data/adminregistrationdata.
+    json", $dataencode))
+    {
+        echo "Registration Done, click login button to Login";
+    }
+    else
+    {
+        echo "Registration incomplete";
     }
 }
 
