@@ -32,7 +32,7 @@ if(isset($_POST["submit"]))
 
     if($uname != "" && strlen($uname) <= 5)
     {
-        $unameErr = "!First name must be more then 5 characters!";
+        $unameErr = "!Username must be more then 5 characters!";
     }
     if ($email != "" && !preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $email))
     {
@@ -74,12 +74,17 @@ if(isset($_POST["submit"]))
             );
             $datadecode[] = $adminregistrationdata;
             $dataencode = json_encode($datadecode, JSON_PRETTY_PRINT);
-            if (file_put_contents('../Data/adminregistrationdata.json', $dataencode)) {
-                echo "Registration complete";
-            } else {
+            if (file_put_contents('../Data/adminregistrationdata.json', $dataencode))
+            {
+                echo "Registration complete. Please click the login button to LOGIN";
+            }
+            else
+            {
                 echo "Registration incomplete";
             }
-        } else {
+        }
+        else
+        {
             echo "Please Fill Out This Form";
         }
     }
