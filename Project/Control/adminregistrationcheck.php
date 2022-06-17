@@ -23,13 +23,17 @@ if(isset($_POST["submit"]))
     {
         $unameErr = "First name must be more then 5 characters!";
     }
-    elseif ($email != "" && !preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $email))
+    if ($email != "" && !preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $email))
     {
         $emailErr = "Enter your valid email";
     }
+    if($nid != "" && !is_numeric($nid))
+    {
+        $nidErr = "NID must have numeric value";
+    }
     else
     {
-        if($fname != "" && $lname != "" && $nid != "" &&   $phone != "")
+        if($fname != "" && $lname != "" &&   $phone != "")
         {
             echo $_FILES["myfile"]["name"];
             if(move_uploaded_file($_FILES["myfile"]["tmp_name"],"../Uploads/". $_FILES  ["myfile"]["name"]))

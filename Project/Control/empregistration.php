@@ -94,7 +94,7 @@ if (isset($_POST['submit']))
 
         /***** Password    ****/
 
-        if (strlen($Password) < 8 ||empty($Password)) {
+        if (strlen($Password) == 8 ||empty($Password)) {
             $passwordErr =  'Password Must Contain 8 character!';
         } 
         
