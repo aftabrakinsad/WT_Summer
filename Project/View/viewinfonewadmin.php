@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Information</title>
+    <title>New Admin Information</title>
 </head>
-
 <body bgcolor="skyblue">
     <tr>
         <td>
@@ -17,14 +15,13 @@
     <center>
         <tr>
             <td>
-                <h1>Admin Login Informations</h1>
+                <h1>New Admins Registration Informations</h1>
             </td>
         </tr>
 
         <tr>
-            <?php include("../control/viewadmin.php"); ?>
+            <?php include("../control/viewnewadminregistrations.php"); ?>
         </tr>
     </center>
 </body>
-
 </html>

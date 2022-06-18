@@ -17,9 +17,21 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
 
 <body>
     <center>
-        <h3>Welcome to the deshboard<?php include('../Control/cookie.php'); ?> </h3>
-        <h3 align="left"><a href="viewinformation.php">View Admins Login Data</a></h3>
-        <h5>Do you want to <a href="../Control/adminlogout.php">logout</a></h5>
+        <h3>
+            Welcome to the deshboard<?php include('../Control/cookie.php'); ?>
+        </h3>
+
+        <h3 align="left">
+            <a href="viewinformation.php">View Admins Login Data</a>
+        </h3>
+
+        <h3 align="left">
+            <a href="viewinfonewadmin.php">View New Admin Registrations.</a>
+        </h3>
+
+        <h5>
+            Do you want to <a href="../Control/adminlogout.php">logout</a>
+        </h5>
     </center>
 </body>
 
