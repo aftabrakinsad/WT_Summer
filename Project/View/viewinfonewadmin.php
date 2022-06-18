@@ -15,7 +15,7 @@
     <center>
         <tr>
             <td>
-                <h1>New Admins Registration Informations</h1>
+                <h1>Admins Registration Informations</h1>
             </td>
         </tr>
 

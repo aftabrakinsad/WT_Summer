@@ -39,24 +39,6 @@
                 if ($f == 0) {
                     echo "Enter Username and password currectly!";
                 }
-                else
-                {
-                    $admininfo = array(
-                        'uname' => $uname,
-                        'password' => $password
-                    );
-
-                    $admindata_array[] = $admininfo;
-                    $admininfoencode = json_encode($admindata_array, JSON_PRETTY_PRINT);
-
-                    if (file_put_contents('../Data/adminlogindata.json', $admininfoencode))
-                    {
-                        echo "";
-                    } else
-                    {
-                        echo "";
-                    }
-                }
             }
         }
         else
