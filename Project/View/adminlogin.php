@@ -1,7 +1,11 @@
 <?php
 
-include('../Control/adminlogincheck.php');
+    include('../Control/adminlogincheck.php');
 
+    if(isset($_SESSION['uname']))
+    {
+        header("location: ../View/adminhomepage.php");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,9 +19,6 @@ include('../Control/adminlogincheck.php');
 
 <body bgcolor="#D1CECD">
     <center>
-
-
-
         <header>
             <h1>
                 <font color="red">City Bank Limited.</font>
