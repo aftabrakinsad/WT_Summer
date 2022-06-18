@@ -34,12 +34,12 @@
                             echo "";
                         }
 
-                            $f = 1;
-                            if($remember)
-                            {
-                                setcookie("uname", $_POST["uname"],time()+86000);
-                            }
-                            header("location: ../view/adminhomepage.php");
+                        $f = 1;
+                        if($remember)
+                        {
+                            setcookie("uname", $_POST["uname"],time()+86000);
+                        }
+                        header("location: ../view/adminhomepage.php");
                         }
                     }
                 }

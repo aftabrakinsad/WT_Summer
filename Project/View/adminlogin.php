@@ -22,23 +22,22 @@ if (isset($_SESSION['uname'])) {
             <h1>
                 <font color="red">City Bank Limited.</font>
             </h1>
-            <p><strong>
-                    <font color="red">Login As An Admin</font>
-                </strong></p>
+            <p>
+                <strong>
+                    <font color="red">Login As An Admin</font> <br>
+                </strong>
+            </p>
             <br><br><br><br><br><br><br><br><br>
         </header>
 
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
-            <?php include '../Control/cookie.php'; ?>
             <center>
                 <table>
                     <tr>
                         <td>
                             <label for="uname">
                                 <font color="darkblue">Username:</font>
-                                <input type="text" name="uname" value="<?php if (isset($_COOKIE['uname'])) {
-                                                                            echo $_COOKIE['uname'];
-                                                                        } ?>">
+                                <input type="text" name="uname">
                                 <br><br>
                             </label>
                         </td>
@@ -48,9 +47,7 @@ if (isset($_SESSION['uname'])) {
                         <td>
                             <label>
                                 <font color="darkblue">Password :</font>
-                                <input type="password" name="password" value="<?php if (isset($_COOKIE['password'])) {
-                                                                                    echo $_COOKIE['password'];
-                                                                                } ?>">
+                                <input type="password" name="password">
                                 <br><br>
                             </label>
                         </td>
