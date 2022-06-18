@@ -1,4 +1,5 @@
-[{
+[
+    {
         "firstName": "Aftab, Rakin",
         "lastName": "Sad",
         "username": "aftabrakinsad",
@@ -19,5 +20,16 @@
         "password": "Aftab123@",
         "cpassword": "Aftab123@",
         "filepath": "..\/Uploads\/aiub logo.png"
+    },
+    {
+        "firstName": "Fatema",
+        "lastName": "Aftab",
+        "username": "fatemaaftab",
+        "email": "fatema@gmail.com",
+        "nid": "7623457666235",
+        "phone": "8347529357",
+        "password": "Fatema@123",
+        "cpassword": "Fatema@123",
+        "filepath": "..\/Uploads\/Fx1.jpg"
     }
 ]

@@ -1,5 +1,5 @@
 <?php
-include("../control/adminregistrationcheck.php");
+include("../Control/adminregistrationcheck.php");
 session_start();
 
 $data = file_get_contents("../Data/adminregistrationdata.json");

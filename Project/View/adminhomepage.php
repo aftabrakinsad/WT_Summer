@@ -22,11 +22,7 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
         </h3>
 
         <h3 align="left">
-            <a href="viewinformation.php">View Admins Login Data</a>
-        </h3>
-
-        <h3 align="left">
-            <a href="viewinfonewadmin.php">View New Admin Registrations.</a>
+            <a href="viewinfonewadmin.php">View Admin Registration Information</a>
         </h3>
 
         <h5>
