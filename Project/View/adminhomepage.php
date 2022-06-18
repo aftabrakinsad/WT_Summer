@@ -16,8 +16,11 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
 </head>
 
 <body>
-    <p>Welcome<?php include('../Control/cookie.php'); ?> </p>
-    <h5>Do you want to <a href="../Control/adminlogout.php">logout</a></h5>
+    <center>
+        <h3>Welcome to the deshboard<?php include('../Control/cookie.php'); ?> </h3>
+        <h3 align="left"><a href="viewinformation.php">View Admins Login Data</a></h3>
+        <h5>Do you want to <a href="../Control/adminlogout.php">logout</a></h5>
+    </center>
 </body>
 
 </html>
