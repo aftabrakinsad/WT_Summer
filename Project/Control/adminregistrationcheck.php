@@ -53,7 +53,7 @@ if(isset($_POST["submit"]))
         {
             if ($fname != "" && $lname != "" &&  $phone != "")
             {
-                echo $_FILES["myfile"]["name"];
+                    echo $_FILES["myfile"]["name"];
                     if (move_uploaded_file($_FILES["myfile"]["tmp_name"], "../Uploads/" . $_FILES["myfile"]["name"]))
                     {
                         $filepath = "../Uploads/" . $_FILES["myfile"]["name"];

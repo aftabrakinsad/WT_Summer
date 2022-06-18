@@ -134,7 +134,7 @@ include('../Control/adminregistrationcheck.php');
                                 <label>Confirm Password: &nbsp;</label>
                                 <input type="password" name="cpassword" placeholder="Confirm Password"><br>
                                 <font color="red">
-                                    <?php echo $cpasswordErr; ?>
+                                <?php echo $cpasswordErr; ?>
                                 </font>
                                 <br><br>
                             </center>
