@@ -17,7 +17,7 @@
     <center>
         <tr>
             <td>
-                <h1>Admin Information</h1>
+                <h1>Admin Login Informations</h1>
             </td>
         </tr>
 
