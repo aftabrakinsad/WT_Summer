@@ -25,26 +25,22 @@ $passwordErr = "";
                 {
                     foreach($admindata_array as $user)
                     {
-                        if($user["uname"] === $_POST["uname"] && $user["password"] === $_POST["password"])
+                        if($user["username"] === $_POST["uname"] && $user["password"] === $_POST["password"])
                         {
                             $_SESSION['uname'] = $user["uname"];
                             $_SESSION['password'] = $user["password"];
 
-                        $f = 1;
-                        if($remember)
+                            $f = 1;
+                            if($remember)
                             {
-                                setcookie("uname", $_POST["uname"], time()+86000);
+                                setcookie("uname", $_POST["uname"],time()+86000);
                             }
-                        }
-                        else
-                        {
                             header("location: ../view/adminhomepage.php");
                         }
                     }
+                if ($f == 0) {
+                    echo "Enter Username and password currectly!";
                 }
-                if($f == 0)
-                {
-                    echo "Login Faild! Please try again.";
                 }
             }
             $admininfo = array(
@@ -63,8 +59,7 @@ $passwordErr = "";
         }
         else
         {
-            echo "Please enter details to log in";
+            echo "Please enter Username and Password to log in";
         }
     }
-
 ?>

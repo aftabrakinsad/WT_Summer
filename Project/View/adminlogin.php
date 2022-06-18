@@ -15,6 +15,9 @@ include('../Control/adminlogincheck.php');
 
 <body bgcolor="#D1CECD">
     <center>
+
+
+
         <header>
             <h1>
                 <font color="red">City Bank Limited.</font>
@@ -22,18 +25,18 @@ include('../Control/adminlogincheck.php');
             <p><strong>
                     <font color="red">Login As An Admin</font>
                 </strong></p>
-            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br>
         </header>
 
-        <form action="" <?php echo $_SERVER['PHP_SELF'];?> method="POST" enctype="multipart/form-data">
+        <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST" enctype="multipart/form-data">
         <?php include '../Control/cookie.php';?>
             <center>
                 <table>
                     <tr>
                         <td>
-                            <label>
+                            <label for="uname">
                                 <font color="darkblue">Username:</font>
-                                <input type="text" id="uname" name="uname" value="<?php if(isset($_COOKIE['uname'])){echo $_COOKIE['uname'];} ?>"> <br><br>
+                                <input type="text" name="uname" value="<?php if(isset($_COOKIE['uname'])){echo $_COOKIE['uname'];} ?>"> <br><br>
                             </label>
                         </td>
                     </tr>
