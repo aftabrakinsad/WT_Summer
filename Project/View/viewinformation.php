@@ -22,8 +22,7 @@
         </tr>
 
         <tr>
-            <?php include("../control/viewadmin.php");
-            ?>
+            <?php include("../control/viewadmin.php");?>
         </tr>
     </center>
 </body>
