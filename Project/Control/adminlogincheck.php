@@ -1,8 +1,5 @@
 <?php
 
-$unameErr = "";
-$passwordErr = "";
-
     if(isset($_POST['submit']))
     {
         $uname = $_POST['uname'];
