@@ -16,7 +16,7 @@ if (isset($_SESSION['uname'])) {
     <title>Admin Log in</title>
 </head>
 
-<body bgcolor="#D1CECD">
+<body bgcolor="skyblue">
     <center>
         <header>
             <h1>
@@ -57,7 +57,7 @@ if (isset($_SESSION['uname'])) {
                         <td>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="remember" id="remember">
                             <label for="remember">
-                            <b>Remember Me</b>
+                                <b>Remember Me</b>
                             </label>
                         </td>
                     </tr>

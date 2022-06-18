@@ -15,19 +15,20 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
     <title>Admin Dashboard</title>
 </head>
 
-<body>
+<body bgcolor="skyblue">
     <center>
         <h3>
             Welcome to the deshboard<?php include('../Control/cookie.php'); ?>
+            <br><br><br><br><br><br><br><br>
         </h3>
 
         <h3 align="left">
-            <a href="viewinfonewadmin.php">View Admin Registration Information</a>
+            <a href="viewinfonewadmin.php">View Admin Registration Information</a><br><br><br><br><br><br><br><br><br><br><br><br>
         </h3>
 
-        <h5>
+        <h3>
             Do you want to <a href="../Control/adminlogout.php">logout</a>
-        </h5>
+        </h3>
     </center>
 </body>
 

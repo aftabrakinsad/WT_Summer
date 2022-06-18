@@ -1,8 +1,7 @@
 <?php
 
 session_start();
-if(isset($_SESSION['username']))
-{
+if (isset($_SESSION['username'])) {
     header("location: ../View/adminlogin.php");
 }
 
@@ -24,7 +23,7 @@ include('../Control/adminregistrationcheck.php');
     <title>Admin Registration</title>
 </head>
 
-<body>
+<body bgcolor="skyblue">
     <center>
         <h1>Welcome to City Bank Limited.</h1>
         <p><strong>To do further work, please register.</strong></p>
@@ -134,7 +133,7 @@ include('../Control/adminregistrationcheck.php');
                                 <label>Confirm Password: &nbsp;</label>
                                 <input type="password" name="cpassword" placeholder="Confirm Password"><br>
                                 <font color="red">
-                                <?php echo $cpasswordErr; ?>
+                                    <?php echo $cpasswordErr; ?>
                                 </font>
                                 <br><br>
                             </center>
