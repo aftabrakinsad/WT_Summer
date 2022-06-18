@@ -44,7 +44,7 @@ if(isset($_POST["submit"]))
         }
         if($password != "")
         {
-            if (!$uppercase || !$lowercase || !$number || !$specialchars || strlen($password) < 8) 
+            if (!$uppercase || !$lowercase || !$number || !$specialchars || strlen($password) > 9) 
             {
                 $passwordErr = "!Password should be at least 8 characters in length and should include at least one upper case, one lower case, one number and one special character!";
             }
