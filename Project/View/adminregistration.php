@@ -145,8 +145,9 @@ include('../Control/adminregistrationcheck.php');
                     <tr>
                         <td>
                             <center>
-                                <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                                 <input type="submit" name="submit" value="Register">
+                                <input type="submit" name="login" value="Login">
                             </center>
                         </td>
                     </tr>
