@@ -9,12 +9,6 @@
         {
             if($_SERVER["REQUEST_METHOD"] == "POST")
             {
-                $remember = false;
-                if(isset($_POST["remember"]))
-                {
-                    $remember = true;
-                }
-
                 $f = 0;
                 $admindata = file_get_contents('../Data/adminregistrationdata.json');
                 $admindata_array = json_decode($admindata, true);
@@ -32,12 +26,11 @@
                             setcookie("username", $_SESSION['uname'], time() + 86000);
                             setcookie("password", $_SESSION['password'], time() + 86000);
                             echo "";
-                        }
-
-                        $f = 1;
-                        if($remember)
+                        } else
                         {
-                            setcookie("uname", $_POST["uname"],time()+86000);
+                            setcookie("username", "");
+                            setcookie("password", "");
+                            echo "";
                         }
                         header("location: ../view/adminhomepage.php");
                         }

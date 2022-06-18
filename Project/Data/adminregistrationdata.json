@@ -1,5 +1,4 @@
-[
-    {
+[{
         "firstName": "Aftab, Rakin",
         "lastName": "Sad",
         "username": "aftabrakinsad",
@@ -17,28 +16,6 @@
         "email": "smith@gail.com",
         "nid": "72614517845",
         "phone": "84842984824",
-        "password": "Aftab123@",
-        "cpassword": "Aftab123@",
-        "filepath": "..\/Uploads\/aiub logo.png"
-    },
-    {
-        "firstName": "Tim",
-        "lastName": "Smith",
-        "username": "timsmith",
-        "email": "tim@gmail.com",
-        "nid": "4732385263895",
-        "phone": "7362583625",
-        "password": "Tim123@r",
-        "cpassword": "Tim123@r",
-        "filepath": "..\/Uploads\/aiub logo.png"
-    },
-    {
-        "firstName": "Aftab, Rakin",
-        "lastName": "Sad",
-        "username": "aftabrakinsad",
-        "email": "20-41991-1@student.aiub.edu",
-        "nid": "43578236578395",
-        "phone": "01889046538",
         "password": "Aftab123@",
         "cpassword": "Aftab123@",
         "filepath": "..\/Uploads\/aiub logo.png"
