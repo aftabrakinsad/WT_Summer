@@ -62,4 +62,8 @@
             echo "Please enter Username and Password to log in";
         }
     }
+    if(isset($_POST['registration']))
+    {
+        header("location: ../View/adminregistration.php");
+    }
 ?>
