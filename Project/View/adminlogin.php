@@ -37,7 +37,6 @@ include('../Control/adminlogincheck.php');
                             <label for="uname">
                                 <font color="darkblue">Username:</font>
                                 <input type="text" name="uname" value="<?php if(isset($_COOKIE['uname'])){echo $_COOKIE['uname'];} ?>">
-                                <?php echo $unameErr; ?>
                                 <br><br>
                             </label>
                         </td>
@@ -48,7 +47,6 @@ include('../Control/adminlogincheck.php');
                             <label>
                                 <font color="darkblue">Password :</font>
                                 <input type="password" name="password" value="<?php if(isset($_COOKIE['password'])){echo $_COOKIE['password'];}?>">
-                                <?php echo $passwordErr; ?>
                                 <br><br>
                             </label>
                         </td>
