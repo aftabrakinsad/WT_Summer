@@ -1,5 +1,4 @@
 <?php
-
     session_start();
     if(isset($_POST['submit']))
     {
@@ -23,10 +22,17 @@
                 {
                     foreach($admindata_array as $user)
                     {
-                        if($user["username"] === $_POST["uname"] && $user["password"] === $_POST["password"])
+                        if($user["username"] == $_POST["uname"] && $user["password"] == $_POST["password"])
                         {
-                            $_SESSION['uname'] = $user["uname"];
+                            $_SESSION['uname'] = $user["username"];
                             $_SESSION['password'] = $user["password"];
+
+                        if (!empty($_POST["remember"]))
+                        {
+                            setcookie("username", $_SESSION['uname'], time() + 86000);
+                            setcookie("password", $_SESSION['password'], time() + 86000);
+                            echo "";
+                        }
 
                             $f = 1;
                             if($remember)
@@ -50,9 +56,11 @@
                 $admindata_array[] = $admininfo;
                 $admininfoencode = json_encode($admindata_array, JSON_PRETTY_PRINT);
 
-                if (file_put_contents('../Data/adminlogindata.json', $admininfoencode)) {
+                if (file_put_contents('../Data/adminlogindata.json', $admininfoencode))
+                {
                     echo "";
-                } else {
+                } else
+                {
                     echo "";
                 }
                 }

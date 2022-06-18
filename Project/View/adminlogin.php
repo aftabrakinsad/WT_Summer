@@ -1,11 +1,10 @@
 <?php
 
-    include('../Control/adminlogincheck.php');
+include('../Control/adminlogincheck.php');
 
-    if(isset($_SESSION['uname']))
-    {
-        header("location: ../View/adminhomepage.php");
-    }
+if (isset($_SESSION['uname'])) {
+    header("location: ../View/adminhomepage.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,15 +28,17 @@
             <br><br><br><br><br><br><br><br><br>
         </header>
 
-        <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST" enctype="multipart/form-data">
-        <?php include '../Control/cookie.php';?>
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
+            <?php include '../Control/cookie.php'; ?>
             <center>
                 <table>
                     <tr>
                         <td>
                             <label for="uname">
                                 <font color="darkblue">Username:</font>
-                                <input type="text" name="uname" value="<?php if(isset($_COOKIE['uname'])){echo $_COOKIE['uname'];} ?>">
+                                <input type="text" name="uname" value="<?php if (isset($_COOKIE['uname'])) {
+                                                                            echo $_COOKIE['uname'];
+                                                                        } ?>">
                                 <br><br>
                             </label>
                         </td>
@@ -47,7 +48,9 @@
                         <td>
                             <label>
                                 <font color="darkblue">Password :</font>
-                                <input type="password" name="password" value="<?php if(isset($_COOKIE['password'])){echo $_COOKIE['password'];}?>">
+                                <input type="password" name="password" value="<?php if (isset($_COOKIE['password'])) {
+                                                                                    echo $_COOKIE['password'];
+                                                                                } ?>">
                                 <br><br>
                             </label>
                         </td>

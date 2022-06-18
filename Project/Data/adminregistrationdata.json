@@ -31,5 +31,16 @@
         "password": "Tim123@r",
         "cpassword": "Tim123@r",
         "filepath": "..\/Uploads\/aiub logo.png"
+    },
+    {
+        "firstName": "Aftab, Rakin",
+        "lastName": "Sad",
+        "username": "aftabrakinsad",
+        "email": "20-41991-1@student.aiub.edu",
+        "nid": "43578236578395",
+        "phone": "01889046538",
+        "password": "Aftab123@",
+        "cpassword": "Aftab123@",
+        "filepath": "..\/Uploads\/aiub logo.png"
     }
 ]

@@ -1,5 +1,15 @@
 <?php
 
+session_start();
+if(isset($_SESSION['username']))
+{
+    header("location: ../View/adminlogin.php");
+}
+
+?>
+
+<?php
+
 include('../Control/adminregistrationcheck.php');
 
 ?>
