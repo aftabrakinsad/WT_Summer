@@ -20,7 +20,7 @@
         </tr>
 
         <tr>
-            <?php include("../control/viewnewadminregistrations.php"); ?>
+            <?php include("../Control/viewnewadminregistrations.php"); ?>
         </tr>
     </center>
 </body>

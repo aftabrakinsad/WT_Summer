@@ -18,8 +18,8 @@
         <nav>
             <center>
                 <a href="../View/adminlogin.php"><font color="white"><strong>Admin</strong></font></a><br><br>
-                <a href="#"><font color="white"><strong>Manager</strong></font></a><br><br>
-                <a href="#"><font color="white"><strong>Employee</strong></font></a><br><br>
+                <a href="../View/managerlogin.php"><font color="white"><strong>Manager</strong></font></a><br><br>
+                <a href="../View/employelogin.php"><font color="white"><strong>Employee</strong></font></a><br><br>
                 <a href="#"><font color="white"><strong>User</strong></font></a><br><br>
             </center>
         </nav>
