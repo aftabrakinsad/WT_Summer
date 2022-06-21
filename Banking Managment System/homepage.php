@@ -20,7 +20,7 @@
                 <a href="Admin/View/adminlogin.php"><font color="white"><strong>Admin</strong></font></a><br><br>
                 <a href="Manager/view/managerlogin.php"><font color="white"><strong>Manager</strong></font></a><br><br>
                 <a href="Employee/view/employelogin.php"><font color="white"><strong>Employee</strong></font></a><br><br>
-                <a href="tahmid/View/userlogin.php"><font color="white"><strong>User</strong></font></a><br><br>
+                <a href="User/View/userlogin.php"><font color="white"><strong>User</strong></font></a><br><br>
             </center>
         </nav>
     </header>
