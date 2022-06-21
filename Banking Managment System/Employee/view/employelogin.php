@@ -78,10 +78,11 @@ if (isset($_SESSION['username'])) {
                     <tr>
 
                         <td>
-                            <center> 
-                                <br><br><br><br><a href="http://localhost/pro - copy/homepage.php">
+                            <center>
+                                <br><br><br><br><a href="http://localhost/Github Repo/WT_Summer/Banking Managment System/homepage.php">
                                     <font color="black"><strong>Return to homepage Homepage</strong></font>
-                                </a><br><br></center>
+                                </a><br><br>
+                            </center>
 
                         </td>
 
