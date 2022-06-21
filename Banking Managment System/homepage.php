@@ -17,7 +17,7 @@
         </center>
         <nav>
             <center>
-                <a href="rakin/View/adminlogin.php"><font color="white"><strong>Admin</strong></font></a><br><br>
+                <a href="Admin/View/adminlogin.php"><font color="white"><strong>Admin</strong></font></a><br><br>
                 <a href="sajid/view/managerlogin.php"><font color="white"><strong>Manager</strong></font></a><br><br>
                 <a href="hamim/view/employelogin.php"><font color="white"><strong>Employee</strong></font></a><br><br>
                 <a href="tahmid/View/userlogin.php"><font color="white"><strong>User</strong></font></a><br><br>
