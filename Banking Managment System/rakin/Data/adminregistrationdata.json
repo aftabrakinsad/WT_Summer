@@ -1,0 +1,49 @@
+[{
+        "firstName": "Aftab, Rakin",
+        "lastName": "Sad",
+        "username": "aftabrakinsad",
+        "gender": "male",
+        "email": "20-41991-1@student.aiub.edu",
+        "nid": "634725340897557637",
+        "phone": "01889046538",
+        "password": "Aftab123@",
+        "cpassword": "Aftab123@",
+        "filepath": "..\/Uploads\/Fx2.jpg"
+    },
+    {
+        "firstName": "Fatema",
+        "lastName": "Aftab",
+        "username": "fatemaaftab",
+        "gender": "female",
+        "email": "fatema@gmail.com",
+        "nid": "555555555553489",
+        "phone": "867458936",
+        "password": "Fatema123@",
+        "cpassword": "Fatema123@",
+        "filepath": "..\/Uploads\/Fx9.jpg"
+    },
+    {
+        "firstName": "Arav ",
+        "lastName": "Aftab",
+        "username": "aravaftab",
+        "gender": "male",
+        "email": "arav@gmail.com",
+        "nid": "74444444656456",
+        "phone": "7586684586",
+        "password": "Arav123@",
+        "cpassword": "Arav123@",
+        "filepath": "..\/Uploads\/Fx8.jpg"
+    },
+    {
+        "firstName": "Alvin Zain",
+        "lastName": "Aftab",
+        "username": "alvinzain",
+        "gender": "male",
+        "email": "zain@gmail.com",
+        "nid": "7548694587676",
+        "phone": "526789655276",
+        "password": "Zain123@",
+        "cpassword": "Zain123@",
+        "filepath": "..\/Uploads\/Fx9.jpg"
+    }
+]
