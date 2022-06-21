@@ -8,15 +8,15 @@
    
     
 </head>
-<body bgcolor="skyblue">
+<body  bgcolor="skyblue">
 <center>
-    <tr><td><h1>Employe Information</h1></td></tr>
+    <tr><td><h1>Manager Information</h1></td></tr>
     <tr><?php
-include("../control/viewinformationemp.php");
+include("../control/viewmanager.php");
 ?></tr>
     <tr>
         <td>
-      <h2><a href="../view/employeregistration.php">Back </a></h2>  
+        <a href="../view/managerRegistration.php">Back
         </td>
     </tr>
     </center>
