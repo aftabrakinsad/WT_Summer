@@ -13,7 +13,6 @@
         <center>
         <h1><font color="white">Welcome To City Bank Limited</font></h1>
         <p><font color="white"><strong>Log in as..</strong></font></p>
-        <p></p>
         </center>
         <nav>
             <center>
