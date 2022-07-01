@@ -10,7 +10,7 @@
   </tr>
 </table>
 
-<table style="width:100%">
+<table>
   <tr>
   	<th colspan="2">Project Group Members</th>
   </tr>
