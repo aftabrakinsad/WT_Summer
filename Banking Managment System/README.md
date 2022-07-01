@@ -28,7 +28,7 @@
   </tr>
   
   <tr>
-    <td>SAJID IBNA MAHBUB</td>
+    <td><a href="https://github.com/sajidmahbub10">SAJID IBNA MAHBUB</a></td>
     <td>20-42109-1</td>
   </tr>
   
