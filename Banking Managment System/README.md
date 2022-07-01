@@ -7,7 +7,7 @@
   </tr>
   
   <tr>
-  <th>Course Teacher: SAZZAD HOSSAIN</th>
+  <th>Course Teacher: <a href="https://github.com/hsazzad-prog">SAZZAD HOSSAIN</a></th>
   </tr>
 </table>
 </p>
