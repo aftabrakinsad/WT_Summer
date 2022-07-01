@@ -14,10 +14,6 @@
   </tr>
   
   <tr>
-  	<th colspan="2">Course Teacher: <a href="https://github.com/hsazzad-prog">SAZZAD HOSSAIN</a></th>
-  </tr>
-  
-  <tr>
     <th>Name</th>
     <th>ID</th>
   </tr>
