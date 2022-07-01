@@ -1,2 +1,2 @@
 # This is a academic course project.
-<h3 style="text-align=centre">CSC3215	WEB TECHNOLOGIES</h3>
+<h3 style="text-align:right;">CSC3215	WEB TECHNOLOGIES</h3>
