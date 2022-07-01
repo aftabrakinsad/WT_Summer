@@ -4,7 +4,13 @@
   <tr>
     <th><h3>CSC3215	WEB TECHNOLOGIES</h3></h>
   </tr>
+  
   <tr>
   <th>Course Teacher: SAZZAD HOSSAIN</th>
+  </tr>
+  
+  <tr>
+   <th>Project Group Members</th>
+   <td>SULTANUL ARIFEEN HAMIM</td>
   </tr>
 </table>
