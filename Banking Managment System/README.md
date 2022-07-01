@@ -33,7 +33,7 @@
   </tr>
   
   <tr>
-    <td>TAHAMIDUL HAQUE</td>
+    <td><a href="https://github.com/tahmid888">TAHAMIDUL HAQUE</a></td>
     <td>20-42139-1</td>
   </tr>
 </table>
