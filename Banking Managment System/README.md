@@ -23,7 +23,7 @@
   </tr>
   
   <tr>
-    <td>SULTANUL ARIFEEN HAMIM</td>
+    <td><a href="https://github.com/Arifeenhamim">SULTANUL ARIFEEN HAMIM</a></td>
     <td>20-42017-1</td>
   </tr>
   
