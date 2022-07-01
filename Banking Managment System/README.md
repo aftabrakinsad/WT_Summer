@@ -1,5 +1,6 @@
 # This is a academic course project.
 
+<p align="center">
 <table>
   <tr>
     <th><h3>CSC3215	WEB TECHNOLOGIES</h3></h>
@@ -9,6 +10,7 @@
   <th>Course Teacher: SAZZAD HOSSAIN</th>
   </tr>
 </table>
+</p>
 
 <table>
   <tr>
