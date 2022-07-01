@@ -14,11 +14,13 @@ Academic Course Work
   <tr>
     <th>Name</th>
     <th>ID</th>
+    <th>Section</th>
   </tr>
   
   <tr>
-    <td><a href="https://github.com/aftabrakinsad">RAKIN SAD AFTAB</a>   </td>
+    <td><a href="https://github.com/aftabrakinsad">RAKIN SAD AFTAB</a></td>
     <td>20-41991-1</td>
+    <td>L</td>
   </tr>
 
 </table>
