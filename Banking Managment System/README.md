@@ -11,7 +11,11 @@
 </table>
 
 <table>
-  <caption>Project Group Members</caption>
+  <tr>
+    <caption>
+      <td>Project Group Members<td>
+    </caption>
+  </tr>
   <tr>
    <td>SULTANUL ARIFEEN HAMIM</td>
    <td>SAJID IBNA MAHBUB</td>
