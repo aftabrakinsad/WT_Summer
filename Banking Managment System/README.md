@@ -11,7 +11,7 @@
 </table>
 
 <table>
-  <tr>
+  <tr rowspan="1">
     <th>Project Group Members</th>
   </tr>
   
