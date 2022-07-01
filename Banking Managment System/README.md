@@ -12,16 +12,18 @@
 
 <table>
   <tr>
-    <th colspan="1">Project Group Members</th>
+  	<th colspan="2">Project Group Members</th>
   </tr>
-  
   <tr>
     <th>Name</th>
     <th>ID</th>
   </tr>
-  
   <tr>
-   <td>SULTANUL ARIFEEN HAMIM</td>
-   <td>20-42017-1</td>
+    <td>Jill</td>
+    <td>Smith</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
   </tr>
 </table>
