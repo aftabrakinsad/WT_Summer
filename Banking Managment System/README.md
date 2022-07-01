@@ -5,6 +5,6 @@
     <th><h3>CSC3215	WEB TECHNOLOGIES</h3></h>
   </tr>
   <tr>
-  <th>Course Teacher</th>
+  <th>Course Teacher: SAZZAD HOSSAIN</th>
   </tr>
 </table>
