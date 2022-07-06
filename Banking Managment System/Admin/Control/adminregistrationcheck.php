@@ -19,7 +19,6 @@ if(isset($_POST["submit"]))
     $fname = $_POST["fname"];
     $lname = $_POST["lname"];
     $uname = $_POST["uname"];
-    //$gender = $_POST["gender"];
     $email = $_POST["email"];
     $nid = $_POST["nid"];
     $phone = $_POST["phone"];
