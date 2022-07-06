@@ -51,11 +51,11 @@ if(isset($_POST["submit"]))
             {
                 if($_POST["gender"] == "male")
                 {
-                    //$genderErr = 'You selected male';
+                    
                 }
                 if ($_POST["gender"]=='female')
                 {
-                    //$genderErr = 'You selected female';
+                  
                 }
             $gender =   $_POST["gender"];
             }
