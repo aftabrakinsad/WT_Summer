@@ -4,11 +4,11 @@ Academic Course Work
 <p align="center">
 <table>
   <tr>
-  	<th colspan="3"><h3>CSC3215	WEB TECHNOLOGIES</h3></th>
+  	<th colspan="2"><h3>CSC3215	WEB TECHNOLOGIES</h3></th>
   </tr>
   
   <tr>
-  	<th colspan="3">Course Teacher: <a href="https://github.com/hsazzad-prog">SAZZAD HOSSAIN</a></th>
+  	<th colspan="2">Course Teacher: <a href="https://github.com/hsazzad-prog">SAZZAD HOSSAIN</a></th>
   </tr>
   
   <tr>
