@@ -3,6 +3,10 @@
 <p align="center">
 <table>
   <tr>
+    <th colspan="2"><a href="https://www.aiub.edu">American International University-Bangladesh(AIUB)</a></th>
+  </tr>
+  
+  <tr>
     <th colspan="2"><h3>CSC3215	WEB TECHNOLOGIES</h3></h>
   </tr>
   
@@ -21,7 +25,7 @@
   
   <tr>
       <td><a href="https://github.com/aftabrakinsad">RAKIN SAD AFTAB</a></td>
-    <td>20-20-41991-1-1</td>
+    <td>20-41991-1</td>
   </tr>
   
   <tr>
