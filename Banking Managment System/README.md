@@ -3,7 +3,7 @@
 <p align="center">
 <table>
   <tr>
-    <th colspan="2"><a href="https://www.aiub.edu">American International University-Bangladesh(AIUB)</a></th>
+    <th colspan="2"><h3><a href="https://www.aiub.edu">American International University-Bangladesh(AIUB)</a></h3></th>
   </tr>
   
   <tr>
