@@ -4,7 +4,7 @@ Academic Course Work
 <p align="center">
 <table>
   <tr>
-  	<th colspan="3"><h3>American International University-Bangladesh(AIUB)</h3></th>
+  	<th colspan="3"><h3><a href="https://www.aiub.edu">American International University-Bangladesh(AIUB)</a></h3></th>
   </tr>
   
   <tr>
