@@ -42,13 +42,11 @@ include("../Control/process.php");
             <tr>
                 <td>Designation :</td>
                 <td>
-                    <input type="radio" name="designation" value="juniorprogrammer">Junior Programmer
-                    <input type="radio" name="designation" value="seniorprogrammer">Senior Programmer
-                    <input type="radio" name="designation" value="projectlead">Project Lead
-                <td>
+                    <input type="radio" name="Designation1" value="juniorprogrammer">Junior Programmer
+                    <input type="radio" name="Designation2" value="seniorprogrammer">Senior Programmer
+                    <input type="radio" name="Designation3" value="projectlead">Project Lead
                     <?php echo $desigErr; ?>
-                </td><br><br>
-                </td>
+                <td>
             </tr>
 
             <tr>
@@ -81,6 +79,7 @@ include("../Control/process.php");
             <tr>
                 <td>Please choose a photo</td>
                 <td>
+                    <br>
                     <input type="file" name="myfile"> <br>
                     <?php echo $fileErr; ?>
                     <br>
