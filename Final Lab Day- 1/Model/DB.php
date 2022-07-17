@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "flabone";
+$dbname = "allinone";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if($conn -> connect_error)
@@ -17,7 +17,7 @@ if($conn -> query($sqlstr))
 }
 else
 {
-    echo "Failed toinsert data". $conn -> error;
+    echo "Failed to insert data". $conn -> error;
 }
 
 ?>
