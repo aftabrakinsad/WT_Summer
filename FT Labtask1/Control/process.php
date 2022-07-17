@@ -10,7 +10,7 @@ $emailErr = "";
 $fileErr = "";
 $desigErr ="";
 $LanErr ="";
-$Designation="";
+$designation="";
 $planguage="";
 $fromdata ="";
 $filepath ="";
@@ -25,24 +25,24 @@ if(isset($planguage))
 {
     $LanErr = 'You Havent Selected a checkbox';
 }
-if(isset($Designation))
+if(isset($designation))
 {
     $desigErr = 'You have not selected any Designation';
 }
 else
 {
-    $Designation = $_POST["designation"];
+    $designation = $_POST["Designation"];
 }
 
     if (empty($name))
     {
         $nameErr ='Please Enter First Name';
-        $hasError =1;
+        $hasError = 1;
     }
     else if(is_numeric($name))
     {
         $nameErr ='First Name can not be numeric';
-        $hasError =1;
+        $hasError = 1;
     }
     else
     {
