@@ -76,19 +76,25 @@ else
 
     echo '<br>';
 
-    if (isset($Designation))
+    if (isset($_POST['Desgination1']) || isset($_POST['Desgination2']) || isset($_POST['Desgination3']))
     {
-        if ("juniorprogrammer"==$Designation)
+        if (isset($_POST['Desgination1']))
         {
-            $desigErr = 'You selected Junior Programmer ';
+            $desigErr = 'You selected Junior Programmer';
+            $designation = $designation . '' . $_POST['Desgination1'];
+            echo '<br>';
         }
-        if ($Designation=='seniorprogrammer')
+        if (isset($_POST['Desgination2']))
         {
             $desigErr = 'You selected Senior Programmer';
+            $designation = $designation . '' . $_POST['Desgination2'];
+            echo '<br>';
         }
-        if ($Designation=='projectlead')
+        if (isset($_POST['Desgination3']))
         {
             $desigErr ='You selected Project Lead';
+            $designation = $designation . '' . $_POST['Desgination3'];
+            echo '<br>';
         }
     }
     else
@@ -103,20 +109,19 @@ else
         if (isset($_POST['PreferredLanguage1']))
         {
             $LanErr = 'Your Have Selected JAVA ';
-            $planguage = $planguage. $_POST['PreferredLanguage1'];
+            $planguage = $planguage . '' . $_POST['PreferredLanguage1'];
             echo '<br>';
         }
-
         if (isset($_POST['PreferredLanguage2']))
         {
             $LanErr = 'Your Have Selected PHP';
-            $planguage =  $planguage.''.$_POST['PreferredLanguage2'];
+            $planguage =  $planguage . '' . $_POST['PreferredLanguage2'];
             echo '<br>';
         }
         if (isset($_POST['PreferredLanguage3']))
         {
             $LanErr = 'Your Have Selected C++';
-            $planguage = $planguage.''. $_POST['PreferredLanguage2'];
+            $planguage = $planguage . '' . $_POST['PreferredLanguage3'];
             echo '<br>';
         }
     }
