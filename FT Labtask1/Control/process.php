@@ -77,21 +77,21 @@ if (isset($_POST["Submit"]))
 
     echo '<br>';
 
-    if (isset($_POST['Desgination1']) || isset($_POST['Desgination2']) || isset($_POST['Desgination3']))
+    if (isset($_POST['Designation1']) || isset($_POST['Designation2']) || isset($_POST['Designation3']))
     {
-        if (isset($_POST['Desgination1']))
+        if (isset($_POST['Designation1']))
         {
             $desigErr = 'You selected Junior Programmer';
             //$designation = $designation;//$_POST['Desgination1'];
             echo '<br>';
         }
-        if (isset($_POST['Desgination2']))
+        if (isset($_POST['Designation2']))
         {
             $desigErr = 'You selected Senior Programmer';
             //$designation = $designation;//$_POST['Desgination2'];
             echo '<br>';
         }
-        if (isset($_POST['Desgination3']))
+        if (isset($_POST['Designation3']))
         {
             $desigErr = 'You selected Project Lead';
             //$designation = $designation;//$_POST['Desgination3'];
