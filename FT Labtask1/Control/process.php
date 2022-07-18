@@ -10,7 +10,7 @@ $emailErr = "";
 $fileErr = "";
 $desigErr = "";
 $LanErr = "";
-$designation = "";
+$Designation = "";
 $planguage = "";
 $fromdata = "";
 $filepath = "";
@@ -26,7 +26,7 @@ if (isset($_POST["Submit"]))
     {
         $LanErr = 'You Havent Selected a checkbox';
     }
-    if (isset($designation))
+    if (isset($Designation))
     {
         $desigErr = 'You have not selected any Designation';
     }
@@ -82,19 +82,19 @@ if (isset($_POST["Submit"]))
         if (isset($_POST['Designation1']))
         {
             $desigErr = 'You selected Junior Programmer';
-            //$designation = $designation;//$_POST['Desgination1'];
+            $Designation = $_POST['Designation1'];
             echo '<br>';
         }
         if (isset($_POST['Designation2']))
         {
             $desigErr = 'You selected Senior Programmer';
-            //$designation = $designation;//$_POST['Desgination2'];
+            $Designation = $_POST['Designation2'];
             echo '<br>';
         }
         if (isset($_POST['Designation3']))
         {
             $desigErr = 'You selected Project Lead';
-            //$designation = $designation;//$_POST['Desgination3'];
+            $Designation = $_POST['Designation3'];
             echo '<br>';
         }
     }
@@ -164,5 +164,5 @@ if (isset($_POST["Submit"]))
         $fileErr = 'Upload Error';
         $mydb = new db();
         $myconn = $mydb->openConn();
-        $mydb->insertUser($name, $name2, $Age, $designation, $planguage, $email, $pass, $picture, "employee", $myconn);
+        $mydb->insertUser($name, $name2, $Age, $Designation, $planguage, $email, $pass, $picture, "employee", $myconn);
 }

@@ -16,13 +16,14 @@ class db
     }
 
 
-    function insertUser($fname, $lname, $age, $designation, $planguage, $email, $pass, $picture, $table, $conn)
+    function insertUser($fname, $lname, $age, $Designation, $planguage, $email, $pass, $picture, $table, $conn)
     {
-        $sqlstr = "INSERT INTO employee(fname,lname,age,designation,planguage,email,password,picture)
-        VALUES ('$fname','$lname','$age','$designation','$planguage','$email','$pass','$picture') ";
+        $sqlstr = "INSERT INTO employee(fname,lname,age,Designation,planguage,email,password,picture)
+        VALUES ('$fname','$lname','$age','$Designation','$planguage','$email','$pass','$picture') ";
 
         if ($conn->query($sqlstr))
         {
+            echo "<br>";
             echo "Data saved";
         }
         else
