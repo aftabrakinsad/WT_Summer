@@ -30,10 +30,10 @@ if (isset($_POST["Submit"]))
     {
         $desigErr = 'You have not selected any Designation';
     }
-    else
-    {
-        $designation = $_POST["Designation"];
-    }
+    // else
+    // {
+        // $designation = $_POST["Designation"];
+    // }
 
     if (empty($name))
     {
