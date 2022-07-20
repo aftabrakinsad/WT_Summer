@@ -19,7 +19,7 @@
         <form action="" enctype="multipart/form-data">
 
             <div class="input-field">
-                <i class="fas fa-user"></i>
+                <i class="fa-solid fa-user"></i>
                 <input type="text" name="uname" placeholder="username">
             </div>
 
