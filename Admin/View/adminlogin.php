@@ -12,24 +12,24 @@
 
 <body>
 
-    <div class="login-form">
+    <div>
 
         <h2>ADMIN LOGIN</h2>
 
         <form action="" enctype="multipart/form-data">
 
-            <div class="input-field">
+            <div>
                 <i class="fa-solid fa-user"></i>
                 <input type="text" name="uname" placeholder="username">
             </div>
 
-            <div class="input-field">
+            <div>
                 <i class="fas fa-lock"></i>
                 <input type="password" name="pass" placeholder="password">
             </div>
             <button>Sign In</button>
 
-            <div class="extra">
+            <div>
                 <a href="#" id="denger">Forget Password?</a>
             </div>
 
