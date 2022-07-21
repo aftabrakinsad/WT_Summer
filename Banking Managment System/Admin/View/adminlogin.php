@@ -77,8 +77,8 @@ if (isset($_SESSION['uname'])) {
 
                         <td>
                             <center>
-                                <br><br><br><br><a href="http://localhost/Github Repo/WT_Summer/Banking Managment System/Admin/View/adminhomepage.php">
-                                    <font color="black"><strong>Return to homepage Homepage</strong></font>
+                                <br><br><br><br><a href="http://localhost/WT_Summer/Banking%20Managment%20System/homepage.php">
+                                    <font color="black"><strong>Return to Homepage</strong></font>
                                 </a><br><br>
                             </center>
 
