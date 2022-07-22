@@ -1,6 +1,6 @@
 <?php
-	$cookie_name="username";
-	if(!isset($_COOKIE["username"]))
+	$cookie_name="uname";
+	if(!isset($_COOKIE["uname"]))
 	{
 		echo " ";
 	}

@@ -28,8 +28,8 @@
 
                         if (!empty($_POST["remember"]))
                         {
-                            setcookie("uname", $_SESSION['uname'], time() + 86000);
-                            setcookie("pass", $_SESSION['pass'], time() + 86000);
+                            setcookie("uname", $_SESSION['uname'], time() + 60);
+                            setcookie("pass", $_SESSION['pass'], time() + 60);
                             echo "";
                         }
                         else
