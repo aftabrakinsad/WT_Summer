@@ -109,6 +109,14 @@ if (isset($_SESSION['username'])) {
 
             <tr>
                 <td>
+                    Please upload your cv
+                    <input type="file" name="myfile">
+                    <span><?php echo $fileErr; ?></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
                     <input type="submit" name="submit" value="Request">
                 </td>
             </tr>
