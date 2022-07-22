@@ -1,6 +1,7 @@
 <?php
 session_start();
-if (empty($_SESSION["uname"]) && empty($_SESSION["pass"])) {
+if (empty($_SESSION["uname"]) && empty($_SESSION["pass"]))
+{
     header("location: ../View/adminlogin.php");
 }
 ?>
@@ -15,21 +16,18 @@ if (empty($_SESSION["uname"]) && empty($_SESSION["pass"])) {
     <title>Admin Dashboard</title>
 </head>
 
-<body bgcolor="skyblue">
-    <center>
+<body>
         <h3>
             Welcome to the deshboard<?php include('../Control/cookie.php'); ?>
-            <br><br><br><br><br><br><br><br>
         </h3>
 
-        <h3 align="left">
-            <a href="viewinfonewadmin.php">View Request Registration Information</a><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h3>
+            <a href="viewinfonewadmin.php">View Request Registration Information</a>
         </h3>
 
         <h3>
             Do you want to <a href="../Control/adminlogout.php">logout</a>
         </h3>
-    </center>
 </body>
 
 </html>

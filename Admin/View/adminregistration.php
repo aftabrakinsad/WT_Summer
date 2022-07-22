@@ -1,15 +1,12 @@
 <?php
 
 session_start();
-if (isset($_SESSION['username'])) {
-    header("location: ../View/adminlogin.php");
+if (isset($_SESSION['username']))
+{
+    //header("location: ../View/adminlogin.php");
 }
 
-?>
-
-<?php
-
-include('../Control/adminregistrationcheck.php');
+@include('../Control/adminregistrationcheck.php');
 
 ?>
 
@@ -23,162 +20,103 @@ include('../Control/adminregistrationcheck.php');
     <title>Admin Registration</title>
 </head>
 
-<body bgcolor="skyblue">
-    <center>
-        <h1>Welcome to City Bank Limited.</h1>
-        <p><strong>To do further work, please register.</strong></p>
-        <br><br>
+<body>
+    <h1>Welcome to City Bank Limited.</h1>
+    <p><strong>To do further work, please register.</strong></p>
 
-        <form action="" method="POST" enctype="multipart/form-data">
-            <center>
-                <table>
-                    <tr>
-                        <td>
-                            <center>
-                                <label>
-                                    <font>Firstname: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</font>
-                                </label>
-                                <input type="text" name="fname" placeholder="Enter your firstname">
-                                <?php echo $fnameErr; ?>
-                                <br><br>
-                            </center>
-                        </td>
-                    </tr>
+    <form action="" method="POST" enctype="multipart/form-data">
+        <table>
+            
+            <tr>
+                <td>
+                    <label>Firstname:</label>
+                    <input type="text" name="fname" placeholder="Enter your Firstname">
+                    <span><?php echo $fnameErr; ?></span>
+                </td>
+            </tr>
 
-                    <tr>
-                        <td>
-                            <center>
-                                <label>Lastname: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
-                                <input type="text" name="lname" placeholder="Enter your lastname">
-                                <?php echo $lnameErr; ?>
-                                <br><br>
-                            </center>
-                        </td>
-                    </tr>
+            <tr>
+                <td>
+                    <label>Lastname:</label>
+                    <input type="text" name="lname" placeholder="Enter your Lastname">
+                    <span><?php echo $lnameErr; ?></span>
+                </td>
+            </tr>
 
-                    <tr>
-                        <td>
-                            <center>
-                                <label>Username: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
-                                <input type="text" name="uname" placeholder="Enter your username"><br>
-                                <span>
-                                    <font color="red">
-                                        <?php echo $unameErr; ?>
-                                    </font>
-                                </span>
-                                <br><br>
-                            </center>
-                        </td>
-                    </tr>
+            <tr>
+                <td>
+                    <label>Username:</label>
+                    <input type="text" name="uname" placeholder="Enter your Username">
+                    <span><?php echo $unameErr; ?></span>
+                </td>
+            </tr>
 
-                    <tr>
-                        <td>
-                            <center>
-                                <label>Gender: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
-                                <input type="radio" name="gender" value="male">Male
-                                <input type="radio" name="gender" value="female">Female <br>
-                                <font color="red">
-                                    <?php echo $genderErr; ?>
-                                </font>
-                                </span>
-                                <br><br>
-                            </center>
-                        </td>
-                    </tr>
+            <tr>
+                <td>
+                    <label>Gender:</label>
+                    <input type="radio" name="gender" value="male">Male
+                    <input type="radio" name="gender" value="female">Female
+                    <span><?php echo $genderErr; ?></span>
+                </td>
+            </tr>
 
-                    <tr>
-                        <td>
-                            <center>
-                                <label>Email: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
-                                <input type="email" name="email" placeholder="Enter your email">
-                                <span>
-                                    <font color="red">
-                                        <?php echo $emailErr; ?>
-                                    </font>
-                                </span>
-                                <br><br>
-                            </center>
-                        </td>
-                    </tr>
+            <tr>
+                <td>
+                    <label>Email:</label>
+                    <input type="email" name="email" placeholder="Enter your Email">
+                    <span><?php echo $emailErr; ?></span>
+                </td>
+            </tr>
 
-                    <tr>
-                        <td>
-                            <center>
-                                <label>NID: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
-                                <input type="text" name="nid" placeholder="Enter your valid nid"> <br>
-                                <span>
-                                    <font color="red">
-                                        <?php echo $nidErr; ?>
-                                    </font>
-                                </span>
-                                <br><br>
-                            </center>
-                        </td>
-                    </tr>
+            <tr>
+                <td>
+                    <label>NID:</label>
+                    <input type="text" name="nid" placeholder="Enter your valid NID">
+                    <span><?php echo $nidErr; ?></span>
+                </td>
+            </tr>
 
-                    <tr>
-                        <td>
-                            <center>
-                                <label>Phone: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
-                                <input type="text" name="phone" placeholder="Enter your phone number">
-                                <?php echo $phoneErr; ?>
-                                <br><br>
-                            </center>
-                        </td>
-                    </tr>
+            <tr>
+                <td>
+                    <label>Phone:</label>
+                    <input type="text" name="phone" placeholder="Enter your Phone Number">
+                    <span><?php echo $phoneErr; ?></span>
+                </td>
+            </tr>
 
-                    <tr>
-                        <td>
-                            <center>
-                                <label>Password: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
-                                <input type="password" name="password" placeholder="Enter your password"><br>
-                                <span>
-                                    <font color="red">
-                                        <?php echo $passwordErr; ?>
-                                    </font>
-                                </span>
-                                <br><br>
-                            </center>
-                        </td>
-                    </tr>
+            <tr>
+                <td>
+                    <label>Password:</label>
+                    <input type="password" name="password" placeholder="Enter your Password">
+                    <span><?php echo $passwordErr; ?></span>
+                </td>
+            </tr>
 
-                    <tr>
-                        <td>
-                            <center>
-                                <label>Confirm Password: &nbsp;</label>
-                                <input type="password" name="cpassword" placeholder="Confirm Password"><br>
-                                <font color="red">
-                                    <?php echo $cpasswordErr; ?>
-                                </font>
-                                <br><br>
-                            </center>
-                        </td>
-                    </tr>
+            <tr>
+                <td>
+                    <label>Confirm Password:</label>
+                    <input type="password" name="cpassword" placeholder="Confirm Password"><br>
+                    <span><?php echo $cpasswordErr; ?></span>
+                </td>
+            </tr>
 
-                    <tr>
-                        <td>
-                            <center>
-                                Please upload your picture &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="file" name="myfile">
-                                <?php echo $fileErr; ?>
-                                <br><br>
-                            </center>
-                        </td>
-                    </tr>
+            <tr>
+                <td>
+                    Please upload your picture
+                    <input type="file" name="myfile">
+                    <span><?php echo $fileErr; ?></span>
+                </td>
+            </tr>
 
-                    <tr>
-                        <td>
-                            <center>
-                                <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                                <input type="submit" name="submit" value="Request">
-                                <input type="submit" name="login" value="Login">
-                            </center>
-                        </td>
-                    </tr>
-                </table>
-            </center>
-        </form>
-    </center>
+            <tr>
+                <td>
+                    <input type="submit" name="submit" value="Request">
+                    <input type="submit" name="login" value="Login">
+                </td>
+            </tr>
+
+        </table>
+    </form>
 </body>
 
 </html>

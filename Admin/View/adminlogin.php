@@ -25,6 +25,7 @@ if (isset($_SESSION['uname'])) {
 
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
         <table>
+            
             <tr>
                 <td>
                     <label for="uname">Username:
@@ -61,7 +62,7 @@ if (isset($_SESSION['uname'])) {
             <tr>
                 <td>
                     <a href="http://localhost/WT_Summer/Banking%20Managment%20System/homepage.php">
-                    <strong>Return to Homepage</strong>
+                        <strong>Return to Homepage</strong>
                     </a>
                 </td>
             </tr>
