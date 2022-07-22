@@ -1,10 +1,12 @@
 <?php
 
-include('../Control/adminlogincheck.php');
-
-if (isset($_SESSION['uname'])) {
+if (isset($_SESSION['uname']))
+{
     header("location: ../View/adminhomepage.php");
 }
+
+@include('../Control/adminlogincheck.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,12 +27,12 @@ if (isset($_SESSION['uname'])) {
 
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
         <table>
-            
+
             <tr>
                 <td>
                     <label for="uname">Username:
-                        <input type="text" name="uname">
-                        <br><br>
+                        <input type="text" name="uname"><br>
+                        <span><?php echo $usernameerror; ?></span>
                     </label>
                 </td>
             </tr>
@@ -38,8 +40,8 @@ if (isset($_SESSION['uname'])) {
             <tr>
                 <td>
                     <label for="pass">Password:
-                        <input type="password" name="pass">
-                        <br><br>
+                        <input type="password" name="pass"><br>
+                        <span><?php echo $passworderror; ?></span>
                     </label>
                 </td>
             </tr>

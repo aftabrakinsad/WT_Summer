@@ -2,7 +2,7 @@
 session_start();
 if (empty($_SESSION["uname"]) && empty($_SESSION["pass"]))
 {
-    header("location: ../View/adminlogin.php");
+    //header("location: ../View/adminlogin.php");
 }
 ?>
 

@@ -1,5 +1,8 @@
 <?php
 
+$usernameerror = "";
+$passworderror = "";
+
 @include('../Model/db.php');
 
     session_start();
@@ -26,23 +29,23 @@
                             $_SESSION['uname'] = $user["uname"];
                             $_SESSION['pass'] = $user["pass"];
 
-                        if (!empty($_POST["remember"]))
-                        {
-                            setcookie("uname", $_SESSION['uname'], time() + 60);
-                            setcookie("pass", $_SESSION['pass'], time() + 60);
-                            echo "";
-                        }
-                        else
-                        {
-                            setcookie("uname", "");
-                            setcookie("pass", "");
-                            echo "";
-                        }
+                            if (!empty($_POST["remember"]))
+                            {
+                                setcookie("uname", $_SESSION['uname'], time() + 60);
+                                setcookie("pass", $_SESSION['pass'], time() + 60);
+                                echo "";
+                            }
+                            else
+                            {
+                                setcookie("uname", "");
+                                setcookie("pass", "");
+                                echo "";
+                            }
                         header("location: ../view/adminhomepage.php");
                         }
                     }
                 }
-                if ($f == 0)
+                else if ($f == 0)
                 {
                     echo "Enter Username and password currectly!";
                 }
@@ -50,7 +53,8 @@
         }
         else
         {
-            echo "Please enter Username and Password to log in";
+            $usernameerror = "Please enter Username!";
+            $passworderror = "Please enter Password!";
         }
     }
     if(isset($_POST['registration']))
