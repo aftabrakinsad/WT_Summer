@@ -61,8 +61,8 @@ $remembererror = "";
             $passworderror = "Please enter Password!";
         }
     }
-    if(isset($_POST['registration']))
-    {
-        header("location: ../View/adminregistration.php");
-    }
+    // if(isset($_POST['registration']))
+    // {
+        // header("location: ../View/adminregistration.php");
+    // }
 ?>
