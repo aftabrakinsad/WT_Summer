@@ -2,8 +2,7 @@
 
 @include('../Control/adminlogincheck.php');
 
-if (isset($_SESSION['username']))
-{
+if (isset($_SESSION['username'])) {
     header("location: ../View/adminhomepage.php");
 }
 
@@ -31,23 +30,45 @@ if (isset($_SESSION['username']))
 
             <tr>
                 <td>
-                    <label for="uname"> <input type="text" name="uname" placeholder="Username"><br>
-                        <span id="denger"><?php echo $usernameerror; ?></span>
-                    </label>
+                    <label for="uname"> <input type="text" name="uname" placeholder="Username"><br></label>
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <label for="pass"> <input type="password" name="pass" placeholder="Password"><br>
-                        <span id="denger"><?php echo $passworderror; ?></span>
-                    </label>
+                    <label for="pass"> <input type="password" name="pass" placeholder="Password"><br></label>
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <span id="denger"><?php echo $remembererror; ?></span><br>
+                    <?php
+
+                    $fullfill = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+                    if (strpos($fullfill, "login=empty") == true)
+                    {
+                        echo "<p id = 'denger'>You did not fill all the fields!<p>";
+                    }
+                    else if(strpos($fullfill, "username=empty") == true)
+                    {
+                        echo "<p id = 'denger'>Please enter Username!<p>";
+                    }
+                    else if(strpos($fullfill, "password=empty") == true)
+                    {
+                        echo "<p id = 'denger'>Please enter Password!<p>";
+                    }
+                    else if(strpos($fullfill, "login_info=incorrect") == true)
+                    {
+                        echo "<p id = 'denger'>Username or Password is incorrect!<p>";
+                    }
+                    else if(strpos($fullfill, "login=success") == true)
+                    {
+                        echo "<p id = 'success'>Login Successfull<p>";
+                    }
+
+                    ?>
+                    <br>
                     <input type="checkbox" name="remember" id="remember">
                     <label for="remember"><b>Remember Me</b></label>
                 </td>

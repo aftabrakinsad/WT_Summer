@@ -1,9 +1,5 @@
 <?php
 
-$usernameerror = "";
-$passworderror = "";
-$remembererror = "";
-
 @include('../Model/db.php');
 
     session_start();
@@ -48,21 +44,30 @@ $remembererror = "";
                 }
                 else if ($f == 0)
                 {
-                    $remembererror = "Enter Username or password currectly!";
+                    header("location: ../view/adminlogin.php?login_info=incorrect");
+                    exit();
                 }
             }
         }
-        if(empty($uname))
+        if(empty($uname) && empty($password))
         {
-            $usernameerror = "Please enter Username!";
+            header("location: ../view/adminlogin.php?login=empty");
+            exit();
         }
-        if(empty($password))
+        else if(empty($uname))
         {
-            $passworderror = "Please enter Password!";
+            header("location: ../view/adminlogin.php?username=empty");
+            exit();
+        }
+        else if(empty($password))
+        {
+            header("location: ../view/adminlogin.php?password=empty");
+            exit();
+        }
+        else
+        {
+            header("location: ../view/adminlogin.php?login=success");
+            exit();
         }
     }
-    // if(isset($_POST['registration']))
-    // {
-        // header("location: ../View/adminregistration.php");
-    // }
 ?>
