@@ -30,7 +30,7 @@
             <button>Sign In</button>
 
             <div>
-                <a href="#" id="denger">Forget Password?</a>
+                <a>Forget Password?</a>
             </div>
 
         </form>

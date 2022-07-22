@@ -3,7 +3,7 @@
 session_start();
 if (empty($_SESSION["uname"]) && empty($_SESSION["pass"]))
 {
-    header("location: ../View/adminlogin.php");
+    //header("location: ../View/adminlogin.php");
 }
 
 ?>
@@ -26,7 +26,7 @@ if (empty($_SESSION["uname"]) && empty($_SESSION["pass"]))
         </h3>
 
         <!-- <h3 align="left"> -->
-            <!-- <a href="viewinfonewadmin.php">View Request Registration Information</a><br><br><br><br><br><br><br><br><br><br><br><br> --> -->
+            <!-- <a href="viewinfonewadmin.php">View Request Registration Information</a><br><br><br><br><br><br><br><br><br><br><br><br> -->
         <!-- </h3> -->
 
         <h3>
