@@ -2,6 +2,7 @@
 
 $usernameerror = "";
 $passworderror = "";
+$remembererror = "";
 
 @include('../Model/db.php');
 
@@ -47,13 +48,16 @@ $passworderror = "";
                 }
                 else if ($f == 0)
                 {
-                    echo "Enter Username and password currectly!";
+                    $remembererror = "Enter Username or password currectly!";
                 }
             }
         }
-        else
+        if(empty($uname))
         {
             $usernameerror = "Please enter Username!";
+        }
+        if(empty($password))
+        {
             $passworderror = "Please enter Password!";
         }
     }

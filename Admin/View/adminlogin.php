@@ -1,7 +1,6 @@
 <?php
 
-if (isset($_SESSION['uname']))
-{
+if (isset($_SESSION['uname'])) {
     header("location: ../View/adminhomepage.php");
 }
 
@@ -48,6 +47,7 @@ if (isset($_SESSION['uname']))
 
             <tr>
                 <td>
+                    <span><?php echo $remembererror;?></span><br>
                     <input type="checkbox" name="remember" id="remember">
                     <label for="remember"><b>Remember Me</b></label>
                 </td>
@@ -55,7 +55,6 @@ if (isset($_SESSION['uname']))
 
             <tr>
                 <td>
-                    <label></label>
                     <input type="submit" name="submit" value="Login">
                     <input type="submit" name="registration" value="Request">
                 </td>
