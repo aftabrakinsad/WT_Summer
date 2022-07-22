@@ -3,7 +3,7 @@
 session_start();
 if (isset($_SESSION['username']))
 {
-    //header("location: ../View/adminlogin.php");
+    header("location: ../View/adminlogin.php");
 }
 
 @include('../Control/adminregistrationcheck.php');
