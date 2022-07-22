@@ -1,8 +1,7 @@
 <?php
 
 session_start();
-if (isset($_SESSION['username']))
-{
+if (isset($_SESSION['username'])) {
     header("location: ../View/adminlogin.php");
 }
 
@@ -26,7 +25,7 @@ if (isset($_SESSION['username']))
 
     <form action="" method="POST" enctype="multipart/form-data">
         <table>
-            
+
             <tr>
                 <td>
                     <label>Firstname:</label>
@@ -79,7 +78,7 @@ if (isset($_SESSION['username']))
             <tr>
                 <td>
                     <label>Phone:</label>
-                    <input type="text" name="phone" placeholder="Enter your Phone Number">
+                    <input type="tel" name="phone" placeholder="+880-1XXXXXXXXX">
                     <span><?php echo $phoneErr; ?></span>
                 </td>
             </tr>
@@ -111,7 +110,6 @@ if (isset($_SESSION['username']))
             <tr>
                 <td>
                     <input type="submit" name="submit" value="Request">
-                    <input type="submit" name="login" value="Login">
                 </td>
             </tr>
 
