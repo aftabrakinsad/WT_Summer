@@ -27,13 +27,13 @@ $remembererror = "";
                     {
                         if($user["uname"] == $_POST["uname"] && $user["pass"] == $_POST["pass"])
                         {
-                            $_SESSION['uname'] = $user["uname"];
-                            $_SESSION['pass'] = $user["pass"];
+                            $_SESSION['username'] = $user["uname"];
+                            $_SESSION['password'] = $user["pass"];
 
                             if (!empty($_POST["remember"]))
                             {
-                                setcookie("uname", $_SESSION['uname'], time() + 60);
-                                setcookie("pass", $_SESSION['pass'], time() + 60);
+                                setcookie("uname", $_SESSION['username'], time() + 60);
+                                setcookie("pass", $_SESSION['password'], time() + 60);
                                 echo "";
                             }
                             else
@@ -42,7 +42,7 @@ $remembererror = "";
                                 setcookie("pass", "");
                                 echo "";
                             }
-                        header("location: ../view/adminhomepage.php");
+                            header("location: ../view/adminhomepage.php");
                         }
                     }
                 }

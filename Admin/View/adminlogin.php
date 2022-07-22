@@ -1,10 +1,11 @@
 <?php
 
-if (isset($_SESSION['uname'])) {
+@include('../Control/adminlogincheck.php');
+
+if (isset($_SESSION['username']))
+{
     header("location: ../View/adminhomepage.php");
 }
-
-@include('../Control/adminlogincheck.php');
 
 ?>
 <!DOCTYPE html>
@@ -21,7 +22,7 @@ if (isset($_SESSION['uname'])) {
 <body class="bodyimage">
     <header>
         <h1>City Bank Limited.</h1>
-        <h2>Welcome to the bank <?php include('../Control/cookie.php'); ?></h2>
+        <h2>Welcome to the bank <?php @include('../Control/cookie.php'); ?></h2>
     </header>
 
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">

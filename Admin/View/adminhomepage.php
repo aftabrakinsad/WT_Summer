@@ -1,9 +1,11 @@
 <?php
+
 session_start();
-if (empty($_SESSION["uname"]) && empty($_SESSION["pass"]))
+if (empty($_SESSION["username"]) && empty($_SESSION["password"]))
 {
     header("location: ../View/adminlogin.php");
 }
+
 ?>
 
 <!DOCTYPE html>
