@@ -1,17 +1,17 @@
 <?php
 
-$fnameErr = "";
-$lnameErr = "";
-$unameErr = "";
-$genderErr = "";
-$emailErr = "";
-$nidErr = "";
-$phoneErr = "";
-$passwordErr = "";
-$cpasswordErr = "";
-$fileErr = "";
-$fromdata = "";
-$filepath = "";
+// $fnameErr = "";
+// $lnameErr = "";
+// $unameErr = "";
+// $genderErr = "";
+// $emailErr = "";
+// $nidErr = "";
+// $phoneErr = "";
+// $passwordErr = "";
+// $cpasswordErr = "";
+// $fileErr = "";
+// $fromdata = "";
+// $filepath = "";
 $uppercase=$lowercase=$number=$specialchars="";
 
 if(isset($_POST["submit"]))
