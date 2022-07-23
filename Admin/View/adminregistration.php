@@ -20,7 +20,7 @@ if (isset($_SESSION['username'])) {
     <title>Admin Application Form</title>
 </head>
 
-<body>
+<body class="bodycolor">
 
     <header>
         <h1>Welcome to City Bank Limited.</h1>
@@ -34,27 +34,27 @@ if (isset($_SESSION['username'])) {
 
             <tr>
                 <td>
-                    <input type="text" name="fname" placeholder="Enter your Firstname">
+                    <input type="text" name="fname" placeholder="Firstname">
                 </td>
 
                 <td>
-                    <input type="text" name="lname" placeholder="Enter your Lastname">
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <input type="text" name="uname" placeholder="Enter your Username">
-                </td>
-
-                <td>
-                    <input type="text" name="email" placeholder="Enter your Email">
+                    <input type="text" name="lname" placeholder="Lastname">
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <input type="text" name="nid" placeholder="Enter your valid NID">
+                    <input type="text" name="uname" placeholder="Username">
+                </td>
+
+                <td>
+                    <input type="text" name="email" placeholder="Email">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="text" name="nid" placeholder="Valid NID">
                 </td>
 
                 <td>
@@ -64,7 +64,7 @@ if (isset($_SESSION['username'])) {
 
             <tr>
                 <td>
-                    <input type="password" name="password" placeholder="Enter your Password">
+                    <input type="password" name="password" placeholder="Password">
                 </td>
 
                 <td>
@@ -83,19 +83,19 @@ if (isset($_SESSION['username'])) {
                     <input type="file" name="myfile">
                 </td>
             </tr>
+
         </table>
 
         <table>
+
             <tr>
                 <td>
                     <br>
                     <input class="inputrequestbutton" type="submit" name="submit" value="Apply">
                 </td>
-            </tr>
 
-            <tr>
                 <td>
-                    <input class="" type="submit" name="return" value="Login">
+                    <input class="inputrequestreturn" type="submit" name="return" value="Login">
                 </td>
             </tr>
 

@@ -69,7 +69,7 @@ if (isset($_SESSION['username'])) {
 
                     ?>
                     <br>
-                    <input type="checkbox" name="remember" id="remember">
+                    <input type="checkbox" name="remember" id="remember" checked>
                     <label for="remember"><b>Remember Me</b></label>
                 </td>
             </tr>

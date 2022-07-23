@@ -117,7 +117,7 @@ if(isset($_POST["submit"]))
             $cpasswordErr = "Password didn't match";
         }
 }
-if(isset($_POST["login"]))
+if(isset($_POST["return"]))
 {
     header("location: ../view/adminlogin.php");
 }
