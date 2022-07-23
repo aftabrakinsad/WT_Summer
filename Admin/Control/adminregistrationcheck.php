@@ -1,17 +1,7 @@
 <?php
 
-// $fnameErr = "";
-// $lnameErr = "";
-// $unameErr = "";
-// $genderErr = "";
-// $emailErr = "";
-// $nidErr = "";
-// $phoneErr = "";
-// $passwordErr = "";
-// $cpasswordErr = "";
-// $fileErr = "";
-// $fromdata = "";
-// $filepath = "";
+@include("../Model/db.php");
+
 $uppercase=$lowercase=$number=$specialchars="";
 
 if(isset($_POST["submit"]))

@@ -21,4 +21,12 @@ class db
         $sqlstr = "SELECT uname,pass FROM $staticadmin WHERE uname = '$uname' AND pass = '$pass'";
         return $conn -> query($sqlstr);
     }
+
+    function insertapplicant($conn, $applicantofadmin, $fname, $lname, $uname, $email, $nid, $phone, $password, $cpassword, $profile_picture, $applicant_cv)
+    {
+        $sqlstr = "INSERT INTO applicantofadmin(fname, lname, uname, email, nid, phone, 
+        password, cpassword, profile_picture, 
+        applicant_cv) VALUES ('$fname', '$lname', '$uname', '$email', '$nid', '$phone', '$password', '$cpassword', '$profile_picture', '$applicant_cv')";
+        return $conn->query($sqlstr);
+    }
 }
