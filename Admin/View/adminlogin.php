@@ -48,7 +48,7 @@ if (isset($_SESSION['username'])) {
 
                     if (strpos($fullfill, "login=empty") == true)
                     {
-                        echo "<p id = 'denger'>You did not fill all the fields!<p>";
+                        echo "<p id = 'denger'>You did not fill all the fields!</p>";
                     }
                     else if(strpos($fullfill, "username=empty") == true)
                     {

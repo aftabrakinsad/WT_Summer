@@ -9,12 +9,16 @@
 
 .bodycolor
 {
-    background-image: linear-gradient(to right top, #2f0537, #41135c, #4b2587, #463cb7, #1255eb);
+    background-color: #d2c8ff;
 }
 
 #denger
 {
     color: red;
+}
+
+#success {
+    color: green;
 }
 
 body form
@@ -29,7 +33,6 @@ form
     background-color: white;
     padding: 50px 100px;
     box-shadow: 0px 5px 10px green;
-    box-sizing: border-box;
     border-radius: 30px;
 }
 

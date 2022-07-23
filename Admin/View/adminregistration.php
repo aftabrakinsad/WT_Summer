@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+
 if (isset($_SESSION['username'])) {
     header("location: ../View/adminlogin.php");
 }
@@ -29,6 +30,7 @@ if (isset($_SESSION['username'])) {
     </header>
 
     <form action="" method="POST" enctype="multipart/form-data">
+
         <h2 class="h2">Application Form</h2>
         <table class="container">
 
@@ -86,10 +88,17 @@ if (isset($_SESSION['username'])) {
 
         </table>
 
-        <table>
+        <table class="container">
 
             <tr>
                 <td>
+                    <?php
+                    $full = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+                    if (strpos($full, "signup=empty" == true)) {
+                        echo "<p id = 'denger>You did not fill all the fields!</p>";
+                    }
+                    ?>
                     <br>
                     <input class="inputrequestbutton" type="submit" name="submit" value="Apply">
                 </td>
