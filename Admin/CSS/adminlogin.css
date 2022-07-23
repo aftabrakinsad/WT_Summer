@@ -32,7 +32,7 @@ body form
 form {
     width: 450px;
     background-color: white;
-    padding: 30px 60px;
+    padding: 30px 70px;
     box-shadow: 0px 5px 10px black;
 }
 
@@ -67,6 +67,7 @@ input[type=text], input[type=password] {
     padding-left: 15px;
     box-sizing: border-box;
 }
+
 
 #uniqueuse
 {

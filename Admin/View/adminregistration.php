@@ -17,20 +17,23 @@ if (isset($_SESSION['username'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/CSS" href="../CSS/adminregistration.css">
-    <link rel="stylesheet" type="text/CSS" href="../CSS/adminlogin.css">
-    <title>Admin Registration</title>
+    <title>Admin Application Form</title>
 </head>
 
 <body>
-    <h1>Welcome to City Bank Limited.</h1>
-    <p><strong>To do further work, please register.</strong></p>
+
+    <header>
+        <h1>Welcome to City Bank Limited.</h1>
+        <p><strong>To do further work, please register.</ strong>
+        </p>
+    </header>
 
     <form action="" method="POST" enctype="multipart/form-data">
-        <table>
+        <h2 class="h2">Application Form</h2>
+        <table class="container">
 
             <tr>
                 <td>
-                    <label>Firstname:</label>
                     <input type="text" name="fname" placeholder="Enter your Firstname">
                     <span><?php echo $fnameErr; ?></span>
                 </td>
@@ -38,7 +41,6 @@ if (isset($_SESSION['username'])) {
 
             <tr>
                 <td>
-                    <label>Lastname:</label>
                     <input type="text" name="lname" placeholder="Enter your Lastname">
                     <span><?php echo $lnameErr; ?></span>
                 </td>
@@ -46,7 +48,6 @@ if (isset($_SESSION['username'])) {
 
             <tr>
                 <td>
-                    <label>Username:</label>
                     <input type="text" name="uname" placeholder="Enter your Username">
                     <span><?php echo $unameErr; ?></span>
                 </td>
@@ -63,15 +64,13 @@ if (isset($_SESSION['username'])) {
 
             <tr>
                 <td>
-                    <label>Email:</label>
-                    <input type="email" name="email" placeholder="Enter your Email">
+                    <input type="text" name="email" placeholder="Enter your Email">
                     <span><?php echo $emailErr; ?></span>
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <label>NID:</label>
                     <input type="text" name="nid" placeholder="Enter your valid NID">
                     <span><?php echo $nidErr; ?></span>
                 </td>
@@ -79,15 +78,13 @@ if (isset($_SESSION['username'])) {
 
             <tr>
                 <td>
-                    <label>Phone:</label>
-                    <input type="tel" name="phone" placeholder="+880-1XXXXXXXXX">
+                    <input type="text" name="phone" placeholder="+880-1XXXXXXXXX">
                     <span><?php echo $phoneErr; ?></span>
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <label>Password:</label>
                     <input type="password" name="password" placeholder="Enter your Password">
                     <span><?php echo $passwordErr; ?></span>
                 </td>
@@ -95,7 +92,6 @@ if (isset($_SESSION['username'])) {
 
             <tr>
                 <td>
-                    <label>Confirm Password:</label>
                     <input type="password" name="cpassword" placeholder="Confirm Password"><br>
                     <span><?php echo $cpasswordErr; ?></span>
                 </td>
@@ -119,7 +115,7 @@ if (isset($_SESSION['username'])) {
 
             <tr>
                 <td>
-                    <input type="submit" name="submit" value="Request">
+                    <input class="inputrequestbutton" type="submit" name="submit" value="Request">
                 </td>
             </tr>
 

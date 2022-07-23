@@ -1,0 +1,54 @@
+*
+{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+}
+
+body form
+{
+    margin-top: 40px;
+    margin-left: 35%;
+}
+
+form
+{
+    width: 450px;
+    background-color: white;
+    padding: 50px 70px;
+    box-shadow: 0px 5px 10px green;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+header h1
+{
+    text-align: center;
+    margin-top: 10px;
+}
+
+header p
+{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.inputrequestbutton
+{
+    width: 290px;
+    background-color: #04aa6d;
+    padding: 8px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    margin: 10px 0;
+    transition: background-color 0.4s;
+}
+
+.inputrequestbutton:hover
+{
+    opacity: 0.8;
+}
