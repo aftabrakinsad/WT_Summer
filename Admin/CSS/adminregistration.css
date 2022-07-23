@@ -76,18 +76,6 @@ input[type=text], input[type=password]
     transition: background-color 0.4s;
 }
 
-.inputreturn
-{
-    width: 200px;
-    background-color:royalblue;
-    padding: 8px;
-    border: none;
-    font-size: 16px;
-    font-weight: 500;
-    color: white;
-    margin: 15px 0;
-    transition: background-color 0.4s;;
-}
 
 .inputrequestbutton:hover
 {

@@ -95,7 +95,7 @@ if (isset($_SESSION['username'])) {
 
             <tr>
                 <td>
-                    <input class="inputreturn" type="submit" name="return" value="Login">
+                    <input class="" type="submit" name="return" value="Login">
                 </td>
             </tr>
 
