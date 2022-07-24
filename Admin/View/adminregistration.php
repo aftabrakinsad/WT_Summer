@@ -2,11 +2,11 @@
 
 session_start();
 
-@include('../Control/adminregistrationcheck.php');
-
 if (isset($_SESSION['username'])) {
-    header("location: ../View/adminhomepage.php");
+    header("location: ../View/adminlogin.php");
 }
+
+@include('../Control/adminregistrationcheck.php');
 
 ?>
 
@@ -22,6 +22,7 @@ if (isset($_SESSION['username'])) {
 </head>
 
 <body class="bodycolor">
+
     <header>
         <h1>Welcome to City Bank Limited.</h1>
         <p id="denger"><strong>Use correct information to apply </strong>
@@ -35,9 +36,7 @@ if (isset($_SESSION['username'])) {
 
             <tr>
                 <td>
-                    <label for="fname">
-                        <input type="text" name="fname" placeholder="Firstname">
-                    </label>
+                    <input type="text" name="fname" placeholder="Firstname">
                 </td>
 
                 <td>
@@ -47,7 +46,7 @@ if (isset($_SESSION['username'])) {
 
             <tr>
                 <td>
-                    <input type="text" name="uname" placeholder="Username">
+                    <input type="text" name="uname" placeholder="Username"> <br>
                 </td>
 
                 <td>
@@ -78,28 +77,40 @@ if (isset($_SESSION['username'])) {
             <tr>
                 <td>
                     Please upload your picture
-                    <input type="file" name="myfile">
+                    <input type="file" name="picture">
                 </td>
 
                 <td>
                     Please upload your cv
-                    <input type="file" name="myfile">
+                    <input type="file" name="picture">
                 </td>
             </tr>
 
-            <tr>
-                <td>
+        </table>
 
+        <table class="container">
+
+            <tr>
+                <td id="denger">
                     <?php
 
-                    $fullfill = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-
-                    if (strpos($fullfill, "signup=empty" == true)) {
-                        echo "<p id = 'denger'>You did not fill all the fields!</p>";
-                    } else {
-                    }
+                    echo "<br>";
+                    echo $unameerr;
+                    echo $unameerr1;
+                    echo $fnameerr;
+                    echo $signuperr;
+                    echo $lnameerr;
+                    echo $emailerr;
+                    echo $niderr;
+                    echo $niderr1;
+                    echo $phoneerr;
+                    echo $phoneerr1;
+                    echo $passworderr;
+                    echo $passworderr1;
+                    echo "<br>";
                     ?>
                     <br>
+
                     <input class="inputrequestbutton" type="submit" name="submit" value="Apply">
                 </td>
 
