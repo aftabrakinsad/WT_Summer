@@ -33,7 +33,7 @@ form
     background-color: white;
     padding: 50px 100px;
     box-shadow: 0px 5px 10px green;
-    border-radius: 30px;
+    /* border-radius: 30px; */
 }
 
 header h1
@@ -63,7 +63,7 @@ input[type=text], input[type=password]
 {
     background-color: #f2f4f6;
     padding: 12px;
-    margin: 3px 0;
+    margin: 8px 0;
     display: inline-block;
     border: none;
     width: 290px;
@@ -100,4 +100,8 @@ input[type=text], input[type=password]
 .inputrequestbutton:hover
 {
     opacity: 0.8;
+}
+
+.container {
+    padding: 16px;
 }
