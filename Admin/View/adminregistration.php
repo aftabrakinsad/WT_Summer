@@ -2,11 +2,11 @@
 
 session_start();
 
-if (isset($_SESSION['username'])) {
-    header("location: ../View/adminlogin.php");
-}
-
 @include('../Control/adminregistrationcheck.php');
+
+if (isset($_SESSION['username'])) {
+    header("location: ../View/adminhomepage.php");
+}
 
 ?>
 
@@ -22,7 +22,6 @@ if (isset($_SESSION['username'])) {
 </head>
 
 <body class="bodycolor">
-
     <header>
         <h1>Welcome to City Bank Limited.</h1>
         <p id="denger"><strong>Use correct information to apply </strong>
@@ -36,7 +35,9 @@ if (isset($_SESSION['username'])) {
 
             <tr>
                 <td>
-                    <input type="text" name="fname" placeholder="Firstname">
+                    <label for="fname">
+                        <input type="text" name="fname" placeholder="Firstname">
+                    </label>
                 </td>
 
                 <td>
@@ -92,11 +93,46 @@ if (isset($_SESSION['username'])) {
 
             <tr>
                 <td>
-                    <?php
-                    $full = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                    <input type="text" name="nid" placeholder="Valid NID">
+                </td>
 
-                    if (strpos($full, "signup=empty" == true)) {
-                        echo "<p id = 'denger>You did not fill all the fields!</p>";
+                <td>
+                    <input type="text" name="phone" placeholder="+880-1XXXXXXXXX">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="password" name="password" placeholder="Password">
+                </td>
+
+                <td>
+                    <input type="password" name="cpassword" placeholder="Confirm Password">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Please upload your picture
+                    <input type="file" name="myfile">
+                </td>
+
+                <td>
+                    Please upload your cv
+                    <input type="file" name="myfile">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+
+                    <?php
+
+                    $fullfill = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+                    if (strpos($fullfill, "signup=empty" == true)) {
+                        echo "<p id = 'denger'>You did not fill all the fields!</p>";
+                    } else {
                     }
                     ?>
                     <br>

@@ -2,7 +2,8 @@
 
 @include('../Control/adminlogincheck.php');
 
-if (isset($_SESSION['username'])) {
+if (isset($_SESSION['username']))
+{
     header("location: ../View/adminhomepage.php");
 }
 
@@ -25,6 +26,7 @@ if (isset($_SESSION['username'])) {
     </header>
 
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
+
         <h2 class="h2">Admin Login</h2>
         <table class="container">
 

@@ -7,7 +7,7 @@ class db
         $servername = "localhost";
         $username = "root";
         $password = "";
-        $dbname = "bankinmanagmentsystem";
+        $dbname = "bankingmanagmentsystem";
         $conn =  new mysqli( $servername, $username, $password, $dbname);
         if ($conn->connect_error)
         {
@@ -22,10 +22,10 @@ class db
         return $conn -> query($sqlstr);
     }
 
-    function insertapplicant($conn, $applicantofadmin, $fname, $lname, $uname, $email, $nid, $phone, $password, $cpassword, $profile_picture, $applicant_cv)
+    function insertapplicant($conn, $fname, $lname, $uname, $email, $nid, $phone, $password, $cpassword, $profile_picture, $applicant_cv, $applicantofadmin)
     {
-        $sqlstr = "INSERT INTO applicantofadmin(fname, lname, uname, email, nid, phone, 
-        password, cpassword, profile_picture, 
+        $sqlstr = "INSERT INTO applicantofadmin(fname, lname, uname, email, nid, phone,
+        password, cpassword, profile_picture,
         applicant_cv) VALUES ('$fname', '$lname', '$uname', '$email', '$nid', '$phone', '$password', '$cpassword', '$profile_picture', '$applicant_cv')";
         return $conn->query($sqlstr);
     }
