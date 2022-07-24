@@ -1,4 +1,5 @@
-* {
+*
+{
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -6,11 +7,13 @@
     text-decoration: none;
 }
 
-.bodycolor {
+.bodycolor
+{
     background-color: #d2c8ff;
 }
 
-#denger {
+#denger
+{
     color: red;
 }
 
@@ -18,30 +21,35 @@
     color: green;
 }
 
-body form {
+body form
+{
     margin-top: 40px;
     margin-left: 22%;
 }
 
-form {
+form
+{
     width: 800px;
     background-color: white;
     padding: 50px 100px;
     box-shadow: 0px 5px 10px green;
-    border-radius: 20px;
+    border-radius: 30px;
 }
 
-header h1 {
+header h1
+{
     text-align: center;
     margin-top: 10px;
 }
 
-header p {
+header p
+{
     text-align: center;
     margin-top: 50px;
 }
 
-.h2 {
+.h2
+{
     text-align: center;
     font-size: 30px;
     margin-bottom: 10px;
@@ -51,8 +59,8 @@ header p {
     border-radius: 15px;
 }
 
-input[type=text],
-input[type=password] {
+input[type=text], input[type=password]
+{
     background-color: #f2f4f6;
     padding: 12px;
     margin: 8px 0;
@@ -63,7 +71,8 @@ input[type=password] {
     box-sizing: border-box;
 }
 
-.inputrequestbutton {
+.inputrequestbutton
+{
     width: 290px;
     background-color: #04aa6d;
     padding: 8px;
@@ -75,9 +84,10 @@ input[type=password] {
     transition: background-color 0.4s;
 }
 
-.inputrequestreturn {
+.inputrequestreturn
+{
     width: 100px;
-    background-color: steelblue;
+    background-color:steelblue;
     padding: 8px;
     border: none;
     font-size: 16px;
@@ -87,8 +97,8 @@ input[type=password] {
     margin-top: 18px;
     transition: background-color 0.4s;
 }
-
-.inputrequestbutton:hover {
+.inputrequestbutton:hover
+{
     opacity: 0.8;
 }
 

@@ -1,82 +1,118 @@
-<?php include "../control/results.php"; ?>
+<?php
+include("../control/results.php")
+?>
+
 
 <!DOCTYPE html>
 <html>
+
 <head>
-  <link rel="stylesheet" type="text/CSS" href="../css/mycss.css">
+  <link rel="stylesheet" type="text/css" href="../css/mycss.css">
 </head>
+
 <body>
 
 
-<div class="header">
-  <h1>ABC Managment System</h1>
-  <h3>We Create Future</h3>
-</div>
-<div class="sticky">
-<div class="topnav">
-  <a href="#">Home</a>
-  <a href="#">About US</a>
-  <a href="#">Shop</a>
+  <div class="header">
+    <center>
+      <h1>ABC Management System</h1>
+      <h2>We Create Future</h2>
+    </center>
+  </div>
+  <div class="sticky">
+    <div class="topnav">
+      <a href="#">Home</a>
+      <a href="#">About US</a>
+      <a href="#">Shop</a>
 
-</div>
-</div>
+    </div>
+  </div>
+  <div class="registrationBox">
+    <h1 align="left">Registration form </h1>
+  </div>
+  <div class="frame">
 
+  </div>
 
-<div class="middlecolumn ">
-<h1>Registration form </h1>
+  <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post" enctype="multipart/form-data">
 
-<form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post" enctype="multipart/form-data">
-<div class="registrationBox">
-Enter your first name: <input type="text" name="fname"> <?php echo $validatename; ?>
-<br>
-<br>
-Enter your email: <input type="text" name="email"> <?php echo $validateemail; ?>
-<br><br>
+    <table>
+      <tr>
+        <td>
+          First Name:
+        </td>
+        <td>
+          <input type="text" name="fname">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Last Name:
+        </td>
+        <td>
+          <input type="text" name="lname">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Age:
+        </td>
+        <td>
+          <input type="text" name="age">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Designation:
+        </td>
+        <td>
+          <input type="radio" name="des" value="Junior Programmer">Junior Programmer
+          <input type="radio" name="des" value="Senior Programmer">Senior Programmer
+          <input type="radio" name="des" value="Project Leader">Project Lead
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Preferred language:
+        </td>
+        <td>
+          <input type="checkbox" name="check" value="Java">JAVA
+          <input type="checkbox" name="check" value="PHP">PHP
+          <input type="checkbox" name="check" value="CPP">C++
+        </td>
+      </tr>
+      <tr>
+        <td>
+          E-mail:
+        </td>
+        <td>
+          <input type="email" name="email">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Enter a Password:
+        </td>
+        <td>
+          <input type="password" name="password">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Please choose a file
+        </td>
+        <td>
+          <input type="file" name="file">
+        </td>
+      </tr>
 
-you options are
-<br>
+    </table>
+    <input type="submit" class="button submit" name="submit">
+    <input type="reset" class="button reset" name="reset">
+  </form>
 
-<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
- I have a bike<br>
-<input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-I have a car<br>
-<input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
- I have a boat<br>
-<br>
-<?php echo $validatecheckbox; ?>
-
-<?php echo $v1;?>
-
-<?php echo $v2;?>
-
-<?php echo $v3;?>
-<br>
-
-<p>Please select your gender:</p>
-  <input type="radio" id="male" name="gender" value="male">
-  <label for="male">Male</label><br>
-  <input type="radio" id="female" name="gender" value="female">
-  <label for="female">Female</label><br>
-  <input type="radio" id="other" name="gender" value="other">
-  <label for="other">Other</label>
-  <br>
-  <?php echo $validateradio; ?>
-<br>
-<input type="file" name="filetoupload">
-<br>
-<br>
-</div>
-<input type="submit" value="SUBMIT">
-<input type="reset" value="RESET">
-
-</form>
-
- </div>
-  
-
- <div class="footer">
-<h3> my footer </h3>
-</div>
+  </div>
 
 </body>
+
 </html>
