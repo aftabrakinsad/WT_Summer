@@ -38,55 +38,53 @@ if (isset($_SESSION['username'])) {
                 <td>
                     <input type="text" name="fname" placeholder="Firstname">
                 </td>
-            </tr>
 
-            <tr>
                 <td>
                     <input type="text" name="lname" placeholder="Lastname">
                 </td>
             </tr>
 
-            <!-- <tr> -->
-            <!-- <td> -->
-            <!-- <input type="text" name="uname" placeholder="Username"> -->
-            <!-- </td> -->
+            <tr>
+            <td>
+            <input type="text" name="uname" placeholder="Username">
+            </td>
 
-            <!-- <td> -->
-            <!-- <input type="text" name="email" placeholder="Email"> -->
-            <!-- </td> -->
-            <!-- </tr> -->
+            <td>
+            <input type="text" name="email" placeholder="Email">
+            </td>
+            </tr>
 
-            <!-- <tr> -->
-            <!-- <td> -->
-            <!-- <input type="text" name="nid" placeholder="Valid NID"> -->
-            <!-- </td> -->
+            <tr>
+            <td>
+            <input type="text" name="nid" placeholder="Valid NID">
+            </td>
 
-            <!-- <td> -->
-            <!-- <input type="text" name="phone" placeholder="+880-1XXXXXXXXX"> -->
-            <!-- </td> -->
-            <!-- </tr> -->
+            <td>
+            <input type="text" name="phone" placeholder="+880-1XXXXXXXXX">
+            </td>
+            </tr>
 
-            <!-- <tr> -->
-            <!-- <td> -->
-            <!-- <input type="password" name="password" placeholder="Password"> -->
-            <!-- </td> -->
+            <tr>
+            <td>
+            <input type="password" name="password" placeholder="Password">
+            </td>
 
-            <!-- <td> -->
-            <!-- <input type="password" name="cpassword" placeholder="Confirm Password"> -->
-            <!-- </td> -->
-            <!-- </tr> -->
+            <td>
+            <input type="password" name="cpassword" placeholder="Confirm Password">
+            </td>
+            </tr>
 
-            <!-- <tr> -->
-            <!-- <td> -->
-            <!-- Please upload your picture -->
-            <!-- <input type="file" name="myfile"> -->
-            <!-- </td> -->
+            <tr>
+            <td>
+            Please upload your picture
+            <input type="file" name="myfile">
+            </td>
 
-            <!-- <td> -->
-            <!-- Please upload your cv -->
-            <!-- <input type="file" name="myfile"> -->
-            <!-- </td> -->
-            <!-- </tr> -->
+            <td>
+            Please upload your cv
+            <input type="file" name="myfile">
+            </td>
+            </tr>
 
         </table>
 
