@@ -2,11 +2,11 @@
 
 session_start();
 
-if (isset($_SESSION['username'])) {
-    header("location: ../View/adminlogin.php");
-}
-
 @include('../Control/adminregistrationcheck.php');
+
+if (isset($_SESSION['username'])) {
+    header("location: ../View/adminhomepage.php");
+}
 
 ?>
 
@@ -22,7 +22,6 @@ if (isset($_SESSION['username'])) {
 </head>
 
 <body class="bodycolor">
-
     <header>
         <h1>Welcome to City Bank Limited.</h1>
         <p id="denger"><strong>Use correct information to apply </strong>
@@ -36,7 +35,9 @@ if (isset($_SESSION['username'])) {
 
             <tr>
                 <td>
-                    <input type="text" name="fname" placeholder="Firstname">
+                    <label for="fname">
+                        <input type="text" name="fname" placeholder="Firstname">
+                    </label>
                 </td>
 
                 <td>
@@ -86,17 +87,16 @@ if (isset($_SESSION['username'])) {
                 </td>
             </tr>
 
-        </table>
-
-        <table class="container">
-
             <tr>
                 <td>
-                    <?php
-                    $full = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
-                    if (strpos($full, "signup=empty" == true)) {
-                        echo "<p id = 'denger>You did not fill all the fields!</p>";
+                    <?php
+
+                    $fullfill = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+                    if (strpos($fullfill, "signup=empty" == true)) {
+                        echo "<p id = 'denger'>You did not fill all the fields!</p>";
+                    } else {
                     }
                     ?>
                     <br>
