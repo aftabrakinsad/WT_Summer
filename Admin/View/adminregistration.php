@@ -46,7 +46,7 @@ if (isset($_SESSION['username'])) {
 
             <tr>
                 <td>
-                    <input type="text" name="uname" placeholder="Username">
+                    <input type="text" name="uname" placeholder="Username"> <br>
                 </td>
 
                 <td>
@@ -77,12 +77,12 @@ if (isset($_SESSION['username'])) {
             <tr>
                 <td>
                     Please upload your picture
-                    <input type="file" name="myfile">
+                    <input type="file" name="picture">
                 </td>
 
                 <td>
                     Please upload your cv
-                    <input type="file" name="myfile">
+                    <input type="file" name="picture">
                 </td>
             </tr>
 
@@ -100,6 +100,7 @@ if (isset($_SESSION['username'])) {
                     }
                     ?>
                     <br>
+
                     <input class="inputrequestbutton" type="submit" name="submit" value="Apply">
                 </td>
 
