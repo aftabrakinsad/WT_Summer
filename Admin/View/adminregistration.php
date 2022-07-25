@@ -91,14 +91,34 @@ if (isset($_SESSION['username'])) {
         <table class="container">
 
             <tr>
-                <td>
+                <td id="denger">
                     <?php
-                    $full = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
-                    if (strpos($full, "signup=empty" == true)) {
-                        echo "<p id = 'denger>You did not fill all the fields!</p>";
-                    }
+                    echo $fnameerr;
+                    echo $lnameerr;
+                    echo $unameerr;
+                    echo $unameerr1;
+                    echo $emailerr;
+                    echo $niderr;
+                    echo $niderr1;
+                    echo $phoneerr;
+                    echo $phoneerr1;
+                    echo $passworderr;
+                    echo $passworderr1;
+                    echo $passworderr2;
+                    echo $filepath;
+                    echo $fileerr;
+                    echo $fileerr1;
+                    echo $fileerr2;
+                    echo $fileerr3;
+                    echo $imageerr;
+                    echo $imageerr1;
+                    echo $imageerr2;
+                    echo $imageerr3;
+                    echo $signuperr;
+
                     ?>
+                    <br>
                     <br>
 
                     <input class="inputrequestbutton" type="submit" name="submit" value="Apply">

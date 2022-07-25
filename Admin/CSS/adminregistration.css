@@ -15,7 +15,7 @@
 #denger
 {
     color: red;
-    /* text-align: center; */
+    text-align: center;
 }
 
 #success {
@@ -95,7 +95,7 @@ input[type=text], input[type=password]
     font-weight: 500;
     color: white;
     margin-left: 100px;
-    margin-top: 54px;
+    margin-top: 40px;
     transition: background-color 0.4s;
 }
 .inputrequestbutton:hover
@@ -104,5 +104,5 @@ input[type=text], input[type=password]
 }
 
 .container {
-    padding: 1px;
+    padding: 16px;
 }

@@ -91,10 +91,10 @@ if(isset($_POST["submit"]))
         {
             $phoneerr = "Please Enter Valid Phone Number";
         }
-        // else if(!empty($phone) && !preg_match("/^[0-9]{3}-[0-9]{4}-[0-9]{4}$/", $phone))
-        // {
-        //     $phoneerr1 = "Please Enter Valid Phone Number";
-        // }
+        else if(!empty($phone) && !preg_match("/^[0-9]{3}-[0-9]{4}-[0-9]{4}$/", $phone))
+        {
+            $phoneerr1 = "Please Enter Valid Phone Number";
+        }
         else if(empty($password))
         {
             $passworderr = "Enter Password!";
