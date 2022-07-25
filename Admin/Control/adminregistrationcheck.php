@@ -52,6 +52,11 @@ if(isset($_POST["submit"]))
 
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
+        $mydb = new db();
+        $conobj = $mydb->openConn();
+        $results = $mydb->loginadmin($conobj, "applicantofadmin", $_POST["fname"], $lname = $_POST["lname"], $_POST["uname"],$_POST["email"], $_POST["nid"], $_POST["phone"], $_POST["password"], $_POST["cpassword"], );
+
+
         if (empty($fname) && empty($lname) && empty($uname) && empty($email) && empty($nid) && empty($phone) && empty($password) && empty($cpassword))
         {
             $signuperr = "You did not fill all the fields!";
