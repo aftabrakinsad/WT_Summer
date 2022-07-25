@@ -82,7 +82,7 @@ if (isset($_SESSION['username'])) {
 
                 <td>
                     Please upload your cv
-                    <input type="file" name="picture">
+                    <input type="file" name="applicantcv">
                 </td>
             </tr>
 

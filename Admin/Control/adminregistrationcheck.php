@@ -115,6 +115,46 @@ if(isset($_POST["submit"]))
                 $passworderr3 = "Password didn't match ";
             }
         }
+        $check = getimagesize($_FILES["picture"]["tmp_name"]);
+        if ($check !== false)
+        {
+            $uploadOk = 1;
+        }
+        else
+        {
+            $imageerr = "File is not an image.";
+            $uploadOk = 0;
+        }
+        if (file_exists($target_file))
+        {
+            $imageerr1 = "Sorry, file already exists.";
+            $uploadOk = 0;
+        }
+        else if ($_FILES["picture"]["size"] > 100000)
+        {
+            $imageerr2 = "Sorry, your file is too large.";
+            $uploadOk = 0;
+        }
+        else if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif")
+        {
+            $imageerr3 = " Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+            $uploadOk = 0;
+        }
+        else if ($uploadOk == 0)
+        {
+            $fileerr1 = "Sorry, your file was not uploaded.";
+        }
+        else
+        {
+            if (move_uploaded_file($_FILES["picture"]["tmp_name"], $target_file))
+            {
+                $fileerr2 = "The file" . htmlspecialchars(basename($_FILES["picture"]["name"])) . "has been uploaded. ";
+            }
+            else
+            {
+                $fileerr3 = "Sorry, there was an error uploading your file.";
+            }
+        }
     }
 }
 
