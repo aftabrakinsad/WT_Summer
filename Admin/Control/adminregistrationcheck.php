@@ -12,6 +12,7 @@ $phoneerr1 = "";
 $passworderr = "";
 $passworderr1 = "";
 $passworderr2 = "";
+$passworderr3 = "";
 $filepath = "";
 $fileerr = "";
 $fileerr1 = "";
@@ -91,10 +92,10 @@ if(isset($_POST["submit"]))
         {
             $phoneerr = "Please Enter Valid Phone Number";
         }
-        else if(!empty($phone) && !preg_match("/^[0-9]{3}-[0-9]{4}-[0-9]{4}$/", $phone))
-        {
-            $phoneerr1 = "Please Enter Valid Phone Number";
-        }
+        // else if(!empty($phone) && !preg_match("/^[0-9]{3}-[0-9]{4}-[0-9]{4}$/", $phone))
+        // {
+            // $phoneerr1 = "Please Enter Valid Phone Number";
+        // }
         else if(empty($password))
         {
             $passworderr = "Enter Password!";
@@ -109,49 +110,9 @@ if(isset($_POST["submit"]))
             {
                 $passworderr2 = "Password should be more than or equal to 8 characters and should include at least one upper case, one lower case, one number and one special character!";
             }
-            else if($password == $cpassword)
+            else if($password != $cpassword)
             {
-                $check = getimagesize($_FILES["picture"]["tmp_name"]);
-                if ($check !== false)
-                {
-                    $uploadOk = 1;
-                }
-                else
-                {
-                    $imageerr = "File is not an image.";
-                    $uploadOk = 0;
-                }
-
-                if (file_exists($target_file))
-                {
-                    $imageerr1 = "Sorry, file already exists.";
-                    $uploadOk = 0;
-                }
-                else if ($_FILES["picture"]["size"] > 10000)
-                {
-                    $imageerr2 = "Sorry, your file is too large.";
-                    $uploadOk = 0;
-                }
-                else if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif")
-                {
-                    $imageerr3 = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-                    $uploadOk = 0;
-                }
-                else if ($uploadOk == 0)
-                {
-                    $fileerr1 = "Sorry, your file was not uploaded.";
-                }
-                else
-                {
-                    if (move_uploaded_file($_FILES["picture"]["tmp_name"], $target_file))
-                    {
-                        $fileerr2 =  "The file " . htmlspecialchars(basename($_FILES["picture"]["name"])) . " has been uploaded.";
-                    }
-                    else
-                    {
-                        $fileerr3 = "Sorry, there was an error uploading your file.";
-                    }
-                }
+                $passworderr3 = "Password didn't match ";
             }
         }
     }

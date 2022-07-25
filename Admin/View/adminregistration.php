@@ -106,6 +106,7 @@ if (isset($_SESSION['username'])) {
                     echo $passworderr;
                     echo $passworderr1;
                     echo $passworderr2;
+                    echo $passworderr3;
                     echo $filepath;
                     echo $fileerr;
                     echo $fileerr1;
