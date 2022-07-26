@@ -14,6 +14,7 @@ $Designation = "";
 $planguage = "";
 $fromdata = "";
 $filepath = "";
+$picture = "";
 if (isset($_POST["Submit"]))
 {
     $name = $_POST["fname"];
@@ -30,11 +31,6 @@ if (isset($_POST["Submit"]))
     {
         $desigErr = 'You have not selected any Designation';
     }
-    // else
-    // {
-        // $designation = $_POST["Designation"];
-    // }
-
     if (empty($name))
     {
         $nameErr = 'Please Enter First Name';
