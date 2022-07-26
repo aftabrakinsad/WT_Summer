@@ -81,7 +81,7 @@ div.sticky {
 
 /* Change color on hover */
 .topnav a:hover {
-  background-color: rgb(221, 221, 221);
+  background-color: #ddd;
   color: black;
 }
 

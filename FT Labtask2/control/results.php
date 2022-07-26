@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include("../Model/db.php");
+include("../model/db.php");
 
   $hasError=0;
   $nameErr = "";
@@ -170,6 +170,39 @@ if(move_uploaded_file($_FILES["myfile"]["tmp_name"],"../uploads/".$_FILES["myfil
 
 else
 $fileErr = 'Upload Error';
+/*
+//file type diye validation je kon type file upload kortese
+$formdata = array(
+    'firstname'=>$_POST["fname"],
+    'lastname'=>$_POST["lname"],
+    'age'=>$_POST["age"],
+    'pass'=>$_POST["pass"],
+    'email'=>$_POST["email"],
+    'language'=>$Language,
+    'designation'=>$_POST["designation"],
+    'filepath'=>$filepath
+   
+);
+$existingdata = file_get_contents('../data/data.json');
+$tempJSONdata = json_decode($existingdata);
+$tempJSONdata[] =$formdata;
+$jsondata = json_encode($tempJSONdata, JSON_PRETTY_PRINT);
+if(file_put_contents("../data/data.json",$jsondata))
+{
+    echo 'Data Successfully Saved';
+}
+else
+echo 'No Data Saved';
+$data = file_get_contents("../data/data.json");
+$mydata = json_decode($data);
+foreach($mydata as $myobject)
+     {
+     foreach($myobject as $key=>$value)
+    {
+        echo $key." => ".$value."<br>";
+    }
+    }
+    */
 $mydb = new db();
 $myconn = $mydb -> openConn();
 $mydb -> insertUser($name,$name2,$Age,$Designation,$planguage,$email,$pass, $picture,"employee",$myconn);

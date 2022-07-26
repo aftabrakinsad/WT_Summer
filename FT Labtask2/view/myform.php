@@ -1,7 +1,4 @@
-<?php
-include("../control/results.php")
-?>
-
+<?php include "../control/results.php"; ?>
 
 <!DOCTYPE html>
 <html>
