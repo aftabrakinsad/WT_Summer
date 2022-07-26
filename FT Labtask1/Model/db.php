@@ -15,7 +15,6 @@ class db
         return $conn;
     }
 
-
     function insertUser($fname, $lname, $age, $Designation, $planguage, $email, $pass, $picture, $table, $conn)
     {
         $sqlstr = "INSERT INTO employee(fname,lname,age,Designation,planguage,email,password,picture)
