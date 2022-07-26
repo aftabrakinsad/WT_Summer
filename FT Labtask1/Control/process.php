@@ -15,6 +15,7 @@ $planguage = "";
 $fromdata = "";
 $filepath = "";
 $picture = "";
+
 if (isset($_POST["Submit"]))
 {
     $name = $_POST["fname"];
