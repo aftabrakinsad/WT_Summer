@@ -22,13 +22,14 @@ $imageerr = "";
 $imageerr1 = "";
 $imageerr2 = "";
 $imageerr3 = "";
+$imageerr4 = "";
 $signuperr = "";
 
 @include("../Model/db.php");
 
 $uppercase=$lowercase=$number=$specialchars="";
 $target_dir = "../Uploads/Profile Pictures/";
-$target_file = $target_dir . basename($_FILES["picture"]["name"]);
+$target_file = $target_dir . basename($_FILES["picture"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
@@ -44,6 +45,8 @@ if(isset($_POST["submit"]))
     $phone = $_POST["phone"];
     $password = $_POST["password"];
     $cpassword = $_POST["cpassword"];
+    $picture = $_FILES["picture"];
+    $applicantcv = $_FILES["applicantcv"];
 
     $uppercase = preg_match('@[A-Z]@', $password);
     $lowercase = preg_match('@[a-z]@', $password);
@@ -52,12 +55,12 @@ if(isset($_POST["submit"]))
 
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
-        $mydb = new db();
-        $conobj = $mydb->openConn();
-        $results = $mydb->loginadmin($conobj, "applicantofadmin", $_POST["fname"], $lname = $_POST["lname"], $_POST["uname"],$_POST["email"], $_POST["nid"], $_POST["phone"], $_POST["password"], $_POST["cpassword"], );
+        // $mydb = new db();
+        // $conobj = $mydb->openConn();
+        // $results = $mydb->loginadmin($conobj, "applicantofadmin", $_POST["fname"], $lname = $_POST["lname"], $_POST["uname"],$_POST["email"], $_POST["nid"], $_POST["phone"], $_POST["password"], $_POST["cpassword"], );
 
 
-        if (empty($fname) && empty($lname) && empty($uname) && empty($email) && empty($nid) && empty($phone) && empty($password) && empty($cpassword))
+        if (empty($fname) && empty($lname) && empty($uname) && empty($email) && empty($nid) && empty($phone) && empty($password) && empty($cpassword) && empty($picture) && empty($applicantcv))
         {
             $signuperr = "You did not fill all the fields!";
         }
@@ -120,44 +123,43 @@ if(isset($_POST["submit"]))
                 $passworderr3 = "Password didn't match ";
             }
         }
-        $check = getimagesize($_FILES["picture"]["tmp_name"]);
-        if ($check !== false)
+        if(isset($_FILES['picture']) && !empty($_FILES['picture']))
         {
-            $uploadOk = 1;
-        }
-        else
-        {
-            $imageerr = "File is not an image.";
-            $uploadOk = 0;
-        }
-        if (file_exists($target_file))
-        {
-            $imageerr1 = "Sorry, file already exists.";
-            $uploadOk = 0;
-        }
-        else if ($_FILES["picture"]["size"] > 100000)
-        {
-            $imageerr2 = "Sorry, your file is too large.";
-            $uploadOk = 0;
-        }
-        else if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif")
-        {
-            $imageerr3 = " Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-            $uploadOk = 0;
-        }
-        else if ($uploadOk == 0)
-        {
-            $fileerr1 = "Sorry, your file was not uploaded.";
-        }
-        else
-        {
-            if (move_uploaded_file($_FILES["picture"]["tmp_name"], $target_file))
+            $check = getimagesize($_FILES["picture"]["tmp_name"]);
+            if ($check !== true)
             {
-                $fileerr2 = "The file" . htmlspecialchars(basename($_FILES["picture"]["name"])) . "has been uploaded. ";
+                $imageerr = "File is not an image.";
+                $uploadOk = 0;
             }
-            else
+            else if (file_exists($target_file))
             {
-                $fileerr3 = "Sorry, there was an error uploading your file.";
+                $imageerr1 = "Sorry, file already exists.";
+                $uploadOk = 0;
+            }
+            else if ($_FILES["picture"]["size"] > 10000)
+            {
+                $imageerr2 = "Sorry, your file is too large.";
+                $uploadOk = 0;
+            }
+            else if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType !="gif") 
+            {
+                $imageerr3 = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+                $uploadOk = 0;
+            } 
+            else if ($uploadOk == 0) 
+            {
+                $fileerr1 = "Sorry, your file was not uploaded.";
+            } 
+            else 
+            {
+                if (move_uploaded_file($_FILES["picture"]["tmp_name"], $target_file))
+                { 
+                    $fileerr2 =  "The file " .htmlspecialchars(basename($_FILES["picture"]["tmp_name"])) . " has been uploaded.";
+                } 
+                else 
+                {
+                    $fileerr3 = "Sorry, there was an error uploading your file.";
+                }
             }
         }
     }
