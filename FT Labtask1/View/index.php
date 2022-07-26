@@ -1,6 +1,9 @@
 <?php
+
 include("../Control/process.php");
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
