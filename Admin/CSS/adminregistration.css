@@ -15,10 +15,10 @@
 #denger
 {
     color: red;
-    /* text-align: center; */
 }
 
-#success {
+#success 
+{
     color: green;
 }
 
@@ -98,11 +98,13 @@ input[type=text], input[type=password]
     margin-top: 38px;
     transition: background-color 0.4s;
 }
+
 .inputrequestbutton:hover
 {
     opacity: 0.8;
 }
 
-.container {
+.container
+{
     padding: 1px;
 }
