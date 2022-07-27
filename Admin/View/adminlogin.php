@@ -8,6 +8,7 @@ if (isset($_SESSION['username']))
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -70,6 +71,7 @@ if (isset($_SESSION['username']))
                     }
 
                     ?>
+
                     <br>
                     <input type="checkbox" name="remember" id="remember" checked>
                     <label for="remember"><b>Remember Me</b></label>
