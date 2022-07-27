@@ -30,3 +30,5 @@ class db
         return $conn->query($sqlstr);
     }
 }
+
+?>
