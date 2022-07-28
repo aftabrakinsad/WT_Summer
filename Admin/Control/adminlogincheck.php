@@ -11,43 +11,38 @@
 
         if($uname != "" && $password != "")
         {
-            if($_SERVER["REQUEST_METHOD"] == "POST")
+            $f = 0;
+            $mydb = new db();
+            $conobj = $mydb->openConn();
+            $results = $mydb->loginadmin($conobj, "staticadmin", $_POST["uname"], $_POST["pass"]);
+            if($results->num_rows > 0)
             {
-                $f = 0;
-                $mydb = new db();
-                $conobj = $mydb->openConn();
-                $results = $mydb->loginadmin($conobj, "staticadmin", $_POST["uname"], $_POST["pass"]);
-
-                if($results->num_rows > 0)
+                foreach($results as $user)
                 {
-                    foreach($results as $user)
+                    if($user["uname"] == $_POST["uname"] && $user["pass"] == $_POST["pass"])
                     {
-                        if($user["uname"] == $_POST["uname"] && $user["pass"] == $_POST["pass"])
+                        $_SESSION['username'] = $user["uname"];
+                        $_SESSION['password'] = $user["pass"];
+                        if (!empty($_POST["remember"]))
                         {
-                            $_SESSION['username'] = $user["uname"];
-                            $_SESSION['password'] = $user["pass"];
-
-                            if (!empty($_POST["remember"]))
-                            {
-                                setcookie("uname", $_SESSION['username'], time() + 60);
-                                setcookie("pass", $_SESSION['password'], time() + 60);
-                                echo "";
-                            }
-                            else
-                            {
-                                setcookie("uname", "");
-                                setcookie("pass", "");
-                                echo "";
-                            }
-                            header("location: ../view/adminhomepage.php");
+                            setcookie("uname", $_SESSION['username'], time() + 60);
+                            setcookie("pass", $_SESSION['password'], time() + 60);
+                            echo "";
                         }
+                        else
+                        {
+                            setcookie("uname", "");
+                            setcookie("pass", "");
+                            echo "";
+                        }
+                        header("location: ../view/adminhomepage.php");
                     }
                 }
-                else if ($f == 0)
-                {
-                    header("location: ../view/adminlogin.php?login_info=incorrect");
-                    exit();
-                }
+            }
+            else if ($f == 0)
+            {
+                header("location: ../view/adminlogin.php?login_info=incorrect");
+                exit();
             }
         }
         if(empty($uname) && empty($password))
@@ -71,4 +66,5 @@
             exit();
         }
     }
-?>
+
+    ?>
