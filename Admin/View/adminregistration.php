@@ -82,7 +82,7 @@ if (isset($_SESSION['username'])) {
 
                 <td>
                     Please upload your cv
-                    <input type="file" name="applicantcv">
+                    <input type="file" name="cv">
                 </td>
             </tr>
 
@@ -117,7 +117,7 @@ if (isset($_SESSION['username'])) {
                     echo $imageerr2;
                     echo $imageerr3;
                     echo $imageerr4;
-                    echo $imageerr5;
+                    //echo $imageerr5;
                     echo $signuperr;
 
                     ?>
