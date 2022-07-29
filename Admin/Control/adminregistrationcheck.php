@@ -112,7 +112,7 @@ if(isset($_POST["submit"]))
     {
         if ($picture == true)
         {
-            $target_dir = "../uploads/";
+            $target_dir = "../uploads/profile_picture/";
             $target_file = $target_dir . $_FILES["picture"]["name"];
             $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
