@@ -103,22 +103,14 @@ if (isset($_SESSION['username'])) {
                     echo $niderr;
                     echo $niderr1;
                     echo $phoneerr;
-                    echo $phoneerr1;
-                    echo $passworderr;
+                    echo $passworderr; 
                     echo $passworderr1;
                     echo $passworderr2;
                     echo $passworderr3;
-                    echo $filepath;
                     echo $fileerr;
                     echo $fileerr1;
-                    echo $fileerr2;
-                    echo $fileerr3;
                     echo $imageerr;
                     echo $imageerr1;
-                    echo $imageerr2;
-                    echo $imageerr3;
-                    echo $imageerr4;
-                    //echo $imageerr5;
                     echo $signuperr;
 
                     ?>

@@ -22,9 +22,9 @@ class db
         return $conn -> query($sqlstr);
     }
 
-    function insertapplicant($fname, $lname, $uname, $email, $nid, $phone, $password, $cpassword, $picture, $cv,$applicantofadmin, $conn)
+    function insertapplicant($fname, $lname, $uname, $email, $nid, $phone, $password, $cpassword, $imgpath, $filepath, $applicantofadmin,$conn)
     {
-        $sqlstr = "INSERT INTO applicantofadmin(fname, lname, uname, email, nid, phone, password, cpassword, picture, cv) VALUES ('$fname', '$lname', '$uname', '$email', '$nid', '$phone', '$password', '$cpassword', '$picture', '$cv')";
+        $sqlstr = "INSERT INTO applicantofadmin(fname, lname, uname, email, nid, phone, password, cpassword, picture, cv) VALUES ('$fname', '$lname', '$uname', '$email', '$nid', '$phone', '$password', '$cpassword', '$imgpath', '$filepath')";
         return $conn->query($sqlstr);
     }
 }
