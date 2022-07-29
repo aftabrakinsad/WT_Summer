@@ -27,9 +27,7 @@ $signuperr = "";
 
 @include("../Model/db.php");
 
-$uppercase=$lowercase=$number=$specialchars="";
-$uploadOk = 1;
-$imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+$uppercase = $lowercase = $number = $specialchars = "";
 
 session_start();
 
@@ -43,111 +41,138 @@ if(isset($_POST["submit"]))
     $phone = $_POST["phone"];
     $password = $_POST["password"];
     $cpassword = $_POST["cpassword"];
-    $picture = $_FILES["picture"];
-    $cv = $_FILES["applicantcv"];
+    $picture = $_FILES["picture"]["name"];
 
     $uppercase = preg_match('@[A-Z]@', $password);
     $lowercase = preg_match('@[a-z]@', $password);
     $number = preg_match('@[0-9]@', $password);
     $specialchars = preg_match('@[^\W]@', $password);
+    
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    if (empty($fname) && empty($lname) && empty($uname) && empty($email) && empty($nid) && empty($phone) && empty($password) && empty($cpassword) && empty($_FILES["picture"]["tmp_name"]))
     {
-        if (empty($fname) && empty($lname) && empty($uname) && empty($email) && empty($nid) && empty($phone) && empty($password) && empty($cpassword))
+        $signuperr = "You did not fill all the fields! ";
+    }
+    else if(empty($fname))
+    {
+        $fnameerr = "Please Enter Your Firstname. ";
+    }
+    else if(empty($lname))
+    {
+        $lnameerr = "Please Enter Your Lastname. ";
+    }
+    else if(empty($uname))
+    {
+        $unameerr1 = "Please Enter Your Username. ";
+    }
+    else if (!empty($uname) && strlen($uname) <= 5)
+    {
+        $unameerr = "Username must be more than 5 characters! ";
+    }
+    else if(empty($email))
+    {
+        $emailerr = "Please Enter Valid Email Address. ";
+    }
+    else if(!empty($email) && !preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $email))
+    {
+        $emailerr = "Please Enter Valid Email Address. ";
+    }
+    else if(empty($nid))
+    {
+        $niderr = "Please Enter Valid National Identity Number. ";
+    }
+    else if(!empty($nid) && strlen($nid) != 8)
+    {
+        $niderr1 = "NID should be 8 digits. ";
+    }
+    else if(empty($phone))
+    {
+        $phoneerr = "Please Enter Valid Phone Number. ";
+    }
+    else if(empty($password))
+    {
+        $passworderr = "Enter Password! ";
+    }
+    elseif(empty($cpassword))
+    {
+        $passworderr1 = "Confirm Your Password ";
+    }
+    else if(!empty($password) && !empty($cpassword))
+    {
+        if(!$uppercase || !$lowercase || !$number || !$specialchars || strlen($password) <= 8)
         {
-            $signuperr = "You did not fill all the fields! ";
+            $passworderr2 = "Password should be more than or equal to 8 characters and should include at least one uppercase, one lower case, one number and one special character! ";
         }
-        else if(empty($fname))
+        else if($password != $cpassword)
         {
-            $fnameerr = "Please Enter Your Firstname. ";
+            $passworderr3 = "Password didn't match. ";
         }
-        else if(empty($lname))
+    }
+    if($fname != "" && $lname != "" && $uname != "" && $email != "" && $nid != "" && $phone != "" && $password != "" && 
+    $cpassword != "" && $picture != "")
+    {
+        if ($picture != "") 
         {
-            $lnameerr = "Please Enter Your Lastname. ";
-        }
-        else if(empty($uname))
-        {
-            $unameerr1 = "Please Enter Your Username. ";
-        }
-        else if (!empty($uname) && strlen($uname) <= 5)
-        {
-            $unameerr = "Username must be more than 5 characters! ";
-        }
-        else if(empty($email))
-        {
-            $emailerr = "Please Enter Valid Email Address. ";
-        }
-        else if(!empty($email) && !preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $email))
-        {
-            $emailerr = "Please Enter Valid Email Address. ";
-        }
-        else if(empty($nid))
-        {
-            $niderr = "Please Enter Valid National Identity Number. ";
-        }
-        else if(!empty($nid) && strlen($nid) != 8)
-        {
-            $niderr1 = "NID should be 8 digits. ";
-        }
-        else if(empty($phone))
-        {
-            $phoneerr = "Please Enter Valid Phone Number. ";
-        }
-        else if(empty($password))
-        {
-            $passworderr = "Enter Password! ";
-        }
-        elseif(empty($cpassword))
-        {
-            $passworderr1 = "Confirm Your Password ";
-        }
-        else if(!empty($password) && !empty($cpassword))
-        {
-            if(!$uppercase || !$lowercase || !$number || !$specialchars || strlen($password) <= 8)
+            $target_dir = "../uploads/";
+            $target_file = $target_dir . $_FILES["picture"]["name"];
+            $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+            // if ($_FILES['picture']['size'] <= 5000000)
+            // {
+            // if(($_FILES['picture']['type']) == "jpeg" || ($_FILES['picture']['type']) == "png")
+            // {
+            // // move_uploaded_file($_FILES['picture']['tmp_name'], "../Uploads/" . time() . rand() . "-" . $_FILES['picture']['name']);
+            // } 
+            // else
+            // {
+            // $imageerr = "Only jpeg and png files are allowed";
+            // }
+            // } 
+            // else
+            // {
+            // $imageerr2 = "File size is too large";
+            // }
+
+            if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif"
+            ) 
             {
-                $passworderr2 = "Password should be more than or equal to 8 characters and should include at least one upper case, one lower case, one number and one special character! ";
+                $imageerr = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
             }
-            else if($password != $cpassword)
+            else
             {
-                $passworderr3 = "Password didn't match. ";
-            }
-        }
-        if(isset($_POST["submit"]))
-        {
-            if(!empty($_FILES["picture"]["tmp_name"]))
-            {
-                $check = getimagesize($_FILES["picture"]["tmp_name"]);
-                if ($check == false && $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif")
+                $result = move_uploaded_file($_FILES["picture"]["tmp_name"], $target_file);
+                if($result == true)
                 {
-                    $imageerr = "File is not an image. Only JPG, JPEG, PNG & GIF files are allowed.";
-                    $uploadOk = 0;
-                }
-                else if($_FILES["picture"]["size"] > 500000)
-                {
-                    $imageerr1 = "Sorry, your file is too large.";
-                    $uploadOk = 0;
-                }
-                else if($uploadOk == 0)
-                {
-                    $imageerr2 = "Sorry, your file was not uploaded.";
+                    echo "uploaded";
                 }
                 else
                 {
-                    if(move_uploaded_file($_FILES["picture"]["tmp_name"], "../Uploads/" . $_FILES["picture"]["name"]))
-                    {
-                        $picture = "../Uploads/" . $_FILES["picture"]["name"];
-                    }
-                    else
-                        $imageerr3 = "Sorry, there was an error uploading your file.";
-                        $mydb = new db();
-                        $myconn = $mydb->openConn();
-                        $mydb->insertapplicant($fname, $lname, $uname, $email, $nid, $phone, $password, $cpassword, $picture, $cv, "applicantofadmin", $conn);
+                    echo "not uploaded";
                 }
+                $mydb = new db();
+                $myconn = $mydb->openConn();
+                $result = $mydb->insertapplicant($fname, $lname, $uname, $email, $nid, $phone, $password, $cpassword, $picture,
+                $cv, "applicantofadmin", $myconn);
             }
+        } 
+        else 
+        {
+            echo "Image required! ";
         }
+            // $mydb = new db();
+            // $myconn = $mydb->openConn();
+            // $result = $mydb->insertapplicant($fname, $lname, $uname, $email, $nid, $phone, $password, $cpassword, $picture,
+            // $cv, "applicantofadmin", $myconn);
     }
+        // #File Name With a Random Number So That Similar Don't Get Replaced
+        // $picture = $_FILES["picture"]["name"];
+        // #Temporary File Name To Store File
+        // $temp = $_FILES["picture"]["tmp_name"];
+        // #Upload Directory Path
+        // $upload_dir = '../Uploads/';
+        // move_uploaded_file($temp, $upload_dir);
+    // }
 }
-
 if(isset($_POST["return"]))
 {
     header("location: ../view/adminlogin.php");
