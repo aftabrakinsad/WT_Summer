@@ -78,6 +78,7 @@ if (isset($_SESSION['username'])) {
                 <td>
                     Please upload your picture
                     <input type="file" name="picture">
+                    </p>
                 </td>
 
                 <td>
@@ -113,7 +114,7 @@ if (isset($_SESSION['username'])) {
                     echo $fileerr2;
                     echo $fileerr3;
                     echo $imageerr;
-                    echo $imageerr1;
+                    //echo $imageerr1;
                     echo $imageerr2;
                     echo $imageerr3;
                     echo $imageerr4;
@@ -121,7 +122,7 @@ if (isset($_SESSION['username'])) {
                     echo $signuperr;
 
                     ?>
-                    
+
                     <br>
                     <br>
 
