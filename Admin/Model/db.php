@@ -27,6 +27,11 @@ class db
         $sqlstr = "INSERT INTO applicantofadmin(fname, lname, uname, email, nid, phone, password, cpassword, picture, cv) VALUES ('$fname', '$lname', '$uname', '$email', '$nid', '$phone', '$password', '$cpassword', '$imgpath', '$filepath')";
         return $conn->query($sqlstr);
     }
+
+    function forgetpassword()
+    {
+        
+    }
 }
 
 ?>
