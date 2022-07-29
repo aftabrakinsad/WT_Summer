@@ -80,7 +80,7 @@ if (isset($_SESSION['username'])) {
 
             <tr>
                 <th id="uniqueuse">
-                    <a id="denger" href="#">Forget Password?</a><br><br>
+                    <a id="denger" href="forgetpassword.php">Forget Password?</a><br><br>
                     <a id="primary" href="adminregistration.php">Apply Admin</a>
                 </th>
             </tr>
