@@ -25,7 +25,7 @@ if (isset($_SESSION['username'])) {
 
     <header>
         <h1>Welcome to City Bank Limited.</h1>
-        <p id="denger"><strong>Use correct information to apply </strong>
+        <p id="info"><strong>Use correct information to apply </strong>
         </p>
     </header>
 
@@ -103,7 +103,7 @@ if (isset($_SESSION['username'])) {
                     echo $niderr;
                     echo $niderr1;
                     echo $phoneerr;
-                    echo $passworderr; 
+                    echo $passworderr;
                     echo $passworderr1;
                     echo $passworderr2;
                     echo $passworderr3;
