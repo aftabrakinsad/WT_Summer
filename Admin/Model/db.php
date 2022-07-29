@@ -24,7 +24,7 @@ class db
 
     function insertapplicant($fname, $lname, $uname, $email, $nid, $phone, $password, $cpassword, $picture, $cv,$applicantofadmin, $conn)
     {
-        $sqlstr = "INSERT INTO applicantofadmin (fname, lname, uname, email, nid, phone, password, cpassword, picture, cv) VALUES ('$fname', '$lname', '$uname', '$email', '$nid', '$phone', '$password', '$cpassword', '$picture', '$cv')";
+        $sqlstr = "INSERT INTO applicantofadmin(fname, lname, uname, email, nid, phone, password, cpassword, picture, cv) VALUES ('$fname', '$lname', '$uname', '$email', '$nid', '$phone', '$password', '$cpassword', '$picture', '$cv')";
         return $conn->query($sqlstr);
     }
 }
