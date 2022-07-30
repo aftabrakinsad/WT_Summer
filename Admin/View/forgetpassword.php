@@ -1,6 +1,10 @@
 <?php
 
-@include('../Control/forgetpasswordprocess.php');
+@include("../Control/forgetpassprocess.php");
+
+if (isset($_SESSION['username'])) {
+    header("location: ../View/adminlogin.php");
+}
 
 ?>
 
@@ -18,17 +22,17 @@
 <body class="bodyimage">
     <form action="" method="POST">
         <h2 class="h2">Forgot Password</h2>
-        <p>Enter your NID and Email address</p>
+        <p>Enter your Username and Email address</p>
+
+        <input type="text" name="uname" placeholder="Enter user name">
 
         <input type="email" name="email" placeholder="Enter email address">
 
-        <input type="text" name="nid" placeholder="Enter your nid number">
+        <input type="password" name="newpass" placeholder="New password">
 
-        <input type="text" name="npass" placeholder="Enter new password">
+        <input class="inputbutton" type="submit" name="submit" value="Continue">
 
-        <input type="text" name="cpass" placeholder="Confirm new password">
-
-        <input class="inputbutton" type="submit" name="check" value="Continue">
+        <input class="inputrequestreturn" type="submit" name="return" value="Back">
     </form>
 </body>
 

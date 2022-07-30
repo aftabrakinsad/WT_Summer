@@ -22,11 +22,6 @@
     color: green;
 }
 
-#info
-{
-    color: blue;
-}
-
 body form
 {
     margin-top: 40px;
@@ -59,7 +54,6 @@ header p
     text-align: center;
     font-size: 30px;
     margin-bottom: 10px;
-    margin-right: 8px;
     background-color: cornflowerblue;
     color: white;
     padding: 5px;
