@@ -18,14 +18,20 @@ class db
 
     function loginadmin($conn, $staticadmin, $uname, $pass)
     {
-        $sqlstr = "SELECT uname,pass FROM $staticadmin WHERE uname = '$uname' AND pass = '$pass'";
+        $sqlstr = "SELECT uname, pass FROM $staticadmin WHERE uname = '$uname' AND pass = '$pass'";
         return $conn -> query($sqlstr);
     }
 
-    function insertapplicant($fname, $lname, $uname, $email, $nid, $phone, $password, $cpassword, $picture, $cv,$applicantofadmin, $conn)
+    function insertapplicant($fname, $lname, $uname, $email, $nid, $phone, $password, $cpassword, $picture, $cv, $applicantofadmin, $conn)
     {
         $sqlstr = "INSERT INTO applicantofadmin (fname, lname, uname, email, nid, phone, password, cpassword, picture, cv) VALUES ('$fname', '$lname', '$uname', '$email', '$nid', '$phone', '$password', '$cpassword', '$picture', '$cv')";
         return $conn->query($sqlstr);
+    }
+
+    function forgotpasswordselect($conn, $staticadmin, $uname, $email)
+    {
+        $sqlstr = "SELECT * FROM staticadmin WHERE uname = '$uname' AND email = '$email'";
+        return $conn -> query($sqlstr);
     }
 }
 

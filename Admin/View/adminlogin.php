@@ -2,7 +2,8 @@
 
 @include('../Control/adminlogincheck.php');
 
-if (isset($_SESSION['username'])) {
+if (isset($_SESSION['username']))
+{
     header("location: ../View/adminhomepage.php");
 }
 
@@ -50,17 +51,21 @@ if (isset($_SESSION['username'])) {
 
                     if (strpos($fullfill, "login=empty") == true) {
                         echo "<p id = 'denger'>You did not fill all the fields!</p>";
-                    } 
-                    else if (strpos($fullfill, "username=empty") == true) {
+                    }
+                    else if (strpos($fullfill, "username=empty") == true)
+                    {
                         echo "<p id = 'denger'>Please enter Username!<p>";
-                    } 
-                    else if (strpos($fullfill, "password=empty") == true) {
+                    }
+                    else if (strpos($fullfill, "password=empty") == true)
+                    {
                         echo "<p id = 'denger'>Please enter Password!<p>";
-                    } 
-                    else if (strpos($fullfill, "login_info=incorrect") == true) {
+                    }
+                    else if (strpos($fullfill, "login_info=incorrect") == true)
+                    {
                         echo "<p id = 'denger'>Username or Password is incorrect!<p>";
-                    } 
-                    else if (strpos($fullfill, "login=success") == true) {
+                    }
+                    else if (strpos($fullfill, "login=success") == true)
+                    {
                         echo "<p id = 'success'>Login Successfull<p>";
                     }
 
@@ -80,7 +85,7 @@ if (isset($_SESSION['username'])) {
 
             <tr>
                 <th id="uniqueuse">
-                    <a id="denger" href="#">Forget Password?</a><br><br>
+                    <a id="denger" href="forgetpassword.php">Forget Password?</a><br><br>
                     <a id="primary" href="adminregistration.php">Apply Admin</a>
                 </th>
             </tr>
