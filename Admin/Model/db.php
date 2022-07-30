@@ -16,22 +16,23 @@ class db
         return $conn;
     }
 
-    function loginadmin($conn, $staticadmin, $uname, $pass)
+    function loginadmin($staticadmin, $uname, $pass, $conn)
     {
         $sqlstr = "SELECT uname,pass FROM $staticadmin WHERE uname = '$uname' AND pass = '$pass'";
         return $conn -> query($sqlstr);
     }
 
-    function insertapplicant($fname, $lname, $uname, $email, $nid, $phone, $password, $cpassword, $imgpath, $filepath, $applicantofadmin,$conn)
+    function insertapplicant($fname, $lname, $uname, $email, $nid, $phone, $password, $cpassword, $imgpath, $filepath, $applicantofadmin, $conn)
     {
         $sqlstr = "INSERT INTO applicantofadmin(fname, lname, uname, email, nid, phone, password, cpassword, picture, cv) VALUES ('$fname', '$lname', '$uname', '$email', '$nid', '$phone', '$password', '$cpassword', '$imgpath', '$filepath')";
         return $conn->query($sqlstr);
     }
 
-    function forgetpassword()
-    {
-        
-    }
+    // function forgetpassword($pass, $nid, $email, $conn)
+    // {
+        // $sqlstr = "SELECT pass,nid,email FROM staticadmin WHERE pass = '$pass' AND nid = '$nid' AND email = '$email'";
+        // return $conn->query($sqlstr);
+    // }
 }
 
 ?>

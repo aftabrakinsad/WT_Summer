@@ -1,3 +1,10 @@
+<?php
+
+@include('../Control/forgetpasswordprocess.php');
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,15 +17,19 @@
 </head>
 
 <body class="bodyimage">
-    <form action="forgetpassword.php" method="POST">
+    <form action="" method="POST">
         <h2 class="h2">Forgot Password</h2>
         <p>Enter your NID and Email address</p>
 
-        <input type="text" name="nid" placeholder="Enter your nid number">
-
         <input type="email" name="email" placeholder="Enter email address">
 
-        <input class="inputbutton" type="submit" name="ckeck" value="Continue">
+        <input type="text" name="nid" placeholder="Enter your nid number">
+
+        <input type="text" name="npass" placeholder="Enter new password">
+
+        <input type="text" name="cpass" placeholder="Confirm new password">
+
+        <input class="inputbutton" type="submit" name="check" value="Continue">
     </form>
 </body>
 
