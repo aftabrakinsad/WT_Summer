@@ -28,11 +28,11 @@ class db
         return $conn->query($sqlstr);
     }
 
-    // function forgetpassword($pass, $nid, $email, $conn)
-    // {
-        // $sqlstr = "SELECT pass,nid,email FROM staticadmin WHERE pass = '$pass' AND nid = '$nid' AND email = '$email'";
-        // return $conn->query($sqlstr);
-    // }
+    function forgetpassword($pass, $nid, $email, $conn)
+    {
+        $sqlstr = "SELECT pass,nid,email FROM staticadmin WHERE pass = '$pass' AND nid = '$nid' AND email = '$email'";
+        return $conn->query($sqlstr);
+    }
 }
 
 ?>
