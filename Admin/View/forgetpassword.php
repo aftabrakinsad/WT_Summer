@@ -1,9 +1,10 @@
 <?php
 
-@include("../Control/forgetpassprocess.php");
+@include('../Control/passcngprocess.php');
 
-if (isset($_SESSION['username'])) {
-    header("location: ../View/adminlogin.php");
+if (isset($_SESSION['email']))
+{
+    //header("location: ../View/passwordchange.php");
 }
 
 ?>
@@ -20,19 +21,57 @@ if (isset($_SESSION['username'])) {
 </head>
 
 <body class="bodyimage">
+    <header>
+        <h1 class="h1">City Bank Limited.</h1>
+    </header>
+
     <form action="" method="POST">
+
         <h2 class="h2">Forgot Password</h2>
-        <p>Enter your Username and Email address</p>
+        <p id="info">Enter your Email and new Password</p>
 
-        <input type="text" name="uname" placeholder="Enter user name">
+        <input type="email" name="email" placeholder="Enter email">
+        <input type="password" name="pass" placeholder="New Password">
+        <input type="password" name="cpass" placeholder="Confirm password">
+        <?php echo "<p id='denger'>$passerr2</p>" ?>
+        <?php echo "<p id='denger'>$passerr1</p>" ?>
 
-        <input type="email" name="email" placeholder="Enter email address">
+        <?php
 
-        <input type="password" name="newpass" placeholder="New password">
+        $fulll = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
-        <input class="inputbutton" type="submit" name="submit" value="Continue">
+        if (strpos($fulll, "User=not_found") == true)
+        {
+            echo "<p id='info'>User Not Found</p>";
+        }
+        else if (strpos($fulll, "info=empty") == true)
+        {
+            echo "<p id='denger'>You didn't fill all the fields</p>";
+        }
+        else if (strpos($fulll, "email=empty") == true)
+        {
+            echo "<p id='denger'>Please enter your email</p>";
+        }
+        else if (strpos($fulll, "new_password=empty"))
+        {
+            echo "<p id='denger'>Please enter your new password</p>";
+        }
 
-        <input class="inputrequestreturn" type="submit" name="return" value="Back">
+        echo "<p id='success'></p>" . $passerr;
+
+        ?>
+
+        <table id="table">
+            <tr>
+                <td>
+                    <input class="inputbutton" type="submit" name="Change" value="Change">
+
+                    <input class="inputrequestreturn" type="submit" name="return" value="Back to Login">
+                </td>
+            </tr>
+        </table>
+
+
     </form>
 </body>
 

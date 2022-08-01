@@ -29,11 +29,13 @@ div.frame {
 .submit {
   background-color: rgb(122, 139, 247);
   color: black;
+  border-radius: 5px;
 }
 
 .reset {
   background-color: rgb(122, 139, 247);
   color: black;
+  border-radius: 5px;
 }
 
 .header h1 {
@@ -114,4 +116,9 @@ div.middlecolumn {
   padding: 4px;
   font-size: 10px;
 
+}
+
+input
+{
+  background-color: aqua;
 }

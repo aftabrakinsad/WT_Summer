@@ -39,7 +39,8 @@
           First Name:
         </td>
         <td>
-          <input type="text" name="fname">
+          <input type="text" name="fname" id="name" onkeyup="checkname()">
+          <p id="nameerror"></p>
         </td>
       </tr>
       <tr>
@@ -66,6 +67,15 @@
           <input type="radio" name="des" value="Junior Programmer">Junior Programmer
           <input type="radio" name="des" value="Senior Programmer">Senior Programmer
           <input type="radio" name="des" value="Project Leader">Project Lead
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Gender:
+        </td>
+        <td>
+          <input type="redio" name="gender" id="male" value="">
         </td>
       </tr>
       <tr>
@@ -109,7 +119,17 @@
   </form>
 
   </div>
+  <!-- <p id="myinput">Hello World</p> -->
 
+  <!-- <input type="text" id="myinput" onkeyup="afterclick()"> -->
+
+  <!-- Enter your name: -->
+  <!-- <input type="text" name="myname" id="name" onkeyup="checkname()"> -->
+  <!-- <p id="nameerror"></p> -->
+  <p id="myprint">output</p>
+  <button class="button submit" onclick="afterclick()">Button</button>
+
+  <script src="../Js/myscript.js"></script>
 </body>
 
 </html>

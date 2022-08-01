@@ -28,9 +28,15 @@ class db
         return $conn->query($sqlstr);
     }
 
-    function forgotpasswordselect($conn, $staticadmin, $uname, $email)
+    function user_searching_by_email($email, $staticadmin, $conn)
     {
-        $sqlstr = "SELECT * FROM staticadmin WHERE uname = '$uname' AND email = '$email'";
+        $sqlstr = "SELECT * FROM $staticadmin WHERE email = '$email'";
+        return $conn -> query($sqlstr);
+    }
+
+    function change_password($pass, $email, $staticadmin, $conn)
+    {
+        $sqlstr = "UPDATE $staticadmin SET pass = '$pass' WHERE email = '$email'";
         return $conn -> query($sqlstr);
     }
 }
