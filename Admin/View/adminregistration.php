@@ -26,8 +26,7 @@ if (isset($_SESSION['username']))
 
     <header>
         <h1>Welcome to City Bank Limited.</h1>
-        <p id="info"><strong>Use correct information to apply </strong>
-        </p>
+        <p id="info"><strong>Use correct information to apply </strong></p>
     </header>
 
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
