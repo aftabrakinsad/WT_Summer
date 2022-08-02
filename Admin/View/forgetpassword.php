@@ -25,41 +25,39 @@ if (isset($_SESSION['email']))
         <h1 class="h1">City Bank Limited.</h1>
     </header>
 
-    <form action="" method="POST">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
 
         <h2 class="h2">Forgot Password</h2>
-        <p id="info">Enter your Email and new Password</p>
+        <p id="info">Enter your Email</p>
 
         <input type="email" name="email" placeholder="Enter email">
-        <input type="password" name="pass" placeholder="New Password">
-        <input type="password" name="cpass" placeholder="Confirm password">
-        <?php echo "<p id='denger'>$passerr2</p>" ?>
-        <?php echo "<p id='denger'>$passerr1</p>" ?>
+        <!-- <input type="password" name="pass" placeholder="New Password"> -->
+        <!-- <input type="password" name="cpass" placeholder="Confirm password"> -->
 
-        <?php
+        
 
-        $fulll = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        <!-- $fulll = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; -->
 
-        if (strpos($fulll, "User=not_found") == true)
-        {
-            echo "<p id='info'>User Not Found</p>";
-        }
-        else if (strpos($fulll, "info=empty") == true)
-        {
-            echo "<p id='denger'>You didn't fill all the fields</p>";
-        }
-        else if (strpos($fulll, "email=empty") == true)
-        {
-            echo "<p id='denger'>Please enter your email</p>";
-        }
-        else if (strpos($fulll, "new_password=empty"))
-        {
-            echo "<p id='denger'>Please enter your new password</p>";
-        }
+        <!-- if (strpos($fulll, "User=not_found") == true) -->
+        <!-- { -->
+            <!-- echo "<p id='info'>User Not Found</p>"; -->
+        <!-- } -->
+        <!-- else if (strpos($fulll, "info=empty") == true) -->
+        <!-- { -->
+            <!-- echo "<p id='denger'>You didn't fill all the fields</p>"; -->
+        <!-- } -->
+        <!-- else if (strpos($fulll, "email=empty") == true) -->
+        <!-- { -->
+            <!-- echo "<p id='denger'>Please enter your email</p>"; -->
+        <!-- } -->
+        <!-- else if (strpos($fulll, "new_password=empty")) -->
+        <!-- { -->
+            <!-- echo "<p id='denger'>Please enter your new password</p>"; -->
+        <!-- } -->
 
-        echo "<p id='success'></p>" . $passerr;
+        <!-- echo "<p id='success'></p>" . $passerr; -->
 
-        ?>
+        <!--  -->
 
         <table id="table">
             <tr>
