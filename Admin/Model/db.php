@@ -34,9 +34,21 @@ class db
         return $conn -> query($sqlstr);
     }
 
-    function change_password($pass, $email, $staticadmin, $conn)
+    function otp_code($email, $code, $staticadmin, $conn)
     {
-        $sqlstr = "UPDATE $staticadmin SET pass = '$pass' WHERE email = '$email'";
+        $sqlstr = "UPDATE $staticadmin SET code = '$code' WHERE email = '$email'";
+        return $conn -> query($sqlstr);
+    }
+
+    function otp_verification($code, $staticadmin, $conn)
+    {
+        $sqlstr = "SELECT * FROM $staticadmin WHERE code = '$code'";
+        return $conn -> query($sqlstr);
+    }
+
+    function change_password($newpassword, $email, $code, $staticadmin, $conn)
+    {
+        $sqlstr = "UPDATE $staticadmin SET pass = '$newpassword', code = '$code' WHERE email = '$email'";
         return $conn -> query($sqlstr);
     }
 }

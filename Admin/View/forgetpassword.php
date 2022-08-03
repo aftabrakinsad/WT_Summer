@@ -2,11 +2,6 @@
 
 @include("../Control/userexits.emailconfirmation.php");
 
-
-if (isset($_SESSION['email'])) {
-    //header("location: ../View/passwordchange.php");
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -30,37 +25,24 @@ if (isset($_SESSION['email'])) {
         <h2 class="h2">Forgot Password</h2>
         <p id="info">Enter your Email</p>
 
-        <input type="email" name="email" placeholder="Enter email">
-        <!-- <input type="password" name="pass" placeholder="New Password"> -->
-        <!-- <input type="password" name="cpass" placeholder="Confirm password"> -->
+        <input type="email" name="email" placeholder="Enter email address">
 
-
-
-        <!-- $fulll = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; -->
-
-        <!-- if (strpos($fulll, "User=not_found") == true) -->
-        <!-- { -->
-        <!-- echo "<p id='info'>User Not Found</p>"; -->
-        <!-- } -->
-        <!-- else if (strpos($fulll, "info=empty") == true) -->
-        <!-- { -->
-        <!-- echo "<p id='denger'>You didn't fill all the fields</p>"; -->
-        <!-- } -->
-        <!-- else if (strpos($fulll, "email=empty") == true) -->
-        <!-- { -->
-        <!-- echo "<p id='denger'>Please enter your email</p>"; -->
-        <!-- } -->
-        <!-- else if (strpos($fulll, "new_password=empty")) -->
-        <!-- { -->
-        <!-- echo "<p id='denger'>Please enter your new password</p>"; -->
-        <!-- } -->
-
-        <!-- echo "<p id='success'></p>" . $passerr; -->
-
-        <!--  -->
         <?php
         echo $emailerr;
         echo $emailerr1;
+
+        if(count($errors) > 0){
+            ?>
+            <div>
+                <?php 
+                    foreach($errors as $error)
+                    {
+                        echo $error;
+                    }
+                ?>
+            </div>
+            <?php
+        }
         ?>
 
         <table id="table">
@@ -71,7 +53,6 @@ if (isset($_SESSION['email'])) {
                 </td>
             </tr>
         </table>
-
 
     </form>
 </body>

@@ -1,3 +1,15 @@
+<?
+
+@include("../Control/otp.process.php");
+
+//$email = $_SEEESION['email'];
+// if($email == false)
+// {
+//   header('location: ../View/adminlogin.php');
+// }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

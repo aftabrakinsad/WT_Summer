@@ -1,3 +1,9 @@
+<?php
+
+@include("../Control/changepassword.process.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,6 +25,27 @@
         <p class="h2">Here you go to change your password</p>
 
         <table>
+            <tr>
+                <td>
+
+                    <?php
+
+                    // if(count($errors) > 0)
+                    // {
+                    ?>
+                        <?php
+                        // foreach($errors as $showerror)
+                        // {
+                            // echo $showerror;
+                        // }
+                    ?>
+                        <?php
+                    //}
+
+                    ?>
+
+                </td>
+            </tr>
             <tr>
                 <td>
                     <input type="password" name="newpassword" placeholder="Enter new password">

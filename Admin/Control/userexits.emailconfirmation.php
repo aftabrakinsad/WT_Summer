@@ -2,6 +2,7 @@
 
 $emailerr = "";
 $emailerr1 = "";
+$errors = array();
 
 @include('../Model/db.php');
 
@@ -19,8 +20,34 @@ if(isset($_POST["Change"]))
 
         if($result -> num_rows > 0)
         {
-            $_session["email"] = $email;
-            header("location: ../View/otpsubmission.php");
+            $code = rand(999999, 100000);
+            $result = $mydb -> otp_code($email, $code, "staticadmin", $mycon);
+            
+            if($result == true)
+            {
+                $subject = "Password Reset Code";
+                $massage = "Your password reset code is $code";
+                $sender = "From: rakinsadaftab@gmail.com";
+
+                if(mail($email, $subject, $message, $sender))
+                {
+                    $info = "We've sent a passwrod reset otp to your email - $email";
+
+                    $_SESSION['info'] = $info;
+                    $_session["email"] = $email;
+                    
+                    header("location: ../View/otpsubmission.php");
+                    exit();
+                }
+                else
+                {
+                    $errors['otp-error'] = "Failed while sending code!";
+                }
+            }
+            else
+            {
+                $errors['db-error'] = "Something went wrong!";
+            }
         }
         else
         {
@@ -31,6 +58,17 @@ if(isset($_POST["Change"]))
     {
         $emailerr1 = "Email is required";
     }
+}
+else
+{
+
+}
+if(isset($_POST['return']))
+{
+    header("location: ../View/adminlogin.php");
+}
+else
+{
 
 }
 
