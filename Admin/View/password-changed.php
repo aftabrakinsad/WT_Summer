@@ -20,7 +20,7 @@ if ($_SESSION['info'] == false) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/CSS" href="../CSS/forgetpassword.css">
+    <link rel="stylesheet" type="text/CSS" href="../CSS/password-changed.css">
     <title>Back to Login</title>
 </head>
 
@@ -35,7 +35,7 @@ if ($_SESSION['info'] == false) {
             }
             ?>
         </p>
-        <input class="otpbtn" type="submit" name="returntologin" value="Login">
+        <input class="inputbutton" type="submit" name="returntologin" value="Login">
     </form>
 </body>
 

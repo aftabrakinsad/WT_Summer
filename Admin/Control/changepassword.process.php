@@ -27,7 +27,7 @@ if(isset($_POST['passwordsubmission']))
 
         if($result == true)
         {
-            $info = "Your password changed.<br> Now you can login with your new password.";
+            $info = "Your password changed. Now you can login with your new password.";
             $_SESSION['info'] = $info;
             header('location: ../View/password-changed.php');
         }
