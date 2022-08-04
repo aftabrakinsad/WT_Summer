@@ -1,6 +1,7 @@
 <?php
 
-@include("../Control/changepassword.process.php");
+include("../Control/changepassword.process.php");
+$email = $_SESSION['email'];
 
 ?>
 
@@ -50,6 +51,16 @@
                 <td>
                     <input type="password" name="newpassword" placeholder="Enter new password">
                     <input type="password" name="confirmpassword" placeholder="Confirm your password">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <?php 
+                    
+                    echo $passwordchanged;
+
+                    ?>
                 </td>
             </tr>
 

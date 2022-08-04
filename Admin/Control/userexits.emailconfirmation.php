@@ -34,7 +34,7 @@ if(isset($_POST["Change"]))
                     $info = "We've sent a passwrod reset otp to your email - $email";
 
                     $_SESSION['info'] = $info;
-                    $_session["email"] = $email;
+                    $_SESSION['email'] = $email;
                     
                     header("location: ../View/otpsubmission.php");
                     exit();

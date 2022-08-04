@@ -3,7 +3,7 @@
 @include("../View/header.php");
 @include("../View/navbar.php");
 @include("../View/adminsidebar.php");
-@include("../view/footer.php");
+// @include("../view/footer.php");
 
 ?>
 
