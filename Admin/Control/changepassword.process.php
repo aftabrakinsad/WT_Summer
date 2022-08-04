@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-$passwordchanged = "";
+$errors = array();
 
 @include("../Model/db.php");
 
@@ -27,13 +27,20 @@ if(isset($_POST['passwordsubmission']))
 
         if($result == true)
         {
-            $passwordchanged = "Password Changed. Go back to login";
+            $info = "Your password changed. Now you can login with your new password.";
+            $_SESSION['info'] = $info;
+            header('location: ../View/password-changed.php');
         }
         else
         {
-            echo "Password not changed";
+            $errors['db-error'] = "Failed to change your password!";
         }
     }
+}
+
+if(isset($_POST['returntologin']))
+{
+    header('location: ../View/adminlogin.php');
 }
 
 ?>

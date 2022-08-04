@@ -31,17 +31,17 @@ $email = $_SESSION['email'];
 
                     <?php
 
-                    // if(count($errors) > 0)
-                    // {
+                    if(count($errors) > 0)
+                    {
                     ?>
                         <?php
-                        // foreach($errors as $showerror)
-                        // {
-                            // echo $showerror;
-                        // }
+                        foreach($errors as $showerror)
+                        {
+                            echo $showerror;
+                        }
                     ?>
                         <?php
-                    //}
+                    }
 
                     ?>
 
@@ -58,7 +58,7 @@ $email = $_SESSION['email'];
                 <td>
                     <?php 
                     
-                    echo $passwordchanged;
+                    //echo $passwordchanged;
 
                     ?>
                 </td>
