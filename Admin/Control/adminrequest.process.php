@@ -21,6 +21,7 @@ if($result == true)
         <td>'.$row['nid'].'</td>
         <td>'.$row['phone'].'</td>
         <td><img src="../uploads/'.$row['picture'].'" width="100px" height="100px"></td>
+        
         </tr>';
     }
 }
