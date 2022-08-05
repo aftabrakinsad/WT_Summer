@@ -31,6 +31,7 @@
                     <th scope="col">Email</th>
                     <th scope="col">NID</th>
                     <th scope="col">Phone</th>
+                    <th scope="col">Pass</th>
                     <th scope="col">Picture</th>
                     <th scope="col">CV</th>
                     <th scope="col">Operations</th>

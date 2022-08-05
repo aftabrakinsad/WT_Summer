@@ -5,7 +5,7 @@
 if(isset($_GET['deleteid']))
 {
     $$applicant_serial = $_GET['deleteid'];
-    
+
     $mydb = new db();
     $myconn = $mydb->openConn();
     $applicant_serial = $_GET['deleteid'];
@@ -18,7 +18,7 @@ if(isset($_GET['deleteid']))
     }
     else
     {
-
+        echo "error";
     }
 }
 

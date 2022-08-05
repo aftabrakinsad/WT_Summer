@@ -54,7 +54,7 @@ class db
 
     function retrive_applicant_info_for_admin($applicantofadmin, $conn)
     {
-        $sqlstr = "SELECT applicant_serial, fname, lname, uname, email, nid, phone, picture, cv FROM $applicantofadmin";
+        $sqlstr = "SELECT applicant_serial, fname, lname, uname, email, nid, phone, password, picture, cv FROM $applicantofadmin";
         return $conn -> query($sqlstr);
     }
 
