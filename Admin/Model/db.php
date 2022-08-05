@@ -57,6 +57,12 @@ class db
         $sqlstr = "SELECT applicant_serial, fname, lname, uname, email, nid, phone, picture, cv FROM $applicantofadmin";
         return $conn -> query($sqlstr);
     }
+
+    function deleting_new_admin($applicant_serial, $applicantofadmin, $conn)
+    {
+        $sqlstr = "DELETE FROM $applicantofadmin WHERE applicant_serial = '$applicant_serial'";
+        return $conn -> query($sqlstr);
+    }
 }
 
 ?>

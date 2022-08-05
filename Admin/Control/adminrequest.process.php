@@ -10,6 +10,7 @@ if($result == true)
 {
     foreach($result as $row)
     {
+        $applicant_serial = $row['applicant_serial'];
         echo '<tr>
 
         <td>'.$row['applicant_serial'].'</td>
@@ -23,7 +24,7 @@ if($result == true)
         <td><a class="accept" href="../uploads/'.$row['cv']. '">View CV</a></td>
         <td>
             <a class="accept" href="">Accept</a> <br><br><br>
-            <a class="reject" href="">Reject</a>
+            <a class="reject" href="../Control/applicantdelete.php?deleteid='.$applicant_serial.'">Reject</a>
         </td>
 
         </tr>';
