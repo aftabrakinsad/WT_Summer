@@ -51,6 +51,12 @@ class db
         $sqlstr = "UPDATE $staticadmin SET pass = '$newpassword', code = '$code' WHERE email = '$email'";
         return $conn -> query($sqlstr);
     }
+
+    function retrive_applicant_info_for_admin($applicantofadmin, $conn)
+    {
+        $sqlstr = "SELECT applicant_serial, fname, lname, uname, email, nid, phone, picture, cv FROM $applicantofadmin";
+        return $conn -> query($sqlstr);
+    }
 }
 
 ?>

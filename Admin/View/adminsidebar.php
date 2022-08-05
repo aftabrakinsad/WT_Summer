@@ -11,9 +11,9 @@
         <a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a>
         <a href="../View/adminhomepage.php">Home</a>
         <a id="label">Admin Workspace</a>
-        <a href="#">Admin Request</a>
+        <a href="../View/adminrequest.php">Admin Request</a>
         <a href="../View/adminmanage.php">Manage Admins</a>
-        <a href="#h">Manage Manager</a>
+        <a href="#">Manage Manager</a>
         <a href="#h">Manage Employee</a>
         <a href="#h">Manage User</a>
         <a id="label">Website Management</a>
