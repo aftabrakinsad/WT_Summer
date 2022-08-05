@@ -2,6 +2,7 @@
 
 @include("../View/header.php");
 @include("../View/navbar.php");
+@include("../View/adminsidebar.php");
 
 ?>
 
