@@ -126,7 +126,7 @@
   <!-- Enter your name: -->
   <!-- <input type="text" name="myname" id="name" onkeyup="checkname()"> -->
   <!-- <p id="nameerror"></p> -->
-  <p id="myprint">output</p>
+  <!-- <p id="myprint">output</p> -->
   <button class="button submit" onclick="afterclick()">Button</button>
 
   <script src="../Js/myscript.js"></script>
