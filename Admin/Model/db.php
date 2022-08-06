@@ -63,6 +63,12 @@ class db
         $sqlstr = "DELETE FROM $applicantofadmin WHERE applicant_serial = '$applicant_serial'";
         return $conn -> query($sqlstr);
     }
+
+    function adding_new_admin($applicant_serial, $staticadmin, $applicantofadmin, $conn)
+    {
+        $sqlstr = "INSERT INTO $staticadmin (uname, pass, email) SELECT uname, password, email FROM $applicantofadmin)";
+        return $conn -> query($sqlstr);
+    }
 }
 
 ?>
