@@ -9,7 +9,7 @@ if (isset($_GET['addingid']))
     $mydb = new db();
     $myconn = $mydb->openConn();
     $applicant_serial = $_GET['addingid'];
-    $result = $mydb ->adding_new_admin("staticadmin", "applicantofadmin", $myconn);
+    $result = $mydb ->adding_new_admin($applicant_serial, "staticadmin", "applicantofadmin", $myconn);
 
     if($result == true)
     {
