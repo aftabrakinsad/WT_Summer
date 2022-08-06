@@ -64,9 +64,9 @@ class db
         return $conn -> query($sqlstr);
     }
 
-    function adding_new_admin($applicant_serial, $staticadmin, $applicantofadmin, $conn)
+    function adding_new_admin($staticadmin, $applicantofadmin, $conn)
     {
-        $sqlstr = "INSERT INTO $staticadmin (uname, pass, email) SELECT uname, password, email FROM $applicantofadmin)";
+        $sqlstr = "INSERT INTO $staticadmin (uname, pass, email) SELECT uname, password, email FROM $applicantofadmin";
         return $conn -> query($sqlstr);
     }
 
