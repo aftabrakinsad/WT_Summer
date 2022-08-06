@@ -66,8 +66,8 @@ button[id="search"] {
     cursor: pointer;
     width: 55px;
     height: 40px;
-    padding-top: 0px;
-    padding-bottom: 50.5px;
+    padding-top: 0.5px;
+    padding-bottom: 49.5px;
     border: 3px solid #212121;
     border-left: 0;
 }
