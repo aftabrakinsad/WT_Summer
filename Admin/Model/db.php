@@ -69,6 +69,12 @@ class db
         $sqlstr = "INSERT INTO $staticadmin (uname, pass, email) SELECT uname, password, email FROM $applicantofadmin)";
         return $conn -> query($sqlstr);
     }
+
+    function search_by_name($search, $staticadmin, $conn)
+    {
+        $sqlstr = "SELECT admin_id, uname, email FROM $staticadmin WHERE uname LIKE '%.$search.%'";
+        return $conn -> query($sqlstr);
+    }
 }
 
 ?>
