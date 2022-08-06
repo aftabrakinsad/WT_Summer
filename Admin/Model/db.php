@@ -75,6 +75,12 @@ class db
         $sqlstr = "SELECT admin_id, uname, email FROM $staticadmin WHERE uname LIKE '%.$search.%'";
         return $conn -> query($sqlstr);
     }
+
+    function display_admin_info_on_admin_manage_page($admin_id, $uname, $staticadmin, $conn)
+    {
+        $sqlstr = "SELECT admin_id, uname, FROM $staticadmin";
+        return $conn -> query($sqlstr);
+    }
 }
 
 ?>

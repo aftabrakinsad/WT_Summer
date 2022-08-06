@@ -37,12 +37,11 @@
                     <th scope="col">Operations</th>
                 </tr>
             </thead>
-            <?php
 
-            @include("../Control/adminrequest.process.php");
-
-            ?>
             <tbody>
+                <?php
+                    @include("../Control/adminrequest.process.php");
+                ?>
             </tbody>
         </table>
 
