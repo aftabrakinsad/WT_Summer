@@ -50,6 +50,32 @@ function lnamecheck_adminregistration()
     }
 }
 
+function usernamecheck_admin()
+{
+    var uname = document.getElementById("uname").value;
+
+    if(!uname)
+    {
+        document.getElementById("nameerr").innerHTML = "Enter your username";
+        return false;
+    }
+    else if(!isNaN(uname))
+    {
+        document.getElementById("nameerr").innerHTML = "username can't be a number";
+        return false;
+    }
+    else if(uname.length < 5)
+    {
+        document.getElementById("nameerr").innerHTML = "username must be atleast lessthan equal to 5";
+        return false;
+    }
+    else
+    {
+        document.getElementById("nameerr").innerHTML = "username is correct";
+        return true;
+    }
+}
+
 function email_adminregistration()
 {
     var emailpattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -117,7 +143,7 @@ function phone_adminregistration()
 function otp_forpasswordchange()
 {
     var otp = document.getElementById("otp").value;
-    
+
     if(!isNaN(otp) && otp.length == 6)
     {
         document.getElementById("otperr").innerHTML = "OTP is valid";

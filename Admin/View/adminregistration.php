@@ -133,7 +133,6 @@ if (isset($_SESSION['username'])) {
 
         </table>
         <script src="../JS/adminregistration.js"></script>
-        <script src="../JS/adminlogin.js"></script>
     </form>
 </body>
 
