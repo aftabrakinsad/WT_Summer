@@ -8,7 +8,6 @@ if(empty($_SESSION["username"]) && empty($_SESSIO["password"]))
 @include("../View/header.php");
 @include("../View/navbar.php");
 @include("../View/adminsidebar.php");
-// @include("../view/footer.php");
 
 ?>
 
