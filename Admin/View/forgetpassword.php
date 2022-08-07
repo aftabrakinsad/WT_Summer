@@ -20,24 +20,18 @@
         <h1 class="h1">City Bank Limited.</h1>
     </header>
 
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data" onsubmit="return email_adminregistration()">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data" onsubmit=" return email_adminregistration()">
 
         <h2 class="h2">Forgot Password</h2>
-        <p id="info">Enter your Email</p>
-
-        <input type="email" name="email" id="email" onkeyup="email_adminregistration()" placeholder="Enter email address">
-        <p id="emailerr"></p>
 
         <?php
-        echo $emailerr;
-        echo $emailerr1;
-
         if (count($errors) > 0) {
         ?>
             <div>
                 <?php
-                foreach ($errors as $error) {
-                    echo $error;
+                foreach ($errors as $showerror) 
+                {
+                    echo "<p id='denger'>$showerror</p>";
                 }
                 ?>
             </div>
@@ -45,11 +39,14 @@
         }
         ?>
 
+        <input type="email" name="email" id="email" onkeyup="email_adminregistration()" placeholder="Enter email address">
+        <p id="emailerr"></p>
+
         <table id="table">
             <tr>
                 <td>
                     <input class="inputbutton" type="submit" name="Change" value="Change">
-                    <input class="inputrequestreturn" type="submit" name="return" value="Back to Login">
+                    <a class="inputrequestreturn" name="return" href="../View/adminlogin.php">Back to Login</a>
                 </td>
             </tr>
         </table>

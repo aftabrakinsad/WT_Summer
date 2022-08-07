@@ -32,7 +32,19 @@
         <table>
             <tr>
                 <td>
-
+                    <?php
+                    if (count($errors) > 0) {
+                    ?>
+                        <div>
+                            <?php
+                            foreach ($errors as $showerror) {
+                                echo "<p id='denger'>$showerror</p>";
+                            }
+                            ?>
+                        </div>
+                    <?php
+                    }
+                    ?>
                 </td>
             </tr>
             <tr>

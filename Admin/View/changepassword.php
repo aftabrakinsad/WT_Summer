@@ -37,7 +37,7 @@ $email = $_SESSION['email'];
                         <?php
                         foreach($errors as $showerror)
                         {
-                            echo $showerror;
+                            echo "<p id='denger'>$showerror</p>";
                         }
                     ?>
                         <?php

@@ -12,9 +12,21 @@ if(isset($_POST['passwordsubmission']))
     $newpassword = $_POST['newpassword'];
     $confirmpassword = $_POST['confirmpassword'];
 
-    if($newpassword != $confirmpassword)
+    if(empty($newpassword) && empty($confirmpassword))
     {
-        echo "Password doesn't match";
+        $errors['change'] = "Fill all the fields";
+    }
+    else if(empty($newpassword))
+    {
+        $errors['newpassword'] = "New Password is required";
+    }
+    else if(empty($confirmpassword))
+    {
+        $errors['confirmpassword'] = "Confirm Password is required";
+    }
+    else if($newpassword != $confirmpassword)
+    {
+        $errors['passnotmached'] = "Password doesn't match";
     }
     else
     {

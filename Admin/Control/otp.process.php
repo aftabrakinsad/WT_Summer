@@ -1,29 +1,45 @@
 <?php
 
 @include("../Model/db.php");
+$errors = array();
 
 if(isset($_POST["enterotp"]))
 {
     $_SESSION['info'] = "";
     $code = $_POST['otp'];
 
-    $mydb = new db();
-    $mycon = $mydb->openConn();
-    $result = $mydb -> otp_verification($code, "staticadmin", $mycon);
-
-    if($result -> num_rows > 0)
+    if(empty($code))
     {
-        $fetch_data = mysqli_fetch_assoc($result);
-        $email = $fetch_data['email'];
-        $_SESSION['email'] = $email;
-        $info = "Please create a new password.";
-        $_SESSION['info'] = $info;
-        header("location: ../View/changepassword.php");
-        exit();
+        $errors['emptyotp'] = "OTP is required";
+    }
+    else if(strlen($code) != 6)
+    {
+        $errors['digiterror'] = "OTP must be 6 digits";
+    }
+    else if(!is_numeric($code))
+    {
+        $errors['numericerror'] = "OTP must be numeric";
     }
     else
     {
-        echo "false";
+        $mydb = new db();
+        $mycon = $mydb->openConn();
+        $result = $mydb -> otp_verification($code, "staticadmin",   $mycon);
+
+        if($result -> num_rows > 0)
+        {
+            $fetch_data = mysqli_fetch_assoc($result);
+            $email = $fetch_data['email'];
+            $_SESSION['email'] = $email;
+            $info = "Please create a new password.";
+            $_SESSION['info'] = $info;
+            header("location: ../View/changepassword.php");
+            exit();
+        }
+        else
+        {
+            $errors['invalidotp'] = "Invalid OTP";
+        }
     }
 }
 
