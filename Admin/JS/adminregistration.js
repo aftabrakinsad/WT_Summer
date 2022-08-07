@@ -140,6 +140,83 @@ function phone_adminregistration()
     }
 }
 
+function password_adminregistration()
+{
+    var pass = document.getElementById("pass").value;
+
+    if(!pass )
+    {
+        document.getElementById("passerr").innerHTML = "password required";
+        return false;
+    }
+    else if(pass.length <= 8)
+    {
+        document.getElementById("passerr").innerHTML = "password must be greater than 8";
+        return false;
+    }
+    else if(pass.search(/[A-Z]/) < 0)
+    {
+        document.getElementById("passerr").innerHTML = "password must contain atleast one uppercase letter";
+        return false;
+    }
+    else if(pass.search(/[a-z]/) < 0)
+    {
+        document.getElementById("passerr").innerHTML = "password must contain atleast one lowercase letter";
+        return false;
+    }
+    else if(pass.search(/[^\W]@/) < 0)
+    {
+        document.getElementById("passerr").innerHTML = "password must contain atleast one special character";
+        return false;
+    }
+    else
+    {
+        document.getElementById("passerr").innerHTML = "password is valid";
+        return true;
+    }
+}
+
+function confirm_password_adminregistration()
+{
+    var cpass = document.getElementById("cpass").value;
+
+    if(!cpass )
+    {
+        document.getElementById("cpasserr").innerHTML = "password required";
+        return false;
+    }
+    else if(cpass.length <= 8)
+    {
+        document.getElementById("cpasserr").innerHTML = 
+        "password must be greater than 8";
+        return false;
+    }
+    else if(cpass.search(/[A-Z]/) < 0)
+    {
+        document.getElementById("cpasserr").innerHTML = 
+        "password must contain atleast one uppercase letter";
+        return false;
+    }
+    else if(cpass.search(/[a-z]/) < 0)
+    {
+        document.getElementById("cpasserr").innerHTML = 
+        "password must contain atleast one lowercase letter";
+        return false;
+    }
+    else if(cpass.search(/[^\W]@/) < 0)
+    {
+        document.getElementById("cpasserr").innerHTML = 
+        "password must contain atleast one special character";
+        return false;
+    }
+    else
+    {
+        document.getElementById("cpasserr").innerHTML = 
+        "password is valid";
+        return true;
+    }
+}
+
 function otp_forpasswordchange()
 {
     var otp = document.getElementById("otp").value;

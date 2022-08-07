@@ -71,11 +71,13 @@ if (isset($_SESSION['username'])) {
 
             <tr>
                 <td>
-                    <input type="password" name="password" placeholder="Password">
+                    <input type="password" name="password" id="pass" onkeyup="password_adminregistration()" placeholder="Password">
+                    <p id="passerr"></p>
                 </td>
 
                 <td>
-                    <input type="password" name="cpassword" placeholder="Confirm Password">
+                    <input type="password" name="cpassword" id="cpass" onkeyup="confirm_password_adminregistration()" placeholder="Confirm Password">
+                    <p id="cpasserr"></p>
                 </td>
             </tr>
 
