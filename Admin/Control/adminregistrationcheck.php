@@ -47,74 +47,61 @@ if(isset($_POST["submit"]))
     if (empty($fname) && empty($lname) && empty($uname) && empty($email) && empty($nid) && empty($phone) && empty($password) && empty($cpassword) && empty($_FILES["picture"]["tmp_name"]) && empty($_FILES["cv"]["tmp_name"]))
     {
         $signuperr = "You did not fill all the fields! ";
-        //header("Location: ../View/adminregistration.php?Application_Submitted=Failed");
     }
     else if(empty($fname))
     {
         $fnameerr = "Please Enter Your Firstname. ";
-        //header("Location: ../View/adminregistration.php?Application_Submitted=Failed");
     }
     else if(empty($lname))
     {
         $lnameerr = "Please Enter Your Lastname. ";
-        //header("Location: ../View/adminregistration.php?Application_Submitted=Failed");
     }
     else if(empty($uname))
     {
         $unameerr1 = "Please Enter Your Username. ";
-        //header("Location: ../View/adminregistration.php?Application_Submitted=Failed");
     }
     else if (!empty($uname) && strlen($uname) <= 5)
     {
         $unameerr = "Username must be more than 5 characters! ";
-        //header("Location: ../View/adminregistration.php?Application_Submitted=Failed");
     }
     else if(empty($email))
     {
         $emailerr = "Please Enter Valid Email Address. ";
-        //header("Location: ../View/adminregistration.php?Application_Submitted=Failed");
     }
     else if(!empty($email) && !preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $email))
     {
         $emailerr = "Please Enter Valid Email Address. ";
-        //header("Location: ../View/adminregistration.php?Application_Submitted=Failed");
     }
     else if(empty($nid))
     {
         $niderr = "Please Enter Valid National Identity Number. ";
-        //header("Location: ../View/adminregistration.php?Application_Submitted=Failed");
     }
     else if(!empty($nid) && strlen($nid) != 8)
     {
         $niderr1 = "NID should be 8 digits. ";
-        //header("Location: ../View/adminregistration.php?Application_Submitted=Failed");
     }
     else if(empty($phone))
     {
         $phoneerr = "Please Enter Valid Phone Number. ";
-        //header("Location: ../View/adminregistration.php?Application_Submitted=Failed");
     }
     else if(empty($password))
     {
         $passworderr = "Enter Password! ";
-        //header("Location: ../View/adminregistration.php?Application_Submitted=Failed");
     }
-    elseif(empty($cpassword))
+    else if(empty($cpassword))
     {
         $passworderr1 = "Confirm Your Password ";
-        //header("Location: ../View/adminregistration.php?Application_Submitted=Failed");
     }
     else if(!empty($password) && !empty($cpassword))
     {
         if(!$uppercase || !$lowercase || !$number || !$specialchars || strlen($password) <= 8)
         {
             $passworderr2 = "Password should be more than or equal to 8 characters and should include at least one uppercase, one lower case, one number and one special character! ";
-            //header("Location: ../View/adminregistration.php?Application_Submitted=Failed");
+
         }
         else if($password != $cpassword)
         {
             $passworderr3 = "Password didn't match. ";
-            //header("Location: ../View/adminregistration.php?Application_Submitted=Failed");
         }
     }
     if ($fname != "" && $lname != "" && $uname != "" && $email != "" && $nid != "" && $phone != "" && $password != "" && $cpassword != "") 
