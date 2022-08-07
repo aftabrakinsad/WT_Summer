@@ -28,7 +28,7 @@ if (isset($_SESSION['username'])) {
         <p id="info"><strong>Use correct information to apply </strong></p>
     </header>
 
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data" onsubmit="return form_check_adminregistration()">
 
         <h2 class="h2">Application Form</h2>
         <table class="container">
@@ -84,8 +84,8 @@ if (isset($_SESSION['username'])) {
             <tr>
                 <td>
                     Please upload your picture
-                    <input type="file" name="picture">
-                    </p>
+                    <input type="file" name="picture" id="picture" onkeyup="picture_adminregistration()">
+                    <p id="pictureerr"></p>
                 </td>
 
                 <td>
@@ -134,8 +134,8 @@ if (isset($_SESSION['username'])) {
             </tr>
 
         </table>
-        <script src="../JS/adminregistration.js"></script>
     </form>
+    <script src="../JS/adminregistration.js"></script>
 </body>
 
 </html>

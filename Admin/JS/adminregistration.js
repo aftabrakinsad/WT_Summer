@@ -217,18 +217,56 @@ function confirm_password_adminregistration()
     }
 }
 
-function otp_forpasswordchange()
-{
-    var otp = document.getElementById("otp").value;
+// function picture_adminregistration()
+// {
+    // var picture = document.getElementbyID("picture").value;
+// 
+    // if(picture == "")
+    // {
+        // document.getElementById("pictureerr").innerHTML = "Select a picture";
+        // return false;
+    // }
+    // else
+    // {
+        // var Extention = picture.substring(picture.lastIndexOf('.') + 1).toLowerCase();
+    // 
+        // if(Extention == "jpg" || Extention == "jpeg" || Extention == "png")
+        // {
+            // document.getElementById("pictureerr").innerHTML = "Picture is an image";
+            // return true;
+        // }
+        // else
+        // {
+            //document.getElementById("pictureerr").innerHTML =  "Only jpg, jpeg and png images are allowed";
+            // return false;
+        // }
+    // }
+// }
 
-    if(!isNaN(otp) && otp.length == 6)
+// function otp_forpasswordchange()
+// {
+    // var otp = document.getElementById("otp").value;
+// 
+    // if(!isNaN(otp) && otp.length == 6)
+    // {
+        // document.getElementById("otperr").innerHTML = "OTP is valid";
+        // return true;
+    // }
+    // else
+    // {
+        // document.getElementById("otperr").innerHTML = "OTP is not valid";
+        // return false;
+    // }
+// }
+
+function form_check_adminregistration()
+{
+    if(fnamecheck_adminregistration() == true && lnamecheck_adminregistration() == true && usernamecheck_admin() == true && email_adminregistration() == true && nid_adminregistration()  == true && phone_adminregistration()  == true && password_adminregistration()  == true && confirm_password_adminregistration()  == true)
     {
-        document.getElementById("otperr").innerHTML = "OTP is valid";
         return true;
     }
     else
     {
-        document.getElementById("otperr").innerHTML = "OTP is not valid";
         return false;
     }
 }
