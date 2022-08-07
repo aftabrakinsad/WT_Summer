@@ -26,8 +26,8 @@ if (isset($_POST['submit']))
                     $_SESSION['password'] = $user["pass"];
                     if (!empty($_POST["remember"]))
                     {
-                        setcookie("uname", $_SESSION['username'], time() + 60);
-                        setcookie("pass", $_SESSION['password'], time() + 60);
+                        setcookie("uname", $_SESSION['username'], time() + 86400);
+                        setcookie("pass", $_SESSION['password'], time() + 86400);
                         echo "";
                     }
                     else
@@ -46,16 +46,23 @@ if (isset($_POST['submit']))
             exit();
         }
     }
-    if (empty($uname) && empty($password)) {
+    if (empty($uname) && empty($password))
+    {
         header("location: ../view/adminlogin.php?login=empty");
         exit();
-    } else if (empty($uname)) {
+    } 
+    else if (empty($uname))
+    {
         header("location: ../view/adminlogin.php?username=empty");
         exit();
-    } else if (empty($password)) {
+    }
+    else if (empty($password))
+    {
         header("location: ../view/adminlogin.php?password=empty");
         exit();
-    } else {
+    }
+    else
+    {
         header("location: ../view/adminlogin.php?login=success");
         exit();
     }
