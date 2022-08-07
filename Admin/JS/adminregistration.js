@@ -117,6 +117,7 @@ function phone_adminregistration()
 function otp_forpasswordchange()
 {
     var otp = document.getElementById("otp").value;
+    
     if(!isNaN(otp) && otp.length == 6)
     {
         document.getElementById("otperr").innerHTML = "OTP is valid";
