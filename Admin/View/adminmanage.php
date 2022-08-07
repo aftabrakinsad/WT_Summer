@@ -1,5 +1,5 @@
 <?php
-@include("../Control/adminmanage.process.php");
+
 ?>
 
 <?php
@@ -38,7 +38,7 @@
                         </div>
                         <div class="flex-item-search-by">
                             <select name="by">
-                                <option value="name">Name</option>
+                                <option value="name" id="name">Name</option>
                                 <option value="acno">Ac/No</option>
                             </select>
                         </div>
@@ -61,6 +61,11 @@
         </thead>
 
         <tbody>
+            <?php
+
+            @include("../Control/adminmanage.process.php");
+
+            ?>
         </tbody>
     </table>
 

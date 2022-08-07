@@ -37,11 +37,13 @@
             </tr>
             <tr>
                 <td>
-                    <input type="text" name="otp" placeholder="Enter otp">
+                    <input type="text" name="otp" id="otp" onkeyup="otp_forpasswordchange()" placeholder="Enter otp">
+                    <p id="otperr"></p>
                     <input class="otpbtn" type="submit" name="enterotp" value="Submit">
                 </td>
             </tr>
         </table>
+        <script src="../JS/validation.js"></script>
     </form>
 </body>
 

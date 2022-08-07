@@ -4,7 +4,7 @@
 
 if(isset($_POST['submit']))
 {
-    $back_button = TRUE;
+    // $back_button = TRUE;
     $search = $_POST['search'];
     $by = $_POST['by'];
 
@@ -16,7 +16,7 @@ if(isset($_POST['submit']))
         if($result == true)
         {
             foreach($result as $row)
-            {
+            { 
                 $admin_id = $row['admin_id'];
 
                 echo '<tr>

@@ -2,8 +2,7 @@
 
 session_start();
 
-if (isset($_SESSION['username']))
-{
+if (isset($_SESSION['username'])) {
     header("location: ../View/adminlogin.php");
 }
 
@@ -36,31 +35,37 @@ if (isset($_SESSION['username']))
 
             <tr>
                 <td>
-                    <input type="text" name="fname" placeholder="Firstname">
+                    <input type="text" name="fname" id="fname" onkeyup="fnamecheck_adminregistration()" placeholder="Firstname">
+                    <p id="fnameerr"></p>
                 </td>
 
                 <td>
-                    <input type="text" name="lname" placeholder="Lastname">
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <input type="text" name="uname" placeholder="Username"> <br>
-                </td>
-
-                <td>
-                    <input type="text" name="email" placeholder="Email">
+                    <input type="text" name="lname" id="lname" onkeyup="lnamecheck_adminregistration()" placeholder="Lastname">
+                    <p id="lnameerr"></p>
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <input type="text" name="nid" placeholder="Valid NID">
+                    <input type="text" name="uname" id="uname" onkeyup="usernamecheck_admin()" placeholder="Username"> <br>
+                    <p id="nameerr"></p>
                 </td>
 
                 <td>
-                    <input type="text" name="phone" placeholder="+880-1XXXXXXXXX">
+                    <input type="text" name="email" id="email" onkeyup="email_adminregistration()" placeholder="Email">
+                    <p id="emailerr"></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="text" name="nid" id="nid" onkeyup="nid_adminregistration()" placeholder="Valid NID">
+                    <p id="niderr"></p>
+                </td>
+
+                <td>
+                    <input type="text" name="phone" id="phone" onkeyup="phone_adminregistration()" placeholder="+880-1XXXXXXXXX">
+                    <p id="phoneerr"></p>
                 </td>
             </tr>
 
@@ -127,6 +132,8 @@ if (isset($_SESSION['username']))
             </tr>
 
         </table>
+        <script src="../JS/adminregistration.js"></script>
+        <script src="../JS/adminlogin.js"></script>
     </form>
 </body>
 

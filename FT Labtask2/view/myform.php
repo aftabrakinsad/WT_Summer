@@ -1,4 +1,4 @@
-<?php include "../control/results.php"; ?>
+<?php include "../Control/process.php"; ?>
 
 <!DOCTYPE html>
 <html>
@@ -8,28 +8,6 @@
 </head>
 
 <body>
-
-
-  <div class="header">
-    <center>
-      <h1>ABC Management System</h1>
-      <h2>We Create Future</h2>
-    </center>
-  </div>
-  <div class="sticky">
-    <div class="topnav">
-      <a href="#">Home</a>
-      <a href="#">About US</a>
-      <a href="#">Shop</a>
-
-    </div>
-  </div>
-  <div class="registrationBox">
-    <h1 align="left">Registration form </h1>
-  </div>
-  <div class="frame">
-
-  </div>
 
   <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post" enctype="multipart/form-data">
 

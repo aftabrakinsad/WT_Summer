@@ -2,8 +2,7 @@
 
 @include('../Control/adminlogincheck.php');
 
-if (isset($_SESSION['username']))
-{
+if (isset($_SESSION['username'])) {
     header("location: ../View/adminhomepage.php");
 }
 
@@ -26,20 +25,23 @@ if (isset($_SESSION['username']))
         <h2>Welcome to the bank <?php @include('../Control/cookie.php'); ?></h2>
     </header>
 
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" onsubmit="return form_check_admin()" enctype="multipart/form-data">
 
         <h2 class="h2">Admin Login</h2>
         <table class="container">
 
             <tr>
                 <td>
-                    <label for="uname"> <input type="text" name="uname" placeholder="Username"><br></label>
+                    <label for="uname"> <input type="text" name="uname" id="uname" onkeyup="usernamecheck_admin()" placeholder="Username"><br></label>
+                    <p id="nameerr"></p>
                 </td>
+
             </tr>
 
             <tr>
                 <td>
-                    <label for="pass"> <input type="password" name="pass" placeholder="Password"><br></label>
+                    <label for="pass"> <input type="password" name="pass" id="pass" onkeyup="passwordcheck_admin()" placeholder="Password"><br></label>
+                    <p id="passerr"></p>
                 </td>
             </tr>
 
@@ -51,21 +53,13 @@ if (isset($_SESSION['username']))
 
                     if (strpos($fullfill, "login=empty") == true) {
                         echo "<p id = 'denger'>You did not fill all the fields!</p>";
-                    }
-                    else if (strpos($fullfill, "username=empty") == true)
-                    {
+                    } else if (strpos($fullfill, "username=empty") == true) {
                         echo "<p id = 'denger'>Please enter Username!<p>";
-                    }
-                    else if (strpos($fullfill, "password=empty") == true)
-                    {
+                    } else if (strpos($fullfill, "password=empty") == true) {
                         echo "<p id = 'denger'>Please enter Password!<p>";
-                    }
-                    else if (strpos($fullfill, "login_info=incorrect") == true)
-                    {
+                    } else if (strpos($fullfill, "login_info=incorrect") == true) {
                         echo "<p id = 'denger'>Username or Password is incorrect!<p>";
-                    }
-                    else if (strpos($fullfill, "login=success") == true)
-                    {
+                    } else if (strpos($fullfill, "login=success") == true) {
                         echo "<p id = 'success'>Login Successfull<p>";
                     }
 
@@ -91,6 +85,7 @@ if (isset($_SESSION['username']))
             </tr>
         </table>
 
+        <script src="../JS/adminlogin.js"></script>
     </form>
 
 </body>

@@ -25,23 +25,23 @@
         <h2 class="h2">Forgot Password</h2>
         <p id="info">Enter your Email</p>
 
-        <input type="email" name="email" placeholder="Enter email address">
+        <input type="email" name="email" id="email" onkeyup="email_adminregistration()" placeholder="Enter email address">
+        <p id="emailerr"></p>
 
         <?php
         echo $emailerr;
         echo $emailerr1;
 
-        if(count($errors) > 0){
-            ?>
+        if (count($errors) > 0) {
+        ?>
             <div>
-                <?php 
-                    foreach($errors as $error)
-                    {
-                        echo $error;
-                    }
+                <?php
+                foreach ($errors as $error) {
+                    echo $error;
+                }
                 ?>
             </div>
-            <?php
+        <?php
         }
         ?>
 
@@ -53,7 +53,7 @@
                 </td>
             </tr>
         </table>
-
+        <script src="../JS/validation.js"></script>
     </form>
 </body>
 
