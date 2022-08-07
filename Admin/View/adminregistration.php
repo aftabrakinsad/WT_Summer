@@ -126,10 +126,8 @@ if (isset($_SESSION['username'])) {
                     <br>
 
                     <input class="inputrequestbutton" type="submit" name="submit" value="Apply">
-                </td>
 
-                <td>
-                    <input class="inputrequestreturn" type="submit" name="return" value="Login">
+                    <a class="inputrequestreturn" href="../View/adminlogin.php" name="return">Back to Login</a>
                 </td>
             </tr>
 

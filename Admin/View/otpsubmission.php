@@ -26,7 +26,7 @@
         <h1 class="h1">City Bank Limited.</h1>
     </header>
 
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data" onsubmit="return otp_forpasswordchange()">
 
         <h2 class="h2">Enter the correct OPT</h2>
         <table>
@@ -43,7 +43,7 @@
                 </td>
             </tr>
         </table>
-        <script src="../JS/validation.js"></script>
+        <script src="../JS/adminregistration.js"></script>
     </form>
 </body>
 

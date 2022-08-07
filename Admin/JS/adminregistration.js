@@ -243,21 +243,26 @@ function confirm_password_adminregistration()
     // }
 // }
 
-// function otp_forpasswordchange()
-// {
-    // var otp = document.getElementById("otp").value;
-// 
-    // if(!isNaN(otp) && otp.length == 6)
-    // {
-        // document.getElementById("otperr").innerHTML = "OTP is valid";
-        // return true;
-    // }
-    // else
-    // {
-        // document.getElementById("otperr").innerHTML = "OTP is not valid";
-        // return false;
-    // }
-// }
+function otp_forpasswordchange()
+{
+    var otp = document.getElementById("otp").value;
+
+    if(!otp)
+    {
+        document.getElementById("otperr").innerHTML = "Enter your otp";
+        return false;
+    }
+    else if(!isNaN(otp) && otp.length == 6)
+    {
+        document.getElementById("otperr").innerHTML = "OTP is valid";
+        return true;
+    }
+    else
+    {
+        document.getElementById("otperr").innerHTML = "OTP is not valid";
+        return false;
+    }
+}
 
 function form_check_adminregistration()
 {
