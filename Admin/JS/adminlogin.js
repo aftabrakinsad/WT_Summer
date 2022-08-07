@@ -4,7 +4,7 @@ function usernamecheck_admin()
 
     if(!uname)
     {
-        document.getElementById("nameerr").innerHTML = "username can't be empty";
+        document.getElementById("nameerr").innerHTML = "Enter your username";
         return false;
     }
     else if(!isNaN(uname))
