@@ -10,10 +10,10 @@
 <body>
     <div class="nav-wrapper">
         <div class="topnav" id="theTopNav">
-            <a href="javascript:void(0);" class="icon" onclick="openNav()" id="hamburger">
-                &#9776;
-            </a>
-            <a id="user">Welcome &nbspAdmin<?php include('../Control/cookie.php'); ?></a>
+            <!-- <a href="javascript:void(0);" class="icon" onclick="openNav()" id="hamburger"> -->
+                <!-- &#9776; -->
+            <!-- </a> -->
+            <a id="user">Welcome Admin<?php include('../Control/cookie.php'); ?></a>
             <a id="logout" href="../Control/adminlogout.php" style="border-top-left-radius: 3px;" onclick="return confirm('Are you sure?')">Logout</a>
         </div>
     </div>
