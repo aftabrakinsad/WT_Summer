@@ -2,22 +2,31 @@
 
 @include("../Model/db.php");
 
-if (isset($_GET['addingid']))
+if ($_GET['email']!="")
 {
-    $applicant_serial = $_GET['addingid'];
+    $email = $_GET['email'];
 
     $mydb = new db();
     $myconn = $mydb->openConn();
-    $applicant_serial = $_GET['addingid'];
-    $result = $mydb ->adding_new_admin($applicant_serial, "staticadmin", "applicantofadmin", $myconn);
-
+    $result = $mydb -> email_checking($email, "staticadmin", $myconn);
+    
     if($result == true)
     {
-        header("location: ../View/adminrequest.php");
+        echo "email already exits";
+        // header("location: ../View/adminrequest.php?email=already_exits");
     }
     else
     {
-        echo "error";
+        $result = $mydb ->adding_new_admin($applicant_serial, "staticadmin", "applicantofadmin", $myconn);
+
+        if($result == true)
+        {
+            header("location: ../View/adminrequest.php");
+        }
+        else
+        {
+            echo "error";
+        }
     }
 }
 

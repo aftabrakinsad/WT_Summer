@@ -98,6 +98,12 @@ input[type=text], input[type=password]
     transition: background-color 0.4s;
 }
 
+.inputrequestbutton:hover
+{
+    opacity: 0.8;
+    background-color:#04aa6d;
+}
+
 .container
 {
     padding: 1px;

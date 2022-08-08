@@ -81,6 +81,12 @@ class db
         $sqlstr = "SELECT admin_id, uname, FROM $staticadmin";
         return $conn -> query($sqlstr);
     }
+
+    function email_checking($email, $staticadmin, $conn)
+    {
+        $sqlstr = "SELECT email FROM $staticadmin WHERE email = '$email'";
+        return $conn -> query($sqlstr);
+    }
 }
 
 ?>

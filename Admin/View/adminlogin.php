@@ -22,7 +22,6 @@ if (isset($_SESSION['username'])) {
 <body class="bodyimage">
     <header>
         <h1>City Bank Limited.</h1>
-        <h2>Welcome to the bank <?php @include('../Control/cookie.php'); ?></h2>
     </header>
 
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" onsubmit="return form_check_admin()" enctype="multipart/form-data">
