@@ -2,7 +2,8 @@
 
 @include('../Control/adminlogincheck.php');
 
-if (isset($_SESSION['username'])) {
+if (isset($_SESSION['username']))
+{
     header("location: ../View/adminhomepage.php");
 }
 
@@ -21,7 +22,9 @@ if (isset($_SESSION['username'])) {
 
 <body class="bodyimage">
     <header>
-        <h1>City Bank Limited.</h1>
+        <?php 
+        @include("../View/header.php");
+        ?>
     </header>
 
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" onsubmit="return form_check_admin()" enctype="multipart/form-data">

@@ -7,12 +7,7 @@
 }
 
 .bodyimage {
-    background-image: linear-gradient(to left bottom, #ffffff, #d2c8ff, #a691fd, #7659f6, #3512eb);
-}
-
-body form {
-    margin-top: 10px;
-    margin-left: 34%;
+    background-color:lightslategrey;
 }
 
 #denger {
@@ -29,20 +24,11 @@ body form {
 
 form {
     width: 450px;
-    background-color: white;
+    background-color:lightsteelblue;
     padding: 30px 70px;
     box-shadow: 0px 5px 10px black;
-}
-
-header h1 {
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 100px;
-}
-
-header h2 {
-    text-align: center;
-    margin-top: 100px;
+    margin-top: 0px;
+    margin-left: 34%;
 }
 
 .h2 {
@@ -65,6 +51,7 @@ input[type=text], input[type=password] {
     width: 290px;
     padding-left: 15px;
     box-sizing: border-box;
+    border-radius: 15px;
 }
 
 #uniqueuse {
@@ -81,6 +68,7 @@ input[type=text], input[type=password] {
     color: white;
     margin: 15px 0;
     transition: background-color 0.4s;
+    border-radius: 15px;
 }
 
 .inputbutton:hover 
