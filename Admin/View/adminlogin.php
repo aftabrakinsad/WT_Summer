@@ -2,8 +2,7 @@
 
 @include('../Control/adminlogincheck.php');
 
-if (isset($_SESSION['username']))
-{
+if (isset($_SESSION['username'])) {
     header("location: ../View/adminhomepage.php");
 }
 
@@ -22,7 +21,7 @@ if (isset($_SESSION['username']))
 
 <body class="bodyimage">
     <header>
-        <?php 
+        <?php
         @include("../View/header.php");
         ?>
     </header>
@@ -30,6 +29,7 @@ if (isset($_SESSION['username']))
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" onsubmit="return form_check_admin()" enctype="multipart/form-data">
 
         <h2 class="h2">Admin Login</h2>
+        <img class="adminimage" src="../Image/admin_pro.jpeg">
         <table class="container">
 
             <tr>
