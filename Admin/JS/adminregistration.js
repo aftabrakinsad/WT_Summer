@@ -303,21 +303,13 @@ function otp_forpasswordchange()
 
 function form_check_adminregistration()
 {
-    if(password_adminregistration() != confirm_password_adminregistration())
+    if(fnamecheck_adminregistration() == true && lnamecheck_adminregistration() == true && usernamecheck_admin() == true &&     email_adminregistration() == true && nid_adminregistration()  == true && phone_adminregistration()  == true &password_adminregistration () == true && confirm_password_adminregistration() == true)
     {
-        document.getElementById("passerror").style.color = "red";
-        document.getElementById("passerror").innerHTML = "Password doesn't match";
-        return false;
+        return true;
     }
     else
     {
-        if(fnamecheck_adminregistration() == true && lnamecheck_adminregistration() == true && usernamecheck_admin() == true &&     email_adminregistration() == true && nid_adminregistration()  == true && phone_adminregistration()  == true && password_adminregistration   ()  == true && confirm_password_adminregistration()  == true)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return false;
     }
+
 }
