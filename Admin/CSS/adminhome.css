@@ -1,3 +1,7 @@
+body
+{
+    background-color: black;
+}
 .flex-container {
 display: -webkit-flex;
 display: flex;

@@ -5,7 +5,7 @@
 
 /* Add a black background color to the top navigation */
 .nav-wrapper .topnav {
-    background-color: #263238;
+    background-color: black;
     overflow: hidden;
     height: 53px;
 }
