@@ -24,8 +24,11 @@ if (isset($_SESSION['username'])) {
 <body class="bodycolor">
 
     <header>
-        <h1>Welcome to City Bank Limited.</h1>
-        <p id="info"><strong>Use correct information to apply </strong></p>
+        <?php
+
+        @include("../View/header.php");
+
+        ?>
     </header>
 
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data" onsubmit="return form_check_adminregistration()">
@@ -81,7 +84,7 @@ if (isset($_SESSION['username'])) {
                 </td>
             </tr>
 
-            <tr>
+            <tr class="p">
                 <td>
                     Please upload your picture
                     <input type="file" name="picture" id="picture" onkeyup="picture_adminregistration()">
