@@ -7,7 +7,7 @@
 }
 
 .bodyimage {
-    background-color:lightslategrey;
+    background-color:black;
 }
 
 #denger {
@@ -24,16 +24,21 @@
 
 form {
     width: 450px;
-    background-color:lightsteelblue;
     padding: 30px 70px;
-    box-shadow: 0px 5px 10px black;
-    margin-top: 0px;
+    margin-top: 20px;
     margin-left: 34%;
+    animation: move 2s infinite;
+    border-radius: 20px;
+}
+
+@keyframes move
+{
+    50% {box-shadow: 10px 20px 30px red}
 }
 
 .adminimage
 {
-    border-radius: 5px;
+    border-radius: 50px;
     image-rendering: optimizeSpeed;
     margin-left: 80px;
     margin-top: 0px;

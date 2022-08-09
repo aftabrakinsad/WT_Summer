@@ -69,7 +69,7 @@ if (isset($_SESSION['username'])) {
 
                     <br>
                     <input type="checkbox" name="remember" id="remember" checked>
-                    <label for="remember"><b>Remember Me</b></label>
+                    <label id="success" for="remember"><b>Remember Me</b></label>
                 </td>
             </tr>
 
@@ -86,10 +86,8 @@ if (isset($_SESSION['username'])) {
                 </th>
             </tr>
         </table>
-
-        <script src="../JS/adminlogin.js"></script>
     </form>
-
+    <script src="../JS/adminlogin.js"></script>
 </body>
 
 </html>
