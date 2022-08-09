@@ -20,7 +20,7 @@ $email = $_SESSION['email'];
     <header>
         <?php
         
-        include("../View/header.php");
+        @include("../View/header.php");
         
         ?>
     </header>

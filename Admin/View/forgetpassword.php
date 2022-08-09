@@ -1,5 +1,4 @@
 <?php
-
 @include("../Control/userexits.emailconfirmation.php");
 
 ?>

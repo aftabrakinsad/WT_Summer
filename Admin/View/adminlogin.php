@@ -2,7 +2,8 @@
 
 @include('../Control/adminlogincheck.php');
 
-if (isset($_SESSION['username'])) {
+if (isset($_SESSION['username']))
+{
     header("location: ../View/adminhomepage.php");
 }
 
@@ -81,8 +82,8 @@ if (isset($_SESSION['username'])) {
 
             <tr>
                 <th id="uniqueuse">
-                    <a id="denger" href="forgetpassword.php">Forget Password?</a><br><br>
-                    <a id="primary" href="adminregistration.php">Apply Admin</a>
+                    <a id="denger" href="../View/forgetpassword.php">Forget Password?</a><br><br>
+                    <a id="primary" href="../View/adminregistration.php">Apply Admin</a>
                 </th>
             </tr>
         </table>
