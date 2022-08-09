@@ -15,9 +15,13 @@
     <title>Forgot Password</title>
 </head>
 
-<body>
+<body class="body">
     <header>
-        <h1 class="h1">City Bank Limited.</h1>
+        <?php
+
+        @include("../View/header.php");
+
+        ?>
     </header>
 
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data" onsubmit=" return email_adminregistration()">
@@ -29,8 +33,7 @@
         ?>
             <div>
                 <?php
-                foreach ($errors as $showerror) 
-                {
+                foreach ($errors as $showerror) {
                     echo "<p id='denger'>$showerror</p>";
                 }
                 ?>

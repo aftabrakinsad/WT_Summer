@@ -11,8 +11,13 @@
         <div class="flex-item-header">
             <img src="../Image/banklogo.png" onclick="eEgg_func()" width="100" height="100">
         </div>
-        <div class="flex-item-header">
+
+        <div>
             <h1>City BANK</h1>
+        </div>
+
+        <div id="flex-item-header">
+            <img src="../Image/banklogo.png" onclick="eEgg_func()" width="100" height="100">
         </div>
     </div>
 

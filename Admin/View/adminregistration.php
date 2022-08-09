@@ -33,7 +33,7 @@ if (isset($_SESSION['username'])) {
 
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data" onsubmit="return form_check_adminregistration()">
 
-        <h2 class="h2">Application Form</h2>
+        <h2 class="h2" id="h2">Application Form</h2>
         <table class="container">
 
             <tr>
@@ -122,13 +122,17 @@ if (isset($_SESSION['username'])) {
                     echo $imageerr;
                     echo $imageerr1;
                     echo $signuperr;
+                    echo $registrationfailed;
 
+                    ?>
+                    <?php
+                    echo "<p id='success'>$registrationsucess</p>"
                     ?>
 
                     <br>
                     <br>
 
-                    <input class="inputrequestbutton" type="submit" name="submit" value="Apply">
+                    <input class="inputrequestbutton" type="submit" name="submit" id="submit" value="Apply">
 
                     <a class="inputrequestreturn" href="../View/adminlogin.php" name="return">Back to Login</a>
                 </td>
@@ -136,7 +140,9 @@ if (isset($_SESSION['username'])) {
 
         </table>
     </form>
+
     <script src="../JS/adminregistration.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </body>
 
 </html>

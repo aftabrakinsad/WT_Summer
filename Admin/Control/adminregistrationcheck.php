@@ -19,6 +19,8 @@ $fileerr1 = "";
 $imageerr = "";
 $imageerr1 = "";
 $signuperr = "";
+$registrationsucess = "";
+$registrationfailed = "";
 
 @include("../Model/db.php");
 
@@ -149,7 +151,7 @@ if(isset($_POST["submit"]))
                     $myconn = $mydb->openConn();
                     $mydb->insertapplicant($fname, $lname, $uname, $email, $nid, $phone, $password, $cpassword, $imgpath, $filepath, "applicantofadmin", $myconn);
 
-                    header("Location: ../View/adminregistration.php?Application_Submitted=Successfully");
+                    $registrationsucess = "You have done your resgistration. Wait for the responce";
                 }
                 else
                 {
@@ -159,10 +161,10 @@ if(isset($_POST["submit"]))
 
         }
     }
-}
-if(isset($_POST["return"]))
-{
-    header("location: ../View/adminlogin.php");
+    else
+    {
+        $registrationfailed = "Your registration failed. Please try again. ";
+    }
 }
 
 ?>

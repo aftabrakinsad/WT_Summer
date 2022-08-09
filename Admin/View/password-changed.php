@@ -24,7 +24,14 @@ if ($_SESSION['info'] == false) {
     <title>Back to Login</title>
 </head>
 
-<body>
+<body class="body">
+    <header>
+        <?php
+        
+            @include("../View/header.php");
+    
+        ?>
+    </header>
     <form action="../View/adminlogin.php">
         <p>
             <?php
