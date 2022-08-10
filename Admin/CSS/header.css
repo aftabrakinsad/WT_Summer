@@ -9,7 +9,7 @@ body {
     display: flex;
     width: auto;
     height: auto;
-    background-color: #263238;
+    background-color: black;
 }
 
 .flex-item-header {
