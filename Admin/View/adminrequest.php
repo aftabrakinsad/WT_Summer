@@ -1,8 +1,7 @@
 <?php
 
 session_start();
-if(empty($_SESSION["username"]) && empty($_SESSION["password"]))
-{
+if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
     header("location: ../View/adminlogin.php");
 }
 
@@ -47,7 +46,7 @@ if(empty($_SESSION["username"]) && empty($_SESSION["password"]))
 
             <tbody>
                 <?php
-                    @include("../Control/adminrequest.process.php");
+                @include("../Control/adminrequest.process.php");
                 ?>
             </tbody>
         </table>

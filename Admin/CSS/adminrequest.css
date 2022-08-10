@@ -1,7 +1,9 @@
-body
-{
+body {
     background-color: black;
+    font-family:'Times New Roman', Times, serif;
+    line-height: 1.25;
 }
+
 table {
     border: 1px solid black;
     border-collapse: collapse;
@@ -83,13 +85,7 @@ table th {
     }
 }
 
-body {
-    font-family: "Open Sans", sans-serif;
-    line-height: 1.25;
-}
-
-.accept
-{
+.accept {
     width: 290px;
     background-color: #04aa6d;
     padding: 8px;
@@ -101,9 +97,7 @@ body {
     transition: background-color 0.4s;
     border-radius: 5px;
 }
-
-.reject
-{
+.reject {
     width: 290px;
     background-color: #ff0000;
     padding: 8px;
@@ -116,10 +110,9 @@ body {
     border-radius: 5px;
 }
 
-#info
-{
+#info {
     width: 290px;
-    background-color:cornflowerblue;
+    background-color: cornflowerblue;
     padding: 8px;
     border: none;
     font-size: 16px;
