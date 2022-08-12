@@ -19,13 +19,13 @@ $email = $_SESSION['email'];
 <body class="body">
     <header>
         <?php
-        
+
         @include("../View/header.php");
-        
+
         ?>
     </header>
 
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data" onsubmit="return change_password_formcheck()">
 
         <p class="h2">Here you go to change your password</p>
 
@@ -35,16 +35,14 @@ $email = $_SESSION['email'];
 
                     <?php
 
-                    if(count($errors) > 0)
-                    {
+                    if (count($errors) > 0) {
                     ?>
                         <?php
-                        foreach($errors as $showerror)
-                        {
+                        foreach ($errors as $showerror) {
                             echo "<p id='denger'>$showerror</p>";
                         }
-                    ?>
-                        <?php
+                        ?>
+                    <?php
                     }
 
                     ?>
@@ -53,8 +51,16 @@ $email = $_SESSION['email'];
             </tr>
             <tr>
                 <td>
-                    <input type="password" name="newpassword" placeholder="Enter new password">
-                    <input type="password" name="confirmpassword" placeholder="Confirm your password">
+                    <input type="password" name="newpassword" id="pass" onkeyup="password_change()" placeholder="Enter new password">
+                    <p id="passerr"></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="password" name="confirmpassword" id="cpass" onkeyup="confirm_password_change()" placeholder="Confirm your password">
+                    <p id="cpasserr"></p>
+                    <p id="matched" onkeyup="password_check()"></p>
                 </td>
             </tr>
 
@@ -66,7 +72,7 @@ $email = $_SESSION['email'];
         </table>
 
     </form>
-
+    <script src="../JS/changepassword.js"></script>
 </body>
 
 </html>

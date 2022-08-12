@@ -287,6 +287,12 @@ function otp_forpasswordchange()
         document.getElementById("otperr").innerHTML = "Enter your otp";
         return false;
     }
+    else if(isNaN(otp))
+    {
+        document.getElementById("otperr").style.color = "red";
+        document.getElementById("otperr").innerHTML = "Otp must be numeric value";
+        return false;
+    }
     else if(!isNaN(otp) && otp.length == 6)
     {
         document.getElementById("otperr").style.color = "green";
