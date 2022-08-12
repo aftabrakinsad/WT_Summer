@@ -46,6 +46,12 @@ class db
         return $conn -> query($sqlstr);
     }
 
+    function otp_showing($email, $staticadmin, $conn)
+    {
+        $sqlstr = "SELECT code FROM $staticadmin WHERE email = '$email'";
+        return $conn -> query($sqlstr);
+    }
+
     function change_password($newpassword, $email, $code, $staticadmin, $conn)
     {
         $sqlstr = "UPDATE $staticadmin SET pass = '$newpassword', code = '$code' WHERE email = '$email'";

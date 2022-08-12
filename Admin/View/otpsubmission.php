@@ -24,8 +24,8 @@
 <body class="body">
     <header>
         <?php
-        
-            @include("../View/header.php");
+
+        @include("../View/header.php");
 
         ?>
     </header>
@@ -33,7 +33,9 @@
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data" onsubmit="return otp_forpasswordchange()">
 
         <h2 class="h2">Enter the correct OPT</h2>
+
         <table>
+            
             <tr>
                 <td>
                     <?php
@@ -54,13 +56,26 @@
             <tr>
                 <td>
                     <input type="text" name="otp" id="otp" onkeyup="otp_forpasswordchange()" placeholder="Enter otp">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
                     <p id="otperr"></p>
                     <input class="otpbtn" type="submit" name="enterotp" value="Submit">
                 </td>
             </tr>
+
+            <tr>
+                <td>
+                    <button class="" name="showotp">Send OTP</button>
+                    <!-- <input class="otpbtn" type="submit" name="showotp" value="Send OTP"> -->
+                </td>
+            </tr>
+
         </table>
-        <script src="../JS/adminregistration.js"></script>
     </form>
+    <script src="../JS/adminregistration.js"></script>
 </body>
 
 </html>
