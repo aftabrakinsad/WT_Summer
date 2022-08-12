@@ -9,7 +9,7 @@
 <body>
     <div class="flex-container-header">
         <div class="flex-item-header">
-            <img src="../Image/banklogo.png" onclick="eEgg_func()" width="100" height="100">
+            <img class="img" src="../Image/banklogo.png" onclick="eEgg_func()">
         </div>
 
         <div>
@@ -17,7 +17,7 @@
         </div>
 
         <div id="flex-item-header">
-            <img src="../Image/banklogo.png" onclick="eEgg_func()" width="100" height="100">
+            <img class="img" src="../Image/banklogo.png" onclick="eEgg_func()">
         </div>
     </div>
 
