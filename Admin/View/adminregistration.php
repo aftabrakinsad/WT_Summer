@@ -143,7 +143,6 @@ if (isset($_SESSION['username']))
     </form>
 
     <script src="../JS/adminregistration.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </body>
 
 </html>
