@@ -31,17 +31,40 @@ function usernamecheck_admin()
 function passwordcheck_admin()
 {
     var pass = document.getElementById("pass").value;
-
-    if(!pass)
+    if(!pass )
     {
         document.getElementById("passerr").style.color = "red";
-        document.getElementById("passerr").innerHTML = "password can't be empty";
+        document.getElementById("passerr").innerHTML = "password required";
+        return false;
+    }
+    else if(pass.length <= 8)
+    {
+        document.getElementById("passerr").style.color = "red";
+        document.getElementById("passerr").innerHTML = "password must be greater than 8";
+        return false;
+    }
+    else if(pass.search(/[A-Z]/) < 0)
+    {
+        document.getElementById("passerr").style.color = "red";
+        document.getElementById("passerr").innerHTML = "password must contain atleast one uppercase letter";
+        return false;
+    }
+    else if(pass.search(/[a-z]/) < 0)
+    {
+        document.getElementById("passerr").style.color = "red";
+        document.getElementById("passerr").innerHTML = "password must contain atleast one lowercase letter";
+        return false;
+    }
+    else if(pass.search(/[^\W]@/) < 0)
+    {
+        document.getElementById("passerr").style.color = "red";
+        document.getElementById("passerr").innerHTML = "password must contain atleast one special character";
         return false;
     }
     else
     {
         document.getElementById("passerr").style.color = "green";
-        document.getElementById("passerr").innerHTML = "password's formet ok";
+        document.getElementById("passerr").innerHTML = "password formet ok";
         return true;
     }
 }

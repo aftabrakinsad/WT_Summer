@@ -60,16 +60,6 @@ $email = $_SESSION['email'];
 
             <tr>
                 <td>
-                    <?php 
-                    
-                    //echo $passwordchanged;
-
-                    ?>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
                     <input class="otpbtn" type="submit" name="passwordsubmission" value="Change">
                 </td>
             </tr>
