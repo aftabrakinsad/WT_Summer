@@ -263,7 +263,7 @@ function confirm_password_adminregistration()
     // else
     // {
         // var Extention = picture.substring(picture.lastIndexOf('.') + 1).toLowerCase();
-    // 
+     
         // if(Extention == "jpg" || Extention == "jpeg" || Extention == "png")
         // {
             // document.getElementById("pictureerr").innerHTML = "Picture is an image";
