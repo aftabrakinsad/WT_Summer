@@ -35,7 +35,7 @@
         <h2 class="h2">Enter the correct OPT</h2>
 
         <table>
-            
+
             <tr>
                 <td>
                     <?php
@@ -69,7 +69,6 @@
             <tr>
                 <td>
                     <button class="" name="showotp">Send OTP</button>
-                    <!-- <input class="otpbtn" type="submit" name="showotp" value="Send OTP"> -->
                 </td>
             </tr>
 
