@@ -47,6 +47,7 @@ if(isset($_POST["enterotp"]))
         }
     }
     
+    
 }
 
 if(isset($_POST["otpshowing"]))
