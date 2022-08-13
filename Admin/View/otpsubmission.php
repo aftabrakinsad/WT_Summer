@@ -1,12 +1,6 @@
-<?
+<?php
 
 @include("../Control/otp.process.php");
-
-//$email = $_SEEESION['email'];
-// if($email == false)
-// {
-//   header('location: ../View/adminlogin.php');
-// }
 
 ?>
 
@@ -30,7 +24,7 @@
         ?>
     </header>
 
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data" onsubmit="return otp_forpasswordchange()">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
 
         <h2 class="h2">Enter the correct OPT</h2>
 
@@ -62,19 +56,14 @@
             <tr>
                 <td>
                     <p id="otperr"></p>
-                    <input class="otpbtn" type="submit" name="enterotp" value="Submit">
+                    <input class="otpbtn" type="submit" name="enterotp" value="Submit"> <br> <br>
+                    <input class="otpbtn" type="submit" name="otpshowing" value="Show OTP">
                 </td>
             </tr>
-
-            <tr>
-                <td>
-                    <button class="" name="showotp">Send OTP</button>
-                </td>
-            </tr>
-
         </table>
+
     </form>
-    <script src="../JS/adminregistration.js"></script>
+    <script src="../JS/otp.js"></script>
 </body>
 
 </html>

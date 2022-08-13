@@ -1,6 +1,11 @@
 <?php
 
 @include("../Model/db.php");
+
+$showotp = "";
+
+session_start();
+
 $errors = array();
 
 if(isset($_POST["enterotp"]))
@@ -39,6 +44,25 @@ if(isset($_POST["enterotp"]))
         else
         {
             $errors['invalidotp'] = "Invalid OTP";
+        }
+    }
+    
+}
+
+if(isset($_POST["otpshowing"]))
+{
+    if(true)
+    {
+        $email = $_SESSION['email'];
+        $mydb = new db();
+        $mycon = $mydb -> openConn();
+        $result = $mydb -> otp_showing($email, "staticadmin", $mycon);
+        if($result -> num_rows > 0)
+        {
+            $myotp = $result->fetch_assoc();
+            $showotp =  $myotp["code"];
+            $errors['showotp'] = "$showotp";
+            
         }
     }
 }

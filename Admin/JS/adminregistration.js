@@ -277,36 +277,6 @@ function confirm_password_adminregistration()
     // }
 // }
 
-function otp_forpasswordchange()
-{
-    var otp = document.getElementById("otp").value;
-
-    if(!otp)
-    {
-        document.getElementById("otperr").style.color = "red";
-        document.getElementById("otperr").innerHTML = "Enter your otp";
-        return false;
-    }
-    else if(isNaN(otp))
-    {
-        document.getElementById("otperr").style.color = "red";
-        document.getElementById("otperr").innerHTML = "Otp must be numeric value";
-        return false;
-    }
-    else if(!isNaN(otp) && otp.length == 6)
-    {
-        document.getElementById("otperr").style.color = "green";
-        document.getElementById("otperr").innerHTML = "OTP formet valid";
-        return true;
-    }
-    else
-    {
-        document.getElementById("otperr").style.color = "red";
-        document.getElementById("otperr").innerHTML = "OTP is not valid";
-        return false;
-    }
-}
-
 function form_check_adminregistration()
 {
     if(fnamecheck_adminregistration() == true && lnamecheck_adminregistration() == true && usernamecheck_admin() == true &&     email_adminregistration() == true && nid_adminregistration()  == true && phone_adminregistration()  == true &password_adminregistration () == true && confirm_password_adminregistration() == true)
