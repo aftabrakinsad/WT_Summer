@@ -1,4 +1,5 @@
 <?php
+
     session_start();
     if(isset($_POST['submit']))
     {
@@ -21,23 +22,33 @@
                             $_SESSION['uname'] = $user["username"];
                             $_SESSION['password'] = $user["password"];
 
-                        if (!empty($_POST["remember"]))
-                        {
-                            setcookie("username", $_SESSION['uname'], time() + 86000);
-                            setcookie("password", $_SESSION['password'], time() + 86000);
-                            echo "";
-                        } else
-                        {
-                            setcookie("username", "");
-                            setcookie("password", "");
-                            echo "";
+                            if (!empty($_POST["remember"]))
+                            {
+                                setcookie("username", $_SESSION['uname'], time() + 86000);
+                                setcookie("password", $_SESSION['password'], time() + 86000);
+                                echo "";
+                            }
+                            else
+                            {
+                                setcookie("username", "");
+                                setcookie("password", "");
+                                echo "";
+                            }
+                            header("location: ../view/adminhomepage.php");
                         }
-                        header("location: ../view/adminhomepage.php");
+                        else
+                        {
+
                         }
                     }
                 }
-                if ($f == 0) {
+                if ($f == 0)
+                {
                     echo "Enter Username and password currectly!";
+                }
+                else
+                {
+                    
                 }
             }
         }
@@ -49,5 +60,9 @@
     if(isset($_POST['registration']))
     {
         header("location: ../View/adminregistration.php");
+    }
+    else
+    {
+
     }
 ?>
