@@ -17,23 +17,32 @@
             </tr>
 
             <tr>
-                <td><label for="num2">2nd Number:</label></td>
-                <td><input type="text" name="num2"><br></td>
+                <td>
+                    <label for="num2">2nd Number:</label>
+                </td>
+
+                <td>
+                    <input type="text" name="num2"><br>
+                </td>
             </tr>
 
             <tr>
                 <td>Calculation:</td>
-                <td><input type="radio" name="func" value="+">plus
+                <td>
+                    <input type="radio" name="func" value="+">plus
 
-                <input type="radio" name="func" value="-">minus
+                    <input type="radio" name="func" value="-">minus
 
-                <input type="radio" name="func" value="*">multiplication
+                    <input type="radio" name="func" value="*">multiplication
 
-                <input type="radio" name="func" value="/">dividation</td>
+                    <input type="radio" name="func" value="/">dividation
+                </td>
             </tr>
 
             <tr>
-                <td><input type="submit" name="submit"></td>
+                <td>
+                    <input type="submit" name="submit">
+                </td>
             </tr>
 
         </table>

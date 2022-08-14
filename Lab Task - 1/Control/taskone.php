@@ -1,4 +1,5 @@
 <?php
+
 $name=$_POST["num1"];
 $name2=$_POST["num2"];
 $func=$_POST["func"];
@@ -30,4 +31,5 @@ if ($func == "/")
 {
     echo"Division: ", $name / $name2;
 }
+
 ?>
