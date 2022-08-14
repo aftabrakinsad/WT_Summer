@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="../Control/taskone.php" method="post">
+    <form action="../Control/taskone.php" method="POST">
         <table>
             <tr>
                 <td><label for="num1">1st Number:</label></td>
