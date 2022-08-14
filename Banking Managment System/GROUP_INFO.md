@@ -11,20 +11,20 @@
   </tr>
   
   <tr>
-  <th colspan="2">Course Teacher: <a href="https://cs.aiub.edu/profile/sazzad">SAZZAD HOSSAIN</a></th>
+    <th colspan="2">Course Teacher: <a href="https://cs.aiub.edu/profile/sazzad">SAZZAD HOSSAIN</a></th>
   </tr>
   
   <tr>
-  <th colspan="2">Group Members</a></th>
+    <th colspan="2">Group Members</a></th>
   </tr>
   
   <tr>
-    <th>Name</th>
-    <th>AIUB ID</th>
+  <th>Name</th>
+  <th>AIUB ID</th>
   </tr>
   
   <tr>
-      <td><a href="https://github.com/aftabrakinsad">RAKIN SAD AFTAB</a></td>
+    <td><a href="https://github.com/aftabrakinsad">RAKIN SAD AFTAB</a></td>
     <td>20-41991-1</td>
   </tr>
   
