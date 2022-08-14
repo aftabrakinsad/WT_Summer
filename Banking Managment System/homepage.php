@@ -8,12 +8,14 @@
     <title>Home - City Bank</title>
 </head>
 
-<body background="bg_img.PNG">
+<body background="../Banking Managment System/Image/bg_img.png">
     <header>
         <center>
             <h1><font color="white">Welcome To City Bank Limited</font></h1>
             <p><font color="white"><strong>Log in as..</strong></font></p>
         </center>
+    </header>
+
         <nav>
             <center>
                 <a href="Admin/View/adminlogin.php"><font color="white"><strong>Admin</strong></font></a><br><br>
@@ -21,7 +23,6 @@
                 <a href="Employee/view/employelogin.php"><font color="white"><strong>Employee</strong></font></a><br><br>
             </center>
         </nav>
-    </header>
 </body>
 
 </html>
