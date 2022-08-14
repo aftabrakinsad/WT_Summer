@@ -1,11 +1,11 @@
 <?php
 
-include('../control/emplogin.php');     #employ login r control
+include('../control/emplogin.php');
 
-if (isset($_SESSION['username'])) {
+if (isset($_SESSION['username']))
+{
     header("location: ../view/epage1.php");
 }
-
 
 ?>
 
@@ -22,9 +22,6 @@ if (isset($_SESSION['username'])) {
 
 <body bgcolor="skyblue">
     <form action="" method="POST" enctype="multipart/form-data">
-
-
-
         <center>
             <header>
                 <h1>
@@ -39,6 +36,7 @@ if (isset($_SESSION['username'])) {
             <form action="" method="POST" enctype="multipart/form-data">
 
                 <table>
+
                     <tr>
                         <td>
                             <label>
@@ -75,22 +73,22 @@ if (isset($_SESSION['username'])) {
 
                         </td>
                     </tr>
-                    <tr>
 
+                    <tr>
                         <td>
                             <center>
-                                <br><br><br><br><a href="http://localhost/Github Repo/WT_Summer/Banking Managment System/homepage.php">
-                                    <font color="black"><strong>Return to homepage Homepage</strong></font>
-                                </a><br><br>
+                                <br><br><br><br>
+                                <a href="http://localhost/Github Repo/WT_Summer/Banking Managment System/homepage.php"><font color="black"><strong>Return to homepage Homepage</strong></font></a>
+                                <br><br>
                             </center>
 
                         </td>
-
                     </tr>
-                </table>
 
+                </table>      
             </form>
         </center>
+    </form>
 </body>
 
 </html
