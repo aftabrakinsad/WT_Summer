@@ -46,17 +46,5 @@
         "password": "Zain123@",
         "cpassword": "Zain123@",
         "filepath": "..\/Uploads\/Fx9.jpg"
-    },
-    {
-        "firstName": "Risha",
-        "lastName": "Aftab",
-        "username": "rishaaftab",
-        "gender": "female",
-        "email": "risha@gmail.com",
-        "nid": "342457478526",
-        "phone": "01889046538",
-        "password": "Risha123@",
-        "cpassword": "Risha123@",
-        "filepath": "..\/Uploads\/7.jpeg"
     }
 ]
