@@ -1,10 +1,12 @@
 <?php
 
-include('../Control/adminlogincheck.php');
+@include('../Control/adminlogincheck.php');
 
-if (isset($_SESSION['uname'])) {
+if (isset($_SESSION['uname']))
+{
     header("location: ../View/adminhomepage.php");
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,9 +21,8 @@ if (isset($_SESSION['uname'])) {
 <body bgcolor="skyblue">
     <center>
         <header>
-            <h1>
-                <font color="red">City Bank Limited.</font>
-            </h1>
+            <h1><font color="red">City Bank Limited.</font></h1>
+            
             <p>
                 <strong>
                     <font color="red">Login As An Admin</font> <br>
@@ -73,6 +74,7 @@ if (isset($_SESSION['uname'])) {
                             </center>
                         </td>
                     </tr>
+
                     <tr>
 
                         <td>
