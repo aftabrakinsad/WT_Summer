@@ -1,7 +1,8 @@
 <?php
 
 session_start();
-if (isset($_SESSION['username'])) {
+if (isset($_SESSION['username']))
+{
     header("location: ../View/adminlogin.php");
 }
 
@@ -9,7 +10,7 @@ if (isset($_SESSION['username'])) {
 
 <?php
 
-include('../Control/adminregistrationcheck.php');
+@include('../Control/adminregistrationcheck.php');
 
 ?>
 
