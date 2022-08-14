@@ -6,5 +6,9 @@ if (session_destroy())
 {
     header("location: ../View/adminlogin.php");
 }
+else
+{
+    
+}
 
 ?>
