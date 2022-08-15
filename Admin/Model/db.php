@@ -104,9 +104,9 @@ class db
     #search Admin by email in Forget Password Page - AJAX
     function searching_existing_email($email, $staticadmin, $conn)
     {
-    $sqlstr = "SELECT * FROM $staticadmin WHERE email ='$email'";
-    return $conn -> query($sqlstr);
-}
+        $sqlstr = "SELECT * FROM $staticadmin WHERE email ='$email'";
+        return $conn -> query($sqlstr);
+    }
 
 }
 
