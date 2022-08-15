@@ -94,12 +94,19 @@ class db
         return $conn -> query($sqlstr);
     }
 
-    #search Admin by Username in admin Login Page
+    #search Admin by Username in admin Login Page - AJAX
     function search_admin_by_username($uname, $staticadmin, $conn)
     {
         $sqlstr = "SELECT * FROM $staticadmin WHERE uname = '$uname'";
         return $conn -> query($sqlstr);
     }
+
+    #search Admin by email in Forget Password Page - AJAX
+    function searching_existing_email($email, $staticadmin, $conn)
+    {
+    $sqlstr = "SELECT * FROM $staticadmin WHERE email ='$email'";
+    return $conn -> query($sqlstr);
+}
 
 }
 

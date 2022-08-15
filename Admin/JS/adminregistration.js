@@ -289,3 +289,20 @@ function form_check_adminregistration()
     }
 
 }
+
+function email_AJAX()
+{
+    var email = document.getElementById("email").value;
+    var emailxhttp = new XMLHttpRequest();
+    emailxhttp.onreadystatechange = function()
+    {
+        if(emailxhttp.readyState == 4 && emailxhttp.status == 200)
+        {
+            document.getElementById("emailajaxresponse").style.color = "steelblue";
+            document.getElementById("emailajaxresponse").innerHTML = emailxhttp.responseText;
+        }
+    };
+    emailxhttp.open("POST", "http://localhost/WT_Summer/Admin/Control/ajax.emailcheck.php", true);
+    emailxhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    emailxhttp.send("email="+email);
+}

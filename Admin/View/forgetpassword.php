@@ -41,8 +41,9 @@
         }
         ?>
 
-        <input type="email" name="email" id="email" onkeyup="email_adminregistration()" placeholder="Enter email address">
+        <input type="email" name="email" id="email" onchange="email_AJAX()" onkeyup="email_adminregistration()" placeholder="Enter email address">
         <p id="emailerr"></p>
+        <p id="emailajaxresponse"></p>
 
         <table id="table">
             <tr>
