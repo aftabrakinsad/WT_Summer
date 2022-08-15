@@ -10,28 +10,15 @@
 <body>
     <div class="nav-wrapper">
         <div class="topnav" id="theTopNav">
-            <!-- <a href="javascript:void(0);" class="icon" onclick="openNav()" id="hamburger"> -->
-                <!-- &#9776; -->
-            <!-- </a> -->
+            <a href="javascript:void(0);" class="icon" onclick="openNav()" id="hamburger">
+                &#9776;
+            </a>
             <a id="user">Welcome Admin<?php include('../Control/cookie.php'); ?></a>
-            <a id="logout" href="../Control/adminlogout.php" style="border-top-left-radius: 3px;" onclick="return confirm('Are you sure?')">Logout</a>
+            <a id="logout" href="../Control/adminlogout.php">Logout</a>
         </div>
     </div>
 
-    <script>
-        // Function below is jquery-3 function used for making the navbar sticky
-        $(document).ready(function() {
-            $(window).scroll(function() {
-                if ($(window).scrollTop() > 120) {
-                    $("#theTopNav").addClass('navbar-fixed');
-                }
-                if ($(window).scrollTop() < 121) {
-                    $("#theTopNav").removeClass('navbar-fixed');
-                }
-            });
-        });
-    </script>
-
+    <script src="../JS/navbar.js"></script>
 </body>
 
 </html>

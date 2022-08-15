@@ -51,6 +51,7 @@
     font-family: OpenSans-Bold;
     background-color: #b71c1c;
     border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
 }
 
 /* Change the color of links on hover */
@@ -62,24 +63,6 @@
 .topnav a[id="logout"]:hover {
     color: white;
     background-color: #f44336;
-}
-
-/* When the screen is less than 855 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 855px) {
-    .topnav a[id="user"] {
-        display: none;
-    }
-
-    .topnav a[id="hamburger"] {
-        float: left;
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 0px 16px;
-        text-decoration: none;
-        font-size: 45px;
-        font-family: Roboto-Light;
-    }
 }
 
 /* Used to make the navbar sticky */
