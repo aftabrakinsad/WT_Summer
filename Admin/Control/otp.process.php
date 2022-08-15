@@ -61,8 +61,7 @@ if(isset($_POST["otpshowing"]))
         if($result -> num_rows > 0)
         {
             $myotp = $result->fetch_assoc();
-            $showotp =  $myotp["code"];
-            $errors['showotp'] = "$showotp";   
+            $showotp =  $myotp["code"]; 
         }
     }
 }

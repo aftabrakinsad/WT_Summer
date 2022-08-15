@@ -39,3 +39,12 @@ function otp_formcheck()
         return false;
     }
 }
+
+function fade() 
+{
+    $(document).ready(function()
+    {
+        $('#otpp').delay(6000).fadeOut();
+    });
+}
+fade();
