@@ -2,7 +2,8 @@
 
 @include('../Control/adminlogincheck.php');
 
-if (isset($_SESSION['username'])) {
+if (isset($_SESSION['username']))
+{
     header("location: ../View/adminhomepage.php");
 }
 
@@ -34,8 +35,9 @@ if (isset($_SESSION['username'])) {
 
             <tr>
                 <td>
-                    <label for="uname"> <input type="text" name="uname" id="uname" onkeyup="usernamecheck_admin()" placeholder="Username"><br></label>
+                    <label for="uname"> <input type="text" name="uname" id="uname" placeholder="Username" onchange="uname_AJAX()" onkeyup="usernamecheck_admin()"><br></label>
                     <p id="nameerr"></p>
+                    <p id="unameajaxresponse"></p>
                 </td>
 
             </tr>
@@ -53,16 +55,29 @@ if (isset($_SESSION['username'])) {
 
                     $fullfill = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
-                    if (strpos($fullfill, "login=empty") == true) {
+                    if (strpos($fullfill, "login=empty") == true)
+                    {
                         echo "<p id = 'denger'>You did not fill all the fields!</p>";
-                    } else if (strpos($fullfill, "username=empty") == true) {
+                    }
+                    else if (strpos($fullfill, "username=empty") == true)
+                    {
                         echo "<p id = 'denger'>Please enter Username!<p>";
-                    } else if (strpos($fullfill, "password=empty") == true) {
+                    }
+                    else if (strpos($fullfill, "password=empty") == true)
+                    {
                         echo "<p id = 'denger'>Please enter Password!<p>";
-                    } else if (strpos($fullfill, "login_info=incorrect") == true) {
+                    }
+                    else if (strpos($fullfill, "login_info=incorrect") == true)
+                    {
                         echo "<p id = 'denger'>Username or Password is incorrect!<p>";
-                    } else if (strpos($fullfill, "login=success") == true) {
+                    }
+                    else if (strpos($fullfill, "login=success") == true)
+                    {
                         echo "<p id = 'success'>Login Successfull<p>";
+                    }
+                    else
+                    {
+                        echo "";
                     }
 
                     ?>

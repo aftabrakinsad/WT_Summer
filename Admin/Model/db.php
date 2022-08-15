@@ -93,6 +93,14 @@ class db
         $sqlstr = "SELECT email FROM $staticadmin WHERE email = '$email'";
         return $conn -> query($sqlstr);
     }
+
+    #search Admin by Username in admin Login Page
+    function search_admin_by_username($uname, $staticadmin, $conn)
+    {
+        $sqlstr = "SELECT * FROM $staticadmin WHERE uname = '$uname'";
+        return $conn -> query($sqlstr);
+    }
+
 }
 
 ?>

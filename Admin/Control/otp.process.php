@@ -62,8 +62,7 @@ if(isset($_POST["otpshowing"]))
         {
             $myotp = $result->fetch_assoc();
             $showotp =  $myotp["code"];
-            $errors['showotp'] = "$showotp";
-            
+            $errors['showotp'] = "$showotp";   
         }
     }
 }
