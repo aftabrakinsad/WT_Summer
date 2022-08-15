@@ -13,10 +13,12 @@ if(!empty($email))
     if($results -> num_rows > 0)
     {
         echo "Email Exsists";
+        // return true;
     }
     else
     {
         echo "Email doesn't Exists";
+        // return false;
     }
 }
 

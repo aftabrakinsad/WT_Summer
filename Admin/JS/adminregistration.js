@@ -251,31 +251,7 @@ function confirm_password_adminregistration()
     }
 }
 
-// function picture_adminregistration()
-// {
-    // var picture = document.getElementbyID("picture").value;
-// 
-    // if(picture == "")
-    // {
-        // document.getElementById("pictureerr").innerHTML = "Select a picture";
-        // return false;
-    // }
-    // else
-    // {
-        // var Extention = picture.substring(picture.lastIndexOf('.') + 1).toLowerCase();
-     
-        // if(Extention == "jpg" || Extention == "jpeg" || Extention == "png")
-        // {
-            // document.getElementById("pictureerr").innerHTML = "Picture is an image";
-            // return true;
-        // }
-        // else
-        // {
-            //document.getElementById("pictureerr").innerHTML =  "Only jpg, jpeg and png images are allowed";
-            // return false;
-        // }
-    // }
-// }
+
 
 function form_check_adminregistration()
 {
@@ -300,6 +276,10 @@ function email_AJAX()
         {
             document.getElementById("emailajaxresponse").style.color = "steelblue";
             document.getElementById("emailajaxresponse").innerHTML = emailxhttp.responseText;
+        }
+        else
+        {
+
         }
     };
     emailxhttp.open("POST", "http://localhost/WT_Summer/Admin/Control/ajax.emailcheck.php", true);
