@@ -12,7 +12,7 @@ if(!empty($uname))
     $results = $mydb -> search_admin_by_username($uname,"staticadmin", $myconn);
     if($results -> num_rows > 0)
     {
-        echo "User Exsists</p>";
+        echo "User Exsists";
     }
     else
     {
