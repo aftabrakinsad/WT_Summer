@@ -21,7 +21,7 @@ if(isset($_GET['email']))
 
         if($result == true)
         {
-            header("location: ../View/adminrequest.php");
+            header("location: ../View/adminrequest.php?admin=added");
         }
         else
         {
