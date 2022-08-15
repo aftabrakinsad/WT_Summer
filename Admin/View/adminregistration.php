@@ -2,8 +2,7 @@
 
 session_start();
 
-if (isset($_SESSION['username']))
-{
+if (isset($_SESSION['username'])) {
     header("location: ../View/adminlogin.php");
 }
 
@@ -88,13 +87,14 @@ if (isset($_SESSION['username']))
             <tr class="p">
                 <td>
                     Please upload your picture
-                    <input type="file" name="picture" id="picture" onkeyup="picture_adminregistration()">
-                    <p id="pictureerr"></p>
+                    <input type="file" name="picture" id="picture" onchange="picture_adminregistration()">
+                    <p id="imgerr"></p>
                 </td>
 
                 <td>
                     Please upload your cv
-                    <input type="file" name="cv">
+                    <input type="file" name="cv" id="cv" onchange="cv_adminregistration()">
+                    <p id="cverr"></p>
                 </td>
             </tr>
 

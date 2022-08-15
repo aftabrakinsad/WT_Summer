@@ -206,6 +206,7 @@ function password_adminregistration()
 
 function confirm_password_adminregistration()
 {
+    var pass = document.getElementById("pass").value;
     var cpass = document.getElementById("cpass").value;
 
     if(!cpass )
@@ -242,6 +243,18 @@ function confirm_password_adminregistration()
         "password must contain atleast one special character";
         return false;
     }
+    else if(pass === cpass)
+    {
+        document.getElementById("cpasserr").style.color = "green";
+        document.getElementById("cpasserr").innerHTML = "password and confirm password is matched";
+        return true;
+    }
+    else if(pass != cpass)
+    {
+        document.getElementById("cpasserr").style.color = "red";
+        document.getElementById("cpasserr").innerHTML = "password and confirm password not matched";
+        return false;
+    }
     else
     {
         document.getElementById("cpasserr").style.color = "green";
@@ -251,11 +264,51 @@ function confirm_password_adminregistration()
     }
 }
 
+function picture_adminregistration()
+{
+    var fileInput = document.getElementById("picture");
+    var filePath = fileInput.value;
+    var allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
 
+    if(!allowedExtensions.exec(filePath))
+    {
+        document.getElementById("imgerr").style.color = "red";
+        document.getElementById("imgerr").innerHTML = "Please upload file having extensions .jpeg /.jpg/ .png only.";
+        fileInput.value = '';
+        return false;
+    }
+    else
+    {
+        document.getElementById("imgerr").style.color = "green";
+        document.getElementById("imgerr").innerHTML = "Valid Image format";
+        return true;
+    }
+}
+
+function cv_adminregistration()
+{
+    var fileInput = document.getElementById("cv");
+    var filePath = fileInput.value;
+    var allowedExtensions = /(\.pdf)$/i;
+
+    if(!allowedExtensions.exec(filePath))
+    {
+        document.getElementById("cverr").style.color = "red";
+        document.getElementById("cverr").innerHTML = "Please upload file having extensions .pdf only.";
+        fileInput.value = '';
+        return false;
+    }
+    else
+    {
+        document.getElementById("cverr").style.color = "green";
+        document.getElementById("cverr").innerHTML = "Valid CV format";
+        return true;
+    }
+}
 
 function form_check_adminregistration()
 {
-    if(fnamecheck_adminregistration() == true && lnamecheck_adminregistration() == true && usernamecheck_admin() == true &&     email_adminregistration() == true && nid_adminregistration()  == true && phone_adminregistration()  == true &password_adminregistration () == true && confirm_password_adminregistration() == true)
+    if(fnamecheck_adminregistration() == true && lnamecheck_adminregistration() == true && usernamecheck_admin() == true &&     email_adminregistration() == true && nid_adminregistration()  == true && phone_adminregistration()  == true &password_adminregistration () == true && confirm_password_adminregistration() == true && picture_adminregistration() == true && cv_adminregistration() == true)
     {
         return true;
     }
