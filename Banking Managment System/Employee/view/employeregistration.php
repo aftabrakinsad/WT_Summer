@@ -1,4 +1,4 @@
-<html lang="en">
+
 <?php
  session_start();
   //include('../control/empregistration.php');
@@ -11,7 +11,8 @@ include("../control/empregistration.php");       #emp reg r control
 ?>
 
 
-
+<!DOCTYPE>
+htm
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,9 +33,6 @@ include("../control/empregistration.php");       #emp reg r control
         <form action="" method="POST" enctype="multipart/form-data">
             <center>
                 <table>
-
-                    
-
 
                 <tr>
                 <td>
