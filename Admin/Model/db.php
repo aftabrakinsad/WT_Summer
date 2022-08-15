@@ -64,18 +64,6 @@ class db
         return $conn -> query($sqlstr);
     }
 
-    function deleting_new_admin($applicant_serial, $applicantofadmin, $conn)
-    {
-        $sqlstr = "DELETE FROM $applicantofadmin WHERE applicant_serial = '$applicant_serial'";
-        return $conn -> query($sqlstr);
-    }
-
-    function adding_new_admin($applicant_serial, $staticadmin, $applicantofadmin, $conn)
-    {
-        $sqlstr = "INSERT INTO $staticadmin (uname, pass, email) SELECT uname, password, email FROM $applicantofadmin WHERE applicant_serial = '$applicant_serial'";
-        return $conn -> query($sqlstr);
-    }
-
     function search_by_name($search, $staticadmin, $conn)
     {
         $sqlstr = "SELECT admin_id, uname, email FROM $staticadmin WHERE uname LIKE '%.$search.%'";
@@ -88,20 +76,35 @@ class db
         return $conn -> query($sqlstr);
     }
 
+    #Used in New Admin (Control)
     function email_checking($email, $staticadmin, $conn)
     {
         $sqlstr = "SELECT email FROM $staticadmin WHERE email = '$email'";
         return $conn -> query($sqlstr);
     }
 
-    #search Admin by Username in admin Login Page - AJAX
+    #Used in New Admin (Control)
+    function adding_new_admin($email, $staticadmin, $applicantofadmin, $conn)
+    {
+        $sqlstr = "INSERT INTO $staticadmin (uname, pass, email) SELECT uname, password, email FROM $applicantofadmin WHERE email= '$email'";
+        return $conn->query($sqlstr);
+    }
+
+    #Used in Delete Admin (Control)
+    function deleting_new_admin($applicant_serial, $applicantofadmin, $conn)
+    {
+        $sqlstr = "DELETE FROM $applicantofadmin WHERE applicant_serial = '$applicant_serial'";
+        return $conn->query($sqlstr);
+    }
+
+    #search Admin by Username in admin Login Page - (Control - AJAX)
     function search_admin_by_username($uname, $staticadmin, $conn)
     {
         $sqlstr = "SELECT * FROM $staticadmin WHERE uname = '$uname'";
         return $conn -> query($sqlstr);
     }
 
-    #search Admin by email in Forget Password Page - AJAX
+    #search Admin by email in Forget Password Page - (Control - AJAX)
     function searching_existing_email($email, $staticadmin, $conn)
     {
         $sqlstr = "SELECT * FROM $staticadmin WHERE email ='$email'";

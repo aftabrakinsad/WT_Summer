@@ -2,7 +2,7 @@
 
 @include("../Model/db.php");
 
-if ($_GET['email']!="")
+if(isset($_GET['email']))
 {
     $email = $_GET['email'];
 
@@ -10,14 +10,14 @@ if ($_GET['email']!="")
     $myconn = $mydb->openConn();
     $result = $mydb -> email_checking($email, "staticadmin", $myconn);
     
-    if($result == true)
+    if($result -> num_rows > 0)
     {
-        echo "email already exits";
-        // header("location: ../View/adminrequest.php?email=already_exits");
+        echo "email already exists"; 
+        header("../View/adminrequest.php");
     }
     else
     {
-        $result = $mydb ->adding_new_admin($applicant_serial, "staticadmin", "applicantofadmin", $myconn);
+        $result = $mydb ->adding_new_admin($email, "staticadmin", "applicantofadmin", $myconn);
 
         if($result == true)
         {

@@ -43,6 +43,7 @@ function password_change()
 function confirm_password_change()
 {
     var cpass = document.getElementById("cpass").value;
+    var pass = document.getElementById("pass").value;
 
     if(!cpass )
     {
@@ -76,6 +77,18 @@ function confirm_password_change()
         document.getElementById("cpasserr").style.color = "red";
         document.getElementById("cpasserr").innerHTML = 
         "password must contain atleast one special character";
+        return false;
+    }
+    else if(pass === cpass)
+    {
+        document.getElementById("cpasserr").style.color = "green";
+        document.getElementById("cpasserr").innerHTML = "New password and confirm password is matched";
+        return true;
+    }
+    else if(pass != cpass)
+    {
+        document.getElementById("cpasserr").style.color = "red";
+        document.getElementById("cpasserr").innerHTML = "New password and confirm password not matched";
         return false;
     }
     else
