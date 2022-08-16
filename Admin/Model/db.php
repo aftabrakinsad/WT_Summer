@@ -173,6 +173,13 @@ class db
         $sqlstr = "SELECT email, nid FROM $details_table_for_selected_admins WHERE email ='$email' AND nid = '$nid'";
         return $conn->query($sqlstr);
     }
+
+    #Used in Add Account No (Control)
+    function genetaring_account_number($email, $nid, $accountno, $details_table_for_selected_admins, $conn)
+    {
+        $sqlstr = "UPDATE $details_table_for_selected_admins SET accountno = '$accountno' WHERE email = '$email' AND nid='$nid'";
+        return $conn -> query($sqlstr);
+    }
 }
 
 ?>

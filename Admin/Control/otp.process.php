@@ -29,7 +29,7 @@ if(isset($_POST["enterotp"]))
     {
         $mydb = new db();
         $mycon = $mydb->openConn();
-        $result = $mydb -> otp_verification($code, "staticadmin",   $mycon);
+        $result = $mydb -> otp_verification($code, "staticadmin", $mycon);
 
         if($result -> num_rows > 0)
         {

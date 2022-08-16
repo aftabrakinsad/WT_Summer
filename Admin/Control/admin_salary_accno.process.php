@@ -24,7 +24,7 @@ if($result == true)
             <td>' . $row['Operations'] . '</td>
 
             <td>
-                <a class="accept" href="../View/add_accountno.php">Add Account No</a> <br><br><br>
+                <a class="accept" href="../Control/add_account.process.php?email='.$email.'&&nid='.$nid.'">Add Account No</a> <br><br><br>
                 <a class="accept" href="../View/addsalary.php? email='.$email.'&&nid='.$nid.'">Add Salary</a>
             </td>
         </tr>';
