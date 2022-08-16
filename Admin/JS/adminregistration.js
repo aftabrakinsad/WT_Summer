@@ -306,19 +306,6 @@ function cv_adminregistration()
     }
 }
 
-function form_check_adminregistration()
-{
-    if(fnamecheck_adminregistration() == true && lnamecheck_adminregistration() == true && usernamecheck_admin() == true &&     email_adminregistration() == true && nid_adminregistration()  == true && phone_adminregistration()  == true &password_adminregistration () == true && confirm_password_adminregistration() == true && picture_adminregistration() == true && cv_adminregistration() == true)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-
-}
-
 function email_AJAX()
 {
     var email = document.getElementById("email").value;
@@ -401,4 +388,16 @@ function registration_phone_AJAX()
     phonexhttp.open("POST", "http://localhost/WT_Summer/Admin/Control/ajax.phonecheck_registration.php", true);
     phonexhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     phonexhttp.send("phone="+phone);
+}
+
+function form_check_adminregistration()
+{
+    if(fnamecheck_adminregistration() == true && lnamecheck_adminregistration() == true && usernamecheck_admin() == true &&     email_adminregistration() == true && nid_adminregistration()  == true && phone_adminregistration()  == true &password_adminregistration () == true && confirm_password_adminregistration() == true && picture_adminregistration() == true && cv_adminregistration() == true)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
