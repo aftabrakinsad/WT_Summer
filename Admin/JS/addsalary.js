@@ -71,9 +71,33 @@ function salary_addsalary()
     }
 }
 
+function accountno_addaccount()
+{
+    var accountno = document.getElementById("accountno").value;
+
+    if(!accountno)
+    {
+        document.getElementById("accountnoerr").style.color = "red";
+        document.getElementById("accountnoerr").innerHTML = "Enter your account no.";
+        return false;
+    }
+    else if(accountno.length == 7 && !isNaN(accountno))
+    {
+        document.getElementById("accountnoerr").style.color = "green";
+        document.getElementById("accountnoerr").innerHTML = "Account no. formet is valid";
+        return true;
+    }
+    else
+    {
+        document.getElementById("accountnoerr").style.color = "red";
+        document.getElementById("accountnoerr").innerHTML = "Account no. must contain 7 numaric value";
+        return false;
+    }
+}
+
 function addsalary_formcheck()
 {
-    if(email_addsalary() == true && nid_addsalary() == true && salary_addsalary() == true)
+    if(email_addsalary() == true && nid_addsalary() == true && salary_addsalary() == true && accountno_addaccount() == true)
     {
         return true;
     }

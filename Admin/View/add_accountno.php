@@ -24,7 +24,7 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
 </head>
 
 <body>
-    <form action="" method="POST">
+    <form action="" method="POST" onsubmit="return addsalary_formcheck()">
 
         <table>
             <caption>Add Selected Admins Account No</caption>
@@ -71,8 +71,8 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
 
             <tr>
                 <td>
-                    <input type="text" name="accountno" id="accountno" onkeyup="salary_addsalary()" placeholder="Enter account no">
-                    <p id="salaryerr"></p>
+                    <input type="text" name="accountno" id="accountno" onkeyup="accountno_addaccount()" placeholder="Enter account no">
+                    <p id="accountnoerr"></p>
                 </td>
             </tr>
 
