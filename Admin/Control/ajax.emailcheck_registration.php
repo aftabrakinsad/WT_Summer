@@ -11,7 +11,7 @@ if(!empty($email))
     $results = $mydb -> searching_existing_email_registration($email, "applicantofadmin", $myconn);
     if($results -> num_rows > 0)
     {
-        echo "Email Already Exsists";
+        echo "Email Already Exists";
     }
     else
     {

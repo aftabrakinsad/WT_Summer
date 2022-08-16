@@ -36,7 +36,7 @@ if (isset($_SESSION['username'])) {
         <h2 class="h2" id="h2">Application Form</h2>
 
         <?php
-        if(count($errors) > 0) {
+        if (count($errors) > 0) {
         ?>
             <div>
                 <?php
@@ -44,6 +44,7 @@ if (isset($_SESSION['username'])) {
                     echo "<p id='denger'> $showerror</p>";
                 }
                 ?>
+            </div>
         <?php
         }
         ?>
@@ -77,13 +78,15 @@ if (isset($_SESSION['username'])) {
 
             <tr>
                 <td>
-                    <input type="text" name="nid" id="nid" onkeyup="nid_adminregistration()" placeholder="Valid NID">
+                    <input type="text" name="nid" id="nid" onchange="registration_nid_AJAX()" onkeyup="nid_adminregistration()" placeholder="Valid NID">
                     <p id="niderr"></p>
+                    <p id="nidajaxresponse"></p>
                 </td>
 
                 <td>
-                    <input type="text" name="phone" id="phone" onkeyup="phone_adminregistration()" placeholder="+880-1XXXXXXXXX">
+                    <input type="text" name="phone" id="phone" onchange="registration_phone_AJAX()" onkeyup="phone_adminregistration()" placeholder="+880-1XXXXXXXXX">
                     <p id="phoneerr"></p>
+                    <p id="phoneajaxresponse"></p>
                 </td>
             </tr>
 

@@ -4,7 +4,6 @@
 
 $email = $_POST["email"];
 
-#Checking email via ajax
 if(!empty($email))
 {
     $mydb = new db();
@@ -13,12 +12,10 @@ if(!empty($email))
     if($results -> num_rows > 0)
     {
         echo "Email Exsists";
-        // return true;
     }
     else
     {
         echo "Email doesn't Exists";
-        // return false;
     }
 }
 

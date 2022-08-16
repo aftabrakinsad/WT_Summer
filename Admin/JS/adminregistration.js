@@ -360,3 +360,45 @@ function registration_email_AJAX()
     emailxhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     emailxhttp.send("email="+email);
 }
+
+function registration_nid_AJAX()
+{
+    var nid = document.getElementById("nid").value;
+    var nidxhttp = new XMLHttpRequest();
+    nidxhttp.onreadystatechange = function()
+    {
+        if(nidxhttp.readyState == 4 && nidxhttp.status == 200)
+        {
+            document.getElementById("nidajaxresponse").style.color = "steelblue";
+            document.getElementById("nidajaxresponse").innerHTML = nidxhttp.responseText;
+        }
+        else
+        {
+
+        }
+    }
+    nidxhttp.open("POST", "http://localhost/WT_Summer/Admin/Control/ajax.nidcheck_registration.php", true);
+    nidxhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    nidxhttp.send("nid="+nid);
+}
+
+function registration_phone_AJAX()
+{
+    var phone = document.getElementById("phone").value;
+    var phonexhttp = new XMLHttpRequest();
+    phonexhttp.onreadystatechange = function()
+    {
+        if(phonexhttp.readyState == 4 && phonexhttp.status == 200)
+        {
+            document.getElementById("phoneajaxresponse").style.color = "steelblue";
+            document.getElementById("phoneajaxresponse").innerHTML = phonexhttp.responseText;
+        }
+        else
+        {
+
+        }
+    }
+    phonexhttp.open("POST", "http://localhost/WT_Summer/Admin/Control/ajax.phonecheck_registration.php", true);
+    phonexhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    phonexhttp.send("phone="+phone);
+}
