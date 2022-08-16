@@ -34,7 +34,8 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
         </div>
         <div class=container>
             <label>User Name :</label><br>
-            <input name="username" type="text" placeholder="search here by username">
+            <input name="username" type="text" placeholder="search here by username" onchange="username_check_admin_manage_page_AJAX()">
+            <span><?php echo "<p id='denger'>$unameerr</p>"; ?></span>
         </div>
         <div class="container">
             <button type="submit" name="search">Search</button>

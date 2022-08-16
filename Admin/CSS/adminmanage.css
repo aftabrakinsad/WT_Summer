@@ -134,3 +134,8 @@ button:hover
     cursor: pointer;
     transition: 5s;
 }
+
+#denger
+{
+    color: red;
+}
