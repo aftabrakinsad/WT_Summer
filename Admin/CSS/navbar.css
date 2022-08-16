@@ -14,7 +14,6 @@
     display: none;
 }
 
-/* Style the Welcome User */
 .topnav a[id="user"] {
     float: left;
     display: block;
@@ -26,9 +25,9 @@
     font-family: Roboto-Light;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a[id="profile"] {
-    float: right;
+.topnav a[id="profile"]
+{
+    float: left;
     display: block;
     color: white;
     text-align: center;
@@ -38,6 +37,7 @@
     font-family: OpenSans-Bold;
     background-color: #0D47A1;
     border-top-left-radius: 3px;
+    margin-right: 5px;
 }
 
 .topnav a[id="logout"] {
@@ -55,7 +55,8 @@
 }
 
 /* Change the color of links on hover */
-.topnav a[id="profile"]:hover {
+.topnav a[id="profile"]:hover 
+{
     color: white;
     background-color: #2196F3;
 }
