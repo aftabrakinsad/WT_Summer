@@ -24,7 +24,7 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
 </head>
 
 <body>
-    <form action="" method="POST">
+    <form action="" method="POST" onsubmit="return addsalary_formcheck()">
 
         <table>
             <caption>Add Selected Admins Salary</caption>
@@ -57,19 +57,24 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
             ?>
             <tr>
                 <td>
-                    <input type="email" name="email" id="email" placeholder="Enter Email" value="<?php echo $email; ?>">
+                    <input type="email" name="email" id="email" placeholder="Enter Email" onkeyup="email_addsalary()"
+                    value="<?php echo $email; ?>">
+                    <p id="emailerr"></p>
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <input type="text" name="nid" id="nid" placeholder="Enter NID" value="<?php echo $nid; ?>">
+                    <input type="text" name="nid" id="nid" placeholder="Enter NID" onkeyup="nid_addsalary()"
+                    value="<?php echo $nid; ?>">
+                    <p id="niderr"></p>
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <input type="text" name="salary" id="salary" placeholder="Enter Salary Amount">
+                    <input type="text" name="salary" id="salary" onkeyup="salary_addsalary()" placeholder="Enter Salary Amount">
+                    <p id="salaryerr"></p>
                 </td>
             </tr>
 
@@ -80,6 +85,8 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
             </tr>
         </table>
     </form>
+
+    <script src="../JS/addsalary.js"></script>
 </body>
 
 </html>
