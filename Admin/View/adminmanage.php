@@ -1,8 +1,9 @@
 <?php
 
+@include("../Control/adminmanage.process.php");
+
 session_start();
-if(empty($_SESSION["username"]) && empty($_SESSION["password"]))
-{
+if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
     header("location: ../View/adminlogin.php");
 }
 
@@ -22,59 +23,53 @@ if(empty($_SESSION["username"]) && empty($_SESSION["password"]))
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/CSS" href="../CSS/adminmanage.css">
-    <link rel="stylesheet" type="text/CSS" href="../CSS/adminrequest.css">
+    <title>Admin Manage</title>
 </head>
 
 <body>
+    <form action="" method="POST" enctype="multipart/form-data">
 
-    <form action="" method="POST">
-
-        <div class="search-bar-wrapper">
-            <div class="search-bar" id="the-search-bar">
-                <div class="flex-item-search-bar" id="fi-search-bar">
-                    <form class="search_form" action="" method="post">
-                        <div class="flex-item-search">
-                            <input name="search" size="30" type="text" placeholder="Search Admins..." />
-                        </div>
-                        <div class="flex-item-search-button">
-                            <button type="submit" name="submit" id="search"></button>
-                        </div>
-                        <div class="flex-item-by">
-                            <label>By :</label>
-                        </div>
-                        <div class="flex-item-search-by">
-                            <select name="by">
-                                <option value="name" id="name">Name</option>
-                                <option value="acno">Ac/No</option>
-                            </select>
-                        </div>
-                    </form>
-                </div>
+        <div class="flex-container-form_header">
+            <h1 id="form_header">Search Admin By Username . . .</h1>
+        </div>
+        <div class=container>
+            <label>User Name :</label><br>
+            <input name="uname" size="30" type="text" />
+        </div>
+        <div class="container">
+            <button type="submit" name="search">Search</button>
+        </div>
+        <div class="flex-container">
+            <div class=container>
+                <label>First Name :</label><br>
+                <input name="fname" size="30" type="text" value="<?php echo $fname; ?>">
+            </div>
+            <div class=container>
+                <label>Last Name :</b></label><br>
+                <input name="lname" size="30" type="text" value="<?php echo $lname; ?>">
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class=container>
+                <label>Username :</label><br>
+                <input name="email" size="30" type="text" value="<?php echo $uname; ?>" readonly>
+            </div>
+            <div class=container>
+                <label>Email-ID :</b></label><br>
+                <input name="phone" size="30" type="text" value="<?php echo $email; ?>">
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class=container>
+                <label>NID :</label><br>
+                <input name="nid" size="30" type="text" value="<?php echo $nid; ?>">
+            </div>
+            <div class=container>
+                <label>Phone No. :</b></label><br>
+                <input name="phone" size="30" type="text" value="<?php echo $phone; ?>">
             </div>
         </div>
     </form>
-    <br><br>
-
-    <table>
-        <caption>Admin Data</caption>
-        <thead>
-            <tr>
-                <th scope="col">Serial</th>
-                <th scope="col">User Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Operations</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <?php
-
-            @include("../Control/adminmanage.process.php");
-
-            ?>
-        </tbody>
-    </table>
-
 </body>
 
 </html>

@@ -2,38 +2,30 @@
 
 @include("../Model/db.php");
 
-if(isset($_POST['submit']))
+$fname = "";
+$lname = "";
+$uname = "";
+$email = "";
+$nid = "";
+$phone = "";
+
+if (isset($_POST["search"]))
 {
-    // $back_button = TRUE;
-    $search = $_POST['search'];
-    $by = $_POST['by'];
-
-    if($by == "name")
+    $mydb = new db();
+    $myconn = $mydb->openConn();
+    $uname = $_POST["uname"];
+    $result = $mydb -> search_by_User_name($uname,"applicantofadmin", $myconn);
+    
+    if($result->num_rows > 0)
     {
-        $mydb = new db();
-        $myconn = $mydb->openConn();
-        $result = $mydb -> search_by_name($search, "staticadmin", $myconn);
-        if($result == true)
-        {
-            foreach($result as $row)
-            { 
-                $admin_id = $row['admin_id'];
-
-                echo '<tr>
-
-                <td>' . $row['admin_id'] . '</td>
-                <td>' . $row['uname'] . '</td>
-                <td>' . $row['email'] . '</td>
-                <td>
-                    <a class="accept" href="../Control/newadmin.php?addingid=' . $admin_id . '">Accept</a> 
-
-                    <br><br><br>
-
-                    <a class="reject" href="../Control/applicantdelete.php?deleteid=' . $admin_id . '">Reject</a>
-                </td>
-
-                </tr>';
-            }
+        while($row = $result->fetch_assoc())
+        { 
+            $fname = $row["fname"];
+            $lname = $row["lname"];
+            $uname = $row["uname"];
+            $email = $row["email"];
+            $nid = $row["nid"];
+            $phone = $row["phone"];
         }
     }
 }

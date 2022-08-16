@@ -64,9 +64,10 @@ class db
         return $conn -> query($sqlstr);
     }
 
-    function search_by_name($search, $staticadmin, $conn)
+    #Used in Admin Manage (Control)
+    function search_by_User_name($uname, $applicantofadmin, $conn)
     {
-        $sqlstr = "SELECT admin_id, uname, email FROM $staticadmin WHERE uname LIKE '%.$search.%'";
+        $sqlstr = "SELECT fname, lname, uname, email, nid, phone FROM $applicantofadmin WHERE uname = '$uname'";
         return $conn -> query($sqlstr);
     }
 
