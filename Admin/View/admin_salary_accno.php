@@ -36,6 +36,7 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
                     <th scope="col">Phone</th>
                     <th scope="col">salary</th>
                     <th scope="col">accountno</th>
+                    <th scope="col"></th>
                     <th scope="col">Operations</th>
                 </tr>
             </thead>

@@ -17,13 +17,16 @@ if($result == true)
             <td>' . $row['lname'] . '</td>
             <td>' . $row['uname'] . '</td>
             <td>' . $row['email'] . '</td>
-            <td>' . $row['nid'] .' </td>
+            <td>' . $row['nid'] . ' </td>
             <td>' . $row['phone'] . '</td>
             <td>' . $row['salary'] . '</td>
             <td>' . $row['accountno'] . '</td>
             <td>' . $row['Operations'] . '</td>
-            <td><a class="accept" href="../View/add_accountno.php">Add Account</a> <br><br><br>
-            <a class="reject" href="../View/addsalary.php?email='.$email.' && nid='.$nid.'">Add Salary</a></td>
+
+            <td>
+                <a class="accept" href="../View/add_accountno.php">Add Account No</a> <br><br><br>
+                <a class="accept" href="../View/addsalary.php? email='.$email.'&&nid='.$nid.'">Add Salary</a>
+            </td>
         </tr>';
     }
 }
