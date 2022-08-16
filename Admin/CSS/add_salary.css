@@ -33,6 +33,11 @@ body
     padding: 5px;
 }
 
+.showing
+{
+    color: white;
+}
+
 #primary {
     color: blue
 }

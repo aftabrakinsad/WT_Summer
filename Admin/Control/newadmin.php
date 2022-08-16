@@ -19,6 +19,7 @@ if($_GET['email'])
     {
         $result = $mydb -> adding_new_admin($email, "staticadmin", "applicantofadmin", $myconn);
         $resultII = $mydb -> adding_new_adminII($email, "details_table_for_selected_admins", "applicantofadmin", $myconn);
+        $resultIII = $mydb -> adding_new_admin_accountno_info($email, "admin_account_number", "applicantofadmin", $myconn);
 
         if($result == true && $resultII == true)
         {

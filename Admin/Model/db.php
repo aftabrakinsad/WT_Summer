@@ -52,6 +52,12 @@ class db
         return $conn -> query($sqlstr);
     }
 
+    function accountno_showing($email, $admin_account_number, $conn)
+    {
+        $sqlstr = "SELECT accountno FROM $admin_account_number WHERE email = '$email'";
+        return $conn->query($sqlstr);
+    }
+
     function change_password($newpassword, $email, $code, $staticadmin, $conn)
     {
         $sqlstr = "UPDATE $staticadmin SET pass = '$newpassword', code = '$code' WHERE email = '$email'";
@@ -102,6 +108,12 @@ class db
     function adding_new_adminII($email, $details_table_for_selected_admins, $applicantofadmin, $conn)
     {
         $sqlstr = "INSERT INTO $details_table_for_selected_admins (fname, lname, uname, email, nid, phone) SELECT fname, lname, uname, email,nid, phone FROM $applicantofadmin WHERE email = '$email'";
+        return $conn->query($sqlstr);
+    }
+
+    function adding_new_admin_accountno_info($email, $admin_account_number, $applicantofadmin, $conn)
+    {
+        $sqlstr = "INSERT INTO $admin_account_number (email, nid) SELECT email, nid FROM $applicantofadmin WHERE email = '$email'";
         return $conn->query($sqlstr);
     }
 
@@ -175,10 +187,16 @@ class db
     }
 
     #Used in Add Account No (Control)
-    function genetaring_account_number($email, $nid, $accountno, $details_table_for_selected_admins, $conn)
+    function genetaring_account_number($email, $nid, $accountno, $admin_account_number, $conn)
+    {
+        $sqlstr = "UPDATE $admin_account_number SET accountno = '$accountno' WHERE email = '$email' AND nid='$nid'";
+        return $conn -> query($sqlstr);
+    }
+
+    function adding_new_admin_accountno($email, $nid, $accountno, $details_table_for_selected_admins, $conn)
     {
         $sqlstr = "UPDATE $details_table_for_selected_admins SET accountno = '$accountno' WHERE email = '$email' AND nid='$nid'";
-        return $conn -> query($sqlstr);
+        return $conn->query($sqlstr);
     }
 }
 
