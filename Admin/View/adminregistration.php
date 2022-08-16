@@ -34,6 +34,20 @@ if (isset($_SESSION['username'])) {
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data" onsubmit="return form_check_adminregistration()">
 
         <h2 class="h2" id="h2">Application Form</h2>
+
+        <?php
+        if(count($errors) > 0) {
+        ?>
+            <div>
+                <?php
+                foreach ($errors as $showerror) {
+                    echo "<p id='denger'> $showerror</p>";
+                }
+                ?>
+        <?php
+        }
+        ?>
+
         <table class="container">
 
             <tr>
@@ -55,8 +69,9 @@ if (isset($_SESSION['username'])) {
                 </td>
 
                 <td>
-                    <input type="text" name="email" id="email" onkeyup="email_adminregistration()" placeholder="Email">
+                    <input type="text" name="email" id="email" onchange="registration_email_AJAX()" onkeyup="email_adminregistration()" placeholder="Email">
                     <p id="emailerr"></p>
+                    <p id="emailajaxresponse"></p>
                 </td>
             </tr>
 
@@ -103,36 +118,9 @@ if (isset($_SESSION['username'])) {
         <table class="container">
 
             <tr>
-                <td id="denger">
-                    <?php
-
-                    echo $fnameerr;
-                    echo $lnameerr;
-                    echo $unameerr;
-                    echo $unameerr1;
-                    echo $emailerr;
-                    echo $niderr;
-                    echo $niderr1;
-                    echo $phoneerr;
-                    echo $passworderr;
-                    echo $passworderr1;
-                    echo $passworderr2;
-                    echo $passworderr3;
-                    echo $fileerr;
-                    echo $fileerr1;
-                    echo $imageerr;
-                    echo $imageerr1;
-                    echo $signuperr;
-                    echo $registrationfailed;
-
-                    ?>
-                    <?php
-                    echo "<p id='success'>$registrationsucess</p>"
-                    ?>
-
+                <td>
                     <br>
                     <br>
-
                     <input class="inputrequestbutton" type="submit" name="submit" id="submit" value="Apply">
 
                     <a class="inputrequestreturn" href="../View/adminlogin.php" name="return">Back to Login</a>

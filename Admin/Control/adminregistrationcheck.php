@@ -1,26 +1,6 @@
 <?php
 
-$fnameerr = "";
-$lnameerr = "";
-$unameerr = "";
-$unameerr1 = "";
-$emailerr = "";
-$niderr = "";
-$niderr1 = "";
-$phoneerr = "";
-$passworderr = "";
-$passworderr1 = "";
-$passworderr2 = "";
-$passworderr3 = "";
-$filepath = "";
-$imgpath = "";
-$fileerr = "";
-$fileerr1 = "";
-$imageerr = "";
-$imageerr1 = "";
-$signuperr = "";
-$registrationsucess = "";
-$registrationfailed = "";
+$errors = array();
 
 @include("../Model/db.php");
 
@@ -48,62 +28,62 @@ if(isset($_POST["submit"]))
 
     if (empty($fname) && empty($lname) && empty($uname) && empty($email) && empty($nid) && empty($phone) && empty($password) && empty($cpassword) && empty($_FILES["picture"]["tmp_name"]) && empty($_FILES["cv"]["tmp_name"]))
     {
-        $signuperr = "You did not fill all the fields! ";
+        $errors['empty-fields'] = "You did not fill all the fields! ";
     }
     else if(empty($fname))
     {
-        $fnameerr = "Please Enter Your Firstname. ";
+        $errors['empty-fname'] = "Please Enter Your Firstname.";
     }
     else if(empty($lname))
     {
-        $lnameerr = "Please Enter Your Lastname. ";
+        $errors['empty-lname'] = "Please Enter Your Lastname.";
     }
     else if(empty($uname))
     {
-        $unameerr1 = "Please Enter Your Username. ";
+        $errors['empty-uname'] = "Please Enter Your Username.";
     }
     else if (!empty($uname) && strlen($uname) <= 5)
     {
-        $unameerr = "Username must be more than 5 characters! ";
+        $errors['uname-char'] = "Username must be more than 5 characters! ";
     }
     else if(empty($email))
     {
-        $emailerr = "Please Enter Valid Email Address. ";
+        $errors['email-notvalid'] = "Please Enter Valid Email Address. ";
     }
     else if(!empty($email) && !preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $email))
     {
-        $emailerr = "Please Enter Valid Email Address. ";
+        $errors['email-notvalid'] = "Please Enter Valid Email Address. ";
     }
     else if(empty($nid))
     {
-        $niderr = "Please Enter Valid National Identity Number. ";
+        $errors['empty-nid'] = "Please Enter Valid National Identity Number. ";
     }
     else if(!empty($nid) && strlen($nid) != 8)
     {
-        $niderr1 = "NID should be 8 digits. ";
+        $errors['nid-digit'] = "NID should be 8 digits. ";
     }
     else if(empty($phone))
     {
-        $phoneerr = "Please Enter Valid Phone Number. ";
+        $errors['empty-phone'] = "Please Enter Valid Phone Number. ";
     }
     else if(empty($password))
     {
-        $passworderr = "Enter Password! ";
+        $errors['empty-pass'] = "Enter Password! ";
     }
     else if(empty($cpassword))
     {
-        $passworderr1 = "Confirm Your Password ";
+        $errors['empty-cpass'] = "Confirm Your Password ";
     }
     else if(!empty($password) && !empty($cpassword))
     {
         if(!$uppercase || !$lowercase || !$number || !$specialchars || strlen($password) <= 8)
         {
-            $passworderr2 = "Password should be more than or equal to 8 characters and should include at least one uppercase, one lower case, one number and one special character! ";
+            $errors['pass-notvalid'] = "Password should be more than or equal to 8 characters and should include at least one uppercase, one lower case, one number and one special character! ";
 
         }
         else if($password != $cpassword)
         {
-            $passworderr3 = "Password didn't match. ";
+            $errors['pass-notmatched'] = "Password didn't match. ";
         }
     }
     if ($fname != "" && $lname != "" && $uname != "" && $email != "" && $nid != "" && $phone != "" && $password != "" && $cpassword != "") 
@@ -121,22 +101,22 @@ if(isset($_POST["submit"]))
 
             if(empty($picture))
             {
-                $imageerr1 = "Please select your picture to upload. ";
+                $errors['empty-img'] = "Please select your picture to upload. ";
                 header("Location: ../View/adminregistration.php?Application_Submitted=Failed");
             }
             else if(empty($cv))
             {
-                $fileerr1 = "Please select your cv to upload. ";
+                $errors['empty-cv'] = "Please select your cv to upload. ";
                 header("Location: ../View/adminregistration.php?Application_Submitted=Failed");
             }
             else if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif")
             {
-                $imageerr = "Sorry, only JPG, JPEG, PNG & GIF files are allowed. ";
+                $errors['img-formrt'] = "Sorry, only JPG, JPEG, PNG & GIF files are allowed. ";
                 header("Location: ../View/adminregistration.php?Application_Submitted=Failed");
             }
             else if($FileType != "pdf")
             {
-                $fileerr = "Sorry, Only PDF files are allowed. ";
+                $errors['img-formet'] = "Sorry, Only PDF files are allowed. ";
                 header("Location: ../View/adminregistration.php?Application_Submitted=Failed");
             }
             else
@@ -149,9 +129,20 @@ if(isset($_POST["submit"]))
 
                     $mydb = new db();
                     $myconn = $mydb->openConn();
-                    $mydb->insertapplicant($fname, $lname, $uname, $email, $nid, $phone, $password, $cpassword, $imgpath, $filepath, "applicantofadmin", $myconn);
+                    $result = $mydb -> searching_existing_email_registration($email, "applicantofadmin", $myconn);
 
-                    $registrationsucess = "You have done your resgistration. Wait for the responce";
+                    if($result->num_rows > 0)
+                    {
+                        $errors['mail-exites'] = "This Email Already Exists";
+                    }
+                    else
+                    {
+                        $mydb = new db();
+                        $myconn = $mydb->openConn();
+                        $mydb->insertapplicant($fname, $lname, $uname, $email, $nid, $phone, $password, $cpassword, $imgpath, $filepath,    "applicantofadmin", $myconn);
+
+                        $errors['registration-done'] = "You have done your resgistration. Wait for the responce";
+                    }
                 }
                 else
                 {
@@ -163,7 +154,7 @@ if(isset($_POST["submit"]))
     }
     else
     {
-        $registrationfailed = "Your registration failed. Please try again. ";
+        $errors['registration-failed'] = "Your registration failed. Please try again. ";
     }
 }
 

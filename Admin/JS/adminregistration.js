@@ -339,3 +339,24 @@ function email_AJAX()
     emailxhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     emailxhttp.send("email="+email);
 }
+
+function registration_email_AJAX()
+{
+    var email = document.getElementById("email").value;
+    var emailxhttp = new XMLHttpRequest();
+    emailxhttp.onreadystatechange = function()
+    {
+        if(emailxhttp.readyState == 4 && emailxhttp.status == 200)
+        {
+            document.getElementById("emailajaxresponse").style.color = "steelblue";
+            document.getElementById("emailajaxresponse").innerHTML = emailxhttp.responseText;
+        }
+        else
+        {
+
+        }
+    };
+    emailxhttp.open("POST", "http://localhost/WT_Summer/Admin/Control/ajax.emailcheck_registration.php", true);
+    emailxhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    emailxhttp.send("email="+email);
+}

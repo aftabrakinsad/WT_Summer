@@ -14,7 +14,11 @@
 
 #denger
 {
-    color: red;
+    background-color: red;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 4px;
 }
 
 #success 

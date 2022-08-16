@@ -21,7 +21,7 @@ if(isset($_POST["Change"]))
             if($result -> num_rows > 0)
             {
                 $code = rand(999999, 100000);
-                $result = $mydb -> otp_code($email, $code,     "staticadmin", $mycon);
+                $result = $mydb -> otp_code($email, $code, "staticadmin", $mycon);
         
                 if($result == true)
                 {

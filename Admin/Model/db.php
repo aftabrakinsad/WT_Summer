@@ -112,6 +112,12 @@ class db
         return $conn -> query($sqlstr);
     }
 
+    #search User by email in Admin Registration Page - (Control - AJAX)
+    function searching_existing_email_registration($email, $applicantofadmin, $conn)
+    {
+        $sqlstr = "SELECT * FROM $applicantofadmin WHERE email ='$email'";
+        return $conn->query($sqlstr);
+    }
 }
 
 ?>
