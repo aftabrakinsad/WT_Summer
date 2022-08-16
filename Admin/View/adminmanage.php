@@ -34,7 +34,7 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
         </div>
         <div class=container>
             <label>User Name :</label><br>
-            <input name="uname" size="30" type="text" />
+            <input name="username" type="text" placeholder="search here by username">
         </div>
         <div class="container">
             <button type="submit" name="search">Search</button>
@@ -42,31 +42,31 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
         <div class="flex-container">
             <div class=container>
                 <label>First Name :</label><br>
-                <input name="fname" size="30" type="text" value="<?php echo $fname; ?>">
+                <input name="fname" type="text" value="<?php echo $fname; ?>">
             </div>
             <div class=container>
                 <label>Last Name :</b></label><br>
-                <input name="lname" size="30" type="text" value="<?php echo $lname; ?>">
+                <input name="lname" type="text" value="<?php echo $lname; ?>">
             </div>
         </div>
         <div class="flex-container">
             <div class=container>
                 <label>Username :</label><br>
-                <input name="email" size="30" type="text" value="<?php echo $uname; ?>" readonly>
+                <input name="uname" type="text" value="<?php echo $uname; ?>">
             </div>
             <div class=container>
                 <label>Email-ID :</b></label><br>
-                <input name="phone" size="30" type="text" value="<?php echo $email; ?>">
+                <input name="phone" type="text" value="<?php echo $email; ?>">
             </div>
         </div>
         <div class="flex-container">
             <div class=container>
                 <label>NID :</label><br>
-                <input name="nid" size="30" type="text" value="<?php echo $nid; ?>">
+                <input name="nid" type="text" value="<?php echo $nid; ?>">
             </div>
             <div class=container>
                 <label>Phone No. :</b></label><br>
-                <input name="phone" size="30" type="text" value="<?php echo $phone; ?>">
+                <input name="phone" type="text" value="<?php echo $phone; ?>">
             </div>
         </div>
     </form>

@@ -65,9 +65,9 @@ class db
     }
 
     #Used in Admin Manage (Control)
-    function search_by_User_name($uname, $applicantofadmin, $conn)
+    function search_by_User_name($username, $applicantofadmin, $conn)
     {
-        $sqlstr = "SELECT fname, lname, uname, email, nid, phone FROM $applicantofadmin WHERE uname = '$uname'";
+        $sqlstr = "SELECT fname, lname, uname, email, nid, phone FROM $applicantofadmin WHERE uname = '$username'";
         return $conn -> query($sqlstr);
     }
 

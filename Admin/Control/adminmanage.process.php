@@ -13,8 +13,8 @@ if (isset($_POST["search"]))
 {
     $mydb = new db();
     $myconn = $mydb->openConn();
-    $uname = $_POST["uname"];
-    $result = $mydb -> search_by_User_name($uname,"applicantofadmin", $myconn);
+    $username = $_POST["username"];
+    $result = $mydb -> search_by_User_name($username,"applicantofadmin", $myconn);
     
     if($result->num_rows > 0)
     {
