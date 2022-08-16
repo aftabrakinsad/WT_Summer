@@ -4,6 +4,16 @@
 $errors = array();
 $success = array();
 
+$email = $_GET["email"];
+$nid = $_GET["nid"];
+
+$mydb = new db();
+$myconn = $mydb->openConn();
+$resultd = $mydb->showing_data_from_admin_salary_control_to_add_salary($email, $nid, "details_table_for_selected_admins", $myconn);
+$row = $resultd->fetch_assoc();
+$email = $row["email"];
+$nid = $row["nid"];
+
 if(isset($_POST["submit"]))
 {
     $email = $_POST["email"];
@@ -51,8 +61,6 @@ if(isset($_POST["submit"]))
 
         if(($emailresult->num_rows > 0) && ($nidresult->num_rows > 0))
         {
-            $mydb = new db();
-            $myconn = $mydb->openConn();
             $result = $mydb->adding_salary_to_selected_admins($email, $nid, $salary, "details_table_for_selected_admins", $myconn);
             if ($result == true)
             {

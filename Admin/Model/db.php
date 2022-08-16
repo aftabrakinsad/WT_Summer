@@ -154,15 +154,23 @@ class db
         return $conn->query($sqlstr);
     }
 
+    #Used in Add Salary (Control)
     function searching_existing_email_in_details_table_for_selected_admins($email, $details_table_for_selected_admins, $conn)
     {
         $sqlstr = "SELECT * FROM $details_table_for_selected_admins WHERE email ='$email'";
         return $conn->query($sqlstr);
     }
 
+    #Used in Add Salary (Control)
     function searching_existing_nid_in_details_table_for_selected_admins($nid, $details_table_for_selected_admins, $conn)
     {
         $sqlstr = "SELECT * FROM $details_table_for_selected_admins WHERE nid ='$nid'";
+        return $conn->query($sqlstr);
+    }
+
+    function showing_data_from_admin_salary_control_to_add_salary($email, $nid, $details_table_for_selected_admins, $conn)
+    {
+        $sqlstr = "SELECT email, nid FROM $details_table_for_selected_admins WHERE email ='$email' AND nid = '$nid'";
         return $conn->query($sqlstr);
     }
 }

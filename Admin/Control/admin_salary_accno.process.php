@@ -11,6 +11,7 @@ if($result == true)
     foreach($result as $row)
     {
         $nid = $row['nid'];
+        $email = $row['email'];
         echo '<tr>
             <td>' . $row['fname'] . '</td>
             <td>' . $row['lname'] . '</td>
@@ -22,7 +23,7 @@ if($result == true)
             <td>' . $row['accountno'] . '</td>
             <td>' . $row['Operations'] . '</td>
             <td><a class="accept" href="../View/add_accountno.php">Add Account</a> <br><br><br>
-            <a class="reject" href="../View/addsalary.php">Add Salary</a></td>
+            <a class="reject" href="../View/addsalary.php?email='.$email.' && nid='.$nid.'">Add Salary</a></td>
         </tr>';
     }
 }

@@ -57,13 +57,13 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
             ?>
             <tr>
                 <td>
-                    <input type="email" name="email" id="email" placeholder="Enter Email">
+                    <input type="email" name="email" id="email" placeholder="Enter Email" value="<?php echo $email; ?>">
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <input type="text" name="nid" id="nid" placeholder="Enter NID">
+                    <input type="text" name="nid" id="nid" placeholder="Enter NID" value="<?php echo $nid; ?>">
                 </td>
             </tr>
 
