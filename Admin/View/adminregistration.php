@@ -36,12 +36,27 @@ if (isset($_SESSION['username'])) {
         <h2 class="h2" id="h2">Application Form</h2>
 
         <?php
-        if (count($errors) > 0) {
+        if (count($errors) > 0)
+        {
         ?>
             <div>
                 <?php
-                foreach ($errors as $showerror) {
+                foreach ($errors as $showerror)
+                {
                     echo "<p id='denger'> $showerror</p>";
+                }
+                ?>
+            </div>
+        <?php
+        } 
+        else if (count($success) > 0)
+        {
+        ?>
+            <div>
+                <?php
+                foreach ($success as $ok)
+                {
+                    echo "<p id='success'> $ok</p>";
                 }
                 ?>
             </div>

@@ -58,9 +58,17 @@ class db
         return $conn -> query($sqlstr);
     }
 
+    #Used in Admin Request (Control)
     function retrive_applicant_info_for_admin($applicantofadmin, $conn)
     {
         $sqlstr = "SELECT applicant_serial, fname, lname, uname, email, nid, phone, password, picture, cv FROM $applicantofadmin";
+        return $conn -> query($sqlstr);
+    }
+
+    #used in Add Salary & Account (Control)
+    function retrive_selected_admin_info($details_table_for_selected_admins, $conn)
+    {
+        $sqlstr = "SELECT fname, lname, uname, email, nid, phone, salary, accountno FROM $details_table_for_selected_admins";
         return $conn -> query($sqlstr);
     }
 
@@ -88,6 +96,12 @@ class db
     function adding_new_admin($email, $staticadmin, $applicantofadmin, $conn)
     {
         $sqlstr = "INSERT INTO $staticadmin (uname, pass, email) SELECT uname, password, email FROM $applicantofadmin WHERE email= '$email'";
+        return $conn->query($sqlstr);
+    }
+
+    function adding_new_adminII($email, $details_table_for_selected_admins, $applicantofadmin, $conn)
+    {
+        $sqlstr = "INSERT INTO $details_table_for_selected_admins (fname, lname, uname, email, nid, phone) SELECT fname, lname, uname, email,nid, phone FROM $applicantofadmin WHERE email = '$email'";
         return $conn->query($sqlstr);
     }
 
@@ -130,6 +144,25 @@ class db
     function seaching_exixting_phone_regisstration($phone, $applicantofadmin, $conn)
     {
         $sqlstr = "SELECT * FROM $applicantofadmin WHERE phone = '$phone'";
+        return $conn->query($sqlstr);
+    }
+
+    #Used in Add Salary (Control)
+    function adding_salary_to_selected_admins($email, $nid, $salary, $details_table_for_selected_admins, $conn)
+    {
+        $sqlstr = "UPDATE $details_table_for_selected_admins SET salary = '$salary' WHERE email = '$email' AND nid='$nid'";
+        return $conn->query($sqlstr);
+    }
+
+    function searching_existing_email_in_details_table_for_selected_admins($email, $details_table_for_selected_admins, $conn)
+    {
+        $sqlstr = "SELECT * FROM $details_table_for_selected_admins WHERE email ='$email'";
+        return $conn->query($sqlstr);
+    }
+
+    function searching_existing_nid_in_details_table_for_selected_admins($nid, $details_table_for_selected_admins, $conn)
+    {
+        $sqlstr = "SELECT * FROM $details_table_for_selected_admins WHERE nid ='$nid'";
         return $conn->query($sqlstr);
     }
 }

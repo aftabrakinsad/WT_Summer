@@ -17,9 +17,10 @@ if($_GET['email'])
     }
     else
     {
-        $result = $mydb ->adding_new_admin($email, "staticadmin", "applicantofadmin", $myconn);
+        $result = $mydb -> adding_new_admin($email, "staticadmin", "applicantofadmin", $myconn);
+        $resultII = $mydb -> adding_new_adminII($email, "details_table_for_selected_admins", "applicantofadmin", $myconn);
 
-        if($result == true)
+        if($result == true && $resultII == true)
         {
             header("location: ../View/adminrequest.php?admin=added");
         }

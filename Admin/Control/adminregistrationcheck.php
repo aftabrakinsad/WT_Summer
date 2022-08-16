@@ -1,6 +1,7 @@
 <?php
 
 $errors = array();
+$success = array();
 
 @include("../Model/db.php");
 
@@ -151,7 +152,7 @@ if(isset($_POST["submit"]))
                         $myconn = $mydb->openConn();
                         $mydb->insertapplicant($fname, $lname, $uname, $email, $nid, $phone, $password, $cpassword, $imgpath, $filepath,    "applicantofadmin", $myconn);
 
-                        $errors['registration-done'] = "You have done your resgistration. Wait for the responce";
+                        $success['registration-done'] = "You have done your resgistration. Wait for the responce";
                     }
                 }
                 else

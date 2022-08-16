@@ -14,7 +14,7 @@
         <a id="label">Admin Workspace</a>
         <a href="../View/adminrequest.php">Admin Request</a>
         <a href="../View/adminmanage.php">Manage Admins</a>
-        <a href="#">Manage Manager</a>
+        <a href="../View/admin_salary_accno.php">Assign Salary</a>
         <a href="#h">Manage Employee</a>
         <a href="#h">Manage User</a>
         <a id="label">Website Management</a>
