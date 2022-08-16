@@ -25,7 +25,7 @@ if($result == true)
 
             <td>
                 <a class="accept" href="../View/add_accountno.php?email='.$email.'&&nid='.$nid.'">Add Account No</a> <br><br><br>
-                <a class="accept" href="../View/addsalary.php? email='.$email.'&&nid='.$nid.'">Add Salary</a>
+                <a class="accept" href="../View/addsalary.php?email='.$email.'&&nid='.$nid.'">Add Salary</a>
             </td>
         </tr>';
     }
