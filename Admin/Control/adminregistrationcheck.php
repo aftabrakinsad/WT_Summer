@@ -129,11 +129,21 @@ if(isset($_POST["submit"]))
 
                     $mydb = new db();
                     $myconn = $mydb->openConn();
-                    $result = $mydb -> searching_existing_email_registration($email, "applicantofadmin", $myconn);
+                    $emailresult = $mydb -> searching_existing_email_registration($email, "applicantofadmin", $myconn);
+                    $nidresult = $mydb -> seaching_exixting_nid_regisstration($nid, "applicantofadmin", $myconn);
+                    $phoneresult = $mydb -> seaching_exixting_phone_regisstration($phone, "applicantofadmin", $myconn);
 
-                    if($result->num_rows > 0)
+                    if($emailresult->num_rows > 0)
                     {
-                        $errors['mail-exites'] = "This Email Already Exists";
+                        $errors['mail-exites'] = "This Email Already Existes";
+                    }
+                    else if($nidresult->num_rows > 0)
+                    {
+                        $errors['nid-exites'] = "This NID is Already Existes";
+                    }
+                    else if($phoneresult->num_rows > 0)
+                    {
+                        $errors['phone-exites'] = "This Phone Number is Already Existes";
                     }
                     else
                     {

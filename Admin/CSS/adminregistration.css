@@ -18,7 +18,9 @@
     color: white;
     text-align: center;
     border-radius: 5px;
-    padding: 4px;
+    margin-left: 5px;
+    margin-right: 8px;
+    padding: 9px;
 }
 
 #success 
