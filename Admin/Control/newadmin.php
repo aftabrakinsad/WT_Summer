@@ -2,7 +2,7 @@
 
 @include("../Model/db.php");
 
-if(isset($_GET['email']))
+if($_GET['email'])
 {
     $email = $_GET['email'];
 
@@ -12,7 +12,7 @@ if(isset($_GET['email']))
     
     if($result -> num_rows > 0)
     {
-        echo "email already exists"; 
+        // echo "email already exists"; 
         header("../View/adminrequest.php");
     }
     else
