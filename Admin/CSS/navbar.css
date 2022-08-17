@@ -40,6 +40,23 @@
     margin-right: 5px;
 }
 
+.topnav a[id="link"]
+{
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 17px 17px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: OpenSans-Bold;
+    background-color:#2196F3;
+    border-top-left-radius: 3px;
+    margin-right: 5px;
+    color: white;
+}
+
 .topnav a[id="logout"] {
     float: right;
     display: block;
