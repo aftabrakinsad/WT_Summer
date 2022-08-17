@@ -13,7 +13,7 @@ if($_GET['email'])
     if($result -> num_rows > 0)
     {
         // echo "email already exists"; 
-        header("../View/adminrequest.php");
+        header("location: ../View/adminrequest.php?admin=already_exists");
     }
     else
     {

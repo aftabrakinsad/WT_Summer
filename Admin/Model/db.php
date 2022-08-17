@@ -78,13 +78,6 @@ class db
         return $conn -> query($sqlstr);
     }
 
-    #Used in Admin Manage (Control)
-    function search_by_User_name($username, $applicantofadmin, $conn)
-    {
-        $sqlstr = "SELECT fname, lname, uname, email, nid, phone FROM $applicantofadmin WHERE uname = '$username'";
-        return $conn -> query($sqlstr);
-    }
-
     function display_admin_info_on_admin_manage_page($admin_id, $uname, $staticadmin, $conn)
     {
         $sqlstr = "SELECT admin_id, uname, FROM $staticadmin";
@@ -122,13 +115,6 @@ class db
     {
         $sqlstr = "DELETE FROM $applicantofadmin WHERE applicant_serial = '$applicant_serial'";
         return $conn->query($sqlstr);
-    }
-
-    #search Admin by Username in admin Login Page - (Control - AJAX)
-    function search_admin_by_username($uname, $staticadmin, $conn)
-    {
-        $sqlstr = "SELECT * FROM $staticadmin WHERE uname = '$uname'";
-        return $conn -> query($sqlstr);
     }
 
     #search Admin by email in Forget Password Page - (Control - AJAX)
@@ -196,6 +182,33 @@ class db
     function adding_new_admin_accountno($email, $nid, $accountno, $details_table_for_selected_admins, $conn)
     {
         $sqlstr = "UPDATE $details_table_for_selected_admins SET accountno = '$accountno' WHERE email = '$email' AND nid='$nid'";
+        return $conn->query($sqlstr);
+    }
+
+    #search Admin by Username in admin Login Page - (Control -AJAX)
+    function search_admin_by_username($uname, $staticadmin, 
+    $conn)
+    {
+        $sqlstr = "SELECT * FROM $staticadmin WHERE uname = '$uname'";
+        return $conn -> query($sqlstr);
+    }
+
+    #Used in Admin Manage (Control)
+    function search_by_User_name($username, $details_table_for_selected_admins, $conn)
+    {
+        $sqlstr = "SELECT fname, lname, uname, email, nid, phone,salary, accountno FROM $details_table_for_selected_admins WHERE uname = '$username'";
+        return $conn->query($sqlstr);
+    }
+
+    function updateProfile($fname, $lname, $uname, $email, $nid, $phone, $salary, $accountno, $details_table_for_selected_admins, $conn)
+    {
+        $sqlstr = "UPDATE $details_table_for_selected_admins SET fname='$fname', lname='$lname', email='$email', nid='$nid', phone='$phone',salary='$salary', accountno='$accountno' WHERE uname ='$uname' ";
+        return $conn->query($sqlstr);
+    }
+
+    function retrive_from_details_table_for_selected_admins($details_table_for_selected_admins, $conn)
+    {
+        $sqlstr = "SELECT * FROM $details_table_for_selected_admins";
         return $conn->query($sqlstr);
     }
 }

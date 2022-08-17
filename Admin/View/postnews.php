@@ -26,7 +26,7 @@
         <div class="flex-container">
             <div class=container>
                 <label>Details :</label><br>
-                <textarea name="news_details" style="height: 200px; width: 60vw;" required /></textarea>
+                <textarea class="xd" name="news_details" required></textarea>
             </div>
         </div>
 
@@ -36,18 +36,11 @@
             </div>
 
             <div class="container">
-                <button type="reset" class="reset" onclick="return confirmReset();">Reset</button>
+                <button type="reset" class="reset">Reset</button>
             </div>
         </div>
 
     </form>
-
-    <script>
-        function confirmReset() {
-            return confirm('Do you really want to reset?')
-        }
-    </script>
-
 </body>
 
 </html>

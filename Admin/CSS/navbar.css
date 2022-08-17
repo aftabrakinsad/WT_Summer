@@ -32,7 +32,7 @@
     color: white;
     text-align: center;
     padding: 17px 17px;
-    text-decoration: none;
+    text-decoration: none; 
     font-size: 17px;
     font-family: OpenSans-Bold;
     background-color: #0D47A1;
@@ -55,8 +55,13 @@
 }
 
 /* Change the color of links on hover */
-.topnav a[id="profile"]:hover 
+.topnav a[id="link"]:hover 
 {
+    color: white;
+    background-color:#0D47A1;
+}
+
+.topnav a[id="profile"]:hover {
     color: white;
     background-color: #2196F3;
 }
