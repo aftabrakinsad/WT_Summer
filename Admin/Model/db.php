@@ -217,6 +217,12 @@ class db
         $sqlstr = "INSERT INTO $news (tittle, news_body, created) VALUES ('$headline', '$news_details', NOW())";
         return $conn->query($sqlstr);
     }
+
+    function retrive_news($news, $conn)
+    {
+        $sqlstr = "SELECT * FROM $news";
+        return $conn->query($sqlstr);
+    }
 }
 
 ?>
