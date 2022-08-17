@@ -185,6 +185,12 @@ class db
         return $conn->query($sqlstr);
     }
 
+    function adding_new_admin_accountno_to_staticadmin($email, $accountno, $staticadmin, $conn)
+    {
+        $sqlstr = "UPDATE $staticadmin SET accountno = '$accountno' WHERE email = '$email'";
+        return $conn->query($sqlstr);
+    }
+
     #search Admin by Username in admin Login Page - (Control -AJAX)
     function search_admin_by_username($uname, $staticadmin, 
     $conn)

@@ -78,9 +78,10 @@
         {
             $mydb = new db();
             $myconn = $mydb->openConn();
-            $mydb-> adding_new_admin_accountno($email, $nid,   $accountno, "details_table_for_selected_admins",   $myconn);
+            $mydb-> adding_new_admin_accountno($email, $nid, $accountno, "details_table_for_selected_admins",   $myconn);
+            $mydb-> adding_new_admin_accountno_to_staticadmin($email, $accountno, "staticadmin", $myconn);
             $success['accno-added'] = "Successfully Added! Account  No.";
         }
-        }
+    }
 
 ?>

@@ -12,7 +12,6 @@ if($_GET['email'])
     
     if($result -> num_rows > 0)
     {
-        // echo "email already exists"; 
         header("location: ../View/adminrequest.php?admin=already_exists");
     }
     else
@@ -21,7 +20,7 @@ if($_GET['email'])
         $resultII = $mydb -> adding_new_adminII($email, "details_table_for_selected_admins", "applicantofadmin", $myconn);
         $resultIII = $mydb -> adding_new_admin_accountno_info($email, "admin_account_number", "applicantofadmin", $myconn);
 
-        if($result == true && $resultII == true)
+        if($result == true && $resultII == true && $resultIII == true)
         {
             header("location: ../View/adminrequest.php?admin=added");
         }
