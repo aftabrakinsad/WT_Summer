@@ -4,6 +4,8 @@
 @include("../View/navbar.php");
 @include("../View/adminsidebar.php");
 
+@include("../Control/post_news.process.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +17,7 @@
 </head>
 
 <body>
-    <form class="news_form" action="post_news_action.php" method="post">
+    <form class="news_form" action="" method="post">
         <div class="flex-container">
             <div class=container>
                 <label>News Headline :</label><br>
@@ -32,7 +34,7 @@
 
         <div class="flex-container">
             <div class="container">
-                <button type="submit">Submit</button>
+                <input type="submit" name="submit" value="Post">
             </div>
 
             <div class="container">

@@ -211,6 +211,12 @@ class db
         $sqlstr = "SELECT * FROM $details_table_for_selected_admins";
         return $conn->query($sqlstr);
     }
+
+    function post_news($headline, $news_details, $news, $conn)
+    {
+        $sqlstr = "INSERT INTO $news (tittle, news_body, created) VALUES ('$headline', '$news_details', NOW())";
+        return $conn->query($sqlstr);
+    }
 }
 
 ?>
