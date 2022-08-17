@@ -83,23 +83,6 @@ box-sizing: border-box;
 background-color: transparent;
 }
 
-@media screen and (max-width: 480px) {
-input[type=text], input[type=password] {
-width: 300px;
-}
-
-label[id="info_label"] {
-display: block;
-float:none;
-}
-}
-
-@media screen and (max-width: 350px) {
-input[type=text], input[type=password] {
-width: 240px;
-}
-}
-
 .container {
 margin-top: 20px;
 margin-left: 20px;
@@ -221,4 +204,22 @@ background-color: #f44336;
 {
     height: 200px; 
     width: 60vw;
+}
+
+#denger
+{
+    color: white;
+    background-color: red;
+    text-align: center;
+    font-weight: 20px;
+    padding: 6px;
+}
+
+#success
+{
+    color: white;
+    background-color:#4CAF50;
+    text-align: center;
+    font-weight: 20px;
+    padding: 6px;
 }
