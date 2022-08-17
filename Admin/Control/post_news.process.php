@@ -10,15 +10,6 @@ if(isset($_POST["submit"]))
     $mydb = new db();
     $myconn = $mydb->openConn();
     $result = $mydb-> post_news($headline, $news_details, "news", $myconn);
-
-    if($result == true)
-    {
-        echo "You are done nigga";
-    }
-    else
-    {
-        echo "Fuck off";
-    }
 }
 
 ?>
