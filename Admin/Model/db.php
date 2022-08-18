@@ -164,6 +164,12 @@ class db
         return $conn->query($sqlstr);
     }
 
+    function adding_pin_to_selected_admins($email, $nid, $pin, $details_table_for_selected_admins, $conn)
+    {
+        $sqlstr = "UPDATE $details_table_for_selected_admins SET pin ='$pin' WHERE email = '$email' AND nid='$nid'";
+        return $conn->query($sqlstr);
+    }
+
     #Used in Add Salary (Control)
     function searching_existing_email_in_details_table_for_selected_admins($email, $details_table_for_selected_admins, $conn)
     {
