@@ -25,11 +25,16 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
         <div class="flex-container-form_header">
             <h1 id="form_header">ATM Simulator</h1>
         </div>
+        <div>
+            <nav>
+                <a href="../View/mytransaction.php">See your Transactions</a>
+            </nav>
+        </div>
 
         <div class="flex-container">
             <div class=container>
                 <label>Enter Account No:</label><br>
-                <input name="accountno" size="24" type="text"/>
+                <input name="accountno" size="24" type="text" />
             </div>
 
             <div class=container>
