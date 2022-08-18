@@ -140,6 +140,7 @@ function nid_adminregistration()
 
 function phone_adminregistration()
 {
+    var phonepatter = /^\+?(88)?0?1[3456789][0-9]{8}\b/;
     var phone = document.getElementById("phone").value;
 
     if(!phone)
@@ -148,17 +149,23 @@ function phone_adminregistration()
         document.getElementById("phoneerr").innerHTML = "Enter your phone number";
         return false;
     }
-    if(phone.length == 11 && !isNaN(phone))
-    {
-        document.getElementById("phoneerr").style.color = "green";
-        document.getElementById("phoneerr").innerHTML = "Phone number formet is valid";
-        return true;
-    }
-    else
+    else if(phone.length != 14)
     {
         document.getElementById("phoneerr").style.color = "red";
-        document.getElementById("phoneerr").innerHTML = "Phone number must be 11 digit numeric value";
+        document.getElementById("phoneerr").innerHTML = "Phone invalid";
         return false;
+    }
+    else if(isNaN(phone))
+    {
+        document.getElementById("phoneerr").style.color = "red";
+        document.getElementById("phoneerr").innerHTML = "Invalid";
+        return false;
+    }
+    else if(phone.match(phonepatter))
+    {
+        document.getElementById("phoneerr").style.color = "green";
+        document.getElementById("phoneerr").innerHTML = "Valid OK";
+        return true;
     }
 }
 

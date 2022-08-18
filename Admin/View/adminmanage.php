@@ -28,7 +28,7 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
 </head>
 
 <body>
-    <form action="" method="POST" enctype="multipart/form-data">
+    <form action="" method="POST" enctype="multipart/form-data" onsubmit="return checkusername()">
 
         <div class="flex-container-form_header">
             <h1 id="form_header">Search Selected Admin By Username . . .</h1>
@@ -48,6 +48,19 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
                 </div>
             <?php
             }
+            else if (count($success) > 0) 
+            {
+            ?>
+                <div>
+                    <?php
+                    foreach ($success as $ok) 
+                    {
+                        echo "<p id='success'> $ok</p>";
+                    }
+                    ?>
+                </div>
+            <?php
+            }
             ?>
         </div>
         <div class=container>
@@ -61,15 +74,18 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
                 <button type="submit" name="search">Search</button>
             </div>
         </div>
-
+    </form>
+    <form action="" method="POST" enctype="multipart/form-data" onsubmit="return form_check_admin_manage()">
         <div class="flex-container">
             <div class=container>
                 <label>First Name :</label><br>
-                <input name="fname" type="text" value="<?php echo $fname; ?>">
+                <p id="fnameerr"></p>
+                <input name="fname" id="fname" type="text" onkeyup="firstname_admin_manage()" value="<?php echo $fname; ?>">
             </div>
             <div class=container>
                 <label>Last Name :</b></label><br>
-                <input name="lname" type="text" value="<?php echo $lname; ?>">
+                <p id="lnameerr"></p>
+                <input name="lname" id="lname" type="text" onkeyup="lastname_admin_manage()" value="<?php echo $lname; ?>">
             </div>
             <div class=container>
                 <label>Username :</label><br>
@@ -79,7 +95,8 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
         <div class="flex-container">
             <div class=container>
                 <label>Email-ID :</b></label><br>
-                <input name="phone" type="text" value="<?php echo $email; ?>">
+                <p id="emailerr"></p>
+                <input name="email" type="text" id="email" onkeyup="email_admin_manage()" value="<?php echo $email; ?>">
             </div>
             <div class=container>
                 <label>NID :</label><br>
@@ -87,13 +104,15 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
             </div>
             <div class=container>
                 <label>Phone No. :</b></label><br>
-                <input name="phone" type="text" value="<?php echo $phone; ?>">
+                <p id="phoneerr"></p>
+                <input name="phone" type="text" id="phone" onkeyup="phone_admin_manage()" value="<?php echo $phone; ?>">
             </div>
         </div>
         <div class="flex-container">
             <div class=container>
                 <label>Salary :</b></label><br>
-                <input name="salary" type="text" value="<?php echo $salary; ?>">
+                <p id="salaryerr"></p>
+                <input name="salary" type="text" id="salary" onkeyup="salary_admin_manage()" value="<?php echo $salary; ?>">
             </div>
             <div class=container>
                 <label>Account No. :</b></label><br>

@@ -11,6 +11,7 @@ $phone = "";
 $salary = "";
 $accountno = "";
 $errors = array();
+$success = array();
 
 if (isset($_POST["search"]))
 {
@@ -52,17 +53,49 @@ if (isset($_POST["search"]))
 }
 
 if(isset($_POST["submit"]))
-{
-    $mydb = new db();
-    $myconn = $mydb->openConn();
-    $resulta = $mydb->updateProfile($_POST["fname"], $_POST["lname"], $_POST["uname"], $_POST["email"], $_POST["nid"], $_POST["phone"], $_POST["salary"], $_POST["accountno"], "details_table_for_selected_admins", $myconn);
-    if($resulta == true)
+{  
+    $fname = $_POST["fname"];
+    $lname = $_POST["lname"];
+    $phone = $_POST["phone"];
+    $email = $_POST["email"];
+
+    if(empty($fname))
     {
-        echo "Udated";
+        $errors['empty-firstname'] = "First name can' be empty";
+    }
+    else if(empty($lname))
+    {
+        $errors['empty-lastname'] = "Last name can' be empty";
+    } 
+    else if (empty($phone))
+    {
+        $errors['empty-phone'] = "Please Enter Valid Phone Number. ";
+    }
+    else if((!empty($phone)) && !preg_match("/^\+?(88)?0?1[3456789][0-9]{8}\b/", $phone))
+    {
+        $errors['phone-notvalid'] = "Phone number must contain country code. Ex. +880";
+    } 
+    else if (empty($email)) 
+    {
+        $errors['email-notvalid'] = "Please Enter Valid Email Address. ";
+    }
+    else if (!empty($email) && !preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $email))
+    {
+        $errors['email-notvalid'] = "Please Enter Valid Email Address. ";
     }
     else
     {
-        echo "Update Failed". $myconn->error;
+        $mydb = new db();
+        $myconn = $mydb->openConn();
+        $resulta = $mydb->updateProfile($_POST["fname"], $_POST["lname"], $_POST["uname"], $_POST["email"], $_POST["nid"], $_POST["phone"],  $_POST["salary"], $_POST["accountno"], "details_table_for_selected_admins", $myconn);
+        if($resulta == true)
+        {
+            $success['ok']= "Udate Sucessfull";
+        }
+        else
+        {
+            $errors['update-failed'] = "Update Failed". $myconn->error;
+        }
     }
 }
 

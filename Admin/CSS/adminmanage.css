@@ -159,3 +159,15 @@ button:hover {
     font-weight: 12px;
     text-align: center;
 }
+
+#success
+{
+    color: white;
+    padding: 7px;
+    border-radius: 5px;
+    width: auto;
+    background-color: green;
+    font-size: medium;
+    font-weight: 12px;
+    text-align: center;
+}
