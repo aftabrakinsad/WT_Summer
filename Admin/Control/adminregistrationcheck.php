@@ -67,6 +67,10 @@ if(isset($_POST["submit"]))
     {
         $errors['empty-phone'] = "Please Enter Valid Phone Number. ";
     }
+    else if(!empty($phone) && !preg_match("/^\+?(88)?0?1[3456789][0-9]{8}\b/", $phone))
+    {
+        $errors['phone-invalidp'] = "Invalid Phone Number Pattern";
+    }
     else if(empty($password))
     {
         $errors['empty-pass'] = "Enter Password! ";

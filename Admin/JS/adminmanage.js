@@ -118,19 +118,19 @@ function phone_admin_manage()
     else if(phone.length != 14)
     {
         document.getElementById("phoneerr").style.color = "red";
-        document.getElementById("phoneerr").innerHTML = "Phone invalid";
+        document.getElementById("phoneerr").innerHTML = " Phone number must be 14 digits in total";
         return false;
     }
     else if(isNaN(phone))
     {
         document.getElementById("phoneerr").style.color = "red";
-        document.getElementById("phoneerr").innerHTML = "Invalid";
+        document.getElementById("phoneerr").innerHTML = "Invalid Phone Number Pattern";
         return false;
     }
     else if(phone.match(phonepatter))
     {
         document.getElementById("phoneerr").style.color = "green";
-        document.getElementById("phoneerr").innerHTML = "Valid OK";
+        document.getElementById("phoneerr").innerHTML = "Valid Phone Number Format";
         return true;
     }
 }
