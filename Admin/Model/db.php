@@ -259,6 +259,30 @@ class db
         $sqlstr = "SELECT * FROM $details_table_for_selected_admins WHERE uname='$uname'";
         return $conn->query($sqlstr);
     }
+
+    function retreving_balance_from_passbook($passbook, $conn)
+    {
+        $sqlstr = "SELECT balance FROM $passbook ORDER BY trans_id DESC LIMIT 1";
+        return $conn->query($sqlstr);
+    }
+
+    function retriving_accountno_pin_from_details_table_for_selected_admins($accountno, $pin, $details_table_for_selected_admins, $conn)
+    {
+        $sqlstr = "SELECT * FROM $details_table_for_selected_admins WHERE accountno='$accountno' AND pin = '$pin'";
+        return $conn->query($sqlstr);
+    }
+
+    function inserting_passbook_credit($atm, $final_balance, $passbook, $conn)
+    {
+        $sqlstr = "INSERT INTO $passbook VALUES(NULL, NOW(), 'Cash Deposit', '0', '$atm', '$final_balance')";
+        return $conn->query($sqlstr);
+    }
+
+    function inserting_passbook_debit($atm, $final_balance,$passbook, $conn)
+    {
+        $sqlstr = "INSERT INTO $passbook VALUES(NULL, NOW(), 'Cash to Self', '$atm', '0', '$final_balance')";
+        return $conn->query($sqlstr);
+    }
 }
 
 ?>

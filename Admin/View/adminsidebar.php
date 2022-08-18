@@ -11,6 +11,7 @@
     <div class="sidenav" id="theSideNav">
         <a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a>
         <a href="../View/adminhomepage.php">Home</a>
+        <a href="../View/atm.php">ATM</a>
         <a id="label">Admin Workspace</a>
         <a href="../View/adminrequest.php">Admin Request</a>
         <a href="../View/adminmanage.php">Manage Admins</a>
