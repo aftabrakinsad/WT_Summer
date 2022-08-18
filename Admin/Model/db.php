@@ -112,7 +112,7 @@ class db
 
     function adding_new_admin_accountno_info($email, $admin_account_number, $applicantofadmin, $conn)
     {
-        $sqlstr = "INSERT INTO $admin_account_number (email, nid) SELECT email, nid FROM $applicantofadmin WHERE email = '$email'";
+        $sqlstr = "INSERT INTO $admin_account_number (uname, email, nid) SELECT uname, email, nid FROM $applicantofadmin WHERE email = '$email'";
         return $conn->query($sqlstr);
     }
 
@@ -221,6 +221,18 @@ class db
     function updateProfile($fname, $lname, $uname, $email, $nid, $phone, $salary, $accountno, $details_table_for_selected_admins, $conn)
     {
         $sqlstr = "UPDATE $details_table_for_selected_admins SET fname='$fname', lname='$lname', email='$email', nid='$nid', phone='$phone',salary='$salary', accountno='$accountno' WHERE uname ='$uname' ";
+        return $conn->query($sqlstr);
+    }
+
+    function updateProfileI($uname, $email,$admin_account_number, $conn)
+    {
+        $sqlstr = "UPDATE $admin_account_number SET email='$email' WHERE uname ='$uname' ";
+        return $conn->query($sqlstr);
+    }
+
+    function updateProfileII($uname, $email, $staticadmin, $conn)
+    {
+        $sqlstr = "UPDATE $staticadmin SET email='$email' WHERE uname ='$uname' ";
         return $conn->query($sqlstr);
     }
 
