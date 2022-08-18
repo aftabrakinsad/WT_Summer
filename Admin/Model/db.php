@@ -229,6 +229,12 @@ class db
         $sqlstr = "SELECT * FROM $news";
         return $conn->query($sqlstr);
     }
+
+    function username_exixts($uname, $details_table_for_selected_admins, $conn)
+    {
+        $sqlstr = "SELECT * FROM $details_table_for_selected_admins WHERE uname='$uname'";
+        return $conn->query($sqlstr);
+    }
 }
 
 ?>

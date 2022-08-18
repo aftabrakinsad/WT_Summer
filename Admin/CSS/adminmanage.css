@@ -150,5 +150,12 @@ button:hover {
 
 #denger
 {
-    color: red;
+    color: white;
+    padding: 7px;
+    border-radius: 5px;
+    width: auto;
+    background-color: red;
+    font-size: medium;
+    font-weight: 12px;
+    text-align: center;
 }

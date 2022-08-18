@@ -33,10 +33,27 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
         <div class="flex-container-form_header">
             <h1 id="form_header">Search Selected Admin By Username . . .</h1>
         </div>
+        <div>
+            <?php
+            if (count($errors) > 0) 
+            {
+            ?>
+                <div>
+                    <?php
+                    foreach ($errors as $showerror) 
+                    {
+                        echo "<p id='denger'> $showerror</p>";
+                    }
+                    ?>
+                </div>
+            <?php
+            }
+            ?>
+        </div>
         <div class=container>
             <label>User Name :</label><br>
-            <input name="username" type="text" placeholder="search here by username" onchange="username_check_admin_manage_page_AJAX()">
-            <span><?php echo "<p id='denger'>$unameerr</p>"; ?></span>
+            <p id="usernameerr"></p>
+            <input name="username" type="text" id="username" placeholder="search here by username" onkeyup="checkusername()">
         </div>
 
         <div class="container">
@@ -89,7 +106,7 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
         </div>
 
     </form>
-
+    <script src="../JS/adminmanage.js"></script>
 </body>
 
 </html>

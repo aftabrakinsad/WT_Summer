@@ -10,13 +10,21 @@ $nid = "";
 $phone = "";
 $salary = "";
 $accountno = "";
-$unameerr = "";
+$errors = array();
 
 if (isset($_POST["search"]))
 {
     $username = $_POST["username"];
 
-    if(!empty($username))
+    if (empty($username))
+    {
+        $errors['empty-username'] =  "Please enter username";
+    }
+    else if (!empty($username) && strlen($uname) >= 5)
+    {
+        $errors['uname-char'] = "Username must be more than 5 characters!";
+    }
+    else
     {
         $mydb = new db();
         $myconn = $mydb->openConn();
@@ -38,12 +46,8 @@ if (isset($_POST["search"]))
         }
         else
         {
-            $unameerr = "User name not found";
+            $errors['username-nofound'] = "User name not found";
         }
-    }
-    else
-    {
-        $unameerr =  "Please enter username";
     }
 }
 

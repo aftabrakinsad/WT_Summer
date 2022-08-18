@@ -3,6 +3,7 @@
 @include("../Model/db.php");
 
 $uname = $_POST["uname"];
+$username = $_POST["username"];
 
 #Checking Username via ajax
 if(!empty($uname))
