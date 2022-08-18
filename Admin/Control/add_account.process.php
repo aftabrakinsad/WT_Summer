@@ -68,7 +68,7 @@
         }
         else if (!is_numeric($accountno))
         {
-        $errors['accountno-notnumeric'] = "Account No must be numericvalue";
+        $errors['accountno-notnumeric'] = "Account No must be numeric value";
         }
         else if(!empty($accountno) && strlen($accountno) != 7)
         {

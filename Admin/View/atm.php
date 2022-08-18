@@ -9,7 +9,6 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
 @include("../View/navbar.php");
 @include("../View/adminsidebar.php");
 
-
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +20,7 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
 </head>
 
 <body>
-    <form action="../Control/atm.process.php" method="post">
+    <form action="../Control/atm.process.php" method="post" onsubmit="return formcheck_atm()">
         <div class="flex-container-form_header">
             <h1 id="form_header">ATM Simulator</h1>
         </div>
@@ -34,12 +33,14 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
         <div class="flex-container">
             <div class=container>
                 <label>Enter Account No:</label><br>
-                <input name="accountno" size="24" type="text" />
+                <input name="accountno" id="accountno" size="24" type="text" onkeyup="accountno_atm()">
+                <p id="accountno_error"></p>
             </div>
 
             <div class=container>
                 <label>Enter Amount:</label><br>
-                <input name="atm" size="24" type="text" />
+                <input name="atm" id="atm" size="24" type="text" onkeyup="amount_atm()">
+                <p id="amount_error"></p>
             </div>
         </div>
 
@@ -55,6 +56,7 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
                 <div class="container">
                     <input type="radio" name="type" value="credit" id="credit-radio">
                     <label id="radio-label" for="credit-radio"><span class="radio">Credit</span></label>
+                    <p id=""></p>
                 </div>
             </div>
         </div>
@@ -62,7 +64,8 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
         <div class="flex-container">
             <div class=container>
                 <label>PIN(4 digit) :</b></label><br>
-                <input name="pin" size="12" type="password" />
+                <input name="pin" id="pin" onkeyup="pin_atm()" size="12" type="password">
+                <p id="pin_error"></p>
             </div>
         </div>
 
@@ -77,6 +80,7 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
         </div>
 
     </form>
+    <script src="../JS/atm.js"></script>
 </body>
 
 </html>

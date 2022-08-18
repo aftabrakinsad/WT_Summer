@@ -2,14 +2,16 @@
 
 @include("../Model/db.php");
 
+$errors = array();
+
 session_start();
 if (empty($_SESSION["username"]) && empty($_SESS["password"])) {
     header("location: ../View/adminlogin.php");
 }
 
-            @include("../View/header.php");
-            @include("../View/navbar.php");
-            @include("../View/adminsidebar.php");
+@include("../View/header.php");
+@include("../View/navbar.php");
+@include("../View/adminsidebar.php");
 
 if(isset($_POST["submit"]))
 {
@@ -33,7 +35,7 @@ if(isset($_POST["submit"]))
         {
             $final_balance = $balance + $atm;
 
-            $resultIII = $mydb-> inserting_passbook_credit  ($atm, $final_balance, "passbook", $myconn);
+            $resultIII = $mydb-> inserting_passbook_credit($atm, $final_balance, "passbook", $myconn);
 
             if($resultIII === true)
             {
@@ -47,7 +49,7 @@ if(isset($_POST["submit"]))
 
             if($final_balance >= 0)
             {
-                $resultIV = $mydb->inserting_passbook_debit    ($atm, $final_balance, "passbook", $myconn);
+                $resultIV = $mydb->inserting_passbook_debit($atm, $final_balance, "passbook", $myconn);
 
                 if($resultIV === true)
                 {
@@ -109,7 +111,7 @@ if(isset($_POST["submit"]))
             if ($err_no == 2)
             {
             ?>
-                <p id="info"><?php echo "Wrong PIN Entered !\n"; ?></p>
+                <p id="info"><?php echo "Please Fill The Information Currectly !\n"; ?></p>
             <?php 
             } 
             ?>
