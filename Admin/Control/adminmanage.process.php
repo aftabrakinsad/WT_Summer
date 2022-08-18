@@ -89,7 +89,7 @@ if(isset($_POST["submit"]))
         $myconn = $mydb->openConn();
         $resulta = $mydb->updateProfile($_POST["fname"], $_POST["lname"], $_POST["uname"], $_POST["email"], $_POST["nid"], $_POST["phone"],  $_POST["salary"], $_POST["accountno"], "details_table_for_selected_admins", $myconn);
 
-        $resultb = $mydb->updateProfileI($_POST["uname"] ,$_POST["email"], "admin_account_number", $myconn);
+        $resultb = $mydb->updateProfileI($_POST["uname"], $_POST["email"], "admin_account_number", $myconn);
 
         $resultc = $mydb -> updateProfileII($_POST["uname"], $_POST["email"], "staticadmin", $myconn);
 
