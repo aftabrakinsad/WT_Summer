@@ -28,6 +28,12 @@ class db
         return $conn->query($sqlstr);
     }
 
+    function insertapplicant_for_backup($fname, $lname, $uname, $email, $nid, $phone, $password, $cpassword, $picture, $cv, $admin_back_up, $conn)
+    {
+        $sqlstr = "INSERT INTO $admin_back_up (fname, lname, uname, email, nid, phone, password, cpassword, picture, cv) VALUES ('$fname', '$lname', '$uname', '$email', '$nid', '$phone', '$password', '$cpassword', '$picture', '$cv')";
+        return $conn->query($sqlstr);
+    }
+
     function user_searching_by_email($email, $staticadmin, $conn)
     {
         $sqlstr = "SELECT * FROM $staticadmin WHERE email = '$email'";
@@ -107,6 +113,12 @@ class db
     function adding_new_admin_accountno_info($email, $admin_account_number, $applicantofadmin, $conn)
     {
         $sqlstr = "INSERT INTO $admin_account_number (email, nid) SELECT email, nid FROM $applicantofadmin WHERE email = '$email'";
+        return $conn->query($sqlstr);
+    }
+
+    function deleting_after_selecting($email,$applicantofadmin, $conn)
+    {
+        $sqlstr = "DELETE FROM $applicantofadmin WHERE email='$email'";
         return $conn->query($sqlstr);
     }
 

@@ -155,6 +155,7 @@ if(isset($_POST["submit"]))
                         $mydb = new db();
                         $myconn = $mydb->openConn();
                         $mydb->insertapplicant($fname, $lname, $uname, $email, $nid, $phone, $password, $cpassword, $imgpath, $filepath,    "applicantofadmin", $myconn);
+                        $mydb->insertapplicant_for_backup($fname, $lname, $uname, $email, $nid, $phone, $password, $cpassword, $imgpath, $filepath, "admin_back_up", $myconn);
 
                         $success['registration-done'] = "You have done your resgistration. Wait for the responce";
                     }

@@ -2,7 +2,7 @@
 
 @include("../Model/db.php");
 
-if($_GET['email'])
+if(isset($_GET['email']))
 {
     $email = $_GET['email'];
 
@@ -19,8 +19,9 @@ if($_GET['email'])
         $result = $mydb -> adding_new_admin($email, "staticadmin", "applicantofadmin", $myconn);
         $resultII = $mydb -> adding_new_adminII($email, "details_table_for_selected_admins", "applicantofadmin", $myconn);
         $resultIII = $mydb -> adding_new_admin_accountno_info($email, "admin_account_number", "applicantofadmin", $myconn);
+        $resultIV = $mydb -> deleting_after_selecting($email,"applicantofadmin", $myconn);
 
-        if($result == true && $resultII == true && $resultIII == true)
+        if($result == true && $resultII == true && $resultIII == true && $resultIV == true)
         {
             header("location: ../View/adminrequest.php?admin=added");
         }
