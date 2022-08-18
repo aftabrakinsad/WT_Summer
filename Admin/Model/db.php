@@ -77,6 +77,12 @@ class db
         return $conn -> query($sqlstr);
     }
 
+    function retriving_transation_history($passbook, $conn)
+    {
+        $sqlstr = "SELECT * FROM $passbook";
+        return $conn->query($sqlstr);
+    }
+
     #used in Add Salary & Account (Control)
     function retrive_selected_admin_info($details_table_for_selected_admins, $conn)
     {
@@ -278,17 +284,54 @@ class db
         return $conn->query($sqlstr);
     }
 
-    function inserting_passbook_credit($atm, $final_balance, $passbook, $conn)
+    function inserting_passbook_credit($accountno, $atm, $final_balance, $passbook, $conn)
     {
-        $sqlstr = "INSERT INTO $passbook VALUES(NULL, NOW(), 'Cash Deposit', '0', '$atm', '$final_balance')";
+        $sqlstr = "INSERT INTO $passbook VALUES(NULL, NOW(), 'Cash Deposit', '0', '$atm', '$final_balance', '$accountno,')";
         return $conn->query($sqlstr);
     }
 
-    function inserting_passbook_debit($atm, $final_balance,$passbook, $conn)
+    function inserting_passbook_debit($accountno,$atm, $final_balance,$passbook, $conn)
     {
-        $sqlstr = "INSERT INTO $passbook VALUES(NULL, NOW(), 'Cash to Self', '$atm', '0', '$final_balance')";
+        $sqlstr = "INSERT INTO $passbook VALUES(NULL, NOW(), 'Cash to Self', '$atm', '0', '$final_balance','$accountno')";
         return $conn->query($sqlstr);
     }
+
+    function retrive_data_from($pin, $details_table_for_selected_admins, $conn)
+    {
+        $sqlstr = "SELECT * FROM $details_table_for_selected_admins WHERE pin = '$pin'";
+        return $conn->query($sqlstr);
+    }
+
+    function dataone($accountno, $details_table_for_selected_admins, $conn)
+    {
+        $sqlstr = "SELECT * FROM $details_table_for_selected_admins WHERE accountno= '$accountno'";
+        return $conn->query($sqlstr);
+    }
+
+    function balance_from_passbook($passbook, $conn)
+    {
+        $sqlstr = "SELECT balance FROM $passbook ORDER BY trans_id DESC LIMIT 1";
+        return $conn->query($sqlstr);
+    }
+
+    function datatwo($passbook, $conn)
+    {
+        $sqlstr = "SELECT balance FROM $passbook balance";
+        return $conn->query($sqlstr);
+    }
+
+    function datathree($accountno,$row5, $atm, $updated_sender_balance, $passbook, $conn)
+    {
+        $sqlstr = "INSERT INTO $passbook VALUES(NULL, NOW(), 'Sent to: ".$row5["fname"]." ".$row5["lname"].", AC/No: ".$row5["accountno"]."', '$atm', '0', '$updated_sender_balance', '$accountno')";
+        return $conn->query($sqlstr);
+    }
+
+    function datafour($accountno,$row0, $atm, $updated_receiver_balance, $passbook, $conn)
+    {
+        $sqlstr = "INSERT INTO $passbook VALUES(NULL, NOW(), 'Received from: ".$row0["fname"]." ".$row0["lname"].", AC/No: ".$row0["accountno"]. "', '0', '$atm', '$updated_receiver_balance', '$accountno')";
+        return $conn->query($sqlstr);
+    }
+
 }
 
 ?>

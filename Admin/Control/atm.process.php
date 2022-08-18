@@ -35,7 +35,7 @@ if(isset($_POST["submit"]))
         {
             $final_balance = $balance + $atm;
 
-            $resultIII = $mydb-> inserting_passbook_credit($atm, $final_balance, "passbook", $myconn);
+            $resultIII = $mydb-> inserting_passbook_credit($accountno,$atm, $final_balance, "passbook", $myconn);
 
             if($resultIII === true)
             {
@@ -49,7 +49,7 @@ if(isset($_POST["submit"]))
 
             if($final_balance >= 0)
             {
-                $resultIV = $mydb->inserting_passbook_debit($atm, $final_balance, "passbook", $myconn);
+                $resultIV = $mydb->inserting_passbook_debit($accountno,$atm, $final_balance, "passbook", $myconn);
 
                 if($resultIV === true)
                 {

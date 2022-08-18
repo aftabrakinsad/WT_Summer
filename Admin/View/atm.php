@@ -27,7 +27,8 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
         </div>
         <div>
             <nav>
-                <a href="../View/mytransaction.php">See your Transactions</a>
+                <a class="a" href="../View/mytransaction.php">See your Transactions</a>
+                <a class="a" href="../View/transferfunds.php">Fund Tranfer</a>
             </nav>
         </div>
 
