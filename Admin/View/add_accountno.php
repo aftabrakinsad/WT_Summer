@@ -24,7 +24,7 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
 </head>
 
 <body>
-    <form action="" method="POST" onsubmit="return addsalary_formcheck()">
+    <form action="" method="POST" onsubmit="return addacc_formcheck()">
 
         <table>
             <caption>Add Selected Admins Account No</caption>
@@ -57,21 +57,21 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
             ?>
             <tr>
                 <td>
-                    <input type="email" name="email" id="email" placeholder="Enter Email" onkeyup="email_addsalary()" value="<?php echo $email; ?>">
+                    <input type="email" name="email" id="email" placeholder="Enter Email" onkeyup="email_addacc()" value="<?php echo $email; ?>">
                     <p id="emailerr"></p>
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <input type="text" name="nid" id="nid" placeholder="Enter NID" onkeyup="nid_addsalary()" value="<?php echo $nid; ?>">
+                    <input type="text" name="nid" id="nid" placeholder="Enter NID" onkeyup="nid_addacc()" value="<?php echo $nid; ?>">
                     <p id="niderr"></p>
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <input type="text" name="accountno" id="accountno" onkeyup="accountno_addaccount()" placeholder="Enter account no">
+                    <input type="text" name="accountno" id="accountno" onkeyup="accountno_addacc()" placeholder="Enter account no">
                     <p id="accountnoerr"></p>
                 </td>
             </tr>
@@ -94,7 +94,7 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
     </form>
 
     <script src="../JS/otp.js"></script>
-    <script src="../JS/addsalary.js"></script>
+    <script src="../JS/addccno.js"></script>
 </body>
 
 </html>

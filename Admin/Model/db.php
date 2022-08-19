@@ -334,4 +334,6 @@ class db
 
 }
 
+#TOTAL 50 FUNCTIONS ARE THERE.
+
 ?>

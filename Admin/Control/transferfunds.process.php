@@ -1,5 +1,13 @@
 <?php
 @include("../Model/db.php");
+
+session_start();
+if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
+    header("location: ../View/adminlogin.php");
+}
+@include("../View/header.php");
+@include("../View/navbar.php");
+@include("../View/adminsidebar.php");
 $err_no = -1;
 
 if(isset($_GET['accountno']))
@@ -66,6 +74,7 @@ if(isset($_POST["submit"]))
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/atmsuccess.css">
+    <title>Transfer Some Funds to Others</title>
 </head>
 
 <body>
@@ -99,14 +108,14 @@ if(isset($_POST["submit"]))
             if ($err_no == 2)
             {
             ?>
-                <p id="info"><?php echo "Wrong password entered !\n"; ?></p>
+                <p id="info"><?php echo "Fill the information currectly !\n"; ?></p>
             <?php 
             }
             ?>
         </div>
 
         <div class="flex-item">
-            <a href="../View/atm.php" class="button">Go Back</a>
+            <a href="../View/transferfunds.php" class="button">Go Back</a>
         </div>
     </div>
 

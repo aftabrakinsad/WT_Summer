@@ -1,43 +1,50 @@
+body
+{
+    background-color: black;
+}
 .flex-container {
     display: -webkit-flex;
     display: flex;
-    margin-left: 256px;
+    margin-left: 600px;
     width: auto;
     height: auto;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-    background-color: #FAFAFA;
+    background-color: black;
+}
+
+nav {
+    background-color: black;
+    padding: 12px;
+}
+
+.a {
+    text-decoration: none;
+    color: white;
+    margin-left: 7px;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: green;
+    border-radius: 5px;
+    margin-top: 5px;
 }
 
 .flex-container-form_header {
-    display: -webkit-flex;
-    display: flex;
-    margin-left: 256px;
+    margin-left: 180px;
     width: auto;
     height: auto;
-    background-color: #FAFAFA;
-    border-bottom: 3px solid #263238;
+    background-color: black;
+    border-bottom: 2px solid blueviolet;
 }
 
 h1[id="form_header"] {
     margin-left: 20px;
     font-family: Roboto-Thin;
-    color: #263238;
+    color: white;
 }
 
-.flex-container-radio {
-    display: -webkit-flex;
-    display: flex;
-    width: auto;
-    height: auto;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    background-color: #FAFAFA;
-}
-
-/* Bordered form */
 form {
-    border: 3px solid white;
+    border: 2px solid blueviolet;
     width: inherit;
     margin-left: 0px;
 }
@@ -45,7 +52,7 @@ form {
 label {
     display: block;
     float: left;
-    color: #212121;
+    color: white;
     font-family: OpenSans-Bold;
     font-size: 20px;
 }
@@ -55,7 +62,7 @@ label[id="info_label"] {
     float: right;
     margin-left: 6px;
     font-family: Roboto-Regular;
-    color: #212121;
+    color: white;
     font-size: 24px;
 }
 
@@ -63,13 +70,13 @@ label[id="info_label"] {
 input[type=text],
 input[type=password] {
     font-family: Roboto-Regular;
-    color: #212121;
+    color: white;
     font-size: 24px;
     width: auto;
     margin: 8px 0;
     padding: 1px 1px;
     border: 0;
-    border-bottom: 1px solid #212121;
+    border-bottom: 1px solid white;
     box-sizing: border-box;
     background-color: transparent;
 }
