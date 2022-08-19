@@ -16,8 +16,8 @@
         <a href="../View/adminrequest.php">Admin Request</a>
         <a href="../View/adminmanage.php">Manage Admins</a>
         <a href="../View/admin_salary_accno.php">Assign Salary & Account No</a>
-        <a href="#h">Manage Employee</a>
-        <a href="#h">Manage User</a>
+        <a href="../View/addemp.php">Manage Employee ADD/DELETE</a>
+        <a href="../View/usermanage.php">Manage User</a>
         <a id="label">Website Management</a>
         <a href="../View/postnews.php">Post News</a>
     </div>

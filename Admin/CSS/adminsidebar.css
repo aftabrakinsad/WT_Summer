@@ -1,6 +1,6 @@
 .sidenav {
     width: 256px;
-    background-color: #eee;
+    background-color:cadetblue;
     height: 90vh;
     float: left;
     overflow-y: auto;
@@ -27,8 +27,9 @@
     display: block;
     padding: 11px;
     text-decoration: none;
-    border-top: 1px solid #212121;
-    border-bottom: 1px solid #212121;
+    border-top: 1px solid blueviolet;
+    border-bottom: 1px solid blueviolet;
+    text-align: center;
 }
 
 .sidenav a[id="label"]:hover {
@@ -50,31 +51,4 @@
 
 .sidenav a[id="closebtn"] {
     display: none;
-}
-
-@media screen and (max-width: 855px) {
-    .sidenav {
-        height: 100vh;
-        width: 0;
-        margin-top: -53px;
-        z-index: 100;
-        top: 131px;
-        background-color: #eee;
-        overflow-x: hidden;
-        transition: 0.5s;
-        box-shadow: 3px 3px 20px #000000;
-    }
-
-    .sidenav a[id="closebtn"] {
-        font-family: OpenSans-Regular;
-        font-size: 19px;
-        color: #212121;
-        display: block;
-        margin-left: 200px;
-    }
-
-    .sidenav.sidenav-fixed.responsive {
-        top: 53px;
-        z-index: 100;
-    }
 }

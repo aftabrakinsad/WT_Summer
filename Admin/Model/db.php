@@ -34,6 +34,12 @@ class db
         return $conn->query($sqlstr);
     }
 
+    function adding_emp_into_registrationofemployee($fname, $lname, $uname, $email, $nid, $phone, $password, $cpassword, $picture, $cv, $addedemployee, $conn)
+     {
+        $sqlstr = "INSERT INTO $addedemployee (fname, lname, uname, email, nid, phone, password, cpassword, picture, cv) VALUES ('$fname', '$lname', '$uname', '$email', '$nid', '$phone', '$password', '$cpassword', '$picture', '$cv')";
+        return $conn->query($sqlstr);
+    }
+
     function user_searching_by_email($email, $staticadmin, $conn)
     {
         $sqlstr = "SELECT * FROM $staticadmin WHERE email = '$email'";
@@ -75,6 +81,12 @@ class db
     {
         $sqlstr = "SELECT applicant_serial, fname, lname, uname, email, nid, phone, password, picture, cv FROM $applicantofadmin";
         return $conn -> query($sqlstr);
+    }
+
+    function retrive_data_from_emp($addedemployee, $conn)
+    {
+        $sqlstr = "SELECT id, fname, lname, uname, email, nid, phone, picture FROM $addedemployee";
+        return $conn->query($sqlstr);
     }
 
     function retriving_transation_history($passbook, $conn)
@@ -132,6 +144,12 @@ class db
     function deleting_new_admin($applicant_serial, $applicantofadmin, $conn)
     {
         $sqlstr = "DELETE FROM $applicantofadmin WHERE applicant_serial = '$applicant_serial'";
+        return $conn->query($sqlstr);
+    }
+
+    function deleting_new_emp($id, $registrationofemployee, $conn)
+    {
+        $sqlstr = "DELETE FROM $registrationofemployee WHERE id = '$id'";
         return $conn->query($sqlstr);
     }
 
@@ -334,6 +352,6 @@ class db
 
 }
 
-#TOTAL 50 FUNCTIONS ARE THERE.
+#TOTAL 51 FUNCTIONS ARE THERE.
 
 ?>
