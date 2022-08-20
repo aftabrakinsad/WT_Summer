@@ -89,6 +89,12 @@ class db
         return $conn -> query($sqlstr);
     }
 
+    function retrive_user_info_newuser_table($new_user, $conn)
+    {
+        $sqlstr = "SELECT user_id, fname, lname, uname, email, nid, phone, accountno, pin FROM $new_user";
+        return $conn->query($sqlstr);
+    }
+
     function retrive_user_info($user, $conn)
     {
         $sqlstr = "SELECT user_id, fname, lname, uname, email, nid, phone, accountno, picture FROM $user";
@@ -162,6 +168,12 @@ class db
     function deleting_new_emp($id, $registrationofemployee, $conn)
     {
         $sqlstr = "DELETE FROM $registrationofemployee WHERE id = '$id'";
+        return $conn->query($sqlstr);
+    }
+
+    function deleting_added_user($user_id, $new_user, $conn)
+    {
+        $sqlstr = "DELETE FROM $new_user WHERE user_id = '$user_id'";
         return $conn->query($sqlstr);
     }
 

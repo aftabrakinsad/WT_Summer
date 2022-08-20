@@ -27,6 +27,9 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
 <body class="bodycolor">
 
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data" onsubmit="return adduser_formcheck()">
+    <nav>
+        <a class="inputrequestreturn" href="../View/Show_Added_User.php">Added User</a> <br> <br>
+    </nav>
 
         <h2 class="h2" id="h2">Add User</h2>
 
@@ -132,7 +135,6 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
                     <br>
                     <br>
                     <input class="inputrequestbutton" type="submit" name="submit" id="submit" value="ADD">
-
                     <a class="inputrequestreturn" href="../View/usermanage.php" name="return">Manage User</a>
                 </td>
             </tr>
