@@ -22,6 +22,9 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
 </head>
 
 <body>
+    <nav>
+        <a id="info2" href="../View/add_user.php">ADD User</a>
+    </nav>
     <form action="" method="POST" enctype="multipart/form-data">
 
         <table>

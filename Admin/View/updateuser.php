@@ -110,6 +110,7 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
             </div>
             <div>
                 <input class="button" type="submit" name="submit" id="submit" value="update">
+                <a class="button" href="../View/usermanage.php">Go Back</a>
             </div>
         </div>
 

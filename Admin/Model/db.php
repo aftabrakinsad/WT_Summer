@@ -40,6 +40,12 @@ class db
         return $conn->query($sqlstr);
     }
 
+    function add_usser($fname, $lname, $uname, $email, $nid, $phone, $accountno, $pin, $password, $cpassword, $new_user, $conn)
+    {
+        $sqlstr = "INSERT INTO $new_user (fname, lname, uname, email, nid, phone, accountno, pin, password, cpassword) VALUES ('$fname', '$lname', '$uname', '$email', '$nid', '$phone', '$accountno', '$pin', '$password', '$cpassword')";
+        return $conn->query($sqlstr);
+    }
+
     function user_searching_by_email($email, $staticadmin, $conn)
     {
         $sqlstr = "SELECT * FROM $staticadmin WHERE email = '$email'";
