@@ -21,31 +21,36 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/CSS" href="../CSS/addemp.css">
-    <title>Admin Application Form</title>
+    <title>Add User</title>
 </head>
 
 <body class="bodycolor">
 
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data" onsubmit="return form_check_adminregistration()">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data" onsubmit="return adduser_formcheck()">
 
         <h2 class="h2" id="h2">Add User</h2>
 
         <?php
-        if (count($errors) > 0) {
+        if (count($errors) > 0)
+        {
         ?>
             <div>
                 <?php
-                foreach ($errors as $showerror) {
+                foreach ($errors as $showerror)
+                {
                     echo "<p id='denger'> $showerror</p>";
                 }
                 ?>
             </div>
         <?php
-        } else if (count($success) > 0) {
+        }
+        else if (count($success) > 0)
+        {
         ?>
             <div>
                 <?php
-                foreach ($success as $ok) {
+                foreach ($success as $ok)
+                {
                     echo "<p id='success'> $ok</p>";
                 }
                 ?>
@@ -97,10 +102,12 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
 
             <tr>
                 <td>
-                    <input type="text" name="accountno" id="accountno" placeholder="Account No.">
+                    <input type="text" name="accountno" id="accountno" onkeyup="accountno_addacc()" placeholder="Account No.">
+                    <p id="accountnoerr"></p>
                 </td>
                 <td>
-                    <input type="text" name="pin" id="pin" placeholder="4 digit PIN">
+                    <input type="text" name="pin" id="pin" onkeyup="pin_xd()" placeholder="4 digit PIN">
+                    <p id="pinerr"></p>
                 </td>
             </tr>
 
@@ -133,7 +140,7 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
         </table>
     </form>
 
-    <!-- <script src="../JS/adminregistration.js"></script> -->
+    <script src="../JS/user.js"></script>
 </body>
 
 </html
