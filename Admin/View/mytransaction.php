@@ -42,7 +42,8 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
                 ?>
             </tbody>
         </table>
-    </form>
+    </form> <br> <br>
+    <a id="info2" href="../View/atm.php">Go Back</a>
 </body>
 
 </html>

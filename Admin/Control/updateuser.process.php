@@ -15,21 +15,21 @@ $success = array();
 
 if (isset($_POST["search"]))
 {
-    $username = $_POST["username"];
+    $accountno = $_POST["accountno"];
 
-    if (empty($username))
+    if (empty($accountno))
     {
-        $errors['empty-username'] =  "Please enter username";
+        $errors['empty-username'] =  "Please enter account no";
     }
-    else if (!empty($username) && strlen($uname) >= 5)
+    else if (!empty($accountno) && strlen($unaaccountnome) == 7)
     {
-        $errors['uname-char'] = "Username must be more than 5 characters!";
+        $errors['uname-char'] = "account no must be equal 7 digits!";
     }
     else
     {
         $mydb = new db();
         $myconn = $mydb->openConn();
-        $result = $mydb->search_by_User_name($username, "details_table_for_selected_admins", $myconn);
+        $result = $mydb->search_by_User_accountno($accountno, "user", $myconn);
 
         if ($result->num_rows > 0)
         {
@@ -41,13 +41,12 @@ if (isset($_POST["search"]))
                 $email = $row["email"];
                 $nid = $row["nid"];
                 $phone = $row["phone"];
-                $salary = $row["salary"];
                 $accountno = $row["accountno"];
             }
         }
         else
         {
-            $errors['username-nofound'] = "User name not found";
+            $errors['username-nofound'] = "Account No. not found";
         }
     }
 }
@@ -56,7 +55,6 @@ if(isset($_POST["submit"]))
 {  
     $fname = $_POST["fname"];
     $lname = $_POST["lname"];
-    $uname = $_POST["uname"];
     $phone = $_POST["phone"];
     $email = $_POST["email"];
 
@@ -68,10 +66,6 @@ if(isset($_POST["submit"]))
     {
         $errors['empty-lastname'] = "Last name can' be empty";
     } 
-    else if(empty($uname))
-    {
-        $errors['empty-username'] = "Username name can' be empty";
-    }
     else if (empty($phone))
     {
         $errors['empty-phone'] = "Please Enter Valid Phone Number. ";
@@ -92,13 +86,10 @@ if(isset($_POST["submit"]))
     {
         $mydb = new db();
         $myconn = $mydb->openConn();
-        $resulta = $mydb->updateProfile($_POST["fname"], $_POST["lname"], $_POST["uname"], $_POST["email"], $_POST["nid"], $_POST["phone"],  $_POST["salary"], $_POST["accountno"], "details_table_for_selected_admins", $myconn);
 
-        $resultb = $mydb->updateProfileI($_POST["uname"], $_POST["email"], "admin_account_number", $myconn);
+        $resulta = $mydb->update_user($_POST["fname"], $_POST["lname"] , $_POST["uname"], $_POST["email"], $_POST["phone"], $_POST["accountno"], "user",$myconn);
 
-        $resultc = $mydb -> updateProfileII($_POST["uname"], $_POST["email"], "staticadmin", $myconn);
-
-        if($resulta == true && $resultb == true)
+        if($resulta == true)
         {
             $success['ok']= "Sucessfully Updated";
         }
@@ -108,5 +99,3 @@ if(isset($_POST["submit"]))
         }
     }
 }
-
-?>

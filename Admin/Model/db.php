@@ -83,6 +83,12 @@ class db
         return $conn -> query($sqlstr);
     }
 
+    function retrive_user_info($user, $conn)
+    {
+        $sqlstr = "SELECT user_id, fname, lname, uname, email, nid, phone, accountno, picture FROM $user";
+        return $conn-> query($sqlstr);
+    }
+
     function retrive_data_from_emp($addedemployee, $conn)
     {
         $sqlstr = "SELECT id, fname, lname, uname, email, nid, phone, picture FROM $addedemployee";
@@ -248,9 +254,21 @@ class db
         return $conn->query($sqlstr);
     }
 
+    function search_by_User_accountno($accountno, $user, $conn)
+    {
+        $sqlstr = "SELECT fname, lname, uname, email, nid, phone, accountno FROM $user WHERE accountno = '$accountno'";
+        return $conn->query($sqlstr);
+    }
+
     function updateProfile($fname, $lname, $uname, $email, $nid, $phone, $salary, $accountno, $details_table_for_selected_admins, $conn)
     {
         $sqlstr = "UPDATE $details_table_for_selected_admins SET fname='$fname', lname='$lname', email='$email', nid='$nid', phone='$phone',salary='$salary', accountno='$accountno' WHERE uname ='$uname' ";
+        return $conn->query($sqlstr);
+    }
+
+    function update_user($fname, $lname, $uname, $email, $phone ,$accountno, $user, $conn)
+    {
+        $sqlstr = "UPDATE $user SET fname='$fname', lname='$lname', uname='$uname', email='$email', phone='$phone' WHERE accountno ='$accountno' ";
         return $conn->query($sqlstr);
     }
 
