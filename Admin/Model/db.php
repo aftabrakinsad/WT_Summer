@@ -89,6 +89,12 @@ class db
         return $conn -> query($sqlstr);
     }
 
+    function retrive_applicant_info_for_manager($manager, $conn)
+    {
+        $sqlstr = "SELECT id, firstname, lastname, gender, age, username, email, presentaddress, nid, phone, doj, salary, cvpath, imgpath FROM $manager";
+        return $conn->query($sqlstr);
+    }
+
     function retrive_user_info_newuser_table($new_user, $conn)
     {
         $sqlstr = "SELECT user_id, fname, lname, uname, email, nid, phone, accountno, pin FROM $new_user";
@@ -272,6 +278,12 @@ class db
         return $conn->query($sqlstr);
     }
 
+    function search_by_nid($nid, $manager, $conn)
+    {
+        $sqlstr = "SELECT firstname, lastname, username, email, nid,phone,salary, presentaddress FROM $manager WHERE nid = '$nid'";
+        return $conn->query($sqlstr);
+    }
+
     function search_by_User_accountno($accountno, $user, $conn)
     {
         $sqlstr = "SELECT fname, lname, uname, email, nid, phone, accountno FROM $user WHERE accountno = '$accountno'";
@@ -287,6 +299,12 @@ class db
     function update_user($fname, $lname, $uname, $email, $phone ,$accountno, $user, $conn)
     {
         $sqlstr = "UPDATE $user SET fname='$fname', lname='$lname', uname='$uname', email='$email', phone='$phone' WHERE accountno ='$accountno' ";
+        return $conn->query($sqlstr);
+    }
+
+    function updateProfilemanager($firstname, $lastname, $username, $email, $nid, $phone, $salary, $presentaddress, $manager, $conn)
+    {
+        $sqlstr = "UPDATE $manager SET firstname='$firstname', lastname='$lastname', username='$username', email='$email', phone='$phone', salary='$salary', presentaddress='$presentaddress' WHERE nid ='$nid'";
         return $conn->query($sqlstr);
     }
 

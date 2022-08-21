@@ -44,7 +44,7 @@ if(isset($_POST["submit"]))
             $row2 = $resultIV->fetch_assoc();
             $receiver_balance = $row2["balance"];
 
-            $updated_receiver_balance = $receiver_balance +
+            $updated_receiver_balance = $receiver_balance -
             $atm;
 
             $resultV = $mydb-> datathree($accountno,$row5, $atm, $updated_sender_balance, "passbook", $myconn);

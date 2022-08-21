@@ -2,6 +2,7 @@
 
 @include('../Model/db.php');
 
+
 session_start();
 
 if (isset($_POST['submit']))
@@ -28,7 +29,8 @@ if (isset($_POST['submit']))
                     {
                         setcookie("uname", $_SESSION['username'], time() + 86400);
                         setcookie("pass", $_SESSION['password'], time() + 86400);
-                        echo "";
+                       
+                        header("location: ../View/adminhomepage.php");
                     }
                     else
                     {

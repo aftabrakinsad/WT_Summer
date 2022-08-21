@@ -2,7 +2,8 @@
 
 @include('../Control/adminlogincheck.php');
 
-if (isset($_SESSION['username'])) {
+if (isset($_SESSION['username'])) 
+{
     header("location: ../View/adminhomepage.php");
 }
 
