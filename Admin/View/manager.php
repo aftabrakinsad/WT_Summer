@@ -30,7 +30,6 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
                     <th scope="col">Serial</th>
                     <th scope="col">First Name</th>
                     <th scope="col">Last Name</th>
-                    <th scope="col">Gender</th>
                     <th scope="col">User Name</th>
                     <th scope="col">Email</th>
                     <th scope="col">Present Address</th>
