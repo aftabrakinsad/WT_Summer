@@ -43,3 +43,13 @@ color: #212121;
 line-height: 42px;
 padding: 10px 100px;
 }
+
+.customer {
+    margin: 20px;
+    font-size: 30px;
+    font-family: Roboto-Regular;
+    color: white;
+    line-height: 42px;
+    padding: 10px 100px;
+    text-align: center;
+}
