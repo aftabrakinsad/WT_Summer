@@ -1,9 +1,6 @@
 <?php
-
 session_start();
-
-if (empty($_SESSION["username"]) && empty($_SESSION["password"]))
-{
+if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
     header("location: ../View/adminlogin.php");
 }
 
@@ -44,8 +41,7 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"]))
                     ?>
                 </div>
             <?php
-            }
-            else if (count($success) > 0)
+            } else if (count($success) > 0)
             {
             ?>
                 <div>
@@ -89,7 +85,7 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"]))
             <tr>
                 <td>
                     <?php
-                    echo "<p class='showing' id='accno' onkeyup='fade()'>$showaccountno</p>";
+                        echo "<p class='showing' id='accno' onkeyup='fade()'>$showaccountno</p>";
                     ?>
                     <input class="inputbutton" type="submit" name="submit" id="submit" value="Show Generated Account Number">
                 </td>

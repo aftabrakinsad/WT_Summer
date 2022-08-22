@@ -15,7 +15,6 @@
             </a>
             <a id="user">Welcome Admin<?php include('../Control/cookie.php'); ?></a>
             <a id="logout" href="../Control/adminlogout.php">Logout</a>
-            <a id="profile" href="../View/profile.php">Profile</a>
         </div>
     </div>
 

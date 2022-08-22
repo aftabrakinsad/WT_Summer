@@ -404,8 +404,14 @@ class db
         return $conn->query($sqlstr);
     }
 
+    function displaynews($table,$conn)
+    {
+        $sqlstr = "SELECT * FROM $table ";
+        return $conn->query($sqlstr);
+    }
+
 }
 
-#TOTAL 51 FUNCTIONS ARE THERE.
+#total 64 functions
 
 ?>

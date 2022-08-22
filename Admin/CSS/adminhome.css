@@ -35,21 +35,17 @@ padding: 30px 100px;
 }
 
 p[id="customer"] {
-max-width: 600px;
 margin: 20px;
 font-size: 30px;
 font-family: Roboto-Regular;
-color: #212121;
+color: white;
 line-height: 42px;
 padding: 10px 100px;
+text-align: center;
 }
 
-.customer {
-    margin: 20px;
-    font-size: 30px;
-    font-family: Roboto-Regular;
-    color: white;
-    line-height: 42px;
-    padding: 10px 100px;
-    text-align: center;
+
+.xd
+{
+    background: url("../Image/BodyImg.png");
 }

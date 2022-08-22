@@ -95,7 +95,7 @@ if (isset($_SESSION['username'])) {
                 <td>
                     <input type="text" name="nid" id="nid" onchange="registration_nid_AJAX()" onkeyup="nid_adminregistration()" placeholder="Valid NID">
                     <p id="niderr"></p>
-                    <p id="nidajaxresponse" ></p>
+                    <p id="nidajaxresponse"></p>
                 </td>
 
                 <td>
