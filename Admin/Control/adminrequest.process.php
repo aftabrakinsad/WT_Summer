@@ -12,21 +12,22 @@ if($result == true)
     {
         $applicant_serial = $row['applicant_serial'];
         $email = $row['email'];
-        echo '<tr>
-        <td>'.$row['applicant_serial'].'</td>
-        <td>'.$row['fname'].'</td>
-        <td>'.$row['lname'].'</td>
-        <td>'.$row['uname'].'</td>
-        <td>'.$row['email'].'</td>
-        <td>'.$row['nid'].'</td>
-        <td>'.$row['phone'].'</td>
+        echo '
+        <tr>
+            <td>' . $row['applicant_serial']. '</td>
+            <td>' . $row['fname']           . '</td>
+            <td>' . $row['lname']           . '</td>
+            <td>' . $row['uname']           . '</td>
+            <td>' . $row['email']           . '</td>
+            <td>' . $row['nid']             . '</td>
+            <td>' . $row['phone']           . '</td>
 
-        <td><img src="../uploads/'.$row['picture']. '" width="100px" height="100px"></td>
-        <td><a id="info" href="../uploads/'.$row['cv']. '">View</a></td>
-        <td>
-            <a class="accept" href="../Control/newadmin.php?email='.$email.'">Accept</a> <br><br><br>
-            <a class="reject" href="../Control/applicantdelete.php?deleteid='.$applicant_serial.'">Reject</a>
-        </td>
+            <td><img src="../uploads/'.$row['picture']. '" width="100px" height="100px"></td>
+            <td><a id="info" href="../uploads/'.$row['cv']. '">View</a></td>
+            <td>
+                <a class="accept" href="../Control/newadmin.php?email='.$email.'">Accept</a> <br><br><br>
+                <a class="reject" href="../Control/applicantdelete.php?deleteid='.$applicant_serial.'">Reject</a>
+            </td>
         </tr>';
     }
 }
