@@ -8,7 +8,8 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="../css/myfirstcss.css">
+    <!-- not used -->
+    <link rel="stylesheet" type="text/CSS" href="../CSS/style.css.css">
 </head>
 
 <body>
