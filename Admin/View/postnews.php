@@ -13,7 +13,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/post.css">
+    <link rel="stylesheet" type="text/CSS" href="../CSS/post.css">
 </head>
 
 <body>
@@ -73,6 +73,7 @@
         </div>
 
     </form>
+    
     <script src="../JS/postnews.js"></script>
 </body>
 
