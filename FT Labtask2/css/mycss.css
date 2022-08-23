@@ -1,53 +1,62 @@
-* {
+*
+{
   box-sizing: border-box;
 }
 
-body {
+body
+{
   font-family: Arial;
   padding: 10px;
   background: rgb(186, 210, 212);
 }
 
-div.frame {
+div.frame
+{
   border-bottom: double;
   padding: 10px;
 }
 
-/* Header/Blog Title */
-.header {
+.header
+{
   color: black;
   padding: 30px;
   text-align: left;
   background: skyblue;
 }
 
-.button {
+.button
+{
   color: black;
   background: blue;
 }
 
-.submit {
+.submit
+{
   background-color: rgb(122, 139, 247);
   color: black;
   border-radius: 5px;
 }
 
-.reset {
+.reset
+{
   background-color: rgb(122, 139, 247);
   color: black;
   border-radius: 5px;
 }
 
-.header h1 {
+.header h1
+{
   font-size: 30px;
 }
 
-.header h2 {
+.header h2
+{
   color: purple;
 }
 
 
-div.sticky {
+div.sticky
+{
   position: sticky;
   top: 0;
   padding: 0;
@@ -55,15 +64,15 @@ div.sticky {
 
 }
 
-/* Style the top navigation bar */
-.topnav {
+.topnav
+{
 
   overflow: hidden;
   background-color: rgb(30, 8, 51);
 }
 
-/* Style the topnav links */
-.topnav a {
+.topnav a
+{
   float: left;
   display: block;
   color: #f2f2f2;
@@ -72,7 +81,8 @@ div.sticky {
   text-decoration: none;
 }
 
-.topnav p {
+.topnav p
+{
   float: right;
   display: block;
   color: blue;
@@ -81,13 +91,14 @@ div.sticky {
   text-decoration: none;
 }
 
-/* Change color on hover */
-.topnav a:hover {
+.topnav a:hover
+{
   background-color: #ddd;
   color: black;
 }
 
-div.fixed {
+div.fixed
+{
   position: fixed;
   bottom: 0;
   right: 0;
@@ -95,22 +106,21 @@ div.fixed {
   border: 3px solid #73AD21;
 }
 
-
-td {
+td
+{
   background-color: rgb(232, 232, 158);
 }
 
-/* Left and right column */
-
-/* Middle column */
-div.middlecolumn {
+div.middlecolumn
+{
   position: relative;
   left: 25%;
   float: center;
   width: 50%;
 }
 
-.registrationBox {
+.registrationBox
+{
   background-color: rgb(184, 184, 184);
   border-left: 15px solid rgb(67, 166, 205);
   padding: 4px;
