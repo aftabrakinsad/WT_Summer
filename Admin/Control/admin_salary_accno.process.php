@@ -12,15 +12,16 @@ if($result == true)
     {
         $nid = $row['nid'];
         $email = $row['email'];
-        echo '<tr>
-            <td>' . $row['fname'] . '</td>
-            <td>' . $row['lname'] . '</td>
-            <td>' . $row['uname'] . '</td>
-            <td>' . $row['email'] . '</td>
-            <td>' . $row['nid'] . ' </td>
-            <td>' . $row['phone'] . '</td>
-            <td>' . $row['salary'] . '</td>
-            <td>' . $row['accountno'] . '</td>
+        echo '
+        <tr>
+            <td>' . $row['fname']      . '</td>
+            <td>' . $row['lname']      . '</td>
+            <td>' . $row['uname']      . '</td>
+            <td>' . $row['email']      . '</td>
+            <td>' . $row['nid']        . ' </td>
+            <td>' . $row['phone']      . '</td>
+            <td>' . $row['salary']     . '</td>
+            <td>' . $row['accountno']  . '</td>
             <td>' . $row['Operations'] . '</td>
 
             <td>
