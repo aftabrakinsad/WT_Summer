@@ -1,6 +1,6 @@
 <?php
 
-include("../Control/process.php");
+@include("../Control/process.php");
 
 ?>
 
@@ -17,8 +17,10 @@ include("../Control/process.php");
 <body>
     <fieldset>
         <legend>Registration Form </legend>
+        
         <form action="" method="post" enctype="multipart/form-data">
             <table>
+
                 <tr>
                     <td>First Name :</td>
                     <td>
