@@ -1,4 +1,5 @@
 <?php
+
 @include("../Control/userexits.emailconfirmation.php");
 
 ?>
@@ -55,8 +56,10 @@
                 </td>
             </tr>
         </table>
-        <script src="../JS/adminregistration.js"></script>
+
     </form>
+    
+    <script src="../JS/adminregistration.js"></script>
 </body>
 
 </html>
