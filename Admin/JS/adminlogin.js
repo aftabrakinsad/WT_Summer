@@ -5,7 +5,7 @@ function usernamecheck_admin()
     if(!uname)
     {
         document.getElementById("nameerr").style.color = "red";
-        document.getElementById("nameerr").innerHTML = "Enter your username";
+        document.getElementById("nameerr").innerHTML = "Enter username";
         return false;
     }
     else if(!isNaN(uname))
