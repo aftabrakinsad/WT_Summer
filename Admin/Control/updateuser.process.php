@@ -35,12 +35,12 @@ if (isset($_POST["search"]))
         {
             while ($row = $result->fetch_assoc())
             {
-                $fname = $row["fname"];
-                $lname = $row["lname"];
-                $uname = $row["uname"];
-                $email = $row["email"];
-                $nid = $row["nid"];
-                $phone = $row["phone"];
+                $fname     = $row["fname"];
+                $lname     = $row["lname"];
+                $uname     = $row["uname"];
+                $email     = $row["email"];
+                $nid       = $row["nid"];
+                $phone     = $row["phone"];
                 $accountno = $row["accountno"];
             }
         }
@@ -49,6 +49,10 @@ if (isset($_POST["search"]))
             $errors['username-nofound'] = "Account No. not found";
         }
     }
+}
+else
+{
+
 }
 
 if(isset($_POST["submit"]))
@@ -98,4 +102,8 @@ if(isset($_POST["submit"]))
             $errors['update-failed'] = "Update Failed". $myconn->error;
         }
     }
+}
+else
+{
+
 }
