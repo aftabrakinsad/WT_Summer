@@ -4,7 +4,6 @@
 
 $uname = $_POST["uname"];
 
-#Checking Username via ajax
 if(!empty($uname))
 {
     $mydb = new db();
