@@ -1,10 +1,14 @@
 <?php
+
 @include("../Model/db.php");
 
 session_start();
-if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
+
+if (empty($_SESSION["username"]) && empty($_SESSION["password"]))
+{
     header("location: ../View/adminlogin.php");
 }
+
 @include("../View/header.php");
 @include("../View/navbar.php");
 @include("../View/adminsidebar.php");
@@ -73,11 +77,12 @@ if(isset($_POST["submit"]))
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/atmsuccess.css">
+    <link rel="stylesheet" type="text/CSS" href="../CSS/atmsuccess.css">
     <title>Transfer Some Funds to Others</title>
 </head>
 
 <body>
+    
     <div class="flex-container">
         <div class="flex-item">
             <?php
