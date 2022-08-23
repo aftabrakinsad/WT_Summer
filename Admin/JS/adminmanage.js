@@ -16,7 +16,7 @@ function checkusername()
     else
     {
         document.getElementById("usernameerr").style.color = "green";
-        document.getElementById("usernameerr").innerHTML = "Username OK";
+        document.getElementById("usernameerr").innerHTML = "Valid username";
         return true;
     }
 }
