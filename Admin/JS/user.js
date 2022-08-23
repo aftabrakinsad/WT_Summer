@@ -5,7 +5,7 @@ function fnamecheck_adminregistration()
     if(!fname)
     {
         document.getElementById("fnameerr").style.color = "red";
-        document.getElementById("fnameerr").innerHTML = "Enter your firstname";
+        document.getElementById("fnameerr").innerHTML = "Enter firstname";
         return false;
     }
     else if(!isNaN(fname))
@@ -35,7 +35,7 @@ function lnamecheck_adminregistration()
     if(!lname)
     {
         document.getElementById("lnameerr").style.color = "red";
-        document.getElementById("lnameerr").innerHTML = "Enter your lastname";
+        document.getElementById("lnameerr").innerHTML = "Enter lastname";
         return false;
     }
     else if(!isNaN(lname))
@@ -66,7 +66,7 @@ function usernamecheck_admin()
     if(!uname)
     {
         document.getElementById("nameerr").style.color = "red";
-        document.getElementById("nameerr").innerHTML = "Enter your username";
+        document.getElementById("nameerr").innerHTML = "Enter username";
         return false;
     }
     else if(!isNaN(uname))
@@ -97,7 +97,7 @@ function email_adminregistration()
     if(!email)
     {
         document.getElementById("emailerr").style.color = "red";
-        document.getElementById("emailerr").innerHTML = "Enter your email";
+        document.getElementById("emailerr").innerHTML = "Enter email";
         return false;
     }
     else if(email.match(emailpattern))
@@ -121,7 +121,7 @@ function nid_adminregistration()
     if(!nid)
     {
         document.getElementById("niderr").style.color = "red";
-        document.getElementById("niderr").innerHTML = "Enter your nid";
+        document.getElementById("niderr").innerHTML = "Enter nid";
         return false;
     }
     else if(nid.length == 8 && !isNaN(nid))
@@ -146,7 +146,7 @@ function phone_adminregistration()
     if(!phone)
     {
         document.getElementById("phoneerr").style.color = "red";
-        document.getElementById("phoneerr").innerHTML = "Enter your phone number";
+        document.getElementById("phoneerr").innerHTML = "Enter phone number";
         return false;
     }
     else if(phone.length != 14)
@@ -176,7 +176,7 @@ function accountno_addacc()
     if(!accountno)
     {
         document.getElementById("accountnoerr").style.color = "red";
-        document.getElementById("accountnoerr").innerHTML = "Enter your account no.";
+        document.getElementById("accountnoerr").innerHTML = "Enter account no.";
         return false;
     }
     else if(accountno.length == 7 && !isNaN(accountno))
@@ -199,7 +199,7 @@ function pin_xd()
     if(!pin)
     {
         document.getElementById("pinerr").style.color = "red";
-        document.getElementById("pinerr").innerHTML = "Enter your pin";
+        document.getElementById("pinerr").innerHTML = "Enter pin";
         return false;
     }
     else if(pin.length == 4 && !isNaN(pin))
@@ -223,7 +223,7 @@ function password_adminregistration()
     if(!pass )
     {
         document.getElementById("passerr").style.color = "red";
-        document.getElementById("passerr").innerHTML = "password required";
+        document.getElementById("passerr").innerHTML = "password is required";
         return false;
     }
     else if(pass.length <= 8)
@@ -266,7 +266,7 @@ function confirm_password_adminregistration()
     if(!cpass )
     {
         document.getElementById("cpasserr").style.color = "red";
-        document.getElementById("cpasserr").innerHTML = "password required";
+        document.getElementById("cpasserr").innerHTML = "password is required";
         return false;
     }
     else if(cpass.length <= 8)
