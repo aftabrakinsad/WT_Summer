@@ -3,7 +3,9 @@
 @include("../Control/adminmanage.process.php");
 
 session_start();
-if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
+
+if (empty($_SESSION["username"]) && empty($_SESSION["password"]))
+{
     header("location: ../View/adminlogin.php");
 }
 
@@ -74,8 +76,11 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
                 <button type="submit" name="search">Search</button>
             </div>
         </div>
+        
     </form>
+
     <form action="" method="POST" enctype="multipart/form-data" onsubmit="return form_check_admin_manage()">
+
         <div class="flex-container">
             <div class=container>
                 <label>First Name :</label><br>
@@ -92,6 +97,7 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
                 <input name="uname" type="text" value="<?php echo $uname; ?>" readonly>
             </div>
         </div>
+
         <div class="flex-container">
             <div class=container>
                 <label>Email-ID :</b></label><br>
@@ -108,6 +114,7 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
                 <input name="phone" type="text" id="phone" onkeyup="phone_admin_manage()" value="<?php echo $phone; ?>">
             </div>
         </div>
+
         <div class="flex-container">
             <div class=container>
                 <label>Salary :</b></label><br>
@@ -125,6 +132,7 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
         </div>
 
     </form>
+
     <script src="../JS/adminmanage.js"></script>
 </body>
 
