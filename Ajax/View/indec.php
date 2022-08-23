@@ -17,8 +17,8 @@
 <body>
     <div>
         <form action="" method="POST" enctype="multipart/form-data" onsubmit="return ajax_formcheck()">
-            <label for="name">Enter your name: </label>
-            <input type="text" name="uname" id="uname" onkeyup="ajax()">
+            <label for="uname">Enter your name: </label>
+            <input type="text" name="uname" id="uname" onchange="ajax()">
             <p id="ajaxresponce"></p>
         </form>
     </div>
