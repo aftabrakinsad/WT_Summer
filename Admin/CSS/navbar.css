@@ -1,20 +1,23 @@
-.nav-wrapper {
+.nav-wrapper
+{
     height: 53px;
     background: #333;
 }
 
-/* Add a black background color to the top navigation */
-.nav-wrapper .topnav {
+.nav-wrapper .topnav
+{
     background-color: black;
     overflow: hidden;
     height: 53px;
 }
 
-.topnav a[id="hamburger"] {
+.topnav a[id="hamburger"]
+{
     display: none;
 }
 
-.topnav a[id="user"] {
+.topnav a[id="user"]
+{
     float: left;
     display: block;
     color: white;
@@ -57,7 +60,8 @@
     color: white;
 }
 
-.topnav a[id="logout"] {
+.topnav a[id="logout"]
+{
     float: right;
     display: block;
     color: white;
@@ -71,25 +75,26 @@
     border-top-left-radius: 3px;
 }
 
-/* Change the color of links on hover */
 .topnav a[id="link"]:hover 
 {
     color: white;
     background-color:#0D47A1;
 }
 
-.topnav a[id="profile"]:hover {
+.topnav a[id="profile"]:hover
+{
     color: white;
     background-color: #2196F3;
 }
 
-.topnav a[id="logout"]:hover {
+.topnav a[id="logout"]:hover
+{
     color: white;
     background-color: #f44336;
 }
 
-/* Used to make the navbar sticky */
-.nav-wrapper .navbar-fixed {
+.nav-wrapper .navbar-fixed
+{
     top: 0;
     left: 0;
     right: 0;
