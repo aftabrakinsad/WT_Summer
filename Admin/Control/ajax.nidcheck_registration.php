@@ -15,7 +15,7 @@ if(!empty($nid))
     }
     else
     {
-        echo "";
+
     }
 }
 
