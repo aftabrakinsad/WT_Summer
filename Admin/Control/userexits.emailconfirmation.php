@@ -1,8 +1,8 @@
 <?php
 
-$errors = array();
-
 @include('../Model/db.php');
+
+$errors = array();
 
 session_start();
 
