@@ -5,7 +5,9 @@
 $errors = array();
 
 session_start();
-if (empty($_SESSION["username"]) && empty($_SESS["password"])) {
+
+if (empty($_SESSION["username"]) && empty($_SESS["password"]))
+{
     header("location: ../View/adminlogin.php");
 }
 
@@ -71,13 +73,12 @@ if(isset($_POST["submit"]))
 ?>
 
 
-
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/atmsuccess.css">
+    <link rel="stylesheet" type="text/CSS" href="../CSS/atmsuccess.css">
     <title>ATM Transactions</title>
 </head>
 
