@@ -1,5 +1,8 @@
-<?php include "../Control/process.php"; ?>
+<?php
+ 
+@include "../Control/process.php"; 
 
+?>
 
 <!DOCTYPE html>
 <html>
@@ -20,9 +23,6 @@
     <form action="" method="post" enctype="multipart/form-data" onsubmit="return formcheck()">
 
         <table>
-
-
-
             <tr>
                 <td>
                     First Name:
@@ -125,11 +125,6 @@
         <input type="reset" class="button reset" name="reset">
     </form>
 
-    <!-- </div> -->
-
-    <!-- <input type="text" id="myinput" onkeyup="afterclick()"> -->
-    <!-- <p id="myprint">Output</p> -->
-    <!-- <button onclick="afterclick()">My Button</button> -->
     <script src="../js/myscript.js"></script>
 </body>
 
