@@ -11,7 +11,7 @@ function ajax()
         }
     };
 
-    myhttp.open("POST", "http://localhost/WT_Summer/Admin/Control/ajax.process.php", true);
+    myhttp.open("POST", "http://localhost/WT_Summer/Ajax/Control/ajax.process.php", true);
     myhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     myhttp.send("uname="+uname);
 }
