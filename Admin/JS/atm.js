@@ -62,7 +62,7 @@ function pin_atm()
     if(!pin)
     {
         document.getElementById("pin_error").style.color = "red";
-        document.getElementById("pin_error").innerHTML = "Please enter your pin";
+        document.getElementById("pin_error").innerHTML = "Please enter pin";
         return false;
     }
     else if(isNaN(pin))
