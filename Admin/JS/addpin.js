@@ -6,7 +6,7 @@ function email_addsalary()
     if(!email)
     {
         document.getElementById("emailerr").style.color = "red";
-        document.getElementById("emailerr").innerHTML = "Enter your email";
+        document.getElementById("emailerr").innerHTML = "Enter email";
         return false;
     }
     else if(email.match(emailpattern))
@@ -30,7 +30,7 @@ function nid_addsalary()
     if(!nid)
     {
         document.getElementById("niderr").style.color = "red";
-        document.getElementById("niderr").innerHTML = "Enter your nid";
+        document.getElementById("niderr").innerHTML = "Enter nid";
         return false;
     }
     else if(nid.length == 8 && !isNaN(nid))
@@ -54,7 +54,7 @@ function pin()
     if(!pin)
     {
         document.getElementById("pinerr").style.color = "red";
-        document.getElementById("pinerr").innerHTML = "Enter your PIN";
+        document.getElementById("pinerr").innerHTML = "Enter PIN";
         return false;
     }
     else if(pin.length == 4 && !isNaN(pin))
