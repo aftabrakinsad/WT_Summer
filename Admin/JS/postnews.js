@@ -4,7 +4,7 @@ function postheadingcheck()
     if(!headline)
     {
         document.getElementById('headlineerr').style.color = "red";
-        document.getElementById('headlineerr').innerHTML = "News headline required";
+        document.getElementById('headlineerr').innerHTML = "News headline is required";
         return false;
     }
     else
