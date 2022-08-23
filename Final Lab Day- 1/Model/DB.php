@@ -10,6 +10,7 @@ if($conn -> connect_error)
 {
     echo "error connectiong db";
 }
+
 $sqlstr = "INSERT INTO flabonetable(numberone, numbertwo) VALUES('1', '2')";
 if($conn -> query($sqlstr))
 {
