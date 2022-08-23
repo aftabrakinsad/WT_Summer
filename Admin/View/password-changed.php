@@ -6,7 +6,8 @@
 
 <?php
 
-if ($_SESSION['info'] == false) {
+if ($_SESSION['info'] == false)
+{
     header('location: ../View/adminlogin.php');
 }
 
@@ -28,14 +29,15 @@ if ($_SESSION['info'] == false) {
     <header>
         <?php
         
-            @include("../View/header.php");
+        @include("../View/header.php");
     
         ?>
     </header>
     <form action="../View/adminlogin.php">
         <p>
             <?php
-            if (isset($_SESSION['info'])) {
+            if (isset($_SESSION['info']))
+            {
             ?>
                 <?php echo $_SESSION['info']; ?>
             <?php
