@@ -47,15 +47,19 @@ if (isset($_POST["search"]))
         }
     }
 }
+else
+{
+
+}
 
 if(isset($_POST["submit"]))
 {
-    $firstname = $_POST["firstname"];
-    $lastname = $_POST["lastname"];
-    $username = $_POST["username"];
-    $email = $_POST["email"];
-    $phone = $_POST["phone"];
-    $salary = $_POST["salary"];
+    $firstname      = $_POST["firstname"];
+    $lastname       = $_POST["lastname"];
+    $username       = $_POST["username"];
+    $email          = $_POST["email"];
+    $phone          = $_POST["phone"];
+    $salary         = $_POST["salary"];
     $presentaddress = $_POST["presentaddress"];
 
     if(empty($firstname))
@@ -109,6 +113,10 @@ if(isset($_POST["submit"]))
             $errors['update-failed'] = "Update Failed". $myconn->error;
         }
     }
+}
+else
+{
+
 }
 
 ?>
