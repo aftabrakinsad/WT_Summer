@@ -6,7 +6,7 @@ function email_addsalary()
     if(!email)
     {
         document.getElementById("emailerr").style.color = "red";
-        document.getElementById("emailerr").innerHTML = "Enter your email";
+        document.getElementById("emailerr").innerHTML = "Enter email";
         return false;
     }
     else if(email.match(emailpattern))
@@ -30,7 +30,7 @@ function nid_addsalary()
     if(!nid)
     {
         document.getElementById("niderr").style.color = "red";
-        document.getElementById("niderr").innerHTML = "Enter your nid";
+        document.getElementById("niderr").innerHTML = "Enter nid";
         return false;
     }
     else if(nid.length == 8 && !isNaN(nid))
@@ -54,7 +54,7 @@ function salary_addsalary()
     if(!salary)
     {
         document.getElementById("salaryerr").style.color = "red";
-        document.getElementById("salaryerr").innerHTML = "Enter your salary";
+        document.getElementById("salaryerr").innerHTML = "Enter salary";
         return false;
     }
     else if(salary.length <= 7 && !isNaN(salary))
@@ -78,7 +78,7 @@ function accountno_addaccount()
     if(!accountno)
     {
         document.getElementById("accountnoerr").style.color = "red";
-        document.getElementById("accountnoerr").innerHTML = "Enter your account no.";
+        document.getElementById("accountnoerr").innerHTML = "Enter account no.";
         return false;
     }
     else if(accountno.length == 7 && !isNaN(accountno))
