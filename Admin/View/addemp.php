@@ -1,7 +1,9 @@
 <?php
 
 session_start();
-if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
+
+if (empty($_SESSION["username"]) && empty($_SESSION["password"]))
+{
     header("location: ../View/adminlogin.php");
 }
 
@@ -31,21 +33,26 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
         <h2 class="h2" id="h2">Add Employees</h2>
 
         <?php
-        if (count($errors) > 0) {
+        if (count($errors) > 0)
+        {
         ?>
             <div>
                 <?php
-                foreach ($errors as $showerror) {
+                foreach ($errors as $showerror)
+                {
                     echo "<p id='denger'> $showerror</p>";
                 }
                 ?>
             </div>
         <?php
-        } else if (count($success) > 0) {
+        }
+        else if (count($success) > 0)
+        {
         ?>
             <div>
                 <?php
-                foreach ($success as $ok) {
+                foreach ($success as $ok)
+                {
                     echo "<p id='success'> $ok</p>";
                 }
                 ?>
