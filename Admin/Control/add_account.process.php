@@ -46,7 +46,7 @@
         {
             $errors['email-empty'] = "Enter email to add Salary";
         }
-        else if (!empty($email) && !preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix",$email))
+        else if (!empty($email) && !preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $email))
         {
             $errors['email-notvalid'] = "Please Enter Valid Email Address.";
         }
@@ -78,9 +78,9 @@
         {
             $mydb = new db();
             $myconn = $mydb->openConn();
-            $mydb-> adding_new_admin_accountno($email, $nid, $accountno, "details_table_for_selected_admins",   $myconn);
+            $mydb-> adding_new_admin_accountno($email, $nid, $accountno, "details_table_for_selected_admins", $myconn);
             $mydb-> adding_new_admin_accountno_to_staticadmin($email, $accountno, "staticadmin", $myconn);
-            $success['accno-added'] = "Successfully Added! Account  No.";
+            $success['accno-added'] = "Successfully Added! Account No.";
         }
     }
 
