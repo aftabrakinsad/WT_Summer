@@ -1,7 +1,9 @@
 <?php
 
 session_start();
-if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
+
+if (empty($_SESSION["username"]) && empty($_SESSION["password"]))
+{
     header("location: ../View/adminlogin.php");
 }
 
@@ -9,15 +11,14 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
 @include("../View/navbar.php");
 @include("../View/adminsidebar.php");
 
-// @include("../Control/transferfunds.process.php");
-
 ?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/transferfunds.css">
+    <link rel="stylesheet" type="text/CSS" href="../CSS/transferfunds.css">
     <title>Transfer Some Funds to Others</title>
 </head>
 
@@ -70,6 +71,7 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
         </div>
 
     </form>
+    
     <script src="../JS/atm.js"></script>
 </body>
 
