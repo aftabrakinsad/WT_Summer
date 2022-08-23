@@ -9,6 +9,7 @@ session_start();
 if(true)
 {
     $email = $_SESSION['email'];
+    
     $mydb = new db();
     $mycon = $mydb -> openConn();
     $result = $mydb -> otp_showing($email, "staticadmin", $mycon);
@@ -18,6 +19,14 @@ if(true)
         $showotp =  $myotp["code"];
         echo $showotp;
     }
+    else
+    {
+
+    }
+}
+else
+{
+
 }
 
 ?>
