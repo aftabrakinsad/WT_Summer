@@ -34,11 +34,13 @@
             <tr>
                 <td>
                     <?php
-                    if (count($errors) > 0) {
+                    if (count($errors) > 0)
+                    {
                     ?>
                         <div>
                             <?php
-                            foreach ($errors as $showerror) {
+                            foreach ($errors as $showerror)
+                            {
                                 echo "<p id='denger'>$showerror</p>";
                             }
                             ?>
@@ -57,9 +59,7 @@
 
             <tr>
                 <td>
-                    <?php
-                    echo "<p class='otpshowing' id='otpp' onkeyup='fade()'>$showotp</p>";
-                    ?>
+                    <?php echo "<p class='otpshowing' id='otpp' onkeyup='fade()'>$showotp</p>"; ?>
                     <input class="otpbtn" type="submit" name="enterotp" value="Submit"> <br> <br>
                     <input class="otpbtn" type="submit" name="otpshowing" id="otpshowing" value="Show OTP">
                 </td>
@@ -67,6 +67,7 @@
         </table>
 
     </form>
+    
     <script src="../JS/otp.js"></script>
 </body>
 
