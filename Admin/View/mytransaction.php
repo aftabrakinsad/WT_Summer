@@ -1,7 +1,9 @@
 <?php
 
 session_start();
-if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
+
+if (empty($_SESSION["username"]) && empty($_SESSION["password"]))
+{
     header("location: ../View/adminlogin.php");
 }
 
@@ -18,14 +20,14 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/CSS" href="../CSS/adminrequest.css">
     <title>My Transactions</title>
-    <link rel="stylesheet" href="../CSS/adminrequest.css">
 </head>
 
 <body>
     <form action="" method="POST">
         <table>
-            <caption>Transaction History</ caption>
+            <caption>Transaction History</caption>
             <thead>
                 <tr>
                     <th scope="col">Transaction Date</th>
@@ -38,11 +40,16 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
             </thead>
             <tbody>
                 <?php
+                
                 @include("../Control/transation.process.php");
+                
                 ?>
             </tbody>
         </table>
-    </form> <br> <br>
+    </form>
+
+    <br>
+    <br>
     <a id="info2" href="../View/atm.php">Go Back</a>
 </body>
 
