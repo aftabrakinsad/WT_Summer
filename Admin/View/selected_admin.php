@@ -1,7 +1,9 @@
 <?php
 
 session_start();
-if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
+
+if (empty($_SESSION["username"]) && empty($_SESSION["password"]))
+{
     header("location: ../View/adminlogin.php");
 }
 
@@ -40,12 +42,15 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
             </thead>
             <tbody>
                 <?php
+                
                 @include("../Control/IIadminmanage.process.php");
+                
                 ?>
             </tbody>
         </table>
     </form>
-    <br><br>
+    <br>
+    <br>
     <a id="info2" href="../View/adminmanage.php">Go Back</a>
 </body>
 
