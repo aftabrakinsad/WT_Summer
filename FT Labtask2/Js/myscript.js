@@ -1,18 +1,3 @@
-function afterclick()
-{
-    var a = document.getElementById("myinput").value;
-    var b = document.getElementById("myprint");
-
-    b.innerHTML = "The " +a+" was this";
-}
-//a.innerHTML="Hello World";
-
-//document.write("Hello Nigga");
-
-//alert("Hello Nigga");
-
-//console.log("I am a noob");
-
 function checkname()
 {
     var namevalue = document.getElementById("name").value;
