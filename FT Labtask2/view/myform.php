@@ -1,4 +1,7 @@
-<?php include "../Control/process.php"; ?>
+<?php
+@include("../control/results.php")
+?>
+
 
 <!DOCTYPE html>
 <html>
@@ -9,6 +12,28 @@
 
 <body>
 
+
+  <div class="header">
+    <center>
+      <h1>ABC Management System</h1>
+      <h2>We Create Future</h2>
+    </center>
+  </div>
+  <div class="sticky">
+    <div class="topnav">
+      <a href="#">Home</a>
+      <a href="#">About US</a>
+      <a href="#">Shop</a>
+
+    </div>
+  </div>
+  <div class="registrationBox">
+    <h1 align="left">Registration form </h1>
+  </div>
+  <div class="frame">
+
+  </div>
+
   <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post" enctype="multipart/form-data">
 
     <table>
@@ -17,8 +42,7 @@
           First Name:
         </td>
         <td>
-          <input type="text" name="fname" id="name" onkeyup="checkname()">
-          <p id="nameerror"></p>
+          <input type="text" name="fname">
         </td>
       </tr>
       <tr>
@@ -45,15 +69,6 @@
           <input type="radio" name="des" value="Junior Programmer">Junior Programmer
           <input type="radio" name="des" value="Senior Programmer">Senior Programmer
           <input type="radio" name="des" value="Project Leader">Project Lead
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          Gender:
-        </td>
-        <td>
-          <input type="redio" name="gender" id="male" value="">
         </td>
       </tr>
       <tr>
@@ -97,17 +112,7 @@
   </form>
 
   </div>
-  <!-- <p id="myinput">Hello World</p> -->
 
-  <!-- <input type="text" id="myinput" onkeyup="afterclick()"> -->
-
-  <!-- Enter your name: -->
-  <!-- <input type="text" name="myname" id="name" onkeyup="checkname()"> -->
-  <!-- <p id="nameerror"></p> -->
-  <!-- <p id="myprint">output</p> -->
-  <button class="button submit" onclick="afterclick()">Button</button>
-
-  <script src="../Js/myscript.js"></script>
 </body>
 
 </html>
