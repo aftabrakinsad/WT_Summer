@@ -54,7 +54,7 @@ function accountno_addacc()
     if(!accountno)
     {
         document.getElementById("accountnoerr").style.color = "red";
-        document.getElementById("accountnoerr").innerHTML = "Enter your account no.";
+        document.getElementById("accountnoerr").innerHTML = "Enter account no.";
         return false;
     }
     else if(accountno.length == 7 && !isNaN(accountno))
