@@ -1,7 +1,11 @@
 <?php
+
 @include("../Control/updateuser.process.php");
+
 session_start();
-if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
+
+if (empty($_SESSION["username"]) && empty($_SESSION["password"]))
+{
     header("location: ../View/adminlogin.php");
 }
 
@@ -69,6 +73,7 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
             </div>
         </div>
     </form>
+
     <form action="" method="POST" enctype="multipart/form-data" onsubmit="return form_check_admin_manage()">
         <div class="flex-container">
             <div class=container>
@@ -76,38 +81,45 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
                 <p id="fnameerr"></p>
                 <input name="fname" id="fname" type="text" onkeyup="firstname_admin_manage()" value="<?php echo $fname; ?>">
             </div>
+
             <div class=container>
                 <label>Last Name :</b></label><br>
                 <p id="lnameerr"></p>
                 <input name="lname" id="lname" type="text" onkeyup="lastname_admin_manage()" value="<?php echo $lname; ?>">
             </div>
+
             <div class=container>
                 <label>Username :</label><br>
                 <p id="nameerr"></p>
                 <input name="uname" id="uname" type="text" onkeyup="usernamecheck_admin()" value="<?php echo $uname; ?>">
             </div>
         </div>
+
         <div class="flex-container">
             <div class=container>
                 <label>Email-ID :</b></label><br>
                 <p id="emailerr"></p>
                 <input name="email" type="text" id="email" onkeyup="email_admin_manage()" value="<?php echo $email; ?>">
             </div>
+
             <div class=container>
                 <label>NID :</label><br>
                 <input name="nid" type="text" value="<?php echo $nid; ?>" readonly>
             </div>
+
             <div class=container>
                 <label>Phone No. :</b></label><br>
                 <p id="phoneerr"></p>
                 <input name="phone" type="text" id="phone" onkeyup="phone_admin_manage()" value="<?php echo $phone; ?>">
             </div>
         </div>
+
         <div class="flex-container">
             <div class=container>
                 <label>Account No. :</b></label><br>
                 <input name="accountno" type="text" value="<?php echo $accountno; ?>" readonly>
             </div>
+
             <div>
                 <input class="button" type="submit" name="submit" id="submit" value="update">
                 <a class="button" href="../View/usermanage.php">Go Back</a>
@@ -115,6 +127,7 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
         </div>
 
     </form>
+    
     <script src="../JS/adduser.js"></script>
 </body>
 
