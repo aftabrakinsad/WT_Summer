@@ -319,7 +319,7 @@ function email_AJAX()
     var emailxhttp = new XMLHttpRequest();
     emailxhttp.onreadystatechange = function()
     {
-        if(emailxhttp.readyState == 4 && emailxhttp.status == 200)
+        if(this.readyState == 4 && this.status == 200)
         {
             document.getElementById("emailajaxresponse").style.color = "steelblue";
             document.getElementById("emailajaxresponse").innerHTML = emailxhttp.responseText;
@@ -340,10 +340,10 @@ function registration_email_AJAX()
     var emailxhttp = new XMLHttpRequest();
     emailxhttp.onreadystatechange = function()
     {
-        if(emailxhttp.readyState == 4 && emailxhttp.status == 200)
+        if(this.readyState == 4 && this.status == 200)
         {
             document.getElementById("emailajaxresponse").style.color = "steelblue";
-            document.getElementById("emailajaxresponse").innerHTML = emailxhttp.responseText;
+            document.getElementById("emailajaxresponse").innerHTML = this.responseText;
         }
         else
         {
@@ -361,7 +361,7 @@ function registration_nid_AJAX()
     var nidxhttp = new XMLHttpRequest();
     nidxhttp.onreadystatechange = function()
     {
-        if(nidxhttp.readyState == 4 && nidxhttp.status == 200)
+        if(this.readyState == 4 && this.status == 200)
         {
             document.getElementById("nidajaxresponse").style.color = "steelblue";
             document.getElementById("nidajaxresponse").innerHTML = nidxhttp.responseText;
@@ -382,7 +382,7 @@ function registration_phone_AJAX()
     var phonexhttp = new XMLHttpRequest();
     phonexhttp.onreadystatechange = function()
     {
-        if(phonexhttp.readyState == 4 && phonexhttp.status == 200)
+        if(this.readyState == 4 && this.status == 200)
         {
             document.getElementById("phoneajaxresponse").style.color = "steelblue";
             document.getElementById("phoneajaxresponse").innerHTML = phonexhttp.responseText;
