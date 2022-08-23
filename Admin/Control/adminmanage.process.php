@@ -35,13 +35,13 @@ if (isset($_POST["search"]))
         {
             while ($row = $result->fetch_assoc())
             {
-                $fname = $row["fname"];
-                $lname = $row["lname"];
-                $uname = $row["uname"];
-                $email = $row["email"];
-                $nid = $row["nid"];
-                $phone = $row["phone"];
-                $salary = $row["salary"];
+                $fname     = $row["fname"];
+                $lname     = $row["lname"];
+                $uname     = $row["uname"];
+                $email     = $row["email"];
+                $nid       = $row["nid"];
+                $phone     = $row["phone"];
+                $salary    = $row["salary"];
                 $accountno = $row["accountno"];
             }
         }
