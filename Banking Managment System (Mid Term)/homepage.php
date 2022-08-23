@@ -9,6 +9,7 @@
 </head>
 
 <body background="../Banking Managment System/Image/bg_img.png">
+
     <header>
         <center>
             <h1><font color="white">Welcome To City Bank Limited</font></h1>
@@ -23,6 +24,7 @@
                 <a href="Employee/view/employelogin.php"><font color="white"><strong>Employee</strong></font></a><br><br>
             </center>
         </nav>
+        
 </body>
 
 </html>
