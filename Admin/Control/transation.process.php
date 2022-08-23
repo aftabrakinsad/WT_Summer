@@ -10,13 +10,14 @@ if($result == true)
 {
     foreach($result as $row)
     {
-        echo '<tr>
-        <td>'.$row['trans_date'].'</td>
-        <td>'.$row['remarks'].'</td>
-        <td>'.$row['debit'].'</td>
-        <td>'.$row['credit'].'</td>
-        <td>'.$row['balance']. '</td>
-        <td>' . $row['accountno'] . '</td>
+        echo '
+        <tr>
+            <td>' . $row['trans_date'].'</td>
+            <td>' . $row['remarks']   .'</td>
+            <td>' . $row['debit']     .'</td>
+            <td>' . $row['credit']    .'</td>
+            <td>' . $row['balance']   . '</td>
+            <td>' . $row['accountno'] . '</td>
         </tr>';
     }
 }
