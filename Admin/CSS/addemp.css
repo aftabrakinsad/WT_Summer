@@ -1,4 +1,5 @@
-* {
+*
+{
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -6,11 +7,13 @@
     text-decoration: none;
 }
 
-.bodycolor {
+.bodycolor
+{
     background-color: black;
 }
 
-#denger {
+#denger
+{
     background-color: red;
     color: white;
     text-align: center;
@@ -20,18 +23,21 @@
     padding: 9px;
 }
 
-#success {
+#success
+{
     color: white;
     background-color: forestgreen;
     padding: 5px;
     border-radius: 5px;
 }
 
-#info {
+#info
+{
     color: blue;
 }
 
-form {
+form
+{
     width: 800px;
     background-color: black;
     padding: 50px 100px;
@@ -41,22 +47,27 @@ form {
     animation: registration 2s infinite;
 }
 
-@keyframes registration {
-    50% {
+@keyframes registration
+{
+    50%
+    {
         box-shadow: 5px 5px 5px 10px green;
     }
 }
 
-h1 {
+h1
+{
     text-align: center;
     margin-top: 10px;
 }
 
-.p {
+.p
+{
     color: white;
 }
 
-.h2 {
+.h2
+{
     text-align: center;
     font-size: 30px;
     margin-bottom: 10px;
@@ -69,7 +80,8 @@ h1 {
 }
 
 input[type=text],
-input[type=password] {
+input[type=password]
+{
     background-color: #f2f4f6;
     padding: 12px;
     margin: 8px 0;
@@ -81,7 +93,8 @@ input[type=password] {
     border-radius: 15px;
 }
 
-.inputrequestbutton {
+.inputrequestbutton
+{
     width: 290px;
     background-color: #04aa6d;
     padding: 8px;
@@ -94,7 +107,8 @@ input[type=password] {
     border-radius: 10px;
 }
 
-.inputrequestreturn {
+.inputrequestreturn
+{
     width: 100px;
     background-color: steelblue;
     padding: 8px;
@@ -107,17 +121,20 @@ input[type=password] {
     border-radius: 10px;
 }
 
-.inputrequestbutton:hover {
+.inputrequestbutton:hover
+{
     opacity: 0.8;
     background-color: #04aa6d;
 }
 
-.inputrequestreturn:hover {
+.inputrequestreturn:hover
+{
     opacity: 0.8;
     background-color: steelblue;
 }
 
-.container {
+.container
+{
     padding: 1px;
 }
 
