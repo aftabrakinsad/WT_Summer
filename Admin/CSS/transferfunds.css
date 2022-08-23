@@ -2,7 +2,8 @@ body
 {
     background-color: black;
 }
-.flex-container {
+.flex-container
+{
     display: -webkit-flex;
     display: flex;
     margin-left: 600px;
@@ -13,12 +14,14 @@ body
     background-color: black;
 }
 
-nav {
+nav
+{
     background-color: black;
     padding: 12px;
 }
 
-.a {
+.a
+{
     text-decoration: none;
     color: white;
     margin-left: 7px;
@@ -29,7 +32,8 @@ nav {
     margin-top: 5px;
 }
 
-.flex-container-form_header {
+.flex-container-form_header
+{
     margin-left: 180px;
     width: auto;
     height: auto;
@@ -37,19 +41,22 @@ nav {
     border-bottom: 2px solid blueviolet;
 }
 
-h1[id="form_header"] {
+h1[id="form_header"]
+{
     margin-left: 20px;
     font-family: Roboto-Thin;
     color: white;
 }
 
-form {
+form
+{
     border: 2px solid blueviolet;
     width: inherit;
     margin-left: 0px;
 }
 
-label {
+label
+{
     display: block;
     float: left;
     color: white;
@@ -57,7 +64,8 @@ label {
     font-size: 20px;
 }
 
-label[id="info_label"] {
+label[id="info_label"]
+{
     display: block;
     float: right;
     margin-left: 6px;
@@ -66,9 +74,9 @@ label[id="info_label"] {
     font-size: 24px;
 }
 
-/* Full-width inputs */
 input[type=text],
-input[type=password] {
+input[type=password]
+{
     font-family: Roboto-Regular;
     color: white;
     font-size: 24px;
@@ -81,14 +89,16 @@ input[type=password] {
     background-color: transparent;
 }
 
-.container {
+.container
+{
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
     display: inline-block;
 }
 
-textarea {
+textarea
+{
     font-family: Roboto-Regular;
     color: #212121;
     font-size: 24px;
@@ -104,8 +114,8 @@ textarea {
     background-color: transparent;
 }
 
-/* Set a style for all buttons */
-button {
+button
+{
     font-family: OpenSans-Regular;
     font-size: 18px;
     background-color: #00BCD4;
@@ -118,7 +128,8 @@ button {
     border-radius: 3px;
 }
 
-.button {
+.button
+{
     background-color: #4CAF50;
     border: none;
     color: white;
@@ -133,7 +144,8 @@ button {
     cursor: pointer;
 }
 
-.password-button {
+.password-button
+{
     background-color: transparent;
     color: #d50000;
     font-family: OpenSans-Regular;
@@ -148,20 +160,21 @@ button {
     cursor: pointer;
 }
 
-.password-button:hover {
+.password-button:hover
+{
     background-color: #d32f2f;
     color: white;
     border: 2px solid #d32f2f;
 }
 
-/* Add a hover effect for buttons */
 button:hover,
-.button:hover {
+.button:hover
+{
     opacity: 0.8;
 }
 
-/* Extra style for the cancel button (red) */
-.reset {
+.reset
+{
     width: auto;
     background-color: #f44336;
 }
