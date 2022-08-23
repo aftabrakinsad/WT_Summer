@@ -5,7 +5,7 @@ function accountno_addacc()
     if(!accountno)
     {
         document.getElementById("accountnoerr").style.color = "red";
-        document.getElementById("accountnoerr").innerHTML = "Enter your account no.";
+        document.getElementById("accountnoerr").innerHTML = "Enter account no.";
         return false;
     }
     else if(accountno.length == 7 && !isNaN(accountno))
@@ -87,7 +87,7 @@ function firstname_admin_manage()
     if(!uname)
     {
         document.getElementById("nameerr").style.color = "red";
-        document.getElementById("nameerr").innerHTML = "Enter your username";
+        document.getElementById("nameerr").innerHTML = "Enter username";
         return false;
     }
     else if(!isNaN(uname))
@@ -118,7 +118,7 @@ function email_admin_manage()
     if(!email)
     {
         document.getElementById("emailerr").style.color = "red";
-        document.getElementById("emailerr").innerHTML = "Enter your email";
+        document.getElementById("emailerr").innerHTML = "Enter email";
         return false;
     }
     else if(email.match(emailpattern))
@@ -143,7 +143,7 @@ function phone_admin_manage()
     if(!phone)
     {
         document.getElementById("phoneerr").style.color = "red";
-        document.getElementById("phoneerr").innerHTML = "Enter your phone number";
+        document.getElementById("phoneerr").innerHTML = "Enter phone number";
         return false;
     }
     else if(phone.length != 14)
