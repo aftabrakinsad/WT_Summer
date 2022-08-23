@@ -1,7 +1,9 @@
 <?php
+
 $name=$_POST["num1"];
 $name2=$_POST["num2"];
 $func=$_POST["func"];
+
 echo $name;
 echo" ";
 echo $name2;
@@ -15,19 +17,17 @@ if ($func == "+")
 {
     echo"Addition: ", $name + $name2;
 }
-
 if ($func == "-")
 {
     echo"Subtraction: ", $name - $name2;
 }
-
 if ($func == "*")
 {
     echo"Multiplication:", $name * $name2;
 }
-
 if ($func == "/")
 {
     echo"Division: ", $name / $name2;
 }
+
 ?>
