@@ -1,6 +1,9 @@
 <?php
+
 session_start();
-if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
+
+if (empty($_SESSION["username"]) && empty($_SESSION["password"]))
+{
     header("location: ../View/adminlogin.php");
 }
 
@@ -18,7 +21,7 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/CSS" href="../CSS/adminrequest.css">
-    <title>Admin Requests</title>
+    <title>Manage User</title>
 </head>
 
 <body>
@@ -46,7 +49,9 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
 
             <tbody>
                 <?php
+                
                 @include("../Control/user.process.php");
+                
                 ?>
             </tbody>
         </table>
