@@ -1,10 +1,9 @@
 <?php
 
-$errors = array();
-$success = array();
-
 @include("../Model/db.php");
 
+$errors = array();
+$success = array();
 $uppercase = $lowercase = $number = $specialchars = "";
 
 session_start();
@@ -84,7 +83,6 @@ if(isset($_POST["submit"]))
         if(!$uppercase || !$lowercase || !$number || !$specialchars || strlen($password) <= 8)
         {
             $errors['pass-notvalid'] = "Password should be more than or equal to 8 characters and should include at least one uppercase, one lower case, one number and one special character! ";
-
         }
         else if($password != $cpassword)
         {
@@ -126,8 +124,7 @@ if(isset($_POST["submit"]))
             }
             else
             {
-                if ((move_uploaded_file($_FILES["picture"]["tmp_name"], "../uploads/profile_picture/" . $_FILES["picture"]["name"])) 
-                    && (move_uploaded_file($_FILES["cv"]["tmp_name"], "../uploads/applicant_cv/" . $_FILES["cv"]["name"])))
+                if ((move_uploaded_file($_FILES["picture"]["tmp_name"], "../uploads/profile_picture/" . $_FILES["picture"]["name"])) && (move_uploaded_file($_FILES["cv"]["tmp_name"], "../uploads/applicant_cv/" . $_FILES["cv"]["name"])))
                 {
                     $imgpath = "../uploads/profile_picture/" . $_FILES["picture"]["name"];
                     $filepath = "../uploads/applicant_cv/" . $_FILES["cv"]["name"];
@@ -165,7 +162,6 @@ if(isset($_POST["submit"]))
                     header("Location: ../View/adminregistration.php?Application_Submitted=Failed");
                 }
             }
-
         }
     }
     else
