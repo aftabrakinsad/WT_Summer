@@ -1,6 +1,9 @@
 <?php
+
 session_start();
-if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
+
+if (empty($_SESSION["username"]) && empty($_SESSION["password"]))
+{
     header("location: ../View/adminlogin.php");
 }
 
@@ -29,7 +32,8 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"])) {
             <h1 id="customer">Welcome to the deshboard admin<?php include('../Control/cookie.php'); ?></h1>
 
             <p class="customer">Hello Everyone. Admin speaking. You know what I like pizza, not pasta.<br>
-                Hello Sir! It's an honor to have you as faculty. Thanks for helping us, and supporting us.<br> Pray for us and give us 5 to 6 grade semester break bonous.😁</p>
+                Hello Sir! It's an honor to have you as faculty. Thanks for helping us, and supporting us.<br> Pray for us and give us 5 to 6 grade semester break bonous.😁
+            </p>
         </div>
     </div>
 </body>
