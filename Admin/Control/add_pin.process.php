@@ -1,6 +1,7 @@
 <?php
 
 @include("../Model/db.php");
+
 $errors = array();
 $success = array();
 
@@ -76,4 +77,5 @@ if(isset($_POST["submit"]))
 
     }
 }
+
 ?>
