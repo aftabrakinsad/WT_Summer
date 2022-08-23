@@ -1,10 +1,9 @@
 <?php
 
-$errors = array();
-$success = array();
-
 @include("../Model/db.php");
 
+$errors = array();
+$success = array();
 $uppercase = $lowercase = $number = $specialchars = "";
 
 session_start();
