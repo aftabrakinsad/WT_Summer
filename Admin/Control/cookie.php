@@ -1,11 +1,14 @@
 <?php
+
 	$cookie_name="uname";
+
 	if(!isset($_COOKIE["uname"]))
 	{
-		echo " ";
+		echo "";
 	}
 	else
 	{
 		echo ", ".$_COOKIE[$cookie_name];
 	}
+	
 ?>
