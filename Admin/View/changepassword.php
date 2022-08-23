@@ -1,6 +1,7 @@
 <?php
 
 include("../Control/changepassword.process.php");
+
 $email = $_SESSION['email'];
 
 ?>
@@ -32,23 +33,22 @@ $email = $_SESSION['email'];
         <table>
             <tr>
                 <td>
-
                     <?php
-
-                    if (count($errors) > 0) {
+                    if (count($errors) > 0)
+                    {
                     ?>
                         <?php
-                        foreach ($errors as $showerror) {
+                        foreach ($errors as $showerror)
+                        {
                             echo "<p id='denger'>$showerror</p>";
                         }
                         ?>
                     <?php
                     }
-
                     ?>
-
                 </td>
             </tr>
+
             <tr>
                 <td>
                     <input type="password" name="newpassword" id="pass" onkeyup="password_change()" placeholder="Enter new password">
@@ -69,9 +69,11 @@ $email = $_SESSION['email'];
                     <input class="otpbtn" type="submit" name="passwordsubmission" value="Change">
                 </td>
             </tr>
+
         </table>
 
     </form>
+    
     <script src="../JS/changepassword.js"></script>
 </body>
 
