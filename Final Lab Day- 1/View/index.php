@@ -1,3 +1,9 @@
+<?php
+
+@include("../Control/taskone.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,11 +11,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab Task - 1</title>
+    <title>Lab Day - 1</title>
 </head>
 
 <body>
-    <form action="../Control/taskone.php" method="post">
+    <form action="" method="post">
         <table>
             <tr>
                 <td><label for="num1">1st Number:</label></td>
@@ -39,4 +45,5 @@
         </table>
     </form>
 </body>
+
 </html>
