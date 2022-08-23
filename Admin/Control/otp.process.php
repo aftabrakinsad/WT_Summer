@@ -2,11 +2,10 @@
 
 @include("../Model/db.php");
 
+$errors = array();
 $showotp = "";
 
 session_start();
-
-$errors = array();
 
 if(isset($_POST["enterotp"]))
 {
@@ -46,8 +45,6 @@ if(isset($_POST["enterotp"]))
             $errors['invalidotp'] = "Invalid OTP";
         }
     }
-    
-    
 }
 
 if(isset($_POST["otpshowing"]))
