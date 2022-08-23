@@ -158,6 +158,17 @@ if (isset($_POST["Submit"]))
         $fileErr = 'Upload Error';
         $mydb = new db();
         $myconn = $mydb->openConn();
-        $mydb->insertUser($name, $name2, $Age, $Designation, $planguage, $email, $pass, $picture, "employee", $myconn);
+        $result = $mydb->insertUser($name, $name2, $Age, $Designation, $planguage, $email, $pass, $picture, "employee", $myconn);
+
+        if ($result == true)
+        {
+            echo "";
+            echo "Data saved";
+        }
+        else
+        {
+            echo "cant insert" . $conn->error;
+        }
 }
+
 ?>
