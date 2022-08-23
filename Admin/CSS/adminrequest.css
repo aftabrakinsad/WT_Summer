@@ -1,10 +1,12 @@
-body {
+body
+{
     background-color: black;
     font-family:'Times New Roman', Times, serif;
     line-height: 1.25;
 }
 
-table {
+table
+{
     border: 1px solid black;
     border-collapse: collapse;
     margin: 0;
@@ -13,13 +15,15 @@ table {
     color: white;
 }
 
-table caption {
+table caption
+{
     font-size: 1.5em;
     margin: .5em 0 .75em;
     color: white;
 }
 
-table tr {
+table tr
+{
     background-color: black;
     border: 1px solid #ddd;
     padding: 1px;
@@ -27,65 +31,23 @@ table tr {
 }
 
 table th,
-table td {
+table td
+{
     padding: .625em;
     text-align: center;
     color: white;
 }
 
-table th {
+table th
+{
     font-size: .85em;
     letter-spacing: .1em;
     text-transform: uppercase;
     color: white;
 }
 
-@media screen and (max-width: 600px) {
-    table {
-        border: 0;
-    }
-
-    table caption {
-        font-size: 1.3em;
-    }
-
-    table thead {
-        border: none;
-        clip: rect(0 0 0 0);
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        width: 1px;
-    }
-
-    table tr {
-        border-bottom: 3px solid black;
-        display: block;
-        margin-bottom: .625em;
-    }
-
-    table td {
-        border-bottom: 1px solid black;
-        display: block;
-        font-size: .8em;
-        text-align: right;
-    }
-
-    table td::before {
-        content: attr(data-label);
-        float: left;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-
-    table td:last-child {
-        border-bottom: 0;
-    }
-}
-
-.accept {
+.accept
+{
     width: 290px;
     background-color: #04aa6d;
     padding: 8px;
@@ -97,7 +59,8 @@ table th {
     transition: background-color 0.4s;
     border-radius: 5px;
 }
-.reject {
+.reject
+{
     width: 290px;
     background-color: #ff0000;
     padding: 8px;
@@ -110,7 +73,8 @@ table th {
     border-radius: 5px;
 }
 
-#info {
+#info
+{
     width: 290px;
     background-color: cornflowerblue;
     padding: 8px;
@@ -123,7 +87,8 @@ table th {
     border-radius: 5px;
 }
 
-#info2 {
+#info2
+{
     width: 290px;
     background-color: cornflowerblue;
     padding: 8px;
