@@ -40,6 +40,7 @@ function otp_formcheck()
     }
 }
 
+// jquery
 function fade() 
 {
     $(document).ready(function()
