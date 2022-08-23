@@ -12,10 +12,10 @@ if($result == true)
     {
         echo '
         <tr>
-            <td>' . $row['trans_date'].'</td>
-            <td>' . $row['remarks']   .'</td>
-            <td>' . $row['debit']     .'</td>
-            <td>' . $row['credit']    .'</td>
+            <td>' . $row['trans_date']. '</td>
+            <td>' . $row['remarks']   . '</td>
+            <td>' . $row['debit']     . '</td>
+            <td>' . $row['credit']    . '</td>
             <td>' . $row['balance']   . '</td>
             <td>' . $row['accountno'] . '</td>
         </tr>';
