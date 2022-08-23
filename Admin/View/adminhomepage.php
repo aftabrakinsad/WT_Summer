@@ -20,9 +20,7 @@ if (empty($_SESSION["username"]) && empty($_SESSION["password"]))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/adminhome.css">
-    <link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="fonts/lineo-icon/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/CSS" href="../CSS/adminhome.css">
     <title>Admin Dashboard</title>
 </head>
 
