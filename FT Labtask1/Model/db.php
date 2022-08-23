@@ -2,7 +2,6 @@
 
 class db
 {
-
     function openConn()
     {
         $servername = "localhost";
@@ -17,20 +16,11 @@ class db
         return $conn;
     }
 
-    function insertUser($fname, $lname, $age, $designation, $planguage, $email, $pass, $picture, $table, $conn)
+    function insertUser($fname, $lname, $age, $designation, $planguage, $email, $pass, $picture, $employee, $conn)
     {
-        $sqlstr = "INSERT INTO employee(fname,lname,age,designation,planguage,email,password,picture)
-        VALUES ('$fname','$lname','$age','$designation','$planguage','$email','$pass','$picture') ";
-
-        if ($conn->query($sqlstr))
-        {
-            echo "";
-            echo "Data saved";
-        }
-        else
-        {
-            echo "cant insert" . $conn->error;
-        }
+        $sqlstr = "INSERT INTO $employee(fname, lname, age,designation, planguage, email, password, picture)
+        VALUES ('$fname', '$lname', '$age', '$designation', '$planguage', '$email', '$pass', '$picture')";
+        return $conn->query($sqlstr);
     }
 }
 
