@@ -24,6 +24,7 @@ class db
 
         if ($conn->query($sqlstr))
         {
+            echo "";
             echo "Data saved";
         }
         else

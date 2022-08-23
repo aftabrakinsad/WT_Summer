@@ -66,8 +66,7 @@ include("../Control/process.php");
                 <tr>
                     <td>Email :</td>
                     <td>
-                        <input type="email" name="email" placeholder="Enter Your Email" autocomplete="on">
-                    <td>
+                        <input type="email" name="email" placeholder="Enter Your Email">
                         <?php echo $emailErr; ?> </td><br>
                     </td>
                 </tr>
