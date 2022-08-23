@@ -13,11 +13,12 @@ if ($result->num_rows > 0)
     foreach ($result as $row) 
     {
 
-        echo '<tr>
-        <td>Tittle: ' . $row['tittle'] . '</td><br>
-        <td>Details: ' . $row['news_body'] . '</td> <br>
-        <td> Posted by: Admin</td> <br>
-        <td>Date & Time: ' . $row['created'] . '</td> <br> <br>
+        echo '
+        <tr>
+            <td>Tittle: ' . $row['tittle'] . '</td>       <br>
+            <td>Details: ' . $row['news_body'] . '</td>   <br>
+            <td>Posted by: Admin</td>                     <br>
+            <td>Date & Time: ' . $row['created'] . '</td> <br><br>
         </tr>';
     }
 }
