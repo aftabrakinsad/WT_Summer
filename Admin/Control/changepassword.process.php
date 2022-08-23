@@ -1,10 +1,10 @@
 <?php
 
-session_start();
-$errors = array();
-
 @include("../Model/db.php");
 
+$errors = array();
+
+session_start();
 
 if(isset($_POST['passwordsubmission']))
 {
@@ -37,8 +37,7 @@ if(isset($_POST['passwordsubmission']))
     }
     else if(!empty($newpassword) && !empty($confirmpassword))
     {
-        if(!$uppercase || !$lowercase || !$number ||
-        !$specialchars)
+        if(!$uppercase || !$lowercase || !$number || !$specialchars)
         {
             if(strlen($newpassword) && strlen($confirmpassword)<= 8)
             {
@@ -83,6 +82,10 @@ if(isset($_POST['passwordsubmission']))
 if(isset($_POST['returntologin']))
 {
     header('location: ../View/adminlogin.php');
+}
+else
+{
+    
 }
 
 ?>
