@@ -1,6 +1,7 @@
 <?php
 
 @include("../Model/db.php");
+
 $errors = array();
 $success = array();
 
@@ -9,7 +10,7 @@ $nid = $_GET["nid"];
 
 $mydb = new db();
 $myconn = $mydb->openConn();
-$resultd = $mydb->showing_data_from_admin_salary_control_to_add_salary($email, $nid, "details_table_for_selected_admins", $myconn);
+$resultd = $mydb->showing_data_from_admin_salary_control_to_add_salary($email, $nid, "details_table_for_selected_admins",$myconn);
 $row = $resultd->fetch_assoc();
 $email = $row["email"];
 $nid = $row["nid"];
@@ -57,6 +58,7 @@ if(isset($_POST["submit"]))
         $mydb = new db();
         $myconn = $mydb->openConn();
         $emailresult = $mydb -> searching_existing_email_in_details_table_for_selected_admins($email, "details_table_for_selected_admins", $myconn);
+        
         $nidresult = $mydb -> searching_existing_nid_in_details_table_for_selected_admins($nid, "details_table_for_selected_admins", $myconn);
 
         if(($emailresult->num_rows > 0) && ($nidresult->num_rows > 0))
