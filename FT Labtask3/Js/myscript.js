@@ -2,6 +2,12 @@
 function checkname()
 {
     var namevalue = document.getElementById("name").value;
+
+    if(!namevalue)
+    {
+        document.getElementById("nameerror").innerHTML="Name Can't be empty";
+        return false;
+    }
     if(!isNaN(namevalue) && (namevalue.length <5))
     {
         document.getElementById("nameerror").innerHTML="Name can't be a number";
@@ -148,8 +154,7 @@ function passcheck()
 
 function formcheck()
 {
-    if(checkname() == true && checklname() == true && getradiovalue() == true && checkboxvalue() == true&& agecheck() == true && 
-    validateemail() == true && passcheck() == true)
+    if(checkname() == true && checklname() == true && getradiovalue() == true && checkboxvalue() == true&& agecheck() == true && validateemail() == true && passcheck() == true)
     {
         return true;
     }
