@@ -5,7 +5,7 @@ function password_change()
     if(!pass )
     {
         document.getElementById("passerr").style.color = "red";
-        document.getElementById("passerr").innerHTML = "password required";
+        document.getElementById("passerr").innerHTML = "password is required";
         return false;
     }
     else if(pass.length <= 8)
@@ -48,7 +48,7 @@ function confirm_password_change()
     if(!cpass )
     {
         document.getElementById("cpasserr").style.color = "red";
-        document.getElementById("cpasserr").innerHTML = "password required";
+        document.getElementById("cpasserr").innerHTML = "password is required";
         return false;
     }
     else if(cpass.length <= 8)
