@@ -17,7 +17,7 @@
 
 <body>
     <div>
-        <h2 id="click">Click here to view my profile</h2>
+        <h2 id="click">Click here</h2>
         <p id="p">Hello Man</p>
     </div>
 
@@ -28,6 +28,11 @@
     <div>
         <button id="btn">Start Animation</button>
         <p id="btnclick">Executing after clicking</p>
+    </div>
+
+    <div>
+        <h2 id="flip">Click here to view</h2>
+        <h5 id="panel">Hello Nigga</h5>
     </div>
 
     <script src="../JS/jquery.js"></script>
