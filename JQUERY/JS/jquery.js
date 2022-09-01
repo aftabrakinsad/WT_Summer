@@ -20,7 +20,7 @@ click();
 function animation()
 {
     //After page refrashing, the Div animation
-    $("#animation").animate({left: '500px'}, "slow");
+    $("#animation").animate({left: '650px'}, "slow");
 }
 animation();
 
@@ -31,7 +31,7 @@ function after_click_animation()
     {
         $("#btn").click(function()
         {
-            $("#btnclick").animate({left: '500px'}, "slow");
+            $("#btnclick").animate({left: '650px'}, "slow");
         });
     });
 }
