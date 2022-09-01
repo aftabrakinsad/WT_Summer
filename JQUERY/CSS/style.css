@@ -1,3 +1,17 @@
+header
+{
+    font-size: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+header abbr
+{
+    font-weight: bold;
+    color: brown;
+}
+
 p
 {
     width: 100px;
@@ -7,4 +21,15 @@ p
     padding: 30px;
     text-align: center;
     position: absolute;
+}
+
+h2
+{
+    color: cornflowerblue;
+}
+
+h2:hover
+{
+    color: green;
+    cursor: pointer;
 }
