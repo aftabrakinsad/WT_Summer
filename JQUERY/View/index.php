@@ -17,8 +17,12 @@
 
 <body>
     <h2 id="click">Click here to view my profile</h2>
+    <p id="p">Hello Man</p> <br><br><br><br><br>
 
-    <p>Hello Man</p>
+    <p id="animation">Animation</p> <br><br><br><br><br><br><br>
+
+    <button id="btn">Start Animation</button>
+    <p id="btnclick">Executed after clicking</p>
 
     <script src="../JS/jquery.js"></script>
 </body>
