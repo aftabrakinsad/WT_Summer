@@ -36,3 +36,15 @@ function after_click_animation()
     });
 }
 after_click_animation();
+
+function sliding_animation()
+{
+    $(document).ready(function()
+    {
+        $("#flip").click(function()
+        {
+            $("#panel").slideDown(5000);
+        });
+    });
+}
+sliding_animation();
