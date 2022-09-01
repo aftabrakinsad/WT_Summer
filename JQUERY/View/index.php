@@ -11,18 +11,24 @@
 </head>
 
 <header>
-    Welcome to the Jquey Session.<br>
+    Welcome to the JQuey Session.<br>
     <sub>By <abbr>Rakin Sad Aftab</abbr></sub>
 </header>
 
 <body>
-    <h2 id="click">Click here to view my profile</h2>
-    <p id="p">Hello Man</p> <br><br><br><br><br>
+    <div>
+        <h2 id="click">Click here to view my profile</h2>
+        <p id="p">Hello Man</p>
+    </div>
 
-    <p id="animation">Animation</p> <br><br><br><br><br><br><br>
+    <div>
+        <p id="animation">Automatic Animation</p>
+    </div>
 
-    <button id="btn">Start Animation</button>
-    <p id="btnclick">Executed after clicking</p>
+    <div>
+        <button id="btn">Start Animation</button>
+        <p id="btnclick">Executing after clicking</p>
+    </div>
 
     <script src="../JS/jquery.js"></script>
 </body>
